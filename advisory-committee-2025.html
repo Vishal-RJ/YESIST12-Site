@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advisory Committee 2025 - YESIST12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="advisory-committee.css">
+</head>
+<body>
+    <!-- Header will be loaded with JavaScript -->
+    <div id="header-container"></div>
+    
+    <!-- Advisory Committee Hero Section -->
+    <section class="advisory-hero">
+        <div class="advisory-hero-content">
+            <h1>Advisory Committee 2025</h1>
+            <div class="breadcrumb">
+                <a href="yesist_index.html">Home</a> > <span>Advisory Committee 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory Committee Content Section -->
+    <section class="advisory-content">
+        <div class="container">
+            <h1 class="section-title">Advisory Committee</h1>
+            
+            <!-- Committee Members Section -->
+            <div class="committee-members">
+                <!-- Committee Member 1 -->
+                <div class="committee-card" data-member-id="1">
+                    <div class="committee-card-image">
+                        <img src="images/Mukesh K.jpg" alt="Dr. Satheesh Kumar">
+                        <div class="dots-decoration">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="accent-shape"></div>
+                        <div class="committee-social">
+                            <a href="https://www.linkedin.com/" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <button class="more-info-btn">More Info</button>
+                        <div class="committee-card-details">
+                            <div class="details-content">
+                                <h4>Dr. Satheesh Kumar</h4>
+                                <p class="details-title">Senior Advisor, YESIST12 2025</p>
+                                <p class="details-bio">Dr. Satheesh Kumar is a senior professor with extensive experience in technology innovation and research. He has guided numerous projects and initiatives in the field of engineering.</p>
+                                <p class="details-affiliation">Technical University, Singapore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="committee-card-content">
+                        <h3>DR. SATHEESH KUMAR</h3>
+                        <p>SENIOR ADVISOR</p>
+                    </div>
+                </div>
+
+                <!-- Committee Member 2 -->
+                <div class="committee-card" data-member-id="2">
+                    <div class="committee-card-image">
+                        <img src="images/Mukesh K.jpg" alt="Dr. Mei Lin">
+                        <div class="dots-decoration">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="accent-shape"></div>
+                        <div class="committee-social">
+                            <a href="https://www.linkedin.com/" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <button class="more-info-btn">More Info</button>
+                        <div class="committee-card-details">
+                            <div class="details-content">
+                                <h4>Dr. Mei Lin</h4>
+                                <p class="details-title">Technical Advisor, YESIST12 2025</p>
+                                <p class="details-bio">Dr. Mei Lin is an expert in emerging technologies with a focus on sustainable solutions. Her research has contributed significantly to advancements in engineering and technology.</p>
+                                <p class="details-affiliation">National University, Malaysia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="committee-card-content">
+                        <h3>DR. MEI LIN</h3>
+                        <p>TECHNICAL ADVISOR</p>
+                    </div>
+                </div>
+
+                <!-- Committee Member 3 -->
+                <div class="committee-card" data-member-id="3">
+                    <div class="committee-card-image">
+                        <img src="images/Mukesh K.jpg" alt="Dr. Rajesh Patel">
+                        <div class="dots-decoration">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="accent-shape"></div>
+                        <div class="committee-social">
+                            <a href="https://www.linkedin.com/" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <button class="more-info-btn">More Info</button>
+                        <div class="committee-card-details">
+                            <div class="details-content">
+                                <h4>Dr. Rajesh Patel</h4>
+                                <p class="details-title">Industry Advisor, YESIST12 2025</p>
+                                <p class="details-bio">Dr. Rajesh Patel brings extensive industry experience to the committee. His expertise in bridging academic research with practical applications has been invaluable to many projects.</p>
+                                <p class="details-affiliation">Global Tech Solutions, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="committee-card-content">
+                        <h3>DR. RAJESH PATEL</h3>
+                        <p>INDUSTRY ADVISOR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Popup for Committee Member Details -->
+    <div class="modal-overlay" id="memberModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-left">
+                <div class="modal-left-content">
+                    <div class="modal-header-img">
+                        <img src="" alt="Committee Member" id="modalMemberImg">
+                    </div>
+                    <h2 id="modalMemberName"></h2>
+                    <p id="modalMemberTitle"></p>
+                </div>
+            </div>
+            <div class="modal-right">
+                <div class="modal-body">
+                    <div class="modal-info-item">
+                        <h3>Biography</h3>
+                        <p id="modalMemberBio"></p>
+                    </div>
+                    <div class="modal-info-item">
+                        <h3>Affiliation</h3>
+                        <p id="modalMemberAffiliation"></p>
+                    </div>
+                    <div class="modal-info-item">
+                        <h3>Responsibilities</h3>
+                        <p id="modalMemberResponsibilities"></p>
+                    </div>
+                    <div class="modal-info-item">
+                        <h3>Contact Information</h3>
+                        <p id="modalMemberContact"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Committee Member Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Committee member data
+            const committeeMembers = {
+                '1': {
+                    name: 'Dr. Satheesh Kumar',
+                    title: 'Senior Advisor, YESIST12 2025',
+                    bio: 'Dr. Satheesh Kumar is a senior professor with extensive experience in technology innovation and research. He has guided numerous projects and initiatives in the field of engineering. With over 25 years of experience in academia and industry, he has contributed significantly to bridging the gap between theoretical knowledge and practical applications.',
+                    affiliation: 'Technical University, Singapore',
+                    responsibilities: 'As a Senior Advisor for YESIST12 2025, Dr. Kumar provides strategic guidance on program development, mentors participants, and helps establish connections with industry partners.',
+                    contact: 'Email: satheesh.kumar@techuniv.edu.sg | LinkedIn: linkedin.com/in/satheeshkumar',
+                    image: 'images/Mukesh K.jpg'
+                },
+                '2': {
+                    name: 'Dr. Mei Lin',
+                    title: 'Technical Advisor, YESIST12 2025',
+                    bio: 'Dr. Mei Lin is an expert in emerging technologies with a focus on sustainable solutions. Her research has contributed significantly to advancements in engineering and technology. She has published numerous papers in international journals and has been a keynote speaker at various global conferences.',
+                    affiliation: 'National University, Malaysia',
+                    responsibilities: 'Dr. Lin provides technical expertise for project evaluations, helps develop assessment criteria, and offers guidance on technological trends relevant to the competition.',
+                    contact: 'Email: mei.lin@nationaluniv.edu.my | LinkedIn: linkedin.com/in/meilin',
+                    image: 'images/Mukesh K.jpg'
+                },
+                '3': {
+                    name: 'Dr. Rajesh Patel',
+                    title: 'Industry Advisor, YESIST12 2025',
+                    bio: 'Dr. Rajesh Patel brings extensive industry experience to the committee. His expertise in bridging academic research with practical applications has been invaluable to many projects. He has led several innovation initiatives in multinational companies and has multiple patents to his name.',
+                    affiliation: 'Global Tech Solutions, India',
+                    responsibilities: 'As an Industry Advisor, Dr. Patel helps connect participants with industry opportunities, provides insights on market relevance of projects, and assists in securing sponsorships and partnerships.',
+                    contact: 'Email: rajesh.patel@globaltechsolutions.com | LinkedIn: linkedin.com/in/rajeshpatel',
+                    image: 'images/Mukesh K.jpg'
+                }
+            };
+
+            const modal = document.getElementById('memberModal');
+            const modalClose = document.querySelector('.modal-close');
+            const moreInfoButtons = document.querySelectorAll('.more-info-btn');
+
+            // Open modal when More Info button is clicked
+            moreInfoButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent event bubbling
+                    const card = this.closest('.committee-card');
+                    const memberId = card.getAttribute('data-member-id');
+                    const member = committeeMembers[memberId];
+
+                    // Populate modal with member data
+                    document.getElementById('modalMemberImg').src = member.image;
+                    document.getElementById('modalMemberName').textContent = member.name;
+                    document.getElementById('modalMemberTitle').textContent = member.title;
+                    document.getElementById('modalMemberBio').textContent = member.bio;
+                    document.getElementById('modalMemberAffiliation').textContent = member.affiliation;
+                    document.getElementById('modalMemberResponsibilities').textContent = member.responsibilities;
+                    document.getElementById('modalMemberContact').textContent = member.contact;
+
+                    // Show modal
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                });
+            });
+
+            // Close modal when close button is clicked
+            modalClose.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+
+            // Close modal when clicking outside the modal content
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
+
+            // Close modal when ESC key is pressed
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
+        });
+    </script>
+</body>
+</html>
