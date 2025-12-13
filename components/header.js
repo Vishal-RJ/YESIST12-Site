@@ -8,12 +8,12 @@ const headerHTML = `
     <div class="container header-container">
         <div class="logo">
             <!-- ⭐ FIX: The 'basePath' variable is added to the start of paths -->
-            <a href="${basePath}yesist_index.html"><img src="${basePath}images/IEEE-YESIST12-Logo-1024x307-1.png" alt="YESIST12 Logo"></a>
+            <a href="${basePath}index.html"><img src="${basePath}images/IEEE-YESIST12-Logo-1024x307-1.png" alt="YESIST12 Logo"></a>
         </div>
         <nav class="main-nav">
             <ul>
                 <!-- ⭐ FIX: All paths now use the dynamic 'basePath' variable -->
-                <li><a href="${basePath}yesist_index.html">HOME</a></li>
+                <li><a href="${basePath}index.html">HOME</a></li>
                 <li><a href="${basePath}about-us.html">ABOUT US</a></li>
                 <li class="has-dropdown">
                     <a href="#">TRACKS</a>
@@ -22,7 +22,7 @@ const headerHTML = `
                         <li><a href="${basePath}tracks/junior_einstein.html">Junior Einstein</a></li>
                         <li><a href="${basePath}tracks/maker_fair.html">Maker Fair</a></li>
                         <li><a href="${basePath}tracks/wepower.html">WePOWER Special Track</a></li>
-                        <li><a href="${basePath}tracks/special_track.html">Special Track</a></li>
+                        <li><a href="${basePath}tracks/special_track_junior_einstein.html">Special Track</a></li>
                         <li><a href="${basePath}tracks/iengage.html">IEngage Track</a></li>
                     </ul>
                 </li>

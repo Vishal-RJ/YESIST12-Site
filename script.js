@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const sections = document.querySelectorAll('.scroll-animate');
         sections.forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
-            const triggerPoint = window.innerHeight * 0.8;
+            const triggerPoint = window.innerHeight; // trigger as soon as it enters viewport
 
             if (sectionTop < triggerPoint) {
                 section.classList.add('in-view');
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.2 });
+            }, { threshold: 0.01 });
 
             if (gatewayHeader) observer.observe(gatewayHeader);
             gatewayRows.forEach(row => observer.observe(row));

@@ -1629,3 +1629,73 @@ main {
     gap: 20px;
   }
 }
+.winners-section {
+    padding: 50px 0;
+    text-align: center;
+}
+.winners-section h1{
+    color: #0a415c;
+}
+
+.winners-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.winner-title, .runner-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0a415c;
+}
+
+
+.winner-card {
+    background: white;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.winner-image {
+    width: 100%;
+    height: auto;
+}
+
+.winner-details {
+    padding: 20px;
+}
+
+.winner-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #0a415c;
+}
+
+.winner-details p {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.winner-card-container {
+    position: relative;
+}
+
+.winner-badge {
+    position: absolute;
+    left: -25px;
+    top: 20px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: auto;
+}
