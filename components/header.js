@@ -33,7 +33,13 @@ const headerHTML = `
                         <li><a href="${basePath}advisory-committee-2025.html">Organizing Committee</a></li>
                     </ul>
                 </li>
-                <li><a href="${basePath}sponsors_2025.html">SPONSORS</a></li>
+                <li class="has-dropdown">
+                    <a href="#">SPONSORS</a>
+                    <ul class="dropdown">
+                        <li><a href="${basePath}sponsors_2025.html">Sponsors 2025</a></li>
+                        <li><a href="${basePath}sponsors_2024.html">Sponsors 2024</a></li>
+                    </ul>
+                </li>
                 <li><a href="${basePath}index.html#juries-speakers">JURY</a></li>
                 <li><a href="#">SUBMIT ABSTRACT</a></li>
             </ul>
