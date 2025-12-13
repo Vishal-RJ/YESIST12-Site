@@ -1,0 +1,114 @@
+/* ============================================
+   SPONSORS 2025 PAGE STYLES
+   ============================================ */
+
+/* Hero Section */
+.sponsors-hero {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+  background-image: url("../images/footer-02-02-03.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.sponsors-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.sponsors-hero .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sponsors-hero .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.sponsors-hero .breadcrumb {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  gap: 10px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.sponsors-hero .breadcrumb li a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.sponsors-hero .breadcrumb li a:hover {
+  color: #2bb884;
+}
+
+.sponsors-hero .breadcrumb li i {
+  font-size: 0.8rem;
+}
+
+.sponsors-hero .hero-subtext {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Full Banner Sections */
+.full-banner {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f4f7f6;
+}
+
+.full-banner.sponsors-banner {
+  background-color: #ffffff;
+}
+
+.full-banner.partners-banner {
+  background-color: #f4f7f6;
+}
+
+.full-banner .title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a415c;
+  margin-bottom: 30px;
+}
+
+.full-banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sponsors-hero .title {
+    font-size: 1.8rem;
+  }
+  
+  .sponsors-hero .hero-subtext {
+    font-size: 1rem;
+  }
+  
+  .full-banner .title {
+    font-size: 1.5rem;
+  }
+}

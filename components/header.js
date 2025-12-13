@@ -29,12 +29,18 @@ const headerHTML = `
                 <li class="has-dropdown">
                     <a href="#">OUR TEAM</a>
                     <ul class="dropdown">
-                        <li><a href="#">Steering Committee</a></li>
-                        <li><a href="#">Organizing Committee</a></li>
+                        <li><a href="${basePath}steering-committee-2025.html">Steering Committee</a></li>
+                        <li><a href="${basePath}advisory-committee-2025.html">Organizing Committee</a></li>
                     </ul>
                 </li>
-                <li><a href="#">SPONSORS</a></li>
-                <li><a href="#">JURY</a></li>
+                <li class="has-dropdown">
+                    <a href="#">SPONSORS</a>
+                    <ul class="dropdown">
+                        <li><a href="${basePath}sponsors_2025.html">Sponsors 2025</a></li>
+                        <li><a href="${basePath}sponsors_2024.html">Sponsors 2024</a></li>
+                    </ul>
+                </li>
+                <li><a href="${basePath}index.html#juries-speakers">JURY</a></li>
                 <li><a href="#">SUBMIT ABSTRACT</a></li>
             </ul>
         </nav>
