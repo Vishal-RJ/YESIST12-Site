@@ -1,0 +1,250 @@
+/* ============================================
+   SPONSORS 2024 PAGE STYLES
+   ============================================ */
+
+/* Hero Section */
+.sponsors-hero {
+    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+    color: #ffffff;
+    background-image: url("../images/footer-02-02-03.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.sponsors-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.sponsors-hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sponsors-hero .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.sponsors-hero .breadcrumb {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 10px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.sponsors-hero .breadcrumb li a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.sponsors-hero .breadcrumb li a:hover {
+    color: #2bb884;
+}
+
+.sponsors-hero .breadcrumb li i {
+    font-size: 0.8rem;
+}
+
+.sponsors-hero .hero-subtext {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Sponsor Section */
+.sponsor-section {
+    padding: 60px 20px;
+    background-color: #f4f7f6;
+}
+
+.sponsor-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sponsor Tiers */
+.sponsor-tier {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.sponsor-tier h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0a415c;
+    margin-bottom: 25px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #2bb884;
+}
+
+.sponsor-tier.platinum h3 {
+    border-bottom-color: #e5e4e2;
+}
+
+.sponsor-tier.silver h3 {
+    border-bottom-color: #c0c0c0;
+}
+
+.sponsor-tier.associate h3 {
+    border-bottom-color: #2bb884;
+}
+
+.sponsor-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-sponsor {
+    text-align: center;
+    flex: 0 0 250px;
+}
+
+.main-sponsor img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main-sponsor p {
+    font-weight: 600;
+    color: #0a415c;
+}
+
+.other-sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    flex: 1;
+}
+
+.sponsor-item {
+    text-align: center;
+    flex: 0 0 150px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-item img {
+    max-width: 120px;
+    max-height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.sponsor-item p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #555;
+    margin: 0;
+}
+
+/* Partners Section */
+.partners-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.partners-section .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0a415c;
+    margin-bottom: 30px;
+}
+
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.partners-grid img {
+    max-width: 150px;
+    max-height: 100px;
+    object-fit: contain;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.partners-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Collaborator Section */
+.collaborator-section {
+    padding: 60px 20px;
+    background-color: #f4f7f6;
+    text-align: center;
+}
+
+.collaborator-section .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0a415c;
+    margin-bottom: 30px;
+}
+
+.collaborator-section img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sponsors-hero .title {
+        font-size: 1.8rem;
+    }
+
+    .sponsor-tier h3 {
+        font-size: 1.4rem;
+    }
+
+    .main-sponsor img {
+        max-width: 150px;
+    }
+
+    .sponsor-item {
+        flex: 0 0 120px;
+    }
+
+    .partners-grid img {
+        max-width: 100px;
+    }
+}
