@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Hamburger menu functionality
     //
     // --- THIS IS THE CRITICAL FIX ---
@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainNav = document.querySelector('.main-nav');   // Use .main-nav class
 
     if (hamburger && mainNav) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
             const isOpening = !mainNav.classList.contains('nav-open');
             mainNav.classList.toggle('nav-open');
             // Toggle icon between bars and times
             this.querySelector('i').classList.toggle('fa-bars');
             this.querySelector('i').classList.toggle('fa-times');
-            
+
             // Close all dropdowns when closing the menu
             if (!isOpening) {
                 const activeDropdowns = mainNav.querySelectorAll('.has-dropdown.active');
@@ -28,21 +28,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dropdown menu toggle for mobile
     const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
     dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(event) {
-            if (window.innerWidth <= 992) { // Only on smaller screens
-                event.preventDefault();
-                const parentLi = this.parentElement;
-                parentLi.classList.toggle('active');
+        toggle.addEventListener('click', function (event) {
+            // Check if within the mobile/hamburger menu (which is always used now)
+            // Or just always enable toggle behavior for these links
+            event.preventDefault();
+            const parentLi = this.parentElement;
+            parentLi.classList.toggle('active');
 
-                // Close other open dropdowns (Ensure mainNav is defined correctly above)
-                if (mainNav) {
-                    const otherDropdowns = mainNav.querySelectorAll('.has-dropdown.active');
-                    otherDropdowns.forEach(otherLi => {
-                        if (otherLi !== parentLi) {
-                            otherLi.classList.remove('active');
-                        }
-                    });
-                }
+            // Close other open dropdowns (Ensure mainNav is defined correctly above)
+            if (mainNav) {
+                const otherDropdowns = mainNav.querySelectorAll('.has-dropdown.active');
+                otherDropdowns.forEach(otherLi => {
+                    if (otherLi !== parentLi) {
+                        otherLi.classList.remove('active');
+                    }
+                });
             }
         });
     });
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close mobile nav when a link is clicked
     if (mainNav) {
         mainNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function(event) {
+            link.addEventListener('click', function (event) {
                 // Only close if it's not a dropdown toggle
                 if (!this.closest('.has-dropdown')) {
                     // Ensure hamburger is defined correctly above
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Close nav if clicking outside on mobile
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         // Ensure mainNav and hamburger are defined correctly above
         if (window.innerWidth <= 992 && mainNav && hamburger) {
             if (mainNav.classList.contains('nav-open') && !mainNav.contains(event.target) && !hamburger.contains(event.target)) {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll to top button functionality
     const scrollTopBtn = document.getElementById('scrollTopBtn'); // Assuming this ID exists in your footer.js or HTML
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (scrollTopBtn) {
             if (window.scrollY > 300) { // Show button after scrolling down 300px
                 scrollTopBtn.classList.add('show');
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     if (scrollTopBtn) {
-        scrollTopBtn.addEventListener('click', function() {
+        scrollTopBtn.addEventListener('click', function () {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             labels: {
                 regions: {
-                    render: function(code) { return; } // No labels
+                    render: function (code) { return; } // No labels
                 }
             },
         });
