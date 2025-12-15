@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const sections = document.querySelectorAll('.scroll-animate');
         sections.forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
-            const triggerPoint = window.innerHeight * 0.8;
+            const triggerPoint = window.innerHeight; // trigger as soon as it enters viewport
 
             if (sectionTop < triggerPoint) {
                 section.classList.add('in-view');
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.2 });
+            }, { threshold: 0.01 });
 
             if (gatewayHeader) observer.observe(gatewayHeader);
             gatewayRows.forEach(row => observer.observe(row));
@@ -222,29 +222,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
-    // Achievers Section Tab Functionality
-    const achieverTabs = document.querySelectorAll('.tab-btn');
-    const trackAchievers = document.querySelectorAll('.track-achievers');
+// Achievers Section Tab Functionality
+const achieverTabs = document.querySelectorAll('.tab-btn');
+const trackAchievers = document.querySelectorAll('.track-achievers');
 
-    if (achieverTabs.length > 0 && trackAchievers.length > 0) {
-        achieverTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const trackName = this.getAttribute('data-track');
-                
-                // Remove active class from all tabs
-                achieverTabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                // Hide all track achievers
-                trackAchievers.forEach(track => track.classList.remove('active'));
-                // Show selected track achievers
-                const selectedTrack = document.querySelector(.track-achievers[data-track=\
-\]);
-                if (selectedTrack) {
-                    selectedTrack.classList.add('active');
-                }
-            });
+if (achieverTabs.length > 0 && trackAchievers.length > 0) {
+    achieverTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            const trackName = this.getAttribute('data-track');
+
+            // Remove active class from all tabs
+            achieverTabs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tab
+            this.classList.add('active');
+
+            // Hide all track achievers
+            trackAchievers.forEach(track => track.classList.remove('active'));
+            // Show selected track achievers
+            const selectedTrack = document.querySelector(`.track-achievers[data-track="${trackName}"]`);
+            if (selectedTrack) {
+                selectedTrack.classList.add('active');
+            }
         });
-    }
-
+    });
+}

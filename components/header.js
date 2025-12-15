@@ -22,7 +22,7 @@ const headerHTML = `
                         <li><a href="${basePath}tracks/junior_einstein.html">Junior Einstein</a></li>
                         <li><a href="${basePath}tracks/maker_fair.html">Maker Fair</a></li>
                         <li><a href="${basePath}tracks/wepower.html">WePOWER Special Track</a></li>
-                        <li><a href="${basePath}tracks/special_track.html">Special Track</a></li>
+                        <li><a href="${basePath}tracks/special_track_junior_einstein.html">Special Track</a></li>
                         <li><a href="${basePath}tracks/iengage.html">IEngage Track</a></li>
                     </ul>
                 </li>
