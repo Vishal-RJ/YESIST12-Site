@@ -579,8 +579,9 @@ header .dropdown li a,
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2; /* Behind the overlay */
-    display: block; /* Make sure it's not hidden */
+    z-index: 0;
+    display: block;
+    pointer-events: none;
 }
 
 .site-footer::before {
@@ -590,15 +591,14 @@ header .dropdown li a,
     left: 0;
     width: 100%;
     height: 100%;
-    /* Keep overlay semi-transparent (0.5) to see video */
-    background-color: rgba(10, 65, 92, 0.5); 
-    z-index: -1; /* Between video and content */
+    background-color: rgba(10, 65, 92, 0.35);
+    z-index: 1;
 }
 
 /* These ensure content is on top */
 .footer-container, .footer-bottom {
     position: relative;
-    z-index: 2; /* Content on top */
+    z-index: 2;
 }
 
 /* Rest of the footer styles remain the same */
