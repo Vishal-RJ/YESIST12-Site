@@ -126,6 +126,11 @@
   background: #0b3b61 !important;
   color: #ffffff !important;
 }
+.abstract-section .download-btn::before {
+  content: none !important;
+  display: none !important;
+  margin: 0 !important;
+}
 .abstract-card .submit-btn {
   background: transparent !important;
   color: #0b3b61 !important;
@@ -139,6 +144,10 @@
 .abstract-card .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(11, 59, 97, 0.18);
+}
+.abstract-card .btn:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(11, 59, 97, 0.12);
 }
 .flip-countdown {
   display: grid;
@@ -205,6 +214,24 @@
   font-size: 12px;
   color: #4a5970;
   font-weight: 600;
+}
+/* Mobile-only improvements for 'Submit your Abstract' */
+@media screen and (max-width: 768px) {
+  .abstract-section { padding: 20px 12px !important; }
+  .abstract-section .container { max-width: 100% !important; padding: 0 !important; }
+  .abstract-section .abstract-card { width: 100% !important; max-width: 100% !important; padding: 16px !important; gap: 12px !important; box-sizing: border-box !important; }
+  .abstract-section .section-title { font-size: 1.3rem !important; line-height: 1.25 !important; }
+  .abstract-section .status-pill { padding: 8px 14px !important; font-size: 0.9rem !important; }
+  .abstract-section .deadline { margin: 6px 0 8px !important; font-size: 1rem !important; }
+  .abstract-section .abstract-actions { flex-direction: column !important; align-items: stretch !important; gap: 12px !important; }
+  .abstract-section .btn { width: 100% !important; min-width: 0 !important; padding: 14px 18px !important; border-radius: 14px !important; font-size: 1rem !important; }
+  .abstract-section .download-btn::before { content: none !important; margin: 0 !important; }
+  .abstract-section .flip-countdown { grid-template-columns: repeat(4, minmax(64px, 1fr)) !important; gap: 8px !important; width: 100% !important; margin-top: 6px !important; }
+  .abstract-section .flip-card { width: 100% !important; height: 64px !important; border-radius: 10px !important; font-size: 22px !important; }
+  .abstract-section .flip-label { margin-top: 4px !important; font-size: 11px !important; }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .abstract-section .flip-countdown { grid-template-columns: repeat(4, minmax(72px, 1fr)) !important; }
 }
 .sdg-image-grid {
   display: grid;
