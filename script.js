@@ -222,3 +222,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+// Achievers Section Tab Functionality
+const achieverTabs = document.querySelectorAll('.tab-btn');
+const trackAchievers = document.querySelectorAll('.track-achievers');
+
+if (achieverTabs.length > 0 && trackAchievers.length > 0) {
+    achieverTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            const trackName = this.getAttribute('data-track');
+
+            // Remove active class from all tabs
+            achieverTabs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tab
+            this.classList.add('active');
+
+            // Hide all track achievers
+            trackAchievers.forEach(track => track.classList.remove('active'));
+            // Show selected track achievers
+            const selectedTrack = document.querySelector(`.track-achievers[data-track="${trackName}"]`);
+            if (selectedTrack) {
+                selectedTrack.classList.add('active');
+            }
+        });
+    });
+}
