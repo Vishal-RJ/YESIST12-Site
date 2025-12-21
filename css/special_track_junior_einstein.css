@@ -507,6 +507,14 @@
 .about-special .presentation-link {
   color: #000000 !important;
 }
+.about-special .title {
+  color: var(--primary-color) !important;
+  font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
+  line-height: 1.2 !important;
+}
+.about-special .presentation-link {
+  color: var(--primary-color) !important;
+}
 .about-special .subtitle {
   text-align: justify;
   font-size: 1.125rem !important;
@@ -527,4 +535,39 @@
   background: none !important;
   background-image: none !important;
   opacity: 0 !important;
+}
+.selection-method-section,
+.selection-method-section h2,
+.selection-method-section h3,
+.selection-method-section p {
+  font-family: 'Montserrat', sans-serif;
+}
+.selection-method-section p {
+  text-align: justify;
+  font-weight: 500;
+}
+
+/* Hero overrides to match About Us hero */
+.innovation-hero {
+  padding: 100px 0 !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  background-image: url("../images/HeaderBG.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+.innovation-hero::before {
+  display: none !important;
+}
+.innovation-hero .container {
+  max-width: 100% !important;
+}
+.innovation-hero .title {
+  color: #ffffff !important;
+  font-size: clamp(2rem, 5vw, 2.5rem) !important;
+  line-height: 1.2 !important;
 }
