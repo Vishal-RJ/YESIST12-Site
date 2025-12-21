@@ -131,113 +131,131 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Carousel Logic ---
     const track = document.querySelector('.jury-carousel-track');
-    const slides = Array.from(track.children);
+    if (!track) return;
+    let slides = Array.from(track.children);
     const nextButton = document.querySelector('.jury-next');
     const prevButton = document.querySelector('.jury-prev');
     const dotsNav = document.querySelector('.jury-dots');
-    const dots = Array.from(dotsNav.children);
 
-    // Calculate items per view based on window width
     function getItemsPerView() {
         if (window.innerWidth <= 768) return 1;
         if (window.innerWidth <= 992) return 2;
         return 3;
     }
 
-    let currentSlideIndex = 0;
+    let currentIndex = 0;
+    let isAnimating = false;
+    let autoplayTimer;
 
-    function updateCarousel() {
-        const itemsPerView = getItemsPerView();
-        const slideWidth = 100 / itemsPerView;
-        
-        // Ensure index is valid
-        const maxIndex = Math.ceil(slides.length / itemsPerView) - 1;
-        // Logic for sliding one by one:
-        // We want to translate by (index * itemWidth)%
-        // But we need to make sure we don't scroll past the end.
-        // Actually, simpler logic: move by one slide width at a time.
-        // The max translation is when the last item is visible.
-        
-        // Let's use a simpler index logic: index 0 to slides.length - itemsPerView
-        const maxScrollIndex = slides.length - itemsPerView;
-        if (currentSlideIndex > maxScrollIndex) currentSlideIndex = maxScrollIndex;
-        if (currentSlideIndex < 0) currentSlideIndex = 0;
-
-        const amountToMove = -(currentSlideIndex * (100 / itemsPerView));
-        track.style.transform = `translateX(${amountToMove}%)`;
-        
-        // Update dots
-        // Map current index to dot index
-        // If we have 6 items and view 3, we have 4 possible positions (0,1,2,3) if scrolling 1 by 1.
-        // But dots usually represent pages.
-        // Let's make dots represent pages.
-        const pageIndex = Math.floor(currentSlideIndex / itemsPerView);
-        
-        dots.forEach(dot => dot.classList.remove('active'));
-        // Determine which dot to activate.
-        // If we scroll 1 by 1, maybe just highlight the dot corresponding to the group.
-        // Let's simplify: 1 dot per item might be too much.
-        // 1 dot per page?
-        // Let's stick to 1 dot per item for now as per HTML structure I will generate, or update dots logic.
-        // Actually, I'll generate dots dynamically in JS to match slides? No, I'll generate them in HTML for now.
-        // Let's just highlight the first dot for now if unsure.
-        if (dots[currentSlideIndex]) {
-            dots[currentSlideIndex].classList.add('active');
-        } else if (dots.length > 0) {
-            // Fallback
-             dots[0].classList.add('active');
+    function buildDots(totalPages) {
+        if (!dotsNav) return;
+        dotsNav.innerHTML = '';
+        for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'jury-dot' + (i === 0 ? ' active' : '');
+            dotsNav.appendChild(dot);
         }
     }
 
-    nextButton.addEventListener('click', () => {
+    function updateCarousel(immediate) {
         const itemsPerView = getItemsPerView();
-        const maxScrollIndex = slides.length - itemsPerView;
-        if (currentSlideIndex < maxScrollIndex) {
-            currentSlideIndex++;
-            updateCarousel();
+        const amountToMove = -(currentIndex * (100 / itemsPerView));
+        if (immediate) {
+            const prevTransition = track.style.transition;
+            track.style.transition = 'none';
+            track.style.transform = `translateX(${amountToMove}%)`;
+            void track.offsetWidth;
+            track.style.transition = prevTransition || '';
         } else {
-             // Loop back to start
-             currentSlideIndex = 0;
-             updateCarousel();
+            track.style.transform = `translateX(${amountToMove}%)`;
         }
-    });
 
-    prevButton.addEventListener('click', () => {
+        if (dotsNav) {
+            const dotEls = Array.from(dotsNav.children);
+            const totalRealSlides = slides.length - 2 * getItemsPerView();
+            const realIndex = currentIndex - getItemsPerView();
+            let pageIndex = Math.floor(realIndex / getItemsPerView());
+            if (pageIndex < 0) pageIndex = 0;
+            dotEls.forEach(d => d.classList.remove('active'));
+            if (dotEls[pageIndex]) dotEls[pageIndex].classList.add('active');
+        }
+    }
+
+    function setupInfinite() {
         const itemsPerView = getItemsPerView();
-        const maxScrollIndex = slides.length - itemsPerView;
-        if (currentSlideIndex > 0) {
-            currentSlideIndex--;
-            updateCarousel();
-        } else {
-            // Loop to end
-            currentSlideIndex = maxScrollIndex;
-            updateCarousel();
+        Array.from(track.querySelectorAll('.clone')).forEach(c => c.remove());
+        const original = Array.from(track.children).filter(el => !el.classList.contains('clone'));
+        for (let i = original.length - itemsPerView; i < original.length; i++) {
+            const clone = original[i].cloneNode(true);
+            clone.classList.add('clone');
+            track.insertBefore(clone, track.firstChild);
         }
-    });
+        for (let i = 0; i < itemsPerView; i++) {
+            const clone = original[i].cloneNode(true);
+            clone.classList.add('clone');
+            track.appendChild(clone);
+        }
+        slides = Array.from(track.children);
+        currentIndex = itemsPerView;
+        updateCarousel(true);
+        const totalPages = Math.ceil(original.length / itemsPerView);
+        buildDots(totalPages);
+    }
 
-    dotsNav.addEventListener('click', e => {
-        const targetDot = e.target.closest('.jury-dot');
-        if (!targetDot) return;
-
-        const targetIndex = dots.findIndex(dot => dot === targetDot);
-        currentSlideIndex = targetIndex;
+    function moveNext() {
+        if (isAnimating) return;
+        isAnimating = true;
+        currentIndex++;
         updateCarousel();
+    }
+
+    function movePrev() {
+        if (isAnimating) return;
+        isAnimating = true;
+        currentIndex--;
+        updateCarousel();
+    }
+
+    if (nextButton) nextButton.addEventListener('click', () => { moveNext(); startAutoplay(); });
+    if (prevButton) prevButton.addEventListener('click', () => { movePrev(); startAutoplay(); });
+
+    if (dotsNav) {
+        dotsNav.addEventListener('click', e => {
+            const targetDot = e.target.closest('.jury-dot');
+            if (!targetDot) return;
+            const itemsPerView = getItemsPerView();
+            const dotEls = Array.from(dotsNav.children);
+            const targetIndex = dotEls.findIndex(dot => dot === targetDot);
+            currentIndex = itemsPerView + targetIndex * itemsPerView;
+            updateCarousel();
+        });
+    }
+
+    track.addEventListener('transitionend', () => {
+        const itemsPerView = getItemsPerView();
+        const totalRealSlides = slides.length - 2 * itemsPerView;
+        if (currentIndex >= totalRealSlides + itemsPerView) {
+            currentIndex = itemsPerView;
+            updateCarousel(true);
+        }
+        if (currentIndex <= 0) {
+            currentIndex = totalRealSlides;
+            updateCarousel(true);
+        }
+        isAnimating = false;
     });
 
-    window.addEventListener('resize', updateCarousel);
-    
-    // Auto play
-    setInterval(() => {
-        const itemsPerView = getItemsPerView();
-        const maxScrollIndex = slides.length - itemsPerView;
-        if (currentSlideIndex < maxScrollIndex) {
-            currentSlideIndex++;
-        } else {
-            currentSlideIndex = 0;
-        }
-        updateCarousel();
-    }, 5000); // 5 seconds
+    function startAutoplay() {
+        if (autoplayTimer) clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(() => {
+            moveNext();
+        }, 5000);
+    }
 
-    // Initial update
-    updateCarousel();
+    window.addEventListener('resize', () => {
+        setupInfinite();
+    });
+
+    setupInfinite();
+    startAutoplay();
 });
