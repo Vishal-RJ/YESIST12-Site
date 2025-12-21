@@ -3,6 +3,7 @@
 }
 .abstract-section {
   padding: 64px 0;
+  background: linear-gradient(180deg, #0b2a45 0%, #187a62 100%);
 }
 .abstract-section .container {
   max-width: 960px;
@@ -607,4 +608,151 @@
 }
 .contacts-section .team-details-list li {
   margin-bottom: 0;
+}
+
+/* Theme section – subdued professional restyle for Special Track page */
+.innovation-theme {
+  padding: 36px 20px;
+  background: transparent;
+  box-shadow: none;
+}
+.innovation-theme .theme-heading h2 {
+  color: #0a415c;
+  margin-bottom: 6px;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+}
+.innovation-theme .theme-heading h3 {
+  color: #4a5970;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif !important;
+}
+.innovation-theme .theme-icon-box {
+  background: linear-gradient(135deg, #0b2a45 0%, #103857 60%, #164b68 100%);
+  border: 2px solid #a8e6cf;
+  border-radius: 24px;
+  padding: 24px 32px;
+  box-shadow: 0 12px 30px rgba(10, 65, 92, 0.25);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.innovation-theme .theme-icon-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(168, 230, 207, 0.08) 0%, transparent 100%);
+  pointer-events: none;
+}
+.innovation-theme .theme-icon-box.accent {
+  position: relative;
+  overflow: hidden;
+}
+.innovation-theme .theme-icon-box.accent::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(180deg, #a8e6cf 0%, #dffaf0 100%);
+}
+.innovation-theme .theme-heading h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 8px auto 0;
+  background: linear-gradient(90deg, #a8e6cf, #dffaf0);
+  border-radius: 2px;
+}
+.innovation-theme .theme-icon-box .icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: #a8e6cf;
+  color: #031b27;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(168, 230, 207, 0.35);
+}
+.innovation-theme .theme-icon-box .icon i {
+  font-size: 26px;
+  color: #031b27;
+}
+.innovation-theme .theme-icon-box .text h2 {
+  font-size: 1.5rem;
+  color: #eaf2f9;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.innovation-theme .theme-icon-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(10, 65, 92, 0.28);
+}
+@media (max-width: 768px) {
+  .innovation-theme .theme-icon-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 18px 20px;
+  }
+  .innovation-theme .theme-icon-box .icon i {
+    font-size: 24px;
+  }
+  .innovation-theme .theme-icon-box .text h2 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+}
+/* Theme description justification */
+.innovation-description .theme-text {
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.methodology-section .section-heading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+}
+.methodology-list li span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.rules-section .section-heading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+}
+.rules-list li span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+.eligibility-section .section-heading {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+}
+.eligibility-list li span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+/* Objectives of the Track typography overrides */
+.mission-areas .section-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+}
+.mission-areas .mission-list li span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
