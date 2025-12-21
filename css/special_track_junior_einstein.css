@@ -540,9 +540,11 @@
 .contacts-section {
   color: #000000;
 }
-.winners-section .gateway-header h2,
+.winners-section .gateway-header h2 {
+  color: #ffffff !important;
+}
 .contacts-section .gateway-header h2 {
-  color: #000000 !important;
+  color: #ffffff !important;
 }
 .about-special .bg-image {
   background: none !important;
@@ -583,4 +585,26 @@
   color: #ffffff !important;
   font-size: clamp(2rem, 5vw, 2.5rem) !important;
   line-height: 1.2 !important;
+}
+
+/* Track Structure content adjustments */
+.objectives-section .section-text {
+  text-align: justify;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+.objectives-section .box-inner p {
+  text-align: justify;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Contacts: place Co-Chair 1 and 2 in one row */
+.contacts-section .team-details-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.contacts-section .team-details-list li {
+  margin-bottom: 0;
 }
