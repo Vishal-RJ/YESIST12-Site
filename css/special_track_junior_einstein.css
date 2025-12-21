@@ -523,3 +523,8 @@
 .contacts-section .gateway-header h2 {
   color: #000000 !important;
 }
+.about-special .bg-image {
+  background: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+}
