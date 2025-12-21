@@ -406,7 +406,7 @@
 .eligibility-section {
   margin: 40px 0;
   padding-left: 90px;
-  color: #0a4360;
+  color: #000000;
 }
 .eligibility-section .section-heading {
   font-size: 2rem;
@@ -445,7 +445,7 @@
 .benefits-section {
   margin: 40px 0;
   padding-left: 90px;
-  color: #0a4360;
+  color: #000000;
 }
 .benefits-section .section-heading {
   font-size: 2rem;
@@ -499,4 +499,27 @@
   font-weight: 600 !important;
   padding: 15px 40px !important;
   margin: 0 !important;
+}
+
+/* Font color overrides for non-abstract sections */
+.about-special .title,
+.about-special .subtitle,
+.about-special .presentation-link {
+  color: #000000 !important;
+}
+.about-special .subtitle {
+  text-align: justify;
+  font-size: 1.125rem !important;
+}
+.about-special .content {
+  text-align: justify;
+}
+.winners-section,
+.selection-method-section,
+.contacts-section {
+  color: #000000;
+}
+.winners-section .gateway-header h2,
+.contacts-section .gateway-header h2 {
+  color: #000000 !important;
 }
