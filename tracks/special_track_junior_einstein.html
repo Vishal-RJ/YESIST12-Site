@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../css/track_style.css" />
     <link rel="stylesheet" href="../css/special_track_junior_einstein.css" />
+    <link rel="stylesheet" href="../jury-carousel.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
@@ -1101,36 +1102,34 @@
     
     <section class="winners-section">
       <div class="gateway-header">
-        <h2 class="section-heading visible"><b>Previous Winner and Runner (2025)</b></h2>
+        <h2 class="section-heading visible"><b>Previous Year Achivers(2025)</b></h2>
       </div>
-      <div class="winners-container">
-        <div class="winner-block">
-          <h2 class="winner-title">Winner</h2>
-          <div class="winner-card-container">
-            <img src="../images/Winner .png" alt="Winner" class="winner-badge">
-            <div class="winner-card">
-              <img src="../images/Aboutus3.jpg" alt="Winner" class="winner-image">
-              <div class="winner-details">
-                <p><b>Team Name:</b>Team Tech Titans</p>
-                <p><b>Project Name:</b> Project Alpha</p>
-                <p><b>Country:</b>INDIA</p>
-              </div>
-            </div>
+      <div class="jury-carousel-container">
+        <button class="jury-nav-btn jury-prev">&#10094;</button>
+        <div class="jury-carousel-track">
+          <div class="jury-carousel-slide">
+            <img src="../images/SpecialTrack_Winner.jpeg" alt="Special Track Winner">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="../images/SpecialTrack_Runner.jpeg" alt="Special Track Runner">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="../images/SpecialTrack_Runner (2).jpeg" alt="Special Track Runner">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="../images/SpecialTrack_HON1.jpeg" alt="Special Track Honorable Mention 1">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="../images/SpecialTrack_HON2.jpeg" alt="Special Track Honorable Mention 2">
           </div>
         </div>
-        <div class="winner-block">
-          <h2 class="runner-title">Runner</h2>
-          <div class="winner-card-container">
-            <img src="../images/Runner.png" alt="Runner" class="winner-badge">
-            <div class="winner-card">
-              <img src="../images/Aboutus4.jpg" alt="Runner Up" class="winner-image">
-              <div class="winner-details">
-                <p><b>Team Name:</b>Team Tech Titans</p>
-                <p><b>Project Name:</b> Project Alpha</p>
-                <p><b>Country:</b>INDIA</p>
-              </div>
-            </div>
-          </div>
+        <button class="jury-nav-btn jury-next">&#10095;</button>
+        <div class="jury-dots">
+          <span class="jury-dot active"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
         </div>
       </div>
     </section>
@@ -1252,6 +1251,7 @@
   <script src="../components/footer.js"></script>
 
   <script src="../script.js"></script>
+  <script src="../jury-carousel.js"></script>
 </body>
 
 </html>
