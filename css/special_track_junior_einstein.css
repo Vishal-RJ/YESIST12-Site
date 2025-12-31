@@ -558,9 +558,16 @@
 .selection-method-section p {
   font-family: 'Montserrat', sans-serif;
 }
+
 .selection-method-section p {
   text-align: justify;
   font-weight: 500;
+}
+
+/* Force left alignment for Selection Method header */
+.selection-method-section,
+.selection-method-section .section-heading {
+  text-align: left !important;
 }
 
 /* Hero overrides to match About Us hero */
