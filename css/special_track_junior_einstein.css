@@ -853,6 +853,43 @@
   font-weight: 600 !important;
 }
 .mission-areas .mission-list li span {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-}
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+  }
+
+  /* --- Alignment Fixes: Match 'Top five reasons' indentation --- */
+  @media (min-width: 992px) {
+    /* Target sections to align left with 90px indentation */
+    .about-special .container,
+    .innovation-description .container,
+    .timeline-section .container,
+    .eligibility-section .container {
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding-left: 90px !important;
+      padding-right: 50px !important;
+    }
+
+    /* For eligibility-section (SDGs Aligned), ensure no double padding if section has it, 
+       but currently it has inline padding:40px 0, so section-level left padding is 0. 
+       The above rule works correctly. */
+
+    /* Center Innovation Theme content */
+    .innovation-theme .theme-heading {
+      text-align: center !important;
+    }
+    .innovation-theme .theme-icon-box {
+      margin: 0 auto !important;
+    }
+
+    /* Align Timeline Heading */
+    .timeline-section .section-heading {
+      margin-left: 0 !important;
+      text-align: left !important;
+    }
+    
+    /* Ensure About Special content doesn't stretch too weirdly */
+    .about-special .content {
+      padding-right: 30px;
+    }
+  }
