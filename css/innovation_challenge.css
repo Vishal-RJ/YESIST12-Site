@@ -1,6 +1,15 @@
 /* ---------------- Main Content ---------------- */
 main {
-  padding: 20px;
+  padding: 0 !important;
+}
+
+.about-special .image {
+  margin-top: 30px;
+}
+@media (min-width: 992px) {
+  .about-special .image {
+    margin-top: 60px;
+  }
 }
 
 /* ---------------- Participation Section ---------------- */
