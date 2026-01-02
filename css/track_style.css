@@ -1738,3 +1738,65 @@ main {
     width: 60px;
     height: auto;
 }
+
+/* ---------------- Highlights Section ---------------- */
+.highlights-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.highlights-section .section-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0a4360;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.highlights-section .sub-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.highlights-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    min-width: 1000px; /* Ensure table doesn't squish too much */
+}
+
+.highlights-table th,
+.highlights-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.highlights-table th {
+    background-color: #0a4360;
+    color: #fff;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.highlights-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Rowspan cell styling */
+.highlights-table td[rowspan] {
+    background-color: #fdfdfd;
+    font-weight: 600;
+    color: #0a4360;
+}
