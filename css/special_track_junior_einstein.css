@@ -811,21 +811,31 @@
 
 /* Responsive Table */
 @media screen and (max-width: 768px) {
-  .timeline-table td {
-    display: block;
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .timeline-table {
+    display: table;
     width: 100%;
-    box-sizing: border-box;
+    min-width: 480px;
+    border-collapse: collapse;
   }
-  
-  .timeline-table td:first-child {
-    background-color: #0a4360;
-    color: #fff;
-    border-bottom: none;
+  .timeline-table tbody {
+    display: table-row-group;
   }
-  
+  .timeline-table tr {
+    display: table-row;
+  }
+  .timeline-table td {
+    display: table-cell;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+  }
+  .timeline-table td:first-child,
   .timeline-table td:last-child {
-    border-top: none;
-    padding-top: 5px;
+    background: transparent;
   }
 }
 
@@ -893,3 +903,127 @@
       padding-right: 30px;
     }
   }
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  .section-heading {
+    font-size: 2rem;
+  }
+  .mission-areas {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .mission-areas .section-heading {
+    text-align: left !important;
+    margin-left: 0 !important;
+    left: auto !important;
+    transform: none !important;
+  }
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+  .about-special .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
+  .theme-icon-box {
+    padding: 14px 24px;
+  }
+  .theme-title {
+    font-size: 1.3rem;
+  }
+  .sdg-img {
+    width: 76px;
+    height: 76px;
+  }
+  .team-details-list {
+    grid-template-columns: 1fr;
+  }
+  .contact-photo {
+    width: 60px;
+    height: 60px;
+  }
+}
+/* Match 'Top five reasons' indentation to 'Rules for participation' on mobile */
+@media (max-width: 768px) {
+  .mission-areas .mission-list {
+    padding: 0;
+    margin: 0;
+  }
+  .mission-areas .mission-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  .mission-areas .mission-list li i {
+    font-size: 1.4rem;
+    color: #2bb884;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.8rem;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .theme-icon {
+    font-size: 2rem;
+  }
+  .theme-title {
+    font-size: 1.15rem;
+  }
+  .sdg-img {
+    width: 68px;
+    height: 68px;
+  }
+}
+/* Mobile: align 'Who is eligible' and 'Benefits' same as Rules */
+@media (max-width: 768px) {
+  .eligibility-section,
+  .benefits-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .eligibility-section .section-heading,
+  .benefits-section .section-heading {
+    text-align: left !important;
+    margin-left: 0 !important;
+    left: auto !important;
+    transform: none !important;
+  }
+  .eligibility-list,
+  .benefits-list {
+    padding: 0;
+    margin: 0;
+  }
+  .eligibility-list li,
+  .benefits-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  .eligibility-list li i,
+  .benefits-list li i {
+    font-size: 1.4rem;
+    color: #2bb884;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+}
