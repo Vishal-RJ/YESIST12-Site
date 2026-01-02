@@ -1419,12 +1419,18 @@ main {
   font-size: 1rem;
   line-height: 1.6;
   padding-left: 25px;
-  display: none; /* hidden initially */
-  transition: all 0.4s ease;
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 
+.faq-item:hover .faq-answer,
 .faq-item.active .faq-answer {
-  display: block;
+  max-height: 600px;
+  opacity: 1;
+  padding-top: 5px;
 }
 
 /* Responsive adjustments */
