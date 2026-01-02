@@ -1277,6 +1277,15 @@ main {
     margin-left: 0;
     text-align: left;
   }
+
+  .focus-areas,
+  .mission-areas,
+  .objectives-areas,
+  .participation-areas,
+  .submission-topics-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* Grid layout for boxes */
