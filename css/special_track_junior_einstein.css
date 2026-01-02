@@ -1060,18 +1060,13 @@
 .card-gallery-section {
   margin: 40px 0;
 }
+.card-gallery-section .objectives-section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .card-gallery-section .objectives-section .section-heading {
   text-align: left;
-  margin-left: 90px;
-}
-@media (min-width: 992px) {
-  .card-gallery-section .objectives-section {
-    padding-left: 90px;
-    padding-right: 50px;
-  }
-  .card-gallery-section .objectives-section .section-heading {
-    margin-left: 0 !important;
-  }
+  margin-left: 0;
 }
 .gallery-controls {
   display: flex;
