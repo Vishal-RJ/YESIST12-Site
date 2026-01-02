@@ -262,69 +262,9 @@
       font-weight: 600;
     }
 
-    .sdg-image-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 100px);
-      justify-content: center;
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-      margin: 20px 0 0 0;
-    }
 
-    .sdg-image-grid li {
-      width: 100px;
-      text-align: center;
-    }
 
-    .sdg-image-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
 
-    .sdg-image-grid img:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    @media (max-width: 1024px) {
-      .sdg-image-grid {
-        grid-template-columns: repeat(4, 100px);
-      }
-      .sdg-image-grid li {
-        width: 100px;
-        text-align: center;
-      }
-      .sdg-image-grid img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .sdg-image-grid img:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      }
-    }
-      @media (max-width: 1024px) {
-        .sdg-image-grid {
-          grid-template-columns: repeat(4, 100px);
-        }
-      }
-      @media (max-width: 768px) {
-        .sdg-image-grid {
-          grid-template-columns: repeat(3, 100px);
-        }
-      }
-      @media (max-width: 480px) {
-        .sdg-image-grid {
-          grid-template-columns: repeat(2, 100px);
-        }
-      }
       /* Submission Mode (Gateways) - visual restyle to match provided layout */
       .gateways-section {
         padding: 40px 0;
@@ -471,8 +411,16 @@
     <section class="innovation-description">
       <div class="container">
         <p class="theme-text scroll-animate animate-fade delay-2">
-          The Junior Einstein Track at IEEE YESIST12 2026 centers on “Smart Ideas for a Sustainable Future.” Aligned with the UN SDGs, this theme empowers young innovators to develop technology-driven solutions for a resilient world. Students are encouraged to identify community or global challenges and propose future-ready ideas—spanning smart systems, automation, and eco-friendly designs—that balance innovation with sustainability to create lasting impact.
+          The Special Track at YESIST12 2025 focuses on innovative, technology-driven solutions addressing real-world societal challenges aligned with the UN Sustainable Development Goals (SDGs).
+          It encourages student innovators to develop impactful projects under themes like:
         </p>
+        <ul class="sdg-points">
+          <li><i class="fas fa-lightbulb"></i> Intelligent Insights (SDG 16)</li>
+          <li><i class="fas fa-car"></i> Smart Mobility (SDG 9)</li>
+          <li><i class="fas fa-heartbeat"></i> Next-Gen Healthcare (SDG 3)</li>
+          <li><i class="fas fa-leaf"></i> Sustainable Living (SDGs 6, 11, 12, 13)</li>
+        </ul>
+       
       </div>
     </section>
 
@@ -482,24 +430,71 @@
         <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
         
         <ul class="sdg-image-grid">
-          <li><img src="../SDG/E-WEB-Goal-04.png" alt="SDG 4: Quality Education"></li>
+          
+          <li><img src="../SDG/E-WEB-Goal-03.png" alt="SDG 3: Good Health and Well-being"></li>
           <li><img src="../SDG/E-WEB-Goal-06.png" alt="SDG 6: Clean Water and Sanitation"></li>
-          <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
+          
           <li><img src="../SDG/E-WEB-Goal-09.png" alt="SDG 9: Industry, Innovation, and Infrastructure"></li>
           <li><img src="../SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
           <li><img src="../SDG/E-WEB-Goal-12.png" alt="SDG 12: Responsible Consumption and Production"></li>
+          <li><img src="../SDG/E-WEB-Goal-16.png" alt="SDG 16: Peace, Justice and Strong Institutions"></li>
           <li><img src="../SDG/E-WEB-Goal-13.png" alt="SDG 13: Climate Action"></li>
-          <li><img src="../SDG/E-WEB-Goal-17.png" alt="SDG 17: Partnerships for the Goals"></li>
+
         </ul>
       </div>
     </section>
+
+    <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
+      <div class="container">
+        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>TIMELINE:</b></h2>
+        <div class="table-responsive">
+          <table class="timeline-table">
+            <tbody>
+              <tr>
+                <td>Call for Abstracts-1</td>
+                <td>15th Dec 2025</td>
+              </tr>
+              <tr>
+                <td>Deadline for Abstract-1</td>
+                <td>31st Jan 2026</td>
+              </tr>
+              <tr>
+                <td>Time for reviewer to review the abstracts</td>
+                <td>1st Feb - 7th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Announcement of qualified abstracts</td>
+                <td>8th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Call for Abstracts-2</td>
+                <td>8th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Deadline for Abstract-2</td>
+                <td>31st March 2026</td>
+              </tr>
+              <tr>
+                <td>Time for reviewer to review the abstracts</td>
+                <td>01st April to 07th April 2026</td>
+              </tr>
+              <tr>
+                <td>Announcement of qualified abstract</td>
+                <td>08th April 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    
     <section class="abstract-section">
       <div class="container">
         <div class="abstract-card">
           <h2 class="section-title">Submit your Abstract now</h2>
           <div class="status-pill open">Open</div>
-          <h4 class="deadline">Call for Abstract: 31 / 12 / 2025</h4>
-          <div class="flip-countdown" data-countdown="2025-12-31T23:59:00">
+          <h4 class="deadline">Call for Abstract: 14 / 01 / 2026</h4>
+          <div class="flip-countdown" data-countdown="2026-01-14T23:59:00">
             <div class="flip-unit" data-unit="days">
               <div class="flip-card"><span class="flip-number">00</span></div>
               <span class="flip-label">Days</span>
@@ -528,6 +523,33 @@
         </div>
       </div>
     </section>
+
+    <section class="reasons-section mission-areas eligibility-section">
+      <h2 class="section-heading"><b>Top five reasons you should participate</b></h2>
+      <ul class="mission-list">
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Meet New People</b> - Connecting with others is a great way to get your ideas, talents, and passions out into the world. With passionate people across the world participating in this competition, you will have endless opportunities to get to know people on a professional level.</span>
+        </li>
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Tackle a real-world challenge</b> – Unleash your team’s creativity by solving real-world challenges.</span>
+        </li>
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Boost Your Project Management Expertise</b> - Take your project management skills to the next level by participating in this competition! This unique opportunity offers hands-on experience in managing long-term investigations and navigating all phases of a project.</span>
+        </li>
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Hone Public Speaking Skills</b> - Participants get to showcase their communication and entrepreneurial skills through a short “quick pitch” proposal during the project presentation.</span>
+        </li>
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Gain Insights from Industry Experts</b> - Expand your knowledge and gain valuable insights from top industry leaders through our distinguished webinar series. These webinars provide guidance and support to teams, offering a unique opportunity to learn from the best in the industry.</span>
+        </li>
+      </ul>
+    </section>
+
     <script>
   document.addEventListener('DOMContentLoaded', function () {
 
@@ -657,8 +679,13 @@
 </script>
 
 
+<<<<<<< HEAD
   <section class="mission-areas">
     <h2 class="section-title">The Objectives of the Junior Einstein</h2>
+=======
+  <section class="mission-areas eligibility-section">
+    <h2 class="section-heading"><b>The Objectives of the Special Track</b></h2>
+>>>>>>> origin/main
     <ul class="mission-list">
       <li>
         <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
@@ -1058,6 +1085,49 @@
         </div>
       </div>
     </section>
+    <section class="card-gallery-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Gallery
+        </h2>
+      </div>
+      <!-- <div class="gallery-controls">
+        <div class="gallery-filters">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="winners">Winners</button>
+          <button class="filter-pill" data-filter="runners">Runners</button>
+          <button class="filter-pill" data-filter="honorable">Honorable</button>
+          <button class="filter-pill" data-filter="moments">Moments</button>
+        </div>
+      </div> -->
+      <div class="card-gallery">
+        <div class="card-gallery-track">
+          <div class="card-gallery-item" data-category="winners">
+            <img src="../Gallery/STGallery1.jpeg" alt="Special Track Winner">
+          </div>
+          <div class="card-gallery-item" data-category="runners">
+            <img src="../Gallery/STGallery2.jpeg" alt="Special Track Runner">
+          </div>
+          <div class="card-gallery-item" data-category="runners">
+            <img src="../Gallery/STGallery3.jpeg" alt="Special Track Runner">
+          </div>
+          <div class="card-gallery-item" data-category="honorable">
+            <img src="../Gallery/STGallery4.jpg" alt="Special Track Honorable Mention 1">
+          </div>
+          <div class="card-gallery-item" data-category="honorable">
+            <img src="../Gallery/STGallery5.JPG" alt="Special Track Honorable Mention 2">
+          </div>
+          <div class="card-gallery-item" data-category="moments">
+            <img src="../Gallery/STGallery6.JPG" alt="Junior Einstein Moment 1">
+          </div>
+        </div>
+        <div class="gallery-bottom-nav">
+          <button class="gallery-nav prev"><i class="fas fa-arrow-left"></i></button>
+          <button class="gallery-nav next"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
     <section class="team-details-section contacts-section scroll-animate">
       <div class="objectives-section">
         <h2 class="section-heading scroll-animate animate-down delay-1">
@@ -1151,6 +1221,146 @@
 
   <script src="../script.js"></script>
   <script src="../jury-carousel.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var section = document.querySelector('.card-gallery-section');
+      if (!section) return;
+      var track = section.querySelector('.card-gallery-track');
+      var container = section.querySelector('.card-gallery');
+      var prevBtn = section.querySelector('.gallery-nav.prev');
+      var nextBtn = section.querySelector('.gallery-nav.next');
+      var pills = Array.from(section.querySelectorAll('.filter-pill'));
+      var currentIndex = 0;
+      var startX = 0;
+      var endX = 0;
+
+      function defaultIndex() {
+        var items = visibleItems();
+        return Math.max(0, Math.floor(items.length / 2));
+      }
+
+      function visibleItems() {
+        return Array.from(track.querySelectorAll('.card-gallery-item:not(.hidden)'));
+      }
+
+      function updateActive() {
+        var items = visibleItems();
+        items.forEach(function (el) { el.classList.remove('active','near-left','near-right'); el.style.zIndex=''; });
+        if (items.length === 0) return;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > items.length - 1) currentIndex = items.length - 1;
+        var active = items[currentIndex];
+        active.classList.add('active');
+        active.style.zIndex = '3';
+        var leftIdx = currentIndex - 1;
+        var rightIdx = currentIndex + 1;
+        if (leftIdx >= 0) items[leftIdx].classList.add('near-left');
+        if (rightIdx < items.length) items[rightIdx].classList.add('near-right');
+      }
+
+      function centerActive() {
+        var items = visibleItems();
+        if (items.length === 0) return;
+        var active = items[currentIndex];
+        var activeCenter = active.offsetLeft + active.offsetWidth / 2;
+        var target = container.clientWidth / 2;
+        var translateX = -(activeCenter - target);
+        track.style.transform = 'translateX(' + translateX + 'px)';
+      }
+
+      function update() {
+        updateActive();
+        centerActive();
+      }
+
+      function moveNext() {
+        currentIndex += 1;
+        update();
+      }
+
+      function movePrev() {
+        currentIndex -= 1;
+        update();
+      }
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          var filter = pill.getAttribute('data-filter');
+          var all = Array.from(track.querySelectorAll('.card-gallery-item'));
+          all.forEach(function (el) {
+            var cat = el.getAttribute('data-category');
+            var show = filter === 'all' ? true : cat === filter;
+            el.classList.toggle('hidden', !show);
+          });
+          currentIndex = defaultIndex();
+          update();
+        });
+      });
+
+      if (nextBtn) nextBtn.addEventListener('click', function () { moveNext(); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { movePrev(); });
+
+      function applyParallax(e) {
+        if (window.innerWidth < 768) return;
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        var rect = active.getBoundingClientRect();
+        var cx = e.clientX - rect.left;
+        var cy = e.clientY - rect.top;
+        var nx = (cx / rect.width) * 2 - 1;
+        var ny = (cy / rect.height) * 2 - 1;
+        var rx = -ny * 6;
+        var ry = nx * 6;
+        active.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'translateX(' + (ry * 1.2) + 'px) translateY(' + (rx * -1.2) + 'px) scale(1.02)';
+        }
+      }
+      function resetParallax() {
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        active.style.transform = 'scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'none';
+        }
+      }
+      container.addEventListener('mousemove', applyParallax);
+      container.addEventListener('mouseleave', resetParallax);
+
+      container.addEventListener('touchstart', function (e) {
+        if (!e.touches || e.touches.length === 0) return;
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', function (e) {
+        endX = e.changedTouches[0].clientX;
+        var delta = endX - startX;
+        if (Math.abs(delta) > 40) {
+          if (delta < 0) moveNext();
+          else movePrev();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        update();
+      });
+
+      currentIndex = defaultIndex();
+      var initialItems = visibleItems();
+      initialItems.forEach(function (el, i) {
+        el.style.animationDelay = (i * 80) + 'ms';
+        el.classList.add('animate-in');
+      });
+      update();
+      window.addEventListener('load', function () { update(); });
+    });
+  </script>
 </body>
 
 </html>
