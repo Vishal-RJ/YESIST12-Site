@@ -100,11 +100,10 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .status-pill.open::before {
   background-color: #0b7a3c;
-  box-shadow: 0 0 0 4px rgba(11, 122, 60, 0.12);
 }
 .status-pill.closed::before {
   background-color: #4a5970;
