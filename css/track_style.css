@@ -1170,6 +1170,7 @@ main {
 
 .focus-areas .section-title,
 .focus-areas .section-heading,
+.mission-areas .section-heading,
 .mission-areas .section-title,
 .objectives-areas .section-title,
 .participation-areas .section-title,
@@ -1260,6 +1261,22 @@ main {
   margin-bottom: 30px;
   margin-left: -60px;
   color: #060a0ccc;
+}
+
+/* Objectives paragraph inside mission-areas */
+.mission-areas .section-text {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  margin-left: 0;
+  color: #060a0ccc;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .mission-areas .section-text {
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 /* Grid layout for boxes */
