@@ -330,17 +330,24 @@
         padding: 40px 0;
       }
       .gateway-container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 28px;
       }
       .gateway-row {
         display: flex;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         gap: 22px;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        border: 1px solid #eef2f6;
+        height: 100%;
       }
       .gateway-icon-container {
-        width: 96px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -358,51 +365,75 @@
         box-shadow: 0 10px 22px rgba(0,0,0,0.18);
       }
       .gateway-label {
-        width: 96px;
+        width: auto;
+        min-width: 140px;
         border-radius: 10px;
         background-color: #0a415c;
         color: #fff;
         font-weight: 700;
         font-size: 14px;
         text-align: center;
-        padding: 10px 8px;
+        padding: 10px 16px;
         box-shadow: 0 6px 16px rgba(0,0,0,0.15);
       }
       .gateway-content {
+          text-align: center;
+      }
+      .gateway-content ul {
+          display: inline-block;
+          text-align: left;
+          padding-left: 20px;
+      }
+      @media (max-width: 768px) {
+        .gateway-container {
+            grid-template-columns: 1fr;
+        }
+      }
+      .gateway-content {
         flex: 1;
-        border-radius: 14px;
-        padding: 22px 24px;
-        color: #fff;
-        box-shadow: 0 16px 26px rgba(0,0,0,0.18);
+        padding: 10px;
+        color: #333;
       }
       .gateway-content ul {
         list-style: none;
         margin: 0;
-        padding-left: 28px;
+        padding-left: 0;
+        text-align: left;
+        display: inline-block;
       }
       .gateway-content li {
         margin-bottom: 12px;
         line-height: 1.7;
+        position: relative;
+        padding-left: 20px;
       }
-      /* Row-specific colors to mirror screenshot */
+      .gateway-content li::before {
+        content: "•";
+        color: #128a73;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+      /* Row-specific colors */
       .gateway-row:first-child .gateway-icon { background-color: #128a73; }
       .gateway-row:first-child .gateway-label { background-color: #128a73; }
-      .gateway-row:first-child .gateway-content { background-color: #128a73; }
+      
       .gateway-row:last-child .gateway-icon { background-color: #0a415c; }
       .gateway-row:last-child .gateway-label { background-color: #0a415c; }
-      .gateway-row:last-child .gateway-content { background-color: #0a415c; }
+      .gateway-row:last-child .gateway-content li::before { color: #0a415c; }
+
       @media (max-width: 768px) {
         .gateway-row {
           flex-direction: column;
-          align-items: stretch;
+          align-items: center;
         }
         .gateway-icon-container {
-          flex-direction: row;
-          width: auto;
+          flex-direction: column;
+          width: 100%;
         }
         .gateway-label {
           width: auto;
-          min-width: 120px;
+          min-width: 140px;
         }
       }
     </style>
@@ -450,7 +481,7 @@
       <div class="container">
         <div class="theme-heading scroll-animate animate-up">
           <h2>Theme</h2>
-          <h3>Special Track:Future-Ready Society Emerging Tech for Everyday</h3>
+          <h3>Smart Ideas for a Sustainable Future</h3>
         </div>
 
         <div class="theme-icon-box accent">
@@ -459,10 +490,10 @@
           </div>
           <div class="text scroll-animate animate-up delay-1">
             <h2>
-              “Shaping Tomorrow with Technology That Matters Today.”
+              “Smart Ideas for a Sustainable Future”
             </h2>
-    </div>
-    </div>
+          </div>
+        </div>
   </div>
 
   
@@ -471,9 +502,7 @@
     <section class="innovation-description">
       <div class="container">
         <p class="theme-text scroll-animate animate-fade delay-2">
-          The Special Track at YESIST12 2026 focuses on innovative, technology-driven solutions addressing real-world societal challenges aligned with the UN Sustainable Development Goals (SDGs).
-It encourages student innovators to develop impactful projects under themes like Intelligent Insights (SDG 16) and Smart Mobility (SDG 9).
-The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SDGs 6, 11, 12, 13) to promote a smarter, healthier, and sustainable future.
+          The Junior Einstein Track at IEEE YESIST12 2026 centers on “Smart Ideas for a Sustainable Future.” Aligned with the UN SDGs, this theme empowers young innovators to develop technology-driven solutions for a resilient world. Students are encouraged to identify community or global challenges and propose future-ready ideas—spanning smart systems, automation, and eco-friendly designs—that balance innovation with sustainability to create lasting impact.
         </p>
       </div>
     </section>
@@ -484,9 +513,6 @@ The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SD
         <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
         
         <ul class="sdg-image-grid">
-          <li><img src="../SDG/E-WEB-Goal-02.png" alt="SDG 2: Zero Hunger"></li>
-          <li><img src="../SDG/E-WEB-Goal-03.png" alt="SDG 3: Good Health and Well-being"></li>
-          <li><img src="../SDG/E-WEB-Goal-03.png" alt="SDG 3: Good Health and Well-being"></li>
           <li><img src="../SDG/E-WEB-Goal-04.png" alt="SDG 4: Quality Education"></li>
           <li><img src="../SDG/E-WEB-Goal-06.png" alt="SDG 6: Clean Water and Sanitation"></li>
           <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
@@ -494,6 +520,7 @@ The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SD
           <li><img src="../SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
           <li><img src="../SDG/E-WEB-Goal-12.png" alt="SDG 12: Responsible Consumption and Production"></li>
           <li><img src="../SDG/E-WEB-Goal-13.png" alt="SDG 13: Climate Action"></li>
+          <li><img src="../SDG/E-WEB-Goal-17.png" alt="SDG 17: Partnerships for the Goals"></li>
         </ul>
       </div>
     </section>
@@ -662,28 +689,27 @@ The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SD
 
 
   <section class="mission-areas">
-    <h2 class="section-title">The Objectives of the Special Track</h2>
+    <h2 class="section-title">The Objectives of the Junior Einstein</h2>
     <ul class="mission-list">
       <li>
         <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Empowerment through Innovation: Encourages young minds to develop impactful, technology-driven solutions that address real-life societal challenges.</span>
+        <span><b>Global Showcase and Collaboration:</b> To create an international platform where young participants can showcase their talents and innovations, connect with peers from around the world, and foster meaningful collaborations that may lead to future academic, technical, and entrepreneurial partnerships.</span>
       </li>
       <li>
         <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Use of Emerging Technologies: Promotes the application of AI, data analytics, IoT, and smart systems to create efficient and intelligent solutions.</span>
+        <span><b>Next-Generation Innovator Recognition:</b> To identify, recognize, and motivate the next generation of innovators by encouraging creative thinking and supporting the development of viable, impactful solutions to real-world social challenges.</span>
       </li>
       <li>
         <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Real-World Impact: Focuses on improving the accessibility, quality, and efficiency of essential services and community experiences.
-</span>
+        <span><b>Societal Impact through STEM:</b> To inspire students to apply STEM concepts in designing and developing solutions that address societal needs, while actively contributing to the United Nations Sustainable Development Goals (SDGs).</span>
       </li>
       <li>
         <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Future-Ready & Ethical Design: Inspires responsible, sustainable, and ethical use of technology with long-term societal benefits.</span>
+        <span><b>Hands-on Experience and Skill Development:</b> To provide participants with hands-on exposure to technology and engineering projects, enhancing critical thinking, problem-solving abilities, technical understanding, and long-term interest in STEM fields.</span>
       </li>
       <li>
         <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Building Changemakers: Nurtures a generation of innovators capable of shaping a smarter, more connected, and resilient future.</span>
+        <span><b>Teamwork, Collaboration, and Innovation:</b> To cultivate a culture of teamwork and collaboration, encouraging participants to work collectively, think creatively, and approach challenges with innovation-driven and solution-oriented mindsets.</span>
       </li>
     </ul>
   </section>
@@ -693,15 +719,23 @@ The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SD
     <ul class="eligibility-list">
       <li>
         <i class="fas fa-star"></i>
-        <span>Teams of up to 4 members, open to undergraduate students and young professionals, encouraging collaboration and interdisciplinary innovation.</span>
+        <span>Open to school students worldwide aged 12–17 years.</span>
       </li>
       <li>
         <i class="fas fa-star"></i>
-        <span>Students interested in emerging technologies like AI, IoT, data analytics, and smart systems to solve real-world problems.</span>
+        <span>Participants should have a keen interest in STEM and a passion for innovation.</span>
       </li>
       <li>
         <i class="fas fa-star"></i>
-        <span>Participants passionate about themes such as sustainability, smart communities, accessibility, healthcare, education, and public services.</span>
+        <span>Teams may include up to 4 members; mixed institutions/countries are allowed.</span>
+      </li>
+      <li>
+        <i class="fas fa-star"></i>
+        <span>A mentor must accompany each team during registration.</span>
+      </li>
+      <li>
+        <i class="fas fa-star"></i>
+        <span>Proof of age and enrollment (e.g., bonafide school certificate or Birth Certificate) is required.</span>
       </li>
     </ul>
   </section>
@@ -737,60 +771,31 @@ The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SD
       <ul class="rules-list">
         <li>
           <i class="fas fa-book"></i>
-          <span><b>Team size:</b> Maximum of 4 members.</span>
+          <span>Teams should consist of up to four members.</span>
         </li>
         <li>
           <i class="fas fa-book"></i>
-          <span
-            >A team may comprise members from varied academic institutions/ Industries and maybe from different countries.</span
-          >
+          <span>Projects can be software, hardware, or integrated tech solutions.</span>
         </li>
         <li>
           <i class="fas fa-book"></i>
-          <span
-            >TTeams that have actively participated and have enrolled themselves with team members and mentor details will be eligible for the certificates.
-</span
-          >
+          <span>Ensure originality – plagiarism in any form is strictly prohibited.</span>
         </li>
         <li>
           <i class="fas fa-book"></i>
-          <span
-            >The selected teams will be given a chance to present their projects in person to the judging panel.
-</span
-          >
+          <span>Submissions must be clear, well-structured, and aligned with SDGs.</span>
         </li>
         <li>
           <i class="fas fa-book"></i>
-          <span
-            >Coordination and teamwork must be taken care of by the team leader. Further details regarding the venue, platform, and logistics will be updated for you all soon.
-</span
-          >
+          <span>Teams will be locked upon abstract submission. No changes to team members or mentors will be permitted after the abstract submission deadline under any circumstances.</span>
         </li>
         <li>
           <i class="fas fa-book"></i>
-          <span
-            >Plagiarism at any form or at any stage is strictly
-            prohibited.</span
-          >
+          <span>Each team is solely responsible for internal coordination, cooperation, and teamwork throughout the duration of the competition. IEEE YESIST12 will not intervene in internal team matters.</span>
         </li>
         <li>
           <i class="fas fa-book"></i>
-          <span
-            >Each team is solely responsible for its own cooperation and
-            teamwork.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-book"></i>
-          <span
-            >The projects can be a software solution or hardware
-            integrated.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-book"></i>
-          <span>Please download the rule book here and follow the regulations cited. Failure to comply with the regulation will result in disqualification.
-</span>
+          <span>Teams that have actively participated and have enrolled themselves with team members and mentor details will be eligible for the certificates.</span>
         </li>
         <span>
           <a href="https://drive.google.com/file/d/1O_UOuKqG0PG7e70z1oqc9Z03QfDghZ6X/view?usp=sharing" download class="download-btn"><b>Download Rulebook</b></a>
@@ -810,16 +815,13 @@ The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SD
         <div class="objective-box">
           <div class="box-inner scroll-animate animate-left delay-3">
             <h3>
-              <i class="fa-solid fa-microphone objective-icon"></i> Phase 1:
-              Call for Abstracts-1
+              <i class="fa-solid fa-microphone objective-icon"></i> Phase 1 – Abstract Preselection & Prelims
             </h3>
             <p>
               This is the initial phase where the abstract submission is open to
-              anyone interested in participating in the Special Track. The call
-              for abstracts is announced globally, and participants can submit
+              anyone interested in participating. Participants can submit
               their abstracts through the submission portal available on the
-              website. Phase 1 serves as the first opportunity for participants
-              to showcase their ideas and concepts.
+              website.
             </p>
           </div>
         </div>
@@ -827,37 +829,7 @@ The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SD
         <div class="objective-box">
           <div class="box-inner scroll-animate animate-right delay-4">
             <h3>
-              <i class="fa-solid fa-paper-plane objective-icon"></i> Phase 2:
-              Call for Abstracts-2
-            </h3>
-            <p>
-              Phase 2 is an extended call for abstract submissions. Teams that
-              wish to extend their participation opportunity can do so by
-              submitting their abstracts in this second phase. It also gives a
-              chance for participants who did not advance to the next rounds in
-              Phase 1 to reapply and take part in the competition.
-            </p>
-          </div>
-        </div>
-
-        <div class="objective-box">
-          <div class="box-inner scroll-animate animate-left delay-5">
-            <h3>
-              <i class="fa-solid fa-check objective-icon"></i> Phase 3:
-              Selection & Registration
-            </h3>
-            <p>
-              Potential and innovative projects that are submitted in the first
-              and second call are selected for finals, and the teams are
-              intimated via mail.
-            </p>
-          </div>
-        </div>
-
-        <div class="objective-box">
-          <div class="box-inner scroll-animate animate-right delay-6">
-            <h3>
-              <i class="fa-solid fa-trophy objective-icon"></i> Phase 4: Finale
+              <i class="fa-solid fa-trophy objective-icon"></i> Phase 2 - Stage 2 – Grand Finale
             </h3>
             <p>
               Selected teams will present their project works before the jury
@@ -1080,7 +1052,8 @@ The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SD
           <span>AI-powered app to identify plant diseases from a simple phone picture.</span>
         </li>
       </ul>
-    </section>
+    </div>
+  </section>
     
     <section class="winners-section">
       <div class="objectives-section">
@@ -1152,90 +1125,145 @@ The track also highlights Next-Gen Healthcare (SDG 3) and Sustainable Living (SD
 
   <section class="faqs-section">
     <div class="container">
-      <h2 class="section-heading">FAQs:</h2>
+      <h2 class="section-heading">Frequently Asked Questions</h2>
 
       <div class="faq-item">
-        <div class="faq-question">1. How can I participate?</div>
+        <div class="faq-question">
+          <span>1. Who can participate?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
         <div class="faq-answer">
-          High school students aged 12-17 can participate by submitting their
-          abstracts either via Pilots or Direct Entry. The selection process
-          involves two stages: Abstracts scrutinization and Prelims, followed
-          by the Grand Finale.
+          School students aged 12–17 worldwide.
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          2. Can I participate as an individual, or do I need a team?
+          <span>2. Can I participate individually?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          Teams of up to 4 members are welcome. You can form teams with
-          students from different academic institutions or industries.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">3. How will the projects be evaluated?</div>
-        <div class="faq-answer">
-          Projects will be evaluated based on novelty, clarity, feasibility,
-          technical implementation, scalability, sustainability, and potential
-          for future work progression.
+          Yes, though teams of up to four are encouraged.
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          4. Can projects be software-based or hardware-integrated?
+          <span>3. Are hardware projects allowed?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          Yes, projects can be either a software solution or
-          hardware-integrated.
+          Yes, both software solutions and hardware-integrated projects are accepted.
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          5. How is the Direct Entry mode evaluated in Stage 1?
+          <span>4. What is the selection process?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          Abstract submissions from Direct Entry participants are assessed,
-          and innovative and creative projects are chosen for the finals.
+          Through preliminary evaluation (pilot or direct) followed by the grand finale.
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          6. What happens in Pilot Entry mode during Stage 1?
+          <span>5. Can I reuse ideas from previous competitions?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          Participants in pilot entry mode showcase their projects in a
-          preliminary round conducted by pilots. Selected teams advance to the
-          finals.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          7. Is plagiarism allowed during the selection process?
-        </div>
-        <div class="faq-answer">
-          No, plagiarism at any stage is strictly prohibited.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">
-          8. What is the process after team selection?
-        </div>
-        <div class="faq-answer">
-          Selected teams are required to submit an executive summary and a
-          video demonstration of their project.
+          Projects should be original and specifically tailored for the current theme.
         </div>
       </div>
     </div>
   </section>
 
-  <div id="footer-container"></div>
+  <!-- Highlights Section -->
+  <section class="highlights-section">
+    <div class="container">
+      <h2 class="section-heading">Highlights of the Track</h2>
+      <h3 class="sub-heading">Previous winner and runner details – 2025</h3>
+      <div class="table-responsive">
+        <table class="highlights-table">
+          <thead>
+            <tr>
+              <th>Details</th>
+              <th>Abstract Id</th>
+              <th>Project Title</th>
+              <th>Team Name</th>
+              <th>Members</th>
+              <th>Participant Name</th>
+              <th>Mail id</th>
+              <th>Contact Number</th>
+              <th>Country</th>
+              <th>Organization Name</th>
+              <th>Direct Entry/Pilot Entry</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Winner -->
+            <tr>
+              <td rowspan="4">Winner</td>
+              <td rowspan="4">10231</td>
+              <td rowspan="4">Multimodal communication device for deaf-blind individuals using Morse Code (Doshwaves)</td>
+              <td rowspan="4">MORSE MINDS</td>
+              <td>Team Member 1</td>
+              <td>Sanjith M</td>
+              <td>sanjithmohanraj16@gmail.com</td>
+              <td>91 9944465522</td>
+              <td>India</td>
+              <td>Aditya Vidyashram Gurguram</td>
+              <td>Pilot Entry</td>
+            </tr>
+            <tr>
+              <td>Team Member 2</td>
+              <td>Sanjay V</td>
+              <td>sanjayvicky2008@gmail.com</td>
+              <td>91 9342691611</td>
+              <td>India</td>
+              <td>Aditya Vidyashram Gurguram</td>
+              <td>Pilot Entry</td>
+            </tr>
+            <tr>
+              <td>Team Member 3</td>
+              <td>Amruth Arun Kumar</td>
+              <td>amrutharunkumar26@gmail.com</td>
+              <td>91 8870940180</td>
+              <td>India</td>
+              <td>Aditya Vidyashram Gurguram</td>
+              <td>Pilot Entry</td>
+            </tr>
+            <tr>
+              <td>Team Member 4</td>
+              <td>Krithiv Jayaram N M</td>
+              <td>krithivjayarammuthusamy2@gmail.com</td>
+              <td>91 9444012586</td>
+              <td>India</td>
+              <td>Aditya Vidyashram Gurguram</td>
+              <td>Pilot Entry</td>
+            </tr>
+            <!-- Runner -->
+            <tr>
+              <td>Runner</td>
+              <td>9724</td>
+              <td>Smart Guardian Belt</td>
+              <td>FutureSafe collective</td>
+              <td>Team Member 1</td>
+              <td>Asmaa Saber Abaas Ahmed</td>
+              <td>saberasmaa195@gmail.com</td>
+              <td>201129423838</td>
+              <td>Egypt</td>
+              <td>Sohag STEM School</td>
+              <td>Direct Entry</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+    <div id="footer-container"></div>
   <script src="../components/header.js"></script>
   <script src="../components/footer.js"></script>
 
