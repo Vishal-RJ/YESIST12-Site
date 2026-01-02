@@ -1179,96 +1179,152 @@
     </div>
   </section>
 
-  <!-- Highlights Section -->
-  <section class="highlights-section">
-    <div class="container">
-      <h2 class="section-heading">Highlights of the Track</h2>
-      <h3 class="sub-heading">Previous winner and runner details – 2025</h3>
-      <div class="table-responsive">
-        <table class="highlights-table">
-          <thead>
-            <tr>
-              <th>Details</th>
-              <th>Abstract Id</th>
-              <th>Project Title</th>
-              <th>Team Name</th>
-              <th>Members</th>
-              <th>Participant Name</th>
-              <th>Mail id</th>
-              <th>Contact Number</th>
-              <th>Country</th>
-              <th>Organization Name</th>
-              <th>Direct Entry/Pilot Entry</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Winner -->
-            <tr>
-              <td rowspan="4">Winner</td>
-              <td rowspan="4">10231</td>
-              <td rowspan="4">Multimodal communication device for deaf-blind individuals using Morse Code (Doshwaves)</td>
-              <td rowspan="4">MORSE MINDS</td>
-              <td>Team Member 1</td>
-              <td>Sanjith M</td>
-              <td>sanjithmohanraj16@gmail.com</td>
-              <td>91 9944465522</td>
-              <td>India</td>
-              <td>Aditya Vidyashram Gurguram</td>
-              <td>Pilot Entry</td>
-            </tr>
-            <tr>
-              <td>Team Member 2</td>
-              <td>Sanjay V</td>
-              <td>sanjayvicky2008@gmail.com</td>
-              <td>91 9342691611</td>
-              <td>India</td>
-              <td>Aditya Vidyashram Gurguram</td>
-              <td>Pilot Entry</td>
-            </tr>
-            <tr>
-              <td>Team Member 3</td>
-              <td>Amruth Arun Kumar</td>
-              <td>amrutharunkumar26@gmail.com</td>
-              <td>91 8870940180</td>
-              <td>India</td>
-              <td>Aditya Vidyashram Gurguram</td>
-              <td>Pilot Entry</td>
-            </tr>
-            <tr>
-              <td>Team Member 4</td>
-              <td>Krithiv Jayaram N M</td>
-              <td>krithivjayarammuthusamy2@gmail.com</td>
-              <td>91 9444012586</td>
-              <td>India</td>
-              <td>Aditya Vidyashram Gurguram</td>
-              <td>Pilot Entry</td>
-            </tr>
-            <!-- Runner -->
-            <tr>
-              <td>Runner</td>
-              <td>9724</td>
-              <td>Smart Guardian Belt</td>
-              <td>FutureSafe collective</td>
-              <td>Team Member 1</td>
-              <td>Asmaa Saber Abaas Ahmed</td>
-              <td>saberasmaa195@gmail.com</td>
-              <td>201129423838</td>
-              <td>Egypt</td>
-              <td>Sohag STEM School</td>
-              <td>Direct Entry</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
     <div id="footer-container"></div>
   <script src="../components/header.js"></script>
   <script src="../components/footer.js"></script>
 
   <script src="../script.js"></script>
   <script src="../jury-carousel.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var section = document.querySelector('.card-gallery-section');
+      if (!section) return;
+      var track = section.querySelector('.card-gallery-track');
+      var container = section.querySelector('.card-gallery');
+      var prevBtn = section.querySelector('.gallery-nav.prev');
+      var nextBtn = section.querySelector('.gallery-nav.next');
+      var pills = Array.from(section.querySelectorAll('.filter-pill'));
+      var currentIndex = 0;
+      var startX = 0;
+      var endX = 0;
+
+      function defaultIndex() {
+        var items = visibleItems();
+        return Math.max(0, Math.floor(items.length / 2));
+      }
+
+      function visibleItems() {
+        return Array.from(track.querySelectorAll('.card-gallery-item:not(.hidden)'));
+      }
+
+      function updateActive() {
+        var items = visibleItems();
+        items.forEach(function (el) { el.classList.remove('active','near-left','near-right'); el.style.zIndex=''; });
+        if (items.length === 0) return;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > items.length - 1) currentIndex = items.length - 1;
+        var active = items[currentIndex];
+        active.classList.add('active');
+        active.style.zIndex = '3';
+        var leftIdx = currentIndex - 1;
+        var rightIdx = currentIndex + 1;
+        if (leftIdx >= 0) items[leftIdx].classList.add('near-left');
+        if (rightIdx < items.length) items[rightIdx].classList.add('near-right');
+      }
+
+      function centerActive() {
+        var items = visibleItems();
+        if (items.length === 0) return;
+        var active = items[currentIndex];
+        var activeCenter = active.offsetLeft + active.offsetWidth / 2;
+        var target = container.clientWidth / 2;
+        var translateX = -(activeCenter - target);
+        track.style.transform = 'translateX(' + translateX + 'px)';
+      }
+
+      function update() {
+        updateActive();
+        centerActive();
+      }
+
+      function moveNext() {
+        currentIndex += 1;
+        update();
+      }
+
+      function movePrev() {
+        currentIndex -= 1;
+        update();
+      }
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          var filter = pill.getAttribute('data-filter');
+          var all = Array.from(track.querySelectorAll('.card-gallery-item'));
+          all.forEach(function (el) {
+            var cat = el.getAttribute('data-category');
+            var show = filter === 'all' ? true : cat === filter;
+            el.classList.toggle('hidden', !show);
+          });
+          currentIndex = defaultIndex();
+          update();
+        });
+      });
+
+      if (nextBtn) nextBtn.addEventListener('click', function () { moveNext(); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { movePrev(); });
+
+      function applyParallax(e) {
+        if (window.innerWidth < 768) return;
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        var rect = active.getBoundingClientRect();
+        var cx = e.clientX - rect.left;
+        var cy = e.clientY - rect.top;
+        var nx = (cx / rect.width) * 2 - 1;
+        var ny = (cy / rect.height) * 2 - 1;
+        var rx = -ny * 6;
+        var ry = nx * 6;
+        active.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'translateX(' + (ry * 1.2) + 'px) translateY(' + (rx * -1.2) + 'px) scale(1.02)';
+        }
+      }
+      function resetParallax() {
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        active.style.transform = 'scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'none';
+        }
+      }
+      container.addEventListener('mousemove', applyParallax);
+      container.addEventListener('mouseleave', resetParallax);
+
+      container.addEventListener('touchstart', function (e) {
+        if (!e.touches || e.touches.length === 0) return;
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', function (e) {
+        endX = e.changedTouches[0].clientX;
+        var delta = endX - startX;
+        if (Math.abs(delta) > 40) {
+          if (delta < 0) moveNext();
+          else movePrev();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        update();
+      });
+
+      currentIndex = defaultIndex();
+      var initialItems = visibleItems();
+      initialItems.forEach(function (el, i) {
+        el.style.animationDelay = (i * 80) + 'ms';
+        el.classList.add('animate-in');
+      });
+      update();
+      window.addEventListener('load', function () { update(); });
+    });
+  </script>
 </body>
 
 </html>
