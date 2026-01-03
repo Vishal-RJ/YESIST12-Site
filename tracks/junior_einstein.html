@@ -330,24 +330,17 @@
         padding: 40px 0;
       }
       .gateway-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 28px;
       }
       .gateway-row {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 22px;
-        background: #ffffff;
-        padding: 30px;
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        border: 1px solid #eef2f6;
-        height: 100%;
       }
       .gateway-icon-container {
-        width: 100%;
+        width: 96px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -365,75 +358,51 @@
         box-shadow: 0 10px 22px rgba(0,0,0,0.18);
       }
       .gateway-label {
-        width: auto;
-        min-width: 140px;
+        width: 96px;
         border-radius: 10px;
         background-color: #0a415c;
         color: #fff;
         font-weight: 700;
         font-size: 14px;
         text-align: center;
-        padding: 10px 16px;
+        padding: 10px 8px;
         box-shadow: 0 6px 16px rgba(0,0,0,0.15);
       }
       .gateway-content {
-          text-align: center;
-      }
-      .gateway-content ul {
-          display: inline-block;
-          text-align: left;
-          padding-left: 20px;
-      }
-      @media (max-width: 768px) {
-        .gateway-container {
-            grid-template-columns: 1fr;
-        }
-      }
-      .gateway-content {
         flex: 1;
-        padding: 10px;
-        color: #333;
+        border-radius: 14px;
+        padding: 22px 24px;
+        color: #fff;
+        box-shadow: 0 16px 26px rgba(0,0,0,0.18);
       }
       .gateway-content ul {
         list-style: none;
         margin: 0;
-        padding-left: 0;
-        text-align: left;
-        display: inline-block;
+        padding-left: 28px;
       }
       .gateway-content li {
         margin-bottom: 12px;
         line-height: 1.7;
-        position: relative;
-        padding-left: 20px;
       }
-      .gateway-content li::before {
-        content: "•";
-        color: #128a73;
-        font-weight: bold;
-        position: absolute;
-        left: 0;
-      }
-      /* Row-specific colors */
+      /* Row-specific colors to mirror screenshot */
       .gateway-row:first-child .gateway-icon { background-color: #128a73; }
       .gateway-row:first-child .gateway-label { background-color: #128a73; }
-      
+      .gateway-row:first-child .gateway-content { background-color: #128a73; }
       .gateway-row:last-child .gateway-icon { background-color: #0a415c; }
       .gateway-row:last-child .gateway-label { background-color: #0a415c; }
-      .gateway-row:last-child .gateway-content li::before { color: #0a415c; }
-
+      .gateway-row:last-child .gateway-content { background-color: #0a415c; }
       @media (max-width: 768px) {
         .gateway-row {
           flex-direction: column;
-          align-items: center;
+          align-items: stretch;
         }
         .gateway-icon-container {
-          flex-direction: column;
-          width: 100%;
+          flex-direction: row;
+          width: auto;
         }
         .gateway-label {
           width: auto;
-          min-width: 140px;
+          min-width: 120px;
         }
       }
     </style>
@@ -465,15 +434,56 @@
          Junior Einstein Track of IEEE YESIST12 2026 is designed to inspire impactful, technology-driven solutions that address some of humanity’s most pressing global challenges. First introduced in 2020, the track has become a dynamic platform for young innovators to present smarter, scalable, and meaningful ideas that tackle both humanitarian and industry-related problems. For the 2026 edition, the Junior Einstein Track focuses on elevating the quality of life worldwide by encouraging creative, research-backed, and future-ready proposals. It invites participants to reimagine how technology can transform communities, improve everyday living, and contribute to a more sustainable and inclusive global society.
 
         </p>
-        <a href="https://ieeeyesist12.org/pdf/?id=schedule-2025-je" target="_blank" class="presentation-link">
-          View Presentation Schedule
-        </a>
       </div>
       <div class="image scroll-animate animate-right delay-2">
         <img src="https://ieeeyesist12.org/wp-content/uploads/2022/12/yesist12-track-02-2048x1050.png"
           alt="Junior Einstein Track Image" />
       </div>
     </div>
+
+    <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
+      <div class="container">
+        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>TIMELINE:</b></h2>
+        <div class="table-responsive">
+          <table class="timeline-table">
+            <tbody>
+              <tr>
+                <td>Call for Abstracts-1</td>
+                <td>15th Dec 2025</td>
+              </tr>
+              <tr>
+                <td>Deadline for Abstract-1</td>
+                <td>31st Jan 2026</td>
+              </tr>
+              <tr>
+                <td>Time for reviewer to review the abstracts</td>
+                <td>1st Feb - 7th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Announcement of qualified abstracts</td>
+                <td>8th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Call for Abstracts-2</td>
+                <td>8th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Deadline for Abstract-2</td>
+                <td>31st March 2026</td>
+              </tr>
+              <tr>
+                <td>Time for reviewer to review the abstracts</td>
+                <td>01st April to 07th April 2026</td>
+              </tr>
+              <tr>
+                <td>Announcement of qualified abstract</td>
+                <td>08th April 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </section>
   
 
@@ -529,8 +539,8 @@
         <div class="abstract-card">
           <h2 class="section-title">Submit your Abstract now</h2>
           <div class="status-pill open">Open</div>
-          <h4 class="deadline">Call for Abstract: 31 / 12 / 2025</h4>
-          <div class="flip-countdown" data-countdown="2025-12-31T23:59:00">
+          <h4 class="deadline">Call for Abstract: 14 / 01 / 2026</h4>
+          <div class="flip-countdown" data-countdown="2026-01-14T23:59:00">
             <div class="flip-unit" data-unit="days">
               <div class="flip-card"><span class="flip-number">00</span></div>
               <span class="flip-label">Days</span>
@@ -803,6 +813,45 @@
       </ul>
     </section>
 
+    <div class="objectives-section">
+      <h2 class="section-heading scroll-animate animate-down delay-1">
+        Track Structure:
+      </h2>
+      <p class="section-text scroll-animate animate-up delay-2">
+        The Special Track follows a structured process to identify and showcase
+        innovative projects, consisting of the following phases:
+      </p>
+
+      <div class="objectives-grid track-grid">
+        <div class="objective-box">
+          <div class="box-inner scroll-animate animate-left delay-3">
+            <h3>
+              <i class="fa-solid fa-microphone objective-icon"></i> Phase 1 – Abstract Preselection & Prelims
+            </h3>
+            <p>
+              This is the initial phase where the abstract submission is open to
+              anyone interested in participating. Participants can submit
+              their abstracts through the submission portal available on the
+              website.
+            </p>
+          </div>
+        </div>
+
+        <div class="objective-box">
+          <div class="box-inner scroll-animate animate-right delay-4">
+            <h3>
+              <i class="fa-solid fa-trophy objective-icon"></i> Phase 2 - Stage 2 – Grand Finale
+            </h3>
+            <p>
+              Selected teams will present their project works before the jury
+              during the finals. Evaluation will be carried out based on the
+              criteria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section class="gateways-section">
       <div class="objectives-section">
         <h2 class="section-heading scroll-animate animate-down delay-1">
@@ -842,45 +891,6 @@
         </div>
       </div>
     </section>
-
-    <div class="objectives-section">
-      <h2 class="section-heading scroll-animate animate-down delay-1">
-        Track Structure:
-      </h2>
-      <p class="section-text scroll-animate animate-up delay-2">
-        The Special Track follows a structured process to identify and showcase
-        innovative projects, consisting of the following phases:
-      </p>
-
-      <div class="objectives-grid track-grid">
-        <div class="objective-box">
-          <div class="box-inner scroll-animate animate-left delay-3">
-            <h3>
-              <i class="fa-solid fa-microphone objective-icon"></i> Phase 1 – Abstract Preselection & Prelims
-            </h3>
-            <p>
-              This is the initial phase where the abstract submission is open to
-              anyone interested in participating. Participants can submit
-              their abstracts through the submission portal available on the
-              website.
-            </p>
-          </div>
-        </div>
-
-        <div class="objective-box">
-          <div class="box-inner scroll-animate animate-right delay-4">
-            <h3>
-              <i class="fa-solid fa-trophy objective-icon"></i> Phase 2 - Stage 2 – Grand Finale
-            </h3>
-            <p>
-              Selected teams will present their project works before the jury
-              during the finals. Evaluation will be carried out based on the
-              criteria.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="selection-method-section">
       <h2 class="section-heading scroll-animate animate-down delay-1">
@@ -1144,20 +1154,15 @@
           <i class="fas fa-user"></i>
           <span>
             Chair<br />
-            Ms. Indhumathi Gunasekeran<br />
-            Chair | Junior Einstein<br />
-            Email ID: yesist12.junioreinstein@gmail.com<br />
-            +91 9442964170
+            Navaneethakrishnan<br />
           </span>
         </li>
         <li>
           <i class="fas fa-user"></i>
           <span>
             Co-Chair<br />
-            Mr. Mithresh Gunaseelan<br />
-            Co-Chair | Junior Einstein<br />
-            Email ID: mithreshgp@ieee.org<br />
-            +91 9488123975
+            TBA<br />
+            TBA<br />
           </span>
         </li>
       </ul>
