@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maker Fair</title>
     <link rel="icon" type="image/png" href="../images/IEEE-YESIST12-Logo-1024x307-1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/track_style.css" />
+    <link rel="stylesheet" href="../css/special_track_junior_einstein.css" />
     <link rel="stylesheet" href="../css/maker_fair.css" />
-        <link rel="stylesheet" href="../css/track_style.css" />
+    <link rel="stylesheet" href="../jury-carousel.css" />
 
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
@@ -23,7 +26,7 @@
     <div id="header-container"></div>
 
     <!-- Maker Hero Section -->
-    <section class="maker-hero">
+    <section class="innovation-hero">
       <div class="container">
         <h1 class="title">Maker Fair</h1>
         <ul class="breadcrumb">
@@ -39,7 +42,7 @@
     </section>
 
     <!-- About Maker Fair Section -->
-    <section class="about-maker">
+    <section class="about-special">
       <!-- Background Image Layer -->
       <div class="bg-image"></div>
 
@@ -60,13 +63,13 @@
             to commercialization can utilize this platform and register for this
             event.
           </p>
-          <a
+          <!-- <a
             href="https://ieeeyesist12.org/pdf/?id=schedule-2025-je"
             target="_blank"
             class="presentation-link"
           >
             View Presentation Schedule
-          </a>
+          </a> -->
         </div>
         <div class="image scroll-animate animate-right delay-2">
           <img
@@ -77,8 +80,45 @@
       </div>
     </section>
 
+    <!-- Abstract Section (Added to match Special Track) -->
+    <section class="abstract-section">
+      <div class="container">
+        <div class="abstract-card">
+          <h2 class="section-title">Submit your Abstract now</h2>
+          <div class="status-pill open">Open</div>
+          <h4 class="deadline">Call for Abstract: 14 / 01 / 2026</h4>
+          <div class="flip-countdown" data-countdown="2026-01-14T23:59:00">
+            <div class="flip-unit" data-unit="days">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Days</span>
+            </div>
+            <div class="flip-unit" data-unit="hours">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Hours</span>
+            </div>
+            <div class="flip-unit" data-unit="minutes">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Minutes</span>
+            </div>
+            <div class="flip-unit" data-unit="seconds">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Seconds</span>
+            </div>
+          </div>
+          <div class="abstract-actions">
+            <a class="btn download-btn" href="https://portal.ieeeyesist12.org/docs/Abstract_template.pptx" target="_blank">
+              <i class="fas fa-download"></i> DOWNLOAD ABSTRACT TEMPLATE
+            </a>
+            <a class="btn submit-btn" href="https://portal.ieeeyesist12.org/mf-direct" target="_blank">
+              <i class="fas fa-paper-plane"></i> Submit Abstract
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Maker Theme Section -->
-    <section class="maker-theme">
+    <section class="innovation-theme">
       <div class="container">
         <!-- Heading -->
         <div class="theme-heading scroll-animate animate-up">
@@ -104,306 +144,293 @@
       </div>
     </section>
 
-    <!-- participation Section -->
-    <section class="participation-areas scroll-animate animate-up delay-1">
-      <h2 class="section-title scroll-animate animate-up delay-1">
-        Participation
-      </h2>
-      <ul class="mission-list">
-        <li>
-          <i class="fas fa-check-circle"></i>
-          <span
-            >Innovators, makers, and doers coming together to showcase their
-            products to the local community.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-check-circle"></i>
-          <span
-            >All types of creators, such as tech enthusiasts, crafters,
-            innovators, and hobbyists.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-check-circle"></i>
-          <span
-            >Students from different technical universities, who wish to
-            participate and showcase their innovations.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-check-circle"></i>
-          <span
-            >Graduate members, capable of delivering solutions to problem
-            statements, are welcome to join this track.</span
-          >
-        </li>
-      </ul>
-    </section>
-
-    <!-- Our Aim, Theme & Topics Section -->
-    <section class="aim-theme-topics">
-      <div class="aim-section">
-        <h2 class="section-title">Our Aim</h2>
-        <p>
-          Maker Fair aims to bring forth a platform for creators and
-          experimenters to demonstrate their ideas and solutions for issues
-          faced on a global level.
-        </p>
-      </div>
-
-      <div class="theme-section">
-        <h2 class="section-title">Theme</h2>
-        <p>
-          Sustainable Agriculture, Unsustainable Actions, Miscellaneous (SDG
-          other than 7, 9, and 11).
-        </p>
-      </div>
-
-      <div class="topics-section">
-        <h2 class="section-title scroll-animate animate-up delay-1">Topics</h2>
-        <ul class="topics-list">
+    <!-- Participation Section (Styled like Eligibility) -->
+    <section class="eligibility-section scroll-animate animate-left">
+      <div class="container">
+        <h2 class="section-heading"><b>Participation</b></h2>
+        <ul class="eligibility-list">
           <li>
-            <i class="fas fa-leaf scroll-animate animate-left delay-1"></i>
-            <span>No Poverty</span>
+            <i class="fas fa-check-circle"></i>
+            <span>Innovators, makers, and doers coming together to showcase their products to the local community.</span>
           </li>
           <li>
-            <i class="fas fa-seedling scroll-animate animate-left delay-1"></i>
-            <span>Zero Hunger</span>
+            <i class="fas fa-check-circle"></i>
+            <span>All types of creators, such as tech enthusiasts, crafters, innovators, and hobbyists.</span>
           </li>
           <li>
-            <i class="fas fa-recycle scroll-animate animate-left delay-1"></i>
-            <span>Responsible Consumption & Production</span>
+            <i class="fas fa-check-circle"></i>
+            <span>Students from different technical universities, who wish to participate and showcase their innovations.</span>
           </li>
           <li>
-            <i class="fas fa-cloud scroll-animate animate-left delay-1"></i>
-            <span>Climate Change</span>
-          </li>
-          <li>
-            <i class="fas fa-tree scroll-animate animate-left delay-1"></i>
-            <span>Loss of Biodiversity through Deforestation</span>
-          </li>
-          <li>
-            <i class="fas fa-water scroll-animate animate-left delay-1"></i>
-            <span>Pollution</span>
-          </li>
-          <li>
-            <i
-              class="fas fa-battery-three-quarters scroll-animate animate-left delay-1"
-            ></i>
-            <span>e-Waste Management</span>
-          </li>
-          <li>
-            <i class="fas fa-globe scroll-animate animate-left delay-1"></i>
-            <span>Miscellaneous (SDG other than 7, 9, and 11)</span>
+            <i class="fas fa-check-circle"></i>
+            <span>Graduate members, capable of delivering solutions to problem statements, are welcome to join this track.</span>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- Topics Explanation Section -->
-    <section class="topics-explanation">
-      <h2 class="section-title scroll-animate animate-up delay-1">
-        Topics Explanation
-      </h2>
-
-      <div class="topic-item">
-        <h3>
-          <i
-            class="fas fa-hand-holding-heart scroll-animate animate-up delay-1"
-          ></i>
-          No Poverty
-        </h3>
-        <p>
-          Build the resilience of the poor and those in vulnerable situations;
-          reduce their exposure and vulnerability to climate-related extreme
-          events and other economic, social, and environmental shocks and
-          disasters.
+    <!-- Our Aim & Theme Section -->
+    <section class="mission-areas" style="padding: 40px 0;">
+      <div class="container">
+        <h2 class="section-heading"><b>Our Aim</b></h2>
+        <p class="section-text">
+          Maker Fair aims to bring forth a platform for creators and
+          experimenters to demonstrate their ideas and solutions for issues
+          faced on a global level.
         </p>
-      </div>
 
-      <div class="topic-item">
-        <h3>
-          <i class="fas fa-carrot scroll-animate animate-up delay-1"></i> Zero
-          Hunger
-        </h3>
-        <p>
-          Ensure sustainable food production systems, implement resilient
-          agricultural practices that increase productivity and production, help
-          maintain ecosystems, strengthen adaptation capacity to climate change,
-          extreme weather, drought, flooding, and progressively improve land and
-          soil quality.
-        </p>
-      </div>
-
-      <div class="topic-item">
-        <h3>
-          <i class="fas fa-recycle scroll-animate animate-up delay-1"></i>
-          Responsible Consumption & Production
-        </h3>
-        <p>
-          Innovative measures to minimize natural resource use and toxic
-          materials, and reduce waste and pollutants throughout the production
-          and consumption process.
-        </p>
-      </div>
-
-      <div class="topic-item">
-        <h3>
-          <i class="fas fa-cloud-sun scroll-animate animate-up delay-1"></i>
-          Climate Change
-        </h3>
-        <p>
-          Build solutions to strengthen resilience and adaptive capacity to
-          climate hazards and disasters globally. Improve education, awareness,
-          and institutional capacity for mitigation, adaptation, impact
-          reduction, and early warning systems.
-        </p>
-      </div>
-
-      <div class="topic-item">
-        <h3>
-          <i class="fas fa-tree scroll-animate animate-up delay-1"></i> Loss of
-          Biodiversity through Deforestation
-        </h3>
-        <p>
-          Focus on sustainable forest management, halting and reversing habitat
-          degradation, combating desertification, and stopping biodiversity
-          loss.
-        </p>
-      </div>
-
-      <div class="topic-item">
-        <h3>
-          <i class="fas fa-water scroll-animate animate-up delay-1"></i>
-          Pollution
-        </h3>
-        <p>
-          Ensure universal access to affordable, reliable, and modern energy
-          services, and significantly increase the share of renewable energy in
-          the global energy mix.
-        </p>
-      </div>
-
-      <div class="topic-item">
-        <h3>
-          <i class="fas fa-microchip scroll-animate animate-up delay-1"></i>
-          e-Waste Management
-        </h3>
-        <p>
-          Innovative ways to collect e-waste, recover and recycle materials
-          safely, and dispose of e-waste by suitable methods to reduce adverse
-          environmental impacts.
-        </p>
-      </div>
-
-      <div class="topic-item">
-        <h3>
-          <i class="fas fa-globe scroll-animate animate-up delay-1"></i>
-          Miscellaneous (SDG other than 7, 9, and 11)
-        </h3>
-        <p>
-          Creative projects addressing diverse Sustainable Development Goals,
-          including education, water management, gender equality, sustainable
-          cities, peace, justice, and strong institutions, and partnerships for
-          sustainable development.
+        <h2 class="section-heading" style="margin-top: 40px;"><b>Theme</b></h2>
+        <p class="section-text">
+          Sustainable Agriculture, Unsustainable Actions, Miscellaneous (SDG
+          other than 7, 9, and 11).
         </p>
       </div>
     </section>
 
-    <!-- Why Join Section -->
-    <section class="why-join-section">
-      <h2 class="section-title scroll-animate animate-up delay-1">
-        Why You Need to Join This Competition?
-      </h2>
-      <ul class="why-join-list">
-        <li>
-          <i
-            class="fas fa-network-wired scroll-animate animate-right delay-1"
-          ></i>
-          <strong>Gaining a good network:</strong> Connect with passionate
-          people worldwide and share your thoughts, talents, and passions.
-          Opportunities to meet professionals are endless.
-        </li>
-        <li>
-          <i class="fas fa-chart-line scroll-animate animate-right delay-1"></i>
-          <strong>Understand present trends:</strong> Participate to gain
-          insight into the society's current state and emerging trends.
-        </li>
-        <li>
-          <i class="fas fa-lightbulb scroll-animate animate-right delay-1"></i>
-          <strong>Attempt a real-world task:</strong> Solve real-world problems
-          to unleash your team's creativity.
-        </li>
-        <li>
-          <i class="fas fa-trophy scroll-animate animate-right delay-1"></i>
-          <strong>Put yourself to the test:</strong> Advance your project
-          management abilities through practical experience in overseeing
-          projects and navigating all stages.
-        </li>
-        <li>
-          <i class="fas fa-microphone scroll-animate animate-right delay-1"></i>
-          <strong>Improve your public speaking skills:</strong> Showcase
-          communication and entrepreneurial abilities during project
-          presentations.
-        </li>
-        <li>
-          <i
-            class="fas fa-chalkboard-teacher scroll-animate animate-right delay-1"
-          ></i>
-          <strong>Gain knowledge from industry experts:</strong> Attend webinars
-          from prominent professionals for guidance, insight, and inspiration.
-        </li>
-      </ul>
+    <!-- Topics Section (Styled like Benefits) -->
+    <section class="benefits-section scroll-animate animate-left">
+      <div class="container">
+        <h2 class="section-heading"><b>Topics</b></h2>
+        <ul class="benefits-list">
+          <li>
+            <i class="fas fa-leaf"></i>
+            <span><b>No Poverty:</b> Build the resilience of the poor and those in vulnerable situations.</span>
+          </li>
+          <li>
+            <i class="fas fa-seedling"></i>
+            <span><b>Zero Hunger:</b> Ensure sustainable food production systems.</span>
+          </li>
+          <li>
+            <i class="fas fa-recycle"></i>
+            <span><b>Responsible Consumption & Production:</b> Minimize natural resource use and toxic materials.</span>
+          </li>
+          <li>
+            <i class="fas fa-cloud"></i>
+            <span><b>Climate Change:</b> Build solutions to strengthen resilience and adaptive capacity.</span>
+          </li>
+          <li>
+            <i class="fas fa-tree"></i>
+            <span><b>Loss of Biodiversity:</b> Focus on sustainable forest management and halting habitat degradation.</span>
+          </li>
+          <li>
+            <i class="fas fa-water"></i>
+            <span><b>Pollution:</b> Ensure universal access to affordable, reliable, and modern energy services.</span>
+          </li>
+          <li>
+            <i class="fas fa-battery-three-quarters"></i>
+            <span><b>e-Waste Management:</b> Innovative ways to collect, recover, and recycle e-waste.</span>
+          </li>
+          <li>
+            <i class="fas fa-globe"></i>
+            <span><b>Miscellaneous:</b> SDG other than 7, 9, and 11.</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Things to Remember Section -->
-    <section class="things-remember-section">
-      <h2 class="section-title scroll-animate animate-up delay-1">
-        Things to Be Remembered
-      </h2>
-      <ul class="things-remember-list">
-        <li>
-          <i class="fas fa-users scroll-animate animate-down delay-1"></i>
-          <strong>Team Size:</strong> 1 to 4 members (Max: 4, Min: 1).
-        </li>
-        <li>
-          <i class="fas fa-globe scroll-animate animate-down delay-1"></i>
-          <strong>Team Members:</strong> Can come from the same or different
-          academic institutions/industries and countries. Only registered
-          members will get certificates. Mentor names must accompany
-          registration.
-        </li>
-        <li>
-          <i class="fas fa-lock scroll-animate animate-down delay-1"></i>
-          <strong>Team Lock:</strong> Teams locked after abstract submission; no
-          changes allowed afterward.
-        </li>
-        <li>
-          <i class="fas fa-project-diagram"></i>
-          <strong>Project Display:</strong> Teams must display their projects,
-          explain, and demonstrate to evaluators and audience.
-        </li>
-        <li>
-          <i class="fas fa-clipboard-check"></i>
-          <strong>Evaluation Criteria:</strong> Challenge, Innovation,
-          Feasibility, Extendibility, and Business Model/Marketability.
-        </li>
-        <li>
-          <i class="fas fa-ban scroll-animate animate-down delay-1"></i>
-          <strong>Plagiarism:</strong> Strictly prohibited at any stage.
-        </li>
-        <li>
-          <i class="fas fa-handshake scroll-animate animate-down delay-1"></i>
-          <strong>Responsibility:</strong> Teams are solely responsible for
-          cooperation and teamwork.
-        </li>
-        <li>
-          <i class="fas fa-info-circle scroll-animate animate-down delay-1"></i>
-          <strong>Updates:</strong> Venue, platform, and logistics details will
-          be updated soon.
-        </li>
-      </ul>
+    <!-- Topics Explanation Section (Detailed) -->
+    <section class="methodology-section scroll-animate">
+      <div class="container">
+        <h2 class="section-heading"><b>Topics Explanation</b></h2>
+        <div class="selection-method-grid">
+          <div class="method-box scroll-animate animate-up delay-1">
+            <i class="fas fa-hand-holding-heart method-icon"></i>
+            <h3>No Poverty</h3>
+            <p>
+              Build the resilience of the poor and those in vulnerable situations;
+              reduce their exposure and vulnerability to climate-related extreme
+              events and other economic, social, and environmental shocks and
+              disasters.
+            </p>
+          </div>
+
+          <div class="method-box scroll-animate animate-up delay-2">
+            <i class="fas fa-carrot method-icon"></i>
+            <h3>Zero Hunger</h3>
+            <p>
+              Ensure sustainable food production systems, implement resilient
+              agricultural practices that increase productivity and production, help
+              maintain ecosystems, strengthen adaptation capacity to climate change,
+              extreme weather, drought, flooding, and progressively improve land and
+              soil quality.
+            </p>
+          </div>
+
+          <div class="method-box scroll-animate animate-up delay-3">
+            <i class="fas fa-recycle method-icon"></i>
+            <h3>Responsible Consumption & Production</h3>
+            <p>
+              Innovative measures to minimize natural resource use and toxic
+              materials, and reduce waste and pollutants throughout the production
+              and consumption process.
+            </p>
+          </div>
+
+          <div class="method-box scroll-animate animate-up delay-4">
+            <i class="fas fa-cloud-sun method-icon"></i>
+            <h3>Climate Change</h3>
+            <p>
+              Build solutions to strengthen resilience and adaptive capacity to
+              climate hazards and disasters globally. Improve education, awareness,
+              and institutional capacity for mitigation, adaptation, impact
+              reduction, and early warning systems.
+            </p>
+          </div>
+
+          <div class="method-box scroll-animate animate-up delay-1">
+            <i class="fas fa-tree method-icon"></i>
+            <h3>Loss of Biodiversity</h3>
+            <p>
+              Focus on sustainable forest management, halting and reversing habitat
+              degradation, combating desertification, and stopping biodiversity
+              loss.
+            </p>
+          </div>
+
+          <div class="method-box scroll-animate animate-up delay-2">
+            <i class="fas fa-water method-icon"></i>
+            <h3>Pollution</h3>
+            <p>
+              Ensure universal access to affordable, reliable, and modern energy
+              services, and significantly increase the share of renewable energy in
+              the global energy mix.
+            </p>
+          </div>
+
+          <div class="method-box scroll-animate animate-up delay-3">
+            <i class="fas fa-microchip method-icon"></i>
+            <h3>e-Waste Management</h3>
+            <p>
+              Innovative ways to collect e-waste, recover and recycle materials
+              safely, and dispose of e-waste by suitable methods to reduce adverse
+              environmental impacts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Join Section (Styled like Benefits) -->
+    <section class="benefits-section why-join-section scroll-animate animate-left">
+      <div class="container">
+        <h2 class="section-heading scroll-animate animate-up delay-1">
+          Why You Need to Join This Competition?
+        </h2>
+        <ul class="benefits-list">
+          <li>
+            <i
+              class="fas fa-network-wired scroll-animate animate-right delay-1"
+            ></i>
+            <span>
+              <strong>Gaining a good network:</strong> Connect with passionate
+              people worldwide and share your thoughts, talents, and passions.
+              Opportunities to meet professionals are endless.
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-chart-line scroll-animate animate-right delay-1"></i>
+            <span>
+              <strong>Understand present trends:</strong> Participate to gain
+              insight into the society's current state and emerging trends.
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-lightbulb scroll-animate animate-right delay-1"></i>
+            <span>
+              <strong>Attempt a real-world task:</strong> Solve real-world problems
+              to unleash your team's creativity.
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-trophy scroll-animate animate-right delay-1"></i>
+            <span>
+              <strong>Put yourself to the test:</strong> Advance your project
+              management abilities through practical experience in overseeing
+              projects and navigating all stages.
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-microphone scroll-animate animate-right delay-1"></i>
+            <span>
+              <strong>Improve your public speaking skills:</strong> Showcase
+              communication and entrepreneurial abilities during project
+              presentations.
+            </span>
+          </li>
+          <li>
+            <i
+              class="fas fa-chalkboard-teacher scroll-animate animate-right delay-1"
+            ></i>
+            <span>
+              <strong>Gain knowledge from industry experts:</strong> Attend webinars
+              from prominent professionals for guidance, insight, and inspiration.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Things to Remember Section (Styled like Rules) -->
+    <section class="rules-section things-remember-section">
+      <div class="container">
+        <h2 class="section-heading scroll-animate animate-up delay-1">
+          Things to Be Remembered
+        </h2>
+        <ul class="rules-list">
+          <li>
+            <i class="fas fa-users scroll-animate animate-down delay-1"></i>
+            <span><strong>Team Size:</strong> 1 to 4 members (Max: 4, Min: 1).</span>
+          </li>
+          <li>
+            <i class="fas fa-globe scroll-animate animate-down delay-1"></i>
+            <span>
+              <strong>Team Members:</strong> Can come from the same or different
+              academic institutions/industries and countries. Only registered
+              members will get certificates. Mentor names must accompany
+              registration.
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-lock scroll-animate animate-down delay-1"></i>
+            <span>
+              <strong>Team Lock:</strong> Teams locked after abstract submission; no
+              changes allowed afterward.
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-project-diagram"></i>
+            <span>
+              <strong>Project Display:</strong> Teams must display their projects,
+              explain, and demonstrate to evaluators and audience.
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-clipboard-check"></i>
+            <span>
+              <strong>Evaluation Criteria:</strong> Challenge, Innovation,
+              Feasibility, Extendibility, and Business Model/Marketability.
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-ban scroll-animate animate-down delay-1"></i>
+            <span><strong>Plagiarism:</strong> Strictly prohibited at any stage.</span>
+          </li>
+          <li>
+            <i class="fas fa-handshake scroll-animate animate-down delay-1"></i>
+            <span>
+              <strong>Responsibility:</strong> Teams are solely responsible for
+              cooperation and teamwork.
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-info-circle scroll-animate animate-down delay-1"></i>
+            <span>
+              <strong>Updates:</strong> Venue, platform, and logistics details will
+              be updated soon.
+            </span>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Track Structure Section -->
