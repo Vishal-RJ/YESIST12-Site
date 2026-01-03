@@ -1170,6 +1170,7 @@ main {
 
 .focus-areas .section-title,
 .focus-areas .section-heading,
+.mission-areas .section-heading,
 .mission-areas .section-title,
 .objectives-areas .section-title,
 .participation-areas .section-title,
@@ -1260,6 +1261,31 @@ main {
   margin-bottom: 30px;
   margin-left: -60px;
   color: #060a0ccc;
+}
+
+/* Objectives paragraph inside mission-areas */
+.mission-areas .section-text {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  margin-left: 0;
+  color: #060a0ccc;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .mission-areas .section-text {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .focus-areas,
+  .mission-areas,
+  .objectives-areas,
+  .participation-areas,
+  .submission-topics-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* Grid layout for boxes */
@@ -1402,12 +1428,18 @@ main {
   font-size: 1rem;
   line-height: 1.6;
   padding-left: 25px;
-  display: none; /* hidden initially */
-  transition: all 0.4s ease;
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
 
+.faq-item:hover .faq-answer,
 .faq-item.active .faq-answer {
-  display: block;
+  max-height: 600px;
+  opacity: 1;
+  padding-top: 5px;
 }
 
 /* Responsive adjustments */
