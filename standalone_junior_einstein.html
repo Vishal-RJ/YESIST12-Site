@@ -1,0 +1,3324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junior Einstein</title>
+    <link rel="icon" type="image/png" href="images/IEEE-YESIST12-Logo-1024x307-1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+/* Inlined from style.css */
+:root {
+  --primary-color: #0a415c;
+  --accent-color: #2bb884;
+  --light-bg-color: #f4f7f6;
+  --white-color: #ffffff;
+  --dark-text-color: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-text-color);
+  background-color: var(--white-color);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: var(--white-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 25px;
+  position: relative;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--accent-color);
+}
+
+/* Dropdown Menu Styles */
+.has-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  margin: 0;
+}
+
+.dropdown a {
+  padding: 10px 20px;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: var(--light-bg-color);
+}
+
+/* Hero Section Styles */
+.hero {
+  background-image: linear-gradient(rgba(10, 65, 92, 0.8), rgba(10, 65, 92, 0.8)), url('images/HeaderBG.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--white-color);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 60px 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+.footer-logo img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: var(--white-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: var(--accent-color);
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--accent-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .main-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--accent-color);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: opacity 0.3s;
+}
+
+#scrollTopBtn.show {
+  display: block;
+}
+
+#scrollTopBtn:hover {
+  background-color: var(--primary-color);
+}
+</style>
+<style>
+/* Inlined from track_style.css */
+* {
+    font-family: "Montserrat";
+}
+
+.innovation-hero {
+    background: linear-gradient(rgba(10, 65, 92, 0.8), rgba(10, 65, 92, 0.8)), url('images/HeaderBG.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.innovation-hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.breadcrumb li {
+    margin: 0 5px;
+}
+
+.breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+.about-special {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.about-special .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-special .content {
+    flex: 1;
+}
+
+.about-special .image {
+    flex: 1;
+}
+
+.about-special .image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-special .title {
+    font-size: 2.5rem;
+    color: #0A415C;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-special .subtitle {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Theme Section */
+.innovation-theme {
+    padding: 80px 0;
+    background-color: #f9fbfd;
+    text-align: center;
+}
+
+.theme-heading h2 {
+    font-size: 2.5rem;
+    color: #0A415C;
+    margin-bottom: 10px;
+}
+
+.theme-heading h3 {
+    font-size: 1.5rem;
+    color: #2bb884;
+    margin-bottom: 40px;
+}
+
+.theme-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.theme-icon-box.accent {
+    border-left: 5px solid #2bb884;
+}
+
+.theme-icon-box .icon {
+    font-size: 3rem;
+    color: #2bb884;
+}
+
+.theme-icon-box .text h2 {
+    font-size: 1.8rem;
+    color: #0A415C;
+    margin: 0;
+}
+
+/* Description Section */
+.innovation-description {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.theme-text {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Objectives Section */
+.objectives-section {
+    padding: 80px 0;
+    background-color: #f9fbfd;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    color: #0A415C;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.objective-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.objective-box:hover {
+    transform: translateY(-10px);
+}
+
+.objective-icon {
+    font-size: 2.5rem;
+    color: #2bb884;
+    margin-bottom: 20px;
+}
+
+.objective-box h3 {
+    font-size: 1.5rem;
+    color: #0A415C;
+    margin-bottom: 15px;
+}
+
+.objective-box p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Selection Method Section */
+.selection-method-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.selection-method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.method-box {
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+    background: #f9fbfd;
+    transition: all 0.3s ease;
+}
+
+.method-box:hover {
+    background: #0A415C;
+    color: #fff;
+}
+
+.method-icon {
+    font-size: 3rem;
+    color: #2bb884;
+    margin-bottom: 20px;
+}
+
+.method-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.method-box p {
+    line-height: 1.6;
+}
+
+.method-box:hover h3, .method-box:hover p {
+    color: #fff;
+}
+
+/* Contacts Section */
+.contacts-section {
+    padding: 80px 0;
+    background-color: #f9fbfd;
+    text-align: center;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: #2bb884;
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    font-size: 1.3rem;
+    color: #0A415C;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #666;
+}
+
+/* Scroll Animations */
+.scroll-animate {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate.animate-up {
+    transform: translateY(50px);
+}
+
+.scroll-animate.animate-down {
+    transform: translateY(-50px);
+}
+
+.scroll-animate.animate-left {
+    transform: translateX(-50px);
+}
+
+.scroll-animate.animate-right {
+    transform: translateX(50px);
+}
+
+.scroll-animate.animate-fade {
+    transform: scale(0.95);
+}
+
+.scroll-animate.in-view {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* Mobile Menu Button */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #0A415C;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .hamburger {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #fff;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .main-nav.nav-open {
+        left: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .main-nav li {
+        margin: 15px 0;
+    }
+
+    .has-dropdown .dropdown {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+        display: none;
+    }
+
+    .has-dropdown.active .dropdown {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .innovation-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-special .container {
+        flex-direction: column;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+}
+</style>
+<style>
+/* Inlined from special_track_junior_einstein.css */
+/* --- HERO SECTION --- */
+.innovation-hero .title {
+    color: #ffffff !important;
+}
+
+/* --- GATEWAYS / SUBMISSION MODE --- */
+.gateways-section {
+    padding: 60px 0;
+}
+
+.gateways-section .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gateway-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gateway-row {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.gateway-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 120px;
+}
+
+.gateway-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.gateway-label {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.gateway-content {
+    flex: 1;
+    border-radius: 15px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.gateway-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gateway-content li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.6;
+    color: white;
+}
+
+.gateway-content li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: white;
+}
+
+.gateway-content li::marker {
+    color: white !important;
+}
+
+/* Colors for Rows */
+.gateway-row:nth-child(1) .gateway-icon { background: #128a73; }
+.gateway-row:nth-child(1) .gateway-label { background: #128a73; }
+.gateway-row:nth-child(1) .gateway-content { background: #128a73; }
+
+.gateway-row:nth-child(2) .gateway-icon { background: #0a415c; }
+.gateway-row:nth-child(2) .gateway-label { background: #0a415c; }
+.gateway-row:nth-child(2) .gateway-content { background: #0a415c; }
+
+/* --- ABSTRACT SECTION --- */
+.abstract-section {
+    padding: 80px 0;
+}
+
+.abstract-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.abstract-card .section-title {
+    font-size: 2.2rem;
+    color: #0a415c;
+    margin-bottom: 15px;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.status-pill.open {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.deadline {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.abstract-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.abstract-actions .btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.download-btn {
+    background: #0a415c;
+    color: white;
+}
+
+.submit-btn {
+    background: #2bb884;
+    color: white;
+}
+
+.abstract-actions .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- GALLERY SECTION --- */
+.card-gallery-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.card-gallery {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.card-gallery-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 30px;
+}
+
+.card-gallery-item {
+    flex: 0 0 350px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.card-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-gallery-item.active {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.card-gallery-item:not(.active) {
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+.gallery-bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-nav {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #0a415c;
+    background: transparent;
+    color: #0a415c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-nav:hover {
+    background: #0a415c;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gateway-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gateway-icon-container {
+        width: 100%;
+    }
+    
+    .abstract-actions {
+        flex-direction: column;
+    }
+    
+    .card-gallery-item {
+        flex: 0 0 280px;
+        height: 380px;
+    }
+}
+</style>
+<style>
+/* Inlined from jury-carousel.css */
+/* Jury Carousel Styles */
+.jury-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.jury-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 30px;
+    padding: 10px;
+}
+
+.jury-carousel-slide {
+    flex: 0 0 calc(33.333% - 20px); /* Show 3 items at a time */
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation Buttons */
+.jury-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0A415C;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.jury-nav-btn:hover {
+    background-color: #2bb884;
+}
+
+.jury-prev {
+    left: 10px;
+}
+
+.jury-next {
+    right: 10px;
+}
+
+/* Dots Indicator */
+.jury-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.jury-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.jury-dot.active {
+    background-color: #0A415C;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .jury-carousel-slide {
+        flex: 0 0 calc(50% - 15px); /* Show 2 items */
+    }
+}
+
+@media (max-width: 768px) {
+    .jury-carousel-slide {
+        flex: 0 0 100%; /* Show 1 item */
+    }
+}
+
+/* Copied from steering-committee.css */
+.committee-card {
+    width: 320px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.committee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.committee-card-image {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.committee-social i {
+    color: #fff; 
+}
+
+.committee-card-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 65, 92, 0.9);
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(15px);
+    backdrop-filter: blur(2px);
+}
+
+.more-info-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2bb884;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 5;
+}
+
+.committee-card:hover .more-info-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.committee-card:hover .committee-card-details {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.committee-card:hover .details-content h4 {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.committee-card:hover .details-title {
+    animation: fadeInUp 0.5s 0.1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.committee-card:hover .details-bio {
+    animation: fadeInUp 0.5s 0.2s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.committee-card:hover .details-affiliation {
+    animation: fadeInUp 0.5s 0.3s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.details-content {
+    text-align: center;
+    max-width: 100%;
+}
+
+.details-content h4 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: white;
+}
+
+.details-title {
+    color: #2bb884;
+    font-weight: 600;
+    margin: 0 0 15px;
+    font-size: 14px;
+}
+
+.details-bio {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 15px;
+}
+
+.details-affiliation {
+    font-style: italic;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.committee-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.committee-card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.committee-card h3 {
+    color: #0A415C;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+}
+
+.committee-card p {
+    color: #2bb884;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Modal Popup Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 900px;
+    max-height: 80vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-left {
+    flex: 0 0 40%;
+    background-color: #0A415C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 65, 92, 0.9) 0%, rgba(43, 184, 132, 0.8) 100%);
+    z-index: 1;
+}
+
+.modal-left-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.modal-header-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 5px solid #2bb884;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-left-content h2 {
+    margin: 0 0 5px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.modal-left-content p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.modal-right {
+    flex: 0 0 60%;
+    padding: 40px 30px;
+    position: relative;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-info-item {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.modal-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.modal-info-item h3 {
+    color: #0A415C;
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.modal-info-item h3::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #2bb884;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.modal-info-item p {
+    margin: 0;
+    line-height: 1.7;
+    color: #555;
+    font-size: 15px;
+    padding-left: 18px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #0A415C;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close:hover {
+    color: #2bb884;
+    transform: rotate(90deg);
+    background-color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.committee-social {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+}
+
+.committee-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #0A415C;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+}
+
+.committee-card .dots-decoration {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.committee-card .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #0A415C;
+    border-radius: 50%;
+}
+
+.committee-card .accent-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #2bb884;
+    border-radius: 0 0 0 100%;
+    opacity: 0.7;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+        max-height: 90vh;
+    }
+    
+    .modal-left {
+        width: 100%;
+        padding: 30px 20px;
+    }
+    
+    .modal-right {
+        width: 100%;
+        padding: 30px 20px;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+    
+    .modal-header-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+</style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .innovation-hero .title {
+      color: #ffffff !important;
+    }
+
+    .abstract-section {
+      padding: 64px 0;
+    }
+
+    .abstract-section .container {
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .abstract-card {
+      background: #ffffff !important;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+      border: 1px solid #e5eef7;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      align-items: center;
+      justify-items: center;
+      animation: abstractEnter 0.8s ease both;
+    }
+
+    .abstract-card.in-view {
+      animation: abstractEnter 0.8s ease both, abstractFloat 8s ease-in-out 0.8s infinite;
+    }
+
+    @keyframes abstractEnter {
+      from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.98);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes abstractFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-3px);
+      }
+    }
+
+    .abstract-card .section-title {
+      color: #0b3b61 !important;
+      letter-spacing: 0.3px;
+      margin: 0;
+    }
+
+    .abstract-card .countdown-timer {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid #cfe3f7 !important;
+      background: #eef6ff !important;
+      color: #0b3b61 !important;
+      font-weight: 600;
+    }
+
+    .abstract-card .deadline {
+      color: #3a4a5b !important;
+      margin: 4px 0 12px 0;
+      letter-spacing: 0.3px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      border: 1px solid #cfe3f7;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      white-space: nowrap;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .status-pill.open {
+      background: linear-gradient(180deg, #eafdf2 0%, #d9f5e7 100%);
+      color: #0b7a3c;
+      border-color: #b9e4c9;
+    }
+
+    .status-pill.closed {
+      background: linear-gradient(180deg, #f2f5f9 0%, #e9eef5 100%);
+      color: #4a5970;
+      border-color: #d7dee8;
+    }
+
+    .status-pill:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .status-pill.open::before,
+    .status-pill.closed::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .status-pill.open::before {
+      background-color: #0b7a3c;
+      box-shadow: 0 0 0 4px rgba(11, 122, 60, 0.12);
+    }
+
+    .status-pill.closed::before {
+      background-color: #4a5970;
+      box-shadow: 0 0 0 4px rgba(74, 89, 112, 0.12);
+    }
+
+    .abstract-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .abstract-card .btn {
+      min-width: 260px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 2px solid #0b3b61 !important;
+      box-shadow: 0 8px 22px rgba(11, 59, 97, 0.12);
+    }
+
+    .abstract-card .download-btn {
+      background: #0b3b61 !important;
+      color: #ffffff !important;
+    }
+
+    .abstract-card .submit-btn {
+      background: transparent !important;
+      color: #0b3b61 !important;
+    }
+
+    .abstract-card .btn i {
+      margin-right: 10px;
+    }
+
+    .abstract-card .btn {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .abstract-card .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(11, 59, 97, 0.18);
+    }
+
+    .flip-countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .flip-unit {
+      text-align: center;
+    }
+
+    .flip-card {
+      position: relative;
+      width: 100px;
+      height: 80px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #1f2a37 0%, #12171d 100%);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      color: #e6e9ed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 32px;
+      letter-spacing: 1px;
+      perspective: 500px;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-0.5px);
+    }
+
+    .flip-number {
+      display: inline-block;
+      transform-origin: top;
+      backface-visibility: hidden;
+      will-change: transform;
+    }
+
+    .flip-card.flip .flip-number {
+      animation: flipDown 0.6s ease;
+    }
+
+    @keyframes flipDown {
+      0% {
+        transform: rotateX(0deg);
+      }
+
+      45% {
+        transform: rotateX(-90deg);
+      }
+
+      100% {
+        transform: rotateX(-180deg);
+      }
+    }
+
+    .flip-label {
+      display: block;
+      margin-top: 6px;
+      font-size: 12px;
+      color: #4a5970;
+      font-weight: 600;
+    }
+
+    .sdg-image-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 100px);
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0 0;
+    }
+
+    .sdg-image-grid li {
+      width: 100px;
+      text-align: center;
+    }
+
+    .sdg-image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sdg-image-grid img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 1024px) {
+      .sdg-image-grid {
+        grid-template-columns: repeat(4, 100px);
+      }
+      .sdg-image-grid li {
+        width: 100px;
+        text-align: center;
+      }
+      .sdg-image-grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .sdg-image-grid img:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+    }
+      @media (max-width: 1024px) {
+        .sdg-image-grid {
+          grid-template-columns: repeat(4, 100px);
+        }
+      }
+      @media (max-width: 768px) {
+        .sdg-image-grid {
+          grid-template-columns: repeat(3, 100px);
+        }
+      }
+      @media (max-width: 480px) {
+        .sdg-image-grid {
+          grid-template-columns: repeat(2, 100px);
+        }
+      }
+      /* Submission Mode (Gateways) - visual restyle to match provided layout */
+      .gateways-section {
+        padding: 40px 0;
+      }
+      .gateway-container {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+      .gateway-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 22px;
+      }
+      .gateway-icon-container {
+        width: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      .gateway-icon {
+        width: 96px;
+        height: 96px;
+        border-radius: 10px;
+        background-color: #128a73;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+      }
+      .gateway-label {
+        width: 96px;
+        border-radius: 10px;
+        background-color: #0a415c;
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px 8px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      }
+      .gateway-content {
+        flex: 1;
+        border-radius: 14px;
+        padding: 22px 24px;
+        color: #fff;
+        box-shadow: 0 16px 26px rgba(0,0,0,0.18);
+      }
+      .gateway-content ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 28px;
+      }
+      .gateway-content li {
+        margin-bottom: 12px;
+        line-height: 1.7;
+      }
+      /* Row-specific colors to mirror screenshot */
+      .gateway-row:first-child .gateway-icon { background-color: #128a73; }
+      .gateway-row:first-child .gateway-label { background-color: #128a73; }
+      .gateway-row:first-child .gateway-content { background-color: #128a73; }
+      .gateway-row:last-child .gateway-icon { background-color: #0a415c; }
+      .gateway-row:last-child .gateway-label { background-color: #0a415c; }
+      .gateway-row:last-child .gateway-content { background-color: #0a415c; }
+      @media (max-width: 768px) {
+        .gateway-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .gateway-icon-container {
+          flex-direction: row;
+          width: auto;
+        }
+        .gateway-label {
+          width: auto;
+          min-width: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+  <section class="innovation-hero">
+    <div class="container">
+      <h1 class="title">Junior Einstein</h1>
+      <!-- Breadcrumb removed -->
+    </div>
+  </section>
+<section class="about-special">
+    <div class="bg-image"></div>
+
+    <div class="container">
+      <div class="content">
+        <h2 class="title">About Junior Einstein</h2>
+        <p class="subtitle">
+         Junior Einstein Track of IEEE YESIST12 2026 is designed to inspire impactful, technology-driven solutions that address some of humanity’s most pressing global challenges. First introduced in 2020, the track has become a dynamic platform for young innovators to present smarter, scalable, and meaningful ideas that tackle both humanitarian and industry-related problems. For the 2026 edition, the Junior Einstein Track focuses on elevating the quality of life worldwide by encouraging creative, research-backed, and future-ready proposals. It invites participants to reimagine how technology can transform communities, improve everyday living, and contribute to a more sustainable and inclusive global society.
+
+        </p>
+      </div>
+      <div class="image scroll-animate animate-right delay-2">
+        <img src="https://ieeeyesist12.org/wp-content/uploads/2022/12/yesist12-track-02-2048x1050.png"
+          alt="Junior Einstein Track Image" />
+      </div>
+    </div>
+
+
+  </section>
+  
+
+    <section class="innovation-theme">
+      <div class="container">
+        <div class="theme-heading scroll-animate animate-up">
+          <h2>Theme</h2>
+          <h3>Smart Ideas for a Sustainable Future</h3>
+        </div>
+
+        <div class="theme-icon-box accent">
+          <div class="icon scroll-animate animate-left">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="text scroll-animate animate-up delay-1">
+            <h2>
+              “Smart Ideas for a Sustainable Future”
+            </h2>
+          </div>
+        </div>
+  </div>
+
+  
+    </section>
+
+    <section class="innovation-description">
+      <div class="container">
+        <p class="theme-text scroll-animate animate-fade delay-2">
+          The Junior Einstein Track at IEEE YESIST12 2026 centers on “Smart Ideas for a Sustainable Future.” Aligned with the UN SDGs, this theme empowers young innovators to develop technology-driven solutions for a resilient world. Students are encouraged to identify community or global challenges and propose future-ready ideas—spanning smart systems, automation, and eco-friendly designs—that balance innovation with sustainability to create lasting impact.
+        </p>
+      </div>
+    </section>
+
+    <section class="eligibility-section scroll-animate animate-up" style="background-color: var(--light-bg-color); padding: 40px 0;">
+      <div class="container">
+        <h2 class="section-heading"><b>SDGs Aligned</b></h2>
+        <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
+        
+        <ul class="sdg-image-grid">
+          <li><img src="SDG/E-WEB-Goal-04.png" alt="SDG 4: Quality Education"></li>
+          <li><img src="SDG/E-WEB-Goal-06.png" alt="SDG 6: Clean Water and Sanitation"></li>
+          <li><img src="SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
+          <li><img src="SDG/E-WEB-Goal-09.png" alt="SDG 9: Industry, Innovation, and Infrastructure"></li>
+          <li><img src="SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
+          <li><img src="SDG/E-WEB-Goal-12.png" alt="SDG 12: Responsible Consumption and Production"></li>
+          <li><img src="SDG/E-WEB-Goal-13.png" alt="SDG 13: Climate Action"></li>
+          <li><img src="SDG/E-WEB-Goal-17.png" alt="SDG 17: Partnerships for the Goals"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
+      <div class="container">
+        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>TIMELINE:</b></h2>
+        <div class="table-responsive">
+          <table class="timeline-table">
+            <tbody>
+              <tr>
+                <td>Call for Abstracts-1</td>
+                <td>15th Dec 2025</td>
+              </tr>
+              <tr>
+                <td>Deadline for Abstract-1</td>
+                <td>31st Jan 2026</td>
+              </tr>
+              <tr>
+                <td>Time for reviewer to review the abstracts</td>
+                <td>1st Feb - 7th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Announcement of qualified abstracts</td>
+                <td>8th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Call for Abstracts-2</td>
+                <td>8th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Deadline for Abstract-2</td>
+                <td>31st March 2026</td>
+              </tr>
+              <tr>
+                <td>Time for reviewer to review the abstracts</td>
+                <td>01st April to 07th April 2026</td>
+              </tr>
+              <tr>
+                <td>Announcement of qualified abstract</td>
+                <td>08th April 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="abstract-section">
+      <div class="container">
+        <div class="abstract-card">
+          <h2 class="section-title">Submit your Abstract now</h2>
+          <div class="status-pill open">Open</div>
+          <h4 class="deadline">Call for Abstract: 14 / 01 / 2026</h4>
+          <div class="flip-countdown" data-countdown="2026-01-14T23:59:00">
+            <div class="flip-unit" data-unit="days">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Days</span>
+            </div>
+            <div class="flip-unit" data-unit="hours">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Hours</span>
+            </div>
+            <div class="flip-unit" data-unit="minutes">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Minutes</span>
+            </div>
+            <div class="flip-unit" data-unit="seconds">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Seconds</span>
+            </div>
+          </div>
+          <div class="abstract-actions">
+            <a class="btn download-btn" href="https://portal.ieeeyesist12.org/docs/Abstract_template.pptx" target="_blank">
+              <i class="fas fa-download"></i> DOWNLOAD ABSTRACT TEMPLATE
+            </a>
+            <a class="btn submit-btn" href="https://portal.ieeeyesist12.org/ic-direct" target="_blank">
+              <i class="fas fa-paper-plane"></i> Submit Abstract
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    var card = document.querySelector('.abstract-card');
+    if (!card) return;
+
+    var statusEl = card.querySelector('.status-pill');
+    var flipCountdown = card.querySelector('.flip-countdown');
+    var submitBtn = card.querySelector('.submit-btn');
+
+    /* ---------------- Intersection Observer ---------------- */
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          card.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    io.observe(card);
+
+    /* ---------------- Countdown Logic ---------------- */
+    if (!flipCountdown) return;
+
+    var deadlineStr = flipCountdown.getAttribute('data-countdown');
+    var deadline = new Date(deadlineStr);
+
+    var daysEl = flipCountdown.querySelector('.flip-unit[data-unit="days"] .flip-number');
+    var hoursEl = flipCountdown.querySelector('.flip-unit[data-unit="hours"] .flip-number');
+    var minsEl = flipCountdown.querySelector('.flip-unit[data-unit="minutes"] .flip-number');
+    var secsEl = flipCountdown.querySelector('.flip-unit[data-unit="seconds"] .flip-number');
+
+    function pad2(n) {
+      return n < 10 ? '0' + n : '' + n;
+    }
+
+    function setInitial(el, val) {
+      if (!el) return;
+      var card = el.closest('.flip-card');
+      el.textContent = val;
+      if (card) card.classList.remove('flip');
+    }
+
+    function setVal(el, val) {
+      if (!el) return;
+      var card = el.closest('.flip-card');
+      var prev = el.textContent;
+
+      if (prev !== val && card) {
+        card.classList.remove('flip');
+        void card.offsetWidth; // force reflow
+
+        var onAnimEnd = function () {
+          el.textContent = val;
+          card.classList.remove('flip');
+          el.removeEventListener('animationend', onAnimEnd);
+        };
+
+        el.addEventListener('animationend', onAnimEnd);
+        card.classList.add('flip');
+      }
+    }
+
+    function tick() {
+      var now = new Date();
+      var diff = deadline - now;
+
+      if (diff > 0) {
+        var days = Math.floor(diff / 86400000);
+        var hours = Math.floor((diff % 86400000) / 3600000);
+        var mins = Math.floor((diff % 3600000) / 60000);
+        var secs = Math.floor((diff % 60000) / 1000);
+
+        setVal(daysEl, days > 99 ? String(days) : pad2(days));
+        setVal(hoursEl, pad2(hours));
+        setVal(minsEl, pad2(mins));
+        setVal(secsEl, pad2(secs));
+
+        if (statusEl) {
+          statusEl.textContent = 'Open';
+          statusEl.classList.add('open');
+          statusEl.classList.remove('closed');
+        }
+      } else {
+        if (statusEl) {
+          statusEl.textContent = 'Closed';
+          statusEl.classList.remove('open');
+          statusEl.classList.add('closed');
+        }
+
+        flipCountdown.innerHTML = 'Closed';
+
+        if (submitBtn) {
+          submitBtn.setAttribute('aria-disabled', 'true');
+          submitBtn.style.opacity = '0.6';
+          submitBtn.style.pointerEvents = 'none';
+        }
+
+        clearInterval(timer);
+      }
+    }
+
+    /* ---------------- Initialize Without Flip ---------------- */
+    (function initValues() {
+      var now = new Date();
+      var diff = deadline - now;
+
+      var days = Math.floor(diff / 86400000);
+      var hours = Math.floor((diff % 86400000) / 3600000);
+      var mins = Math.floor((diff % 3600000) / 60000);
+      var secs = Math.floor((diff % 60000) / 1000);
+
+      setInitial(daysEl, days > 99 ? String(days) : pad2(days));
+      setInitial(hoursEl, pad2(hours));
+      setInitial(minsEl, pad2(mins));
+      setInitial(secsEl, pad2(secs));
+    })();
+
+    /* ---------------- Start Timer ---------------- */
+    var timer;
+    setTimeout(function () {
+      tick();
+      timer = setInterval(tick, 1000);
+    }, 1000);
+
+  });
+</script>
+
+
+  <section class="mission-areas">
+    <h2 class="section-heading">The Objectives of the Junior Einstein</h2>
+    <ul class="mission-list">
+      <li>
+        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+        <span><b>Global Showcase and Collaboration:</b> To create an international platform where young participants can showcase their talents and innovations, connect with peers from around the world, and foster meaningful collaborations that may lead to future academic, technical, and entrepreneurial partnerships.</span>
+      </li>
+      <li>
+        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+        <span><b>Next-Generation Innovator Recognition:</b> To identify, recognize, and motivate the next generation of innovators by encouraging creative thinking and supporting the development of viable, impactful solutions to real-world social challenges.</span>
+      </li>
+      <li>
+        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+        <span><b>Societal Impact through STEM:</b> To inspire students to apply STEM concepts in designing and developing solutions that address societal needs, while actively contributing to the United Nations Sustainable Development Goals (SDGs).</span>
+      </li>
+      <li>
+        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+        <span><b>Hands-on Experience and Skill Development:</b> To provide participants with hands-on exposure to technology and engineering projects, enhancing critical thinking, problem-solving abilities, technical understanding, and long-term interest in STEM fields.</span>
+      </li>
+      <li>
+        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+        <span><b>Teamwork, Collaboration, and Innovation:</b> To cultivate a culture of teamwork and collaboration, encouraging participants to work collectively, think creatively, and approach challenges with innovation-driven and solution-oriented mindsets.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="eligibility-section scroll-animate animate-left">
+    <h2 class="section-heading"><b>Who is eligible?</b></h2>
+    <ul class="eligibility-list">
+      <li>
+        <i class="fas fa-star"></i>
+        <span>Open to school students worldwide aged 12–17 years.</span>
+      </li>
+      <li>
+        <i class="fas fa-star"></i>
+        <span>Participants should have a keen interest in STEM and a passion for innovation.</span>
+      </li>
+      <li>
+        <i class="fas fa-star"></i>
+        <span>Teams may include up to 4 members; mixed institutions/countries are allowed.</span>
+      </li>
+      <li>
+        <i class="fas fa-star"></i>
+        <span>A mentor must accompany each team during registration.</span>
+      </li>
+      <li>
+        <i class="fas fa-star"></i>
+        <span>Proof of age and enrollment (e.g., bonafide school certificate or Birth Certificate) is required.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="benefits-section scroll-animate animate-left">
+    <h2 class="section-heading"><b>Benefits of participating</b></h2>
+    <ul class="benefits-list">
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Global Recognition:</b> Showcase your innovative ideas and stand
+          a chance to be recognized on a global platform.</span>
+      </li>
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Skill Development:</b> Hone critical thinking, problem-solving,
+          and collaboration skills.</span>
+      </li>
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Networking:</b> Connect with like-minded individuals, mentors,
+          and professionals who share a passion for sustainability.</span>
+      </li>
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Awareness:</b> Gain insights into pressing global issues and
+          contribute to meaningful solutions.</span>
+      </li>
+    </ul>
+  </section>
+
+    <section class="rules-section scroll-animate animate-left">
+      <h2 class="section-heading"><b>Rules for participation</b></h2>
+      <ul class="rules-list">
+        <li>
+          <i class="fas fa-book"></i>
+          <span>Teams should consist of up to four members.</span>
+        </li>
+        <li>
+          <i class="fas fa-book"></i>
+          <span>Projects can be software, hardware, or integrated tech solutions.</span>
+        </li>
+        <li>
+          <i class="fas fa-book"></i>
+          <span>Ensure originality – plagiarism in any form is strictly prohibited.</span>
+        </li>
+        <li>
+          <i class="fas fa-book"></i>
+          <span>Submissions must be clear, well-structured, and aligned with SDGs.</span>
+        </li>
+        <li>
+          <i class="fas fa-book"></i>
+          <span>Teams will be locked upon abstract submission. No changes to team members or mentors will be permitted after the abstract submission deadline under any circumstances.</span>
+        </li>
+        <li>
+          <i class="fas fa-book"></i>
+          <span>Each team is solely responsible for internal coordination, cooperation, and teamwork throughout the duration of the competition. IEEE YESIST12 will not intervene in internal team matters.</span>
+        </li>
+        <li>
+          <i class="fas fa-book"></i>
+          <span>Teams that have actively participated and have enrolled themselves with team members and mentor details will be eligible for the certificates.</span>
+        </li>
+        <span>
+          <a href="https://drive.google.com/file/d/1O_UOuKqG0PG7e70z1oqc9Z03QfDghZ6X/view?usp=sharing" download class="download-btn"><b>Download Rulebook</b></a>
+        </span>
+      </ul>
+    </section>
+
+    <div class="objectives-section">
+      <h2 class="section-heading scroll-animate animate-down delay-1">
+        Track Structure:
+      </h2>
+      <p class="section-text scroll-animate animate-up delay-2">
+        The Special Track follows a structured process to identify and showcase
+        innovative projects, consisting of the following phases:
+      </p>
+
+      <div class="objectives-grid track-grid">
+        <div class="objective-box">
+          <div class="box-inner scroll-animate animate-left delay-3">
+            <h3>
+              <i class="fa-solid fa-microphone objective-icon"></i> Phase 1 – Abstract Preselection & Prelims
+            </h3>
+            <p>
+              This is the initial phase where the abstract submission is open to
+              anyone interested in participating. Participants can submit
+              their abstracts through the submission portal available on the
+              website.
+            </p>
+          </div>
+        </div>
+
+        <div class="objective-box">
+          <div class="box-inner scroll-animate animate-right delay-4">
+            <h3>
+              <i class="fa-solid fa-trophy objective-icon"></i> Phase 2 - Stage 2 – Grand Finale
+            </h3>
+            <p>
+              Selected teams will present their project works before the jury
+              during the finals. Evaluation will be carried out based on the
+              criteria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="gateways-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Submission Mode
+        </h2>
+        <div class="gateway-container">
+          <div class="gateway-row">
+            <div class="gateway-icon-container">
+              <div class="gateway-icon">
+                <i class="fas fa-paper-plane" style="color:white; font-size: 40px;"></i>
+              </div>
+              <div class="gateway-label">Pilot Entry</div>
+            </div>
+            <div class="gateway-content pilot-content">
+              <ul>
+                <li>Participants from regions with an active YESIST12 Pilot event.</li>
+                <li>Projects are first presented and evaluated at a preliminary competition.</li>
+                <li>Winners from the Pilot event get a direct entry into the Grand Finale.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="gateway-row">
+            <div class="gateway-icon-container">
+              <div class="gateway-icon">
+                 <i class="fas fa-laptop-code" style="color:white; font-size: 40px;"></i>
+              </div>
+              <div class="gateway-label">Direct Entry</div>
+            </div>
+            <div class="gateway-content direct-content">
+              <ul>
+                <li>For participants from countries or regions without a YESIST12 Pilot event.</li>
+                <li>Submissions (Abstract, PPT, Video) are evaluated directly by the jury.</li>
+                <li>Selected projects are notified via email and advance to the Grand Finale.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="selection-method-section">
+      <h2 class="section-heading scroll-animate animate-down delay-1">
+        The submission could be related to the following topics
+      </h2>
+
+      <div class="selection-method-grid">
+        <div class="method-box scroll-animate animate-up delay-2">
+          <i class="fa-solid fa-database method-icon"></i>
+          <h3>Intelligent Insights
+</h3>
+          <p>
+            Leverage AI, machine learning, and data-driven technologies to solve real societal challenges. This includes using data analytics, predictive models, automation, and intelligent decision-support systems to improve public services, strengthen governance, enhance education, support economic development, and promote environmental sustainability. Projects should focus on creating impactful, inclusive, and efficient solutions that benefit communities, reduce inequalities, and improve everyday life.
+
+          </p>
+        </div>
+
+        <div class="method-box scroll-animate animate-up delay-3">
+          <i class="fa-solid fa-car method-icon"></i>
+          <h3>Smart Mobility</h3>
+          <p>
+            Develop innovative technological solutions to improve the safety, efficiency, and sustainability of transportation systems. This includes using smart technologies, connected devices, automation, and intelligent traffic management to reduce congestion, enhance mobility, lower emissions, and create seamless travel experiences. Projects may focus on optimizing public transport, supporting greener mobility, improving road safety, or building smarter, more accessible, and resilient transportation networks for communities.
+
+          </p>
+        </div>
+
+        <div class="method-box scroll-animate animate-up delay-4">
+          <i class="fa-solid fa-heart-pulse method-icon"></i>
+          <h3>Next-Gen Healthcare</h3>
+          <p>
+           Reimagine healthcare by developing solutions that make quality care more accessible, efficient, and patient-centered. Use telemedicine, IoT-based monitoring, predictive analytics, and digital diagnostics to improve early detection, streamline clinical workflows, and enable personalized treatment. Projects may address public health challenges, rural and remote care, hospital management, emergency response, mental well-being, maternal and child health, or chronic disease management. The goal is to create smarter, faster, and more equitable healthcare systems that enhance outcomes and strengthen community well-being.
+
+          </p>
+        </div>
+
+        <div class="method-box scroll-animate animate-up delay-5">
+          <i class="fa-solid fa-leaf method-icon"></i>
+          <h3>Sustainable Living</h3>
+          <p>
+            Champion innovative solutions that promote greener, smarter, and more resilient living environments. Use technology to improve environmental quality, optimize energy and water usage, and enhance overall urban sustainability. Apply smart home systems, automation, renewable energy, and eco-friendly design to reduce waste, manage resources efficiently, and create healthier living spaces. Projects may focus on smart irrigation, air and water quality monitoring, waste management, energy optimization, sustainable housing, or climate-friendly lifestyle solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="selection-method-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Selection Method
+        </h2>
+      </div>
+      <p class="section-text">
+        The selection process will be conducted in two main stages:
+      </p>
+
+      <div class="selection-method-grid">
+        <div class="method-box scroll-animate animate-up delay-3">
+          <i class="fa-solid fa-file-lines method-icon"></i>
+          <h3>Stage 1 - Abstracts & Prelims</h3>
+          <p>
+            Abstract submission is open to all school students between ages 12
+            and 17 via Pilot entry or Direct Entry.
+            <br /><br />
+            <b>A)</b> Direct entry participants will be evaluated based on
+            abstract submission. Selected innovative projects will be informed
+            via email. <br /><br />
+            <b>B)</b> Pilot entry participants present projects in a preliminary
+            round conducted by pilots. Winners move to finals.
+          </p>
+        </div>
+
+        <div class="method-box scroll-animate animate-up delay-4">
+          <i class="fa-solid fa-trophy method-icon"></i>
+          <h3>Stage 2 - Grand Finale</h3>
+          <p>
+            Selected teams will present their projects before the jury during
+            the finals.
+            <br /><br />
+            Evaluation will be carried out based on criteria such as novelty,
+            technical implementation, clarity of pitch, and expandability of the
+            idea.
+          </p>
+        </div>
+      </div>
+    </div>
+    <section class="methodology-section scroll-animate">
+      <h2 class="section-heading"><b>Methodology</b></h2>
+      <ul class="methodology-list">
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >The participants will be evaluated in either of the two modes:
+            Pilot entry mode or Direct entry mode.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Direct entry mode is for participants from countries without Pilots
+            and will be evaluated based on their submission of Abstract, PPT,
+            and Video demonstration of their project.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Pilot entry mode will select eligible teams for participation by
+            conducting a preliminary project competition at their venue.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Teams need to submit the problem statement and the detailed
+            solution as a PPT for evaluation by experts/Jury.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Selected teams will be notified and asked to submit an executive
+            summary and video demonstration of their project.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >During the finale, teams will present their projects virtually,
+            evaluated by the jury.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Prizes will be awarded based on jury, track chair, and general
+            chair recommendations.</span
+          >
+        </li>
+      </ul>
+    </section>
+
+    
+
+
+
+  <section class="benefits-section scroll-animate animate-left"
+    style="background-color: var(--light-bg-color); padding: 40px 0;">
+    <div class="container">
+      <h2 class="section-heading"><b>Sample Project Topics</b></h2>
+      <ul class="benefits-list">
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>A low-cost, portable water filtration system for remote communities.</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>An educational mobile app that teaches coding basics through interactive games.</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>Smart irrigation system using soil moisture sensors to conserve water.</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>A mental health chatbot to provide anonymous support and resources.</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>Wearable device for tracking air quality and alerting users to pollutants.</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>AI-powered app to identify plant diseases from a simple phone picture.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+    
+    <section class="winners-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Previous Year Achivers(2025)
+        </h2>
+      </div>
+      <div class="jury-carousel-container">
+        <button class="jury-nav-btn jury-prev">&#10094;</button>
+        <div class="jury-carousel-track">
+          <div class="jury-carousel-slide">
+            <img src="images/je1.jpeg" alt="Junior Einstein Achiever 1">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="images/je2.jpeg" alt="Junior Einstein Achiever 2">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="images/je3.jpeg" alt="Junior Einstein Achiever 3">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="images/je4.jpeg" alt="Junior Einstein Achiever 4">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="images/je5.jpeg" alt="Junior Einstein Achiever 5">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="images/je6.jpeg" alt="Junior Einstein Achiever 6">
+          </div>
+        </div>
+        <button class="jury-nav-btn jury-next">&#10095;</button>
+        <div class="jury-dots">
+          <span class="jury-dot active"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-gallery-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Gallery
+        </h2>
+      </div>
+      <div class="card-gallery">
+        <div class="card-gallery-track">
+          <div class="card-gallery-item" data-category="winners">
+            <img src="Gallery/STGallery1.jpeg" alt="Special Track Winner">
+          </div>
+          <div class="card-gallery-item" data-category="runners">
+            <img src="Gallery/STGallery2.jpeg" alt="Special Track Runner">
+          </div>
+          <div class="card-gallery-item" data-category="runners">
+            <img src="Gallery/STGallery3.jpeg" alt="Special Track Runner">
+          </div>
+          <div class="card-gallery-item" data-category="honorable">
+            <img src="Gallery/STGallery4.jpg" alt="Special Track Honorable Mention 1">
+          </div>
+          <div class="card-gallery-item" data-category="honorable">
+            <img src="Gallery/STGallery5.JPG" alt="Special Track Honorable Mention 2">
+          </div>
+          <div class="card-gallery-item" data-category="moments">
+            <img src="Gallery/STGallery6.JPG" alt="Junior Einstein Moment 1">
+          </div>
+        </div>
+        <div class="gallery-bottom-nav">
+          <button class="gallery-nav prev"><i class="fas fa-arrow-left"></i></button>
+          <button class="gallery-nav next"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="team-details-section contacts-section scroll-animate">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          For any Queries, please contact
+        </h2>
+      </div>
+      <ul class="team-details-list">
+        <li>
+          <i class="fas fa-user"></i>
+          <span>
+            Chair<br />
+            Navaneethakrishnan<br />
+          </span>
+        </li>
+        <li>
+          <i class="fas fa-user"></i>
+          <span>
+            Co-Chair<br />
+            TBA<br />
+            TBA<br />
+          </span>
+        </li>
+      </ul>
+    </section>
+
+  <section class="faqs-section">
+    <div class="container">
+      <h2 class="section-heading">Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>1. Who can participate?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          School students aged 12–17 worldwide.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>2. Can I participate individually?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          Yes, though teams of up to four are encouraged.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>3. Are hardware projects allowed?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          Yes, both software solutions and hardware-integrated projects are accepted.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>4. What is the selection process?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          Through preliminary evaluation (pilot or direct) followed by the grand finale.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>5. Can I reuse ideas from previous competitions?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          Projects should be original and specifically tailored for the current theme.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer container removed -->
+  <!-- Header script removed -->
+  <!-- Footer script removed -->
+
+  <script>
+    /* Inlined from script.js */
+    document.addEventListener('DOMContentLoaded', function () {
+        // Hamburger menu functionality
+        //
+        // --- THIS IS THE CRITICAL FIX ---
+        // Changed getElementById to querySelector to find by CLASS
+        //
+        const hamburger = document.querySelector('.hamburger'); // Use .hamburger class
+        const mainNav = document.querySelector('.main-nav');   // Use .main-nav class
+
+        if (hamburger && mainNav) {
+            hamburger.addEventListener('click', function () {
+                const isOpening = !mainNav.classList.contains('nav-open');
+                mainNav.classList.toggle('nav-open');
+                // Toggle icon between bars and times
+                this.querySelector('i').classList.toggle('fa-bars');
+                this.querySelector('i').classList.toggle('fa-times');
+
+                // Close all dropdowns when closing the menu
+                if (!isOpening) {
+                    const activeDropdowns = mainNav.querySelectorAll('.has-dropdown.active');
+                    activeDropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        }
+
+        // Dropdown menu toggle for mobile
+        const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function (event) {
+                // Check if within the mobile/hamburger menu (which is always used now)
+                // Or just always enable toggle behavior for these links
+                event.preventDefault();
+                const parentLi = this.parentElement;
+                parentLi.classList.toggle('active');
+
+                // Close other open dropdowns (Ensure mainNav is defined correctly above)
+                if (mainNav) {
+                    const otherDropdowns = mainNav.querySelectorAll('.has-dropdown.active');
+                    otherDropdowns.forEach(otherLi => {
+                        if (otherLi !== parentLi) {
+                            otherLi.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Close mobile nav when a link is clicked
+        if (mainNav) {
+            mainNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function (event) {
+                    // Only close if it's not a dropdown toggle
+                    if (!this.closest('.has-dropdown')) {
+                        // Ensure hamburger is defined correctly above
+                        if (mainNav.classList.contains('nav-open') && hamburger) {
+                            mainNav.classList.remove('nav-open');
+                            hamburger.querySelector('i').classList.remove('fa-times');
+                            hamburger.querySelector('i').classList.add('fa-bars');
+                        }
+                    }
+                });
+            });
+        }
+
+        // Close nav if clicking outside on mobile
+        document.addEventListener('click', function (event) {
+            // Ensure mainNav and hamburger are defined correctly above
+            if (window.innerWidth <= 992 && mainNav && hamburger) {
+                if (mainNav.classList.contains('nav-open') && !mainNav.contains(event.target) && !hamburger.contains(event.target)) {
+                    mainNav.classList.remove('nav-open');
+                    hamburger.querySelector('i').classList.remove('fa-times');
+                    hamburger.querySelector('i').classList.add('fa-bars');
+                }
+            }
+        });
+
+
+        // --- (Rest of your script.js code remains the same) ---
+
+        // Scroll to top button functionality
+        const scrollTopBtn = document.getElementById('scrollTopBtn'); // Assuming this ID exists in your footer.js or HTML
+
+        window.addEventListener('scroll', function () {
+            if (scrollTopBtn) {
+                if (window.scrollY > 300) { // Show button after scrolling down 300px
+                    scrollTopBtn.classList.add('show');
+                } else {
+                    scrollTopBtn.classList.remove('show');
+                }
+            }
+        });
+
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Map initialization for Global Reach section (Only runs if #map exists)
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+            new jsVectorMap({
+                selector: "#map",
+                map: "world",
+                markers: [
+                    { name: "Malaysia", coords: [4.2105, 101.9758] },
+                    { name: "India", coords: [20.5937, 78.9629] },
+                    { name: "USA", coords: [37.0902, -95.7129] },
+                    { name: "UK", coords: [55.3781, -3.4360] },
+                ],
+                regionStyle: {
+                    initial: { fill: '#D2E3F0' },
+                    hover: { fill: '#80B3E8' }
+                },
+                markerStyle: {
+                    initial: {
+                        fill: '#FF5733',
+                        stroke: '#FFF',
+                        "stroke-width": 4,
+                        "stroke-opacity": 0.5
+                    },
+                    hover: { fill: '#C70039' }
+                },
+                labels: {
+                    regions: {
+                        render: function (code) { return; } // No labels
+                    }
+                },
+            });
+        }
+
+        // Scroll animation for sections
+        const animateOnScroll = () => {
+            const sections = document.querySelectorAll('.scroll-animate');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight; // trigger as soon as it enters viewport
+
+                if (sectionTop < triggerPoint) {
+                    section.classList.add('in-view');
+                } else {
+                    // Optional: remove class if you want animation to repeat when scrolling up
+                    // section.classList.remove('in-view');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Run on load
+
+        // Latest Updates Ticker (Only runs if elements exist)
+        const updatesWrapper = document.querySelector('.updates-wrapper');
+        const updateItems = document.querySelectorAll('.update-item');
+        const prevUpdateBtn = document.getElementById('prev-update');
+        const nextUpdateBtn = document.getElementById('next-update');
+        let currentIndex = 0;
+
+        if (updatesWrapper && updateItems.length > 0) {
+            const showUpdate = (index) => {
+                updatesWrapper.style.transform = `translateX(-${index * 100}%)`;
+            };
+
+            const updateButtons = () => {
+                if (prevUpdateBtn) prevUpdateBtn.disabled = currentIndex === 0;
+                if (nextUpdateBtn) nextUpdateBtn.disabled = currentIndex === updateItems.length - 1;
+            };
+
+            if (nextUpdateBtn) {
+                nextUpdateBtn.addEventListener('click', () => {
+                    if (currentIndex < updateItems.length - 1) {
+                        currentIndex++;
+                        showUpdate(currentIndex);
+                        updateButtons();
+                    }
+                });
+            }
+
+            if (prevUpdateBtn) {
+                prevUpdateBtn.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        showUpdate(currentIndex);
+                        updateButtons();
+                    }
+                });
+            }
+
+            // Initialize
+            showUpdate(currentIndex);
+            updateButtons();
+        }
+
+        // Reveal YESIST Gateways section items when in view
+        const gatewaysSection = document.querySelector('.gateways-section');
+        if (gatewaysSection) {
+            const gatewayHeader = gatewaysSection.querySelector('.gateway-header h2');
+            const gatewayRows = gatewaysSection.querySelectorAll('.gateway-row');
+
+            const reveal = (el) => { if (el) el.classList.add('visible'); };
+
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            reveal(entry.target);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.01 });
+
+                if (gatewayHeader) observer.observe(gatewayHeader);
+                gatewayRows.forEach(row => observer.observe(row));
+            } else {
+                // Fallback for older browsers: reveal immediately
+                reveal(gatewayHeader);
+                gatewayRows.forEach(reveal);
+            }
+        }
+
+        // FAQ Accordion Functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        if (faqItems.length > 0) {
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        // Close other items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item && otherItem.classList.contains('active')) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+
+                        // Toggle current item
+                        item.classList.toggle('active');
+                    });
+                }
+            });
+        }
+    });
+    // Achievers Section Tab Functionality
+    const achieverTabs = document.querySelectorAll('.tab-btn');
+    const trackAchievers = document.querySelectorAll('.track-achievers');
+
+    if (achieverTabs.length > 0 && trackAchievers.length > 0) {
+        achieverTabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const trackName = this.getAttribute('data-track');
+
+                // Remove active class from all tabs
+                achieverTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                // Hide all track achievers
+                trackAchievers.forEach(track => track.classList.remove('active'));
+                // Show selected track achievers
+                const selectedTrack = document.querySelector(`.track-achievers[data-track="${trackName}"]`);
+                if (selectedTrack) {
+                    selectedTrack.classList.add('active');
+                }
+            });
+        });
+    }
+  </script>
+  <script>
+    /* Inlined from jury-carousel.js */
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- Data ---
+        const committeeMembers = {
+            '1': {
+                name: 'Dr. Ramalatha Marimuthu',
+                title: 'Chair, YESIST12 2025',
+                bio: 'Dr. Ramalatha Marimuthu is a distinguished professor with extensive experience in IEEE leadership roles. She has led numerous initiatives to promote technology education and innovation among young engineers. With over 20 years of experience in academia and research, she has contributed significantly to the field of engineering education.',
+                affiliation: 'Kumaraguru College of Technology, India',
+                responsibilities: 'As the General Chair of YESIST12 2025, Dr. Marimuthu oversees all aspects of the program, including strategic planning, partnership development, and overall execution of the event.',
+                contact: 'Email: ramalatha.m@kct.ac.in | LinkedIn: linkedin.com/in/ramalatha-marimuthu-0aa6a78/',
+                image: 'images/Mukesh K.jpg'
+            },
+            '2': {
+                name: 'Dr. Rukmani Devi R K',
+                title: 'Co-Chair, YESIST12 2025',
+                bio: 'Dr. Rukmani Devi R K is a renowned researcher and educator with a focus on sustainable technology. Her work has been instrumental in developing innovative approaches to engineering education and research. She has published numerous papers in international journals and conferences.',
+                affiliation: 'Sri Sairam Engineering College, India',
+                responsibilities: 'As Program Coordinator, Dr. Rukmani Devi manages the technical program, coordinates with track chairs, and ensures smooth execution of all program activities.',
+                contact: 'Email: rukmani.cse@sairam.edu.in | LinkedIn: linkedin.com/in/rukmani-devi-r-k-0b845a20/',
+                image: 'images/Mukesh K.jpg'
+            },
+            '3': {
+                name: 'Dr. Gunjan Varshney',
+                title: 'Co-Chair, YESIST12 2025',
+                bio: 'Dr. Gunjan Varshney is an expert in emerging technologies and has led multiple international collaborations. She has published extensively in the field of computer science and engineering. Her research interests include artificial intelligence, machine learning, and their applications in solving real-world problems.',
+                affiliation: 'JSS Academy of Technical Education, India',
+                responsibilities: 'As Chair of the Innovation Challenge Track, Dr. Varshney leads the evaluation and selection process for innovative projects, coordinates with judges, and ensures high standards for all submissions.',
+                contact: 'Email: gunjanvarshney@jssaten.ac.in | LinkedIn: linkedin.com/in/dr-gunjan-varshney-6a881b20/',
+                image: 'images/Mukesh K.jpg'
+            },
+            // Duplicated members to reach 6
+            '4': {
+                name: 'Dr. Ramalatha Marimuthu',
+                title: 'Chair, YESIST12 2025',
+                bio: 'Dr. Ramalatha Marimuthu is a distinguished professor with extensive experience in IEEE leadership roles. She has led numerous initiatives to promote technology education and innovation among young engineers. With over 20 years of experience in academia and research, she has contributed significantly to the field of engineering education.',
+                affiliation: 'Kumaraguru College of Technology, India',
+                responsibilities: 'As the General Chair of YESIST12 2025, Dr. Marimuthu oversees all aspects of the program, including strategic planning, partnership development, and overall execution of the event.',
+                contact: 'Email: ramalatha.m@kct.ac.in | LinkedIn: linkedin.com/in/ramalatha-marimuthu-0aa6a78/',
+                image: 'images/Mukesh K.jpg'
+            },
+            '5': {
+                name: 'Dr. Rukmani Devi R K',
+                title: 'Co-Chair, YESIST12 2025',
+                bio: 'Dr. Rukmani Devi R K is a renowned researcher and educator with a focus on sustainable technology. Her work has been instrumental in developing innovative approaches to engineering education and research. She has published numerous papers in international journals and conferences.',
+                affiliation: 'Sri Sairam Engineering College, India',
+                responsibilities: 'As Program Coordinator, Dr. Rukmani Devi manages the technical program, coordinates with track chairs, and ensures smooth execution of all program activities.',
+                contact: 'Email: rukmani.cse@sairam.edu.in | LinkedIn: linkedin.com/in/rukmani-devi-r-k-0b845a20/',
+                image: 'images/Mukesh K.jpg'
+            },
+            '6': {
+                name: 'Dr. Gunjan Varshney',
+                title: 'Co-Chair, YESIST12 2025',
+                bio: 'Dr. Gunjan Varshney is an expert in emerging technologies and has led multiple international collaborations. She has published extensively in the field of computer science and engineering. Her research interests include artificial intelligence, machine learning, and their applications in solving real-world problems.',
+                affiliation: 'JSS Academy of Technical Education, India',
+                responsibilities: 'As Chair of the Innovation Challenge Track, Dr. Varshney leads the evaluation and selection process for innovative projects, coordinates with judges, and ensures high standards for all submissions.',
+                contact: 'Email: gunjanvarshney@jssaten.ac.in | LinkedIn: linkedin.com/in/dr-gunjan-varshney-6a881b20/',
+                image: 'images/Mukesh K.jpg'
+            }
+        };
+
+        // --- Modal Logic ---
+        const modal = document.getElementById('memberModal');
+        const modalClose = document.querySelector('.modal-close');
+        const moreInfoButtons = document.querySelectorAll('.more-info-btn');
+
+        // Open modal when More Info button is clicked
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('more-info-btn')) {
+                e.stopPropagation(); // Prevent event bubbling
+                const card = e.target.closest('.committee-card');
+                const memberId = card.getAttribute('data-member-id');
+                const member = committeeMembers[memberId];
+
+                if (member) {
+                    // Populate modal with member data
+                    const modalImg = document.getElementById('modalMemberImg');
+                    if (modalImg) modalImg.src = member.image;
+                    
+                    const modalName = document.getElementById('modalMemberName');
+                    if (modalName) modalName.textContent = member.name;
+                    
+                    const modalTitle = document.getElementById('modalMemberTitle');
+                    if (modalTitle) modalTitle.textContent = member.title;
+                    
+                    const modalBio = document.getElementById('modalMemberBio');
+                    if (modalBio) modalBio.textContent = member.bio;
+                    
+                    const modalAffiliation = document.getElementById('modalMemberAffiliation');
+                    if (modalAffiliation) modalAffiliation.textContent = member.affiliation;
+                    
+                    const modalResponsibilities = document.getElementById('modalMemberResponsibilities');
+                    if (modalResponsibilities) modalResponsibilities.textContent = member.responsibilities;
+                    
+                    const modalContact = document.getElementById('modalMemberContact');
+                    if (modalContact) modalContact.textContent = member.contact;
+
+                    // Show modal
+                    if (modal) {
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                    }
+                }
+            }
+        });
+
+        // Close modal when close button is clicked
+        if (modalClose) {
+            modalClose.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        }
+
+        // Close modal when clicking outside the modal content
+        if (modal) {
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
+        }
+
+        // Close modal when ESC key is pressed
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+
+        // --- Carousel Logic ---
+        const track = document.querySelector('.jury-carousel-track');
+        if (!track) return;
+        let slides = Array.from(track.children);
+        const nextButton = document.querySelector('.jury-next');
+        const prevButton = document.querySelector('.jury-prev');
+        const dotsNav = document.querySelector('.jury-dots');
+
+        function getItemsPerView() {
+            if (window.innerWidth <= 768) return 1;
+            if (window.innerWidth <= 992) return 2;
+            return 3;
+        }
+
+        let currentIndex = 0;
+        let isAnimating = false;
+        let autoplayTimer;
+
+        function buildDots(totalPages) {
+            if (!dotsNav) return;
+            dotsNav.innerHTML = '';
+            for (let i = 0; i < totalPages; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'jury-dot' + (i === 0 ? ' active' : '');
+                dotsNav.appendChild(dot);
+            }
+        }
+
+        function updateCarousel(immediate) {
+            const itemsPerView = getItemsPerView();
+            const amountToMove = -(currentIndex * (100 / itemsPerView));
+            if (immediate) {
+                const prevTransition = track.style.transition;
+                track.style.transition = 'none';
+                track.style.transform = `translateX(${amountToMove}%)`;
+                void track.offsetWidth;
+                track.style.transition = prevTransition || '';
+            } else {
+                track.style.transform = `translateX(${amountToMove}%)`;
+            }
+
+            if (dotsNav) {
+                const dotEls = Array.from(dotsNav.children);
+                const totalRealSlides = slides.length - 2 * getItemsPerView();
+                const realIndex = currentIndex - getItemsPerView();
+                let pageIndex = Math.floor(realIndex / getItemsPerView());
+                if (pageIndex < 0) pageIndex = 0;
+                dotEls.forEach(d => d.classList.remove('active'));
+                if (dotEls[pageIndex]) dotEls[pageIndex].classList.add('active');
+            }
+        }
+
+        function setupInfinite() {
+            const itemsPerView = getItemsPerView();
+            Array.from(track.querySelectorAll('.clone')).forEach(c => c.remove());
+            const original = Array.from(track.children).filter(el => !el.classList.contains('clone'));
+            for (let i = original.length - itemsPerView; i < original.length; i++) {
+                const clone = original[i].cloneNode(true);
+                clone.classList.add('clone');
+                track.insertBefore(clone, track.firstChild);
+            }
+            for (let i = 0; i < itemsPerView; i++) {
+                const clone = original[i].cloneNode(true);
+                clone.classList.add('clone');
+                track.appendChild(clone);
+            }
+            slides = Array.from(track.children);
+            currentIndex = itemsPerView;
+            updateCarousel(true);
+            const totalPages = Math.ceil(original.length / itemsPerView);
+            buildDots(totalPages);
+        }
+
+        function moveNext() {
+            if (isAnimating) return;
+            isAnimating = true;
+            currentIndex++;
+            updateCarousel();
+        }
+
+        function movePrev() {
+            if (isAnimating) return;
+            isAnimating = true;
+            currentIndex--;
+            updateCarousel();
+        }
+
+        if (nextButton) nextButton.addEventListener('click', () => { moveNext(); startAutoplay(); });
+        if (prevButton) prevButton.addEventListener('click', () => { movePrev(); startAutoplay(); });
+
+        if (dotsNav) {
+            dotsNav.addEventListener('click', e => {
+                const targetDot = e.target.closest('.jury-dot');
+                if (!targetDot) return;
+                const itemsPerView = getItemsPerView();
+                const dotEls = Array.from(dotsNav.children);
+                const targetIndex = dotEls.findIndex(dot => dot === targetDot);
+                currentIndex = itemsPerView + targetIndex * itemsPerView;
+                updateCarousel();
+            });
+        }
+
+        track.addEventListener('transitionend', () => {
+            const itemsPerView = getItemsPerView();
+            const totalRealSlides = slides.length - 2 * itemsPerView;
+            if (currentIndex >= totalRealSlides + itemsPerView) {
+                currentIndex = itemsPerView;
+                updateCarousel(true);
+            }
+            if (currentIndex <= 0) {
+                currentIndex = totalRealSlides;
+                updateCarousel(true);
+            }
+            isAnimating = false;
+        });
+
+        function startAutoplay() {
+            if (autoplayTimer) clearInterval(autoplayTimer);
+            autoplayTimer = setInterval(() => {
+                moveNext();
+            }, 5000);
+        }
+
+        window.addEventListener('resize', () => {
+            setupInfinite();
+        });
+
+        setupInfinite();
+        startAutoplay();
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var section = document.querySelector('.card-gallery-section');
+      if (!section) return;
+      var track = section.querySelector('.card-gallery-track');
+      var container = section.querySelector('.card-gallery');
+      var prevBtn = section.querySelector('.gallery-nav.prev');
+      var nextBtn = section.querySelector('.gallery-nav.next');
+      var pills = Array.from(section.querySelectorAll('.filter-pill'));
+      var currentIndex = 0;
+      var startX = 0;
+      var endX = 0;
+
+      function defaultIndex() {
+        var items = visibleItems();
+        return Math.max(0, Math.floor(items.length / 2));
+      }
+
+      function visibleItems() {
+        return Array.from(track.querySelectorAll('.card-gallery-item:not(.hidden)'));
+      }
+
+      function updateActive() {
+        var items = visibleItems();
+        items.forEach(function (el) { el.classList.remove('active','near-left','near-right'); el.style.zIndex=''; });
+        if (items.length === 0) return;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > items.length - 1) currentIndex = items.length - 1;
+        var active = items[currentIndex];
+        active.classList.add('active');
+        active.style.zIndex = '3';
+        var leftIdx = currentIndex - 1;
+        var rightIdx = currentIndex + 1;
+        if (leftIdx >= 0) items[leftIdx].classList.add('near-left');
+        if (rightIdx < items.length) items[rightIdx].classList.add('near-right');
+      }
+
+      function centerActive() {
+        var items = visibleItems();
+        if (items.length === 0) return;
+        var active = items[currentIndex];
+        var activeCenter = active.offsetLeft + active.offsetWidth / 2;
+        var target = container.clientWidth / 2;
+        var translateX = -(activeCenter - target);
+        track.style.transform = 'translateX(' + translateX + 'px)';
+      }
+
+      function update() {
+        updateActive();
+        centerActive();
+      }
+
+      function moveNext() {
+        currentIndex += 1;
+        update();
+      }
+
+      function movePrev() {
+        currentIndex -= 1;
+        update();
+      }
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          var filter = pill.getAttribute('data-filter');
+          var all = Array.from(track.querySelectorAll('.card-gallery-item'));
+          all.forEach(function (el) {
+            var cat = el.getAttribute('data-category');
+            var show = filter === 'all' ? true : cat === filter;
+            el.classList.toggle('hidden', !show);
+          });
+          currentIndex = defaultIndex();
+          update();
+        });
+      });
+
+      if (nextBtn) nextBtn.addEventListener('click', function () { moveNext(); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { movePrev(); });
+
+      function applyParallax(e) {
+        if (window.innerWidth < 768) return;
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        var rect = active.getBoundingClientRect();
+        var cx = e.clientX - rect.left;
+        var cy = e.clientY - rect.top;
+        var nx = (cx / rect.width) * 2 - 1;
+        var ny = (cy / rect.height) * 2 - 1;
+        var rx = -ny * 6;
+        var ry = nx * 6;
+        active.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'translateX(' + (ry * 1.2) + 'px) translateY(' + (rx * -1.2) + 'px) scale(1.02)';
+        }
+      }
+      function resetParallax() {
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        active.style.transform = 'scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'none';
+        }
+      }
+      container.addEventListener('mousemove', applyParallax);
+      container.addEventListener('mouseleave', resetParallax);
+
+      container.addEventListener('touchstart', function (e) {
+        if (!e.touches || e.touches.length === 0) return;
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', function (e) {
+        endX = e.changedTouches[0].clientX;
+        var delta = endX - startX;
+        if (Math.abs(delta) > 40) {
+          if (delta < 0) moveNext();
+          else movePrev();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        update();
+      });
+
+      currentIndex = defaultIndex();
+      var initialItems = visibleItems();
+      initialItems.forEach(function (el, i) {
+        el.style.animationDelay = (i * 80) + 'ms';
+        el.classList.add('animate-in');
+      });
+      update();
+      window.addEventListener('load', function () { update(); });
+    });
+  </script>
+</body>
+
+</html>
