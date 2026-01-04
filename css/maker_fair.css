@@ -179,3 +179,26 @@
     align-items: flex-start;
   }
 }
+
+/* Topics bullets inside Selection Method cards */
+.selection-method-section .method-box ul.topics-bullets {
+  list-style: none;
+  padding-left: 0;
+  margin: 8px 0 0 0;
+}
+.selection-method-section .method-box ul.topics-bullets li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  color: #0a4360;
+}
+.selection-method-section .method-box ul.topics-bullets li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2bb884;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}

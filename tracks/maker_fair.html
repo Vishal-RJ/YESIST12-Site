@@ -427,7 +427,7 @@
         </ul>
       </div>
     </section>
-
+    
     <!-- About Maker Fair Section -->
     <section class="about-special">
       <!-- Background Image Layer -->
@@ -437,18 +437,9 @@
         <div class="content">
           <h2 class="title">About Maker Fair</h2>
           <p class="subtitle">
-            MakerFair is a unique platform with opportunities for the
-            innovators, makers, and creators to showcase their innovative
-            products to the international community. MakerFair Track 2025 aims
-            to address maximum goals that will aid the world in addressing the
-            difficulties it has faced in recent years, as defined by the United
-            Nations Sustainable Development Goals. MakerFair Track inspires
-            pre-final, final-year and graduate students in developing prototypes
-            for projects that can be eventually developed into full-fledged
-            products. Young aspirers with enthusiasm and determination to invent
-            and showcase their innovative ideas which are capable from ideation
-            to commercialization can utilize this platform and register for this
-            event.
+            MakerFair Track is a unique platform for innovators, makers, and creators to showcase their hands-on, technology-driven prototypes and innovative products to a global audience. This track encourages students and young creators to transform their ideas into tangible, demonstrable solutions that can have a meaningful social or environmental impact.
+MakerFair Track is designed to inspire pre-final, final-year, and graduate students to develop functional prototypes that could evolve into full-scale products. It is an opportunity for passionate innovators to demonstrate creativity, technical skill, and practical problem-solving while addressing real-world challenges.
+
           </p>
         </div>
         <div class="image scroll-animate animate-right delay-2">
@@ -503,6 +494,7 @@
       <div class="container">
         <h2 class="section-heading"><b>SDGs Aligned</b></h2>
         <ul class="sdg-image-grid">
+          
           <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
           <li><img src="../SDG/E-WEB-Goal-09.png" alt="SDG 9: Industry, Innovation, and Infrastructure"></li>
           <li><img src="../SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
@@ -727,8 +719,10 @@
               be updated soon.
             </span>
           </li>
+           <span>
+          <a href="https://drive.google.com/file/d/1O_UOuKqG0PG7e70z1oqc9Z03QfDghZ6X/view?usp=sharing" download class="download-btn"><b>Download Rulebook</b></a>
+        </span>
         </ul>
-      </div>
     </section>
 
     <!-- Track Structure Section -->
@@ -1229,49 +1223,146 @@
 
   });
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var section = document.querySelector('.card-gallery-section');
+      if (!section) return;
+      var track = section.querySelector('.card-gallery-track');
+      var container = section.querySelector('.card-gallery');
+      var prevBtn = section.querySelector('.gallery-nav.prev');
+      var nextBtn = section.querySelector('.gallery-nav.next');
+      var pills = Array.from(section.querySelectorAll('.filter-pill'));
+      var currentIndex = 0;
+      var startX = 0;
+      var endX = 0;
 
-    <!-- Contact Section -->
-    <section class="contact-section scroll-animate animate-up">
-      <h3>For any Queries, please contact</h3>
+      function defaultIndex() {
+        var items = visibleItems();
+        return Math.max(0, Math.floor(items.length / 2));
+      }
 
-      <div class="contact-row">
-        <!-- Chair -->
-        <div class="contact-person scroll-animate animate-left delay-1">
-          <div class="contact-icon">
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="contact-details">
-            <h4>Chair</h4>
-            <p>
-              <b>Mr. M. Arun</b><br />
-              Chair | Maker Fair Track
-              <br />
-              Email: arunmemba@ieee.org<br />
-              yesist12.makerfairtrack@gmail.com
-              <br />
-              Phone: +91 7200096048
-            </p>
-          </div>
-        </div>
+      function visibleItems() {
+        return Array.from(track.querySelectorAll('.card-gallery-item:not(.hidden)'));
+      }
 
-        <!-- Co-Chair -->
-        <div class="contact-person scroll-animate animate-right delay-2">
-          <div class="contact-icon">
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="contact-details">
-            <h4>Co-Chair</h4>
-            <p>
-              <b>Ms. Dhanalakshmi</b><br />
-              Co - Chair | Maker Fair Track<br />
-              Email: dharshinid410@gmail.comm<br />
-              Phone: +91 8939652730
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      function updateActive() {
+        var items = visibleItems();
+        items.forEach(function (el) { el.classList.remove('active','near-left','near-right'); el.style.zIndex=''; });
+        if (items.length === 0) return;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > items.length - 1) currentIndex = items.length - 1;
+        var active = items[currentIndex];
+        active.classList.add('active');
+        active.style.zIndex = '3';
+        var leftIdx = currentIndex - 1;
+        var rightIdx = currentIndex + 1;
+        if (leftIdx >= 0) items[leftIdx].classList.add('near-left');
+        if (rightIdx < items.length) items[rightIdx].classList.add('near-right');
+      }
 
+      function centerActive() {
+        var items = visibleItems();
+        if (items.length === 0) return;
+        var active = items[currentIndex];
+        var activeCenter = active.offsetLeft + active.offsetWidth / 2;
+        var target = container.clientWidth / 2;
+        var translateX = -(activeCenter - target);
+        track.style.transform = 'translateX(' + translateX + 'px)';
+      }
+
+      function update() {
+        updateActive();
+        centerActive();
+      }
+
+      function moveNext() {
+        currentIndex += 1;
+        update();
+      }
+
+      function movePrev() {
+        currentIndex -= 1;
+        update();
+      }
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          var filter = pill.getAttribute('data-filter');
+          var all = Array.from(track.querySelectorAll('.card-gallery-item'));
+          all.forEach(function (el) {
+            var cat = el.getAttribute('data-category');
+            var show = filter === 'all' ? true : cat === filter;
+            el.classList.toggle('hidden', !show);
+          });
+          currentIndex = defaultIndex();
+          update();
+        });
+      });
+
+      if (nextBtn) nextBtn.addEventListener('click', function () { moveNext(); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { movePrev(); });
+
+      function applyParallax(e) {
+        if (window.innerWidth < 768) return;
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        var rect = active.getBoundingClientRect();
+        var cx = e.clientX - rect.left;
+        var cy = e.clientY - rect.top;
+        var nx = (cx / rect.width) * 2 - 1;
+        var ny = (cy / rect.height) * 2 - 1;
+        var rx = -ny * 6;
+        var ry = nx * 6;
+        active.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'translateX(' + (ry * 1.2) + 'px) translateY(' + (rx * -1.2) + 'px) scale(1.02)';
+        }
+      }
+      function resetParallax() {
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        active.style.transform = 'scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'none';
+        }
+      }
+      container.addEventListener('mousemove', applyParallax);
+      container.addEventListener('mouseleave', resetParallax);
+
+      container.addEventListener('touchstart', function (e) {
+        if (!e.touches || e.touches.length === 0) return;
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', function (e) {
+        endX = e.changedTouches[0].clientX;
+        var delta = endX - startX;
+        if (Math.abs(delta) > 40) {
+          if (delta < 0) moveNext();
+          else movePrev();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        update();
+      });
+
+      currentIndex = defaultIndex();
+      var initialItems = visibleItems();
+      initialItems.forEach(function (el, i) {
+        el.style.animationDelay = (i * 80) + 'ms';
+        el.classList.add('animate-in');
+      });
+      update();
+      window.addEventListener('load', function () { update(); });
+    });
+  </script>
     <!-- Footer -->
     <div id="footer-container"></div>
 
