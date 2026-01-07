@@ -15,403 +15,13 @@
     <link rel="stylesheet" href="../css/special_track_junior_einstein.css" />
     <link rel="stylesheet" href="../css/maker_fair.css" />
     <link rel="stylesheet" href="../jury-carousel.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-  <style>
-    .innovation-hero .title {
-      color: #ffffff !important;
-    }
-
-    .abstract-section {
-      padding: 64px 0;
-    }
-
-    .abstract-section .container {
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .abstract-card {
-      background: #ffffff !important;
-      border-radius: 16px;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-      border: 1px solid #e5eef7;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 28px 32px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      align-items: center;
-      justify-items: center;
-      animation: abstractEnter 0.8s ease both;
-    }
-
-    .abstract-card.in-view {
-      animation: abstractEnter 0.8s ease both, abstractFloat 8s ease-in-out 0.8s infinite;
-    }
-
-    @keyframes abstractEnter {
-      from {
-        opacity: 0;
-        transform: translateY(16px) scale(0.98);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    @keyframes abstractFloat {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-3px);
-      }
-    }
-
-    .abstract-card .section-title {
-      color: #0b3b61 !important;
-      letter-spacing: 0.3px;
-      margin: 0;
-    }
-
-    .abstract-card .countdown-timer {
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid #cfe3f7 !important;
-      background: #eef6ff !important;
-      color: #0b3b61 !important;
-      font-weight: 600;
-    }
-
-    .abstract-card .deadline {
-      color: #3a4a5b !important;
-      margin: 4px 0 12px 0;
-      letter-spacing: 0.3px;
-    }
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 20px;
-      border-radius: 999px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      border: 1px solid #cfe3f7;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-      white-space: nowrap;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-    }
-
-    .status-pill.open {
-      background: linear-gradient(180deg, #eafdf2 0%, #d9f5e7 100%);
-      color: #0b7a3c;
-      border-color: #b9e4c9;
-    }
-
-    .status-pill.closed {
-      background: linear-gradient(180deg, #f2f5f9 0%, #e9eef5 100%);
-      color: #4a5970;
-      border-color: #d7dee8;
-    }
-
-    .status-pill:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-    }
-
-    .status-pill.open::before,
-    .status-pill.closed::before {
-      content: '';
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    .status-pill.open::before {
-      background-color: #0b7a3c;
-      box-shadow: 0 0 0 4px rgba(11, 122, 60, 0.12);
-    }
-
-    .status-pill.closed::before {
-      background-color: #4a5970;
-      box-shadow: 0 0 0 4px rgba(74, 89, 112, 0.12);
-    }
-
-    .abstract-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .abstract-card .btn {
-      min-width: 260px;
-      padding: 12px 18px;
-      border-radius: 12px;
-      border: 2px solid #0b3b61 !important;
-      box-shadow: 0 8px 22px rgba(11, 59, 97, 0.12);
-    }
-
-    .abstract-card .download-btn {
-      background: #0b3b61 !important;
-      color: #ffffff !important;
-    }
-
-    .abstract-card .submit-btn {
-      background: transparent !important;
-      color: #0b3b61 !important;
-    }
-
-    .abstract-card .btn i {
-      margin-right: 10px;
-    }
-
-    .abstract-card .btn {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .abstract-card .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(11, 59, 97, 0.18);
-    }
-
-    .flip-countdown {
-      display: grid;
-      grid-template-columns: repeat(4, 100px);
-      gap: 12px;
-      justify-content: center;
-      align-items: center;
-      margin-top: 8px;
-    }
-
-    .flip-unit {
-      text-align: center;
-    }
-
-    .flip-card {
-      position: relative;
-      width: 100px;
-      height: 80px;
-      border-radius: 12px;
-      background: linear-gradient(180deg, #1f2a37 0%, #12171d 100%);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-      color: #e6e9ed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 32px;
-      letter-spacing: 1px;
-      perspective: 500px;
-      overflow: hidden;
-      transform-style: preserve-3d;
-    }
-
-    .flip-card::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 100%;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.12);
-      transform: translateY(-0.5px);
-    }
-
-    .flip-number {
-      display: inline-block;
-      transform-origin: top;
-      backface-visibility: hidden;
-      will-change: transform;
-    }
-
-    .flip-card.flip .flip-number {
-      animation: flipDown 0.6s ease;
-    }
-
-    @keyframes flipDown {
-      0% {
-        transform: rotateX(0deg);
-      }
-
-      45% {
-        transform: rotateX(-90deg);
-      }
-
-      100% {
-        transform: rotateX(-180deg);
-      }
-    }
-
-    .flip-label {
-      display: block;
-      margin-top: 6px;
-      font-size: 12px;
-      color: #4a5970;
-      font-weight: 600;
-    }
-
-    .sdg-image-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 100px);
-      justify-content: center;
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-      margin: 20px 0 0 0;
-    }
-
-    .sdg-image-grid li {
-      width: 100px;
-      text-align: center;
-    }
-
-    .sdg-image-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .sdg-image-grid img:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    @media (max-width: 1024px) {
-      .sdg-image-grid {
-        grid-template-columns: repeat(4, 100px);
-      }
-      .sdg-image-grid li {
-        width: 100px;
-        text-align: center;
-      }
-      .sdg-image-grid img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .sdg-image-grid img:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      }
-    }
-      @media (max-width: 1024px) {
-        .sdg-image-grid {
-          grid-template-columns: repeat(4, 100px);
-        }
-      }
-      @media (max-width: 768px) {
-        .sdg-image-grid {
-          grid-template-columns: repeat(3, 100px);
-        }
-      }
-      @media (max-width: 480px) {
-        .sdg-image-grid {
-          grid-template-columns: repeat(2, 100px);
-        }
-      }
-      /* Submission Mode (Gateways) - visual restyle to match provided layout */
-      .gateways-section {
-        padding: 40px 0;
-      }
-      .gateway-container {
-        display: flex;
-        flex-direction: column;
-        gap: 28px;
-      }
-      .gateway-row {
-        display: flex;
-        align-items: flex-start;
-        gap: 22px;
-      }
-      .gateway-icon-container {
-        width: 96px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-      }
-      .gateway-icon {
-        width: 96px;
-        height: 96px;
-        border-radius: 10px;
-        background-color: #128a73;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-      }
-      .gateway-label {
-        width: 96px;
-        border-radius: 10px;
-        background-color: #0a415c;
-        color: #fff;
-        font-weight: 700;
-        font-size: 14px;
-        text-align: center;
-        padding: 10px 8px;
-        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-      }
-      .gateway-content {
-        flex: 1;
-        border-radius: 14px;
-        padding: 22px 24px;
-        color: #fff;
-        box-shadow: 0 16px 26px rgba(0,0,0,0.18);
-      }
-      .gateway-content ul {
-        list-style: none;
-        margin: 0;
-        padding-left: 28px;
-      }
-      .gateway-content li {
-        margin-bottom: 12px;
-        line-height: 1.7;
-      }
-      /* Row-specific colors to mirror screenshot */
-      .gateway-row:first-child .gateway-icon { background-color: #128a73; }
-      .gateway-row:first-child .gateway-label { background-color: #128a73; }
-      .gateway-row:first-child .gateway-content { background-color: #128a73; }
-      .gateway-row:last-child .gateway-icon { background-color: #0a415c; }
-      .gateway-row:last-child .gateway-label { background-color: #0a415c; }
-      .gateway-row:last-child .gateway-content { background-color: #0a415c; }
-      @media (max-width: 768px) {
-        .gateway-row {
-          flex-direction: column;
-          align-items: stretch;
-        }
-        .gateway-icon-container {
-          flex-direction: row;
-          width: auto;
-        }
-        .gateway-label {
-          width: auto;
-          min-width: 120px;
-        }
-      }
-    </style>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <!-- Header -->
-    <div id="header-container"></div>
-
     <!-- Maker Hero Section -->
     <section class="innovation-hero">
       <div class="container">
@@ -441,6 +51,13 @@
 MakerFair Track is designed to inspire pre-final, final-year, and graduate students to develop functional prototypes that could evolve into full-scale products. It is an opportunity for passionate innovators to demonstrate creativity, technical skill, and practical problem-solving while addressing real-world challenges.
 
           </p>
+          <!-- <a
+            href="https://ieeeyesist12.org/pdf/?id=schedule-2025-je"
+            target="_blank"
+            class="presentation-link"
+          >
+            View Presentation Schedule
+          </a> -->
         </div>
         <div class="image scroll-animate animate-right delay-2">
           <img
@@ -450,6 +67,10 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
         </div>
       </div>
     </section>
+
+    
+
+
 
     <!-- Maker Theme Section -->
     <section class="innovation-theme">
@@ -477,22 +98,18 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
         </div>
       </div>
     </section>
-
-    <!-- Description (From Our Aim) -->
     <section class="innovation-description">
       <div class="container">
         <p class="theme-text scroll-animate animate-fade delay-2">
-          Maker Fair aims to bring forth a platform for creators and
-          experimenters to demonstrate their ideas and solutions for issues
-          faced on a global level. Sustainable Agriculture, Unsustainable Actions, Miscellaneous (SDG other than 7, 9, and 11).
+           This year, MakerFair Track focuses on solutions that align with United Nations Sustainable Development Goals (SDGs) other than SDG 7, 9, and 11. Participants are encouraged to develop prototypes that tackle pressing global challenges, from sustainable agriculture to environmental conservation, waste management, and more.
         </p>
       </div>
     </section>
-
-    <!-- SDGs Aligned -->
     <section class="eligibility-section scroll-animate animate-up" style="background-color: var(--light-bg-color); padding: 40px 0;">
       <div class="container">
         <h2 class="section-heading"><b>SDGs Aligned</b></h2>
+        <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
+        
         <ul class="sdg-image-grid">
           
           <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
@@ -501,7 +118,7 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
         </ul>
       </div>
     </section>
-
+    <!-- Timeline Section -->
     <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
       <div class="container">
         <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>TIMELINE:</b></h2>
@@ -545,8 +162,7 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
         </div>
       </div>
     </section>
-
-    <!-- Abstract Section -->
+     <!-- Abstract Section (Moved) -->
     <section class="abstract-section">
       <div class="container">
         <div class="abstract-card">
@@ -582,91 +198,88 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
         </div>
       </div>
     </section>
+    <!-- The Objectives of the Special Track -->
+    <section class="mission-areas eligibility-section">
+      <h2 class="section-heading"><b>The Objectives of the Maker Fair Track</b></h2>
+      <ul class="mission-list">
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Empowerment through Innovation:</b> Encourages young minds to develop impactful, technology-driven solutions that address real-life societal challenges.</span>
+        </li>
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Use of Emerging Technologies:</b> Promotes the application of AI, data analytics, IoT, and smart systems to create efficient and intelligent solutions.</span>
+        </li>
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Real-World Impact:</b> Focuses on improving the accessibility, quality, and efficiency of essential services and community experiences.</span>
+        </li>
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Future-Ready & Ethical Design:</b> Inspires responsible, sustainable, and ethical use of technology with long-term societal benefits.</span>
+        </li>
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span><b>Building Changemakers:</b> Nurtures a generation of innovators capable of shaping a smarter, more connected, and resilient future.</span>
+        </li>
+      </ul>
+    </section>
 
-    <!-- Eligibility Section (Was Participation) -->
+    <!-- Who is eligible? section  -->
     <section class="eligibility-section scroll-animate animate-left">
-      <div class="container">
-        <h2 class="section-heading"><b>Who is eligible?</b></h2>
-        <ul class="eligibility-list">
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span>Innovators, makers, and doers coming together to showcase their products to the local community.</span>
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span>All types of creators, such as tech enthusiasts, crafters, innovators, and hobbyists.</span>
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span>Students from different technical universities, who wish to participate and showcase their innovations.</span>
-          </li>
-          <li>
-            <i class="fas fa-check-circle"></i>
-            <span>Graduate members, capable of delivering solutions to problem statements, are welcome to join this track.</span>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <h2 class="section-heading"><b>Who is eligible?</b></h2>
+    <ul class="eligibility-list">
+      <li>
+        <i class="fas fa-star"></i>
+        <span>Innovators, makers, and doers coming together to showcase their products to the local community.</span>
+      </li>
+      <li>
+        <i class="fas fa-star"></i>
+        <span>All types of creators, such as tech enthusiasts, crafters, innovators, and hobbyists.</span>
+      </li>
+      <li>
+        <i class="fas fa-star"></i>
+        <span>Students from different technical universities, who wish to participate and showcase their innovations.</span>
+      </li>
+      <li>
+        <i class="fas fa-star"></i>
+        <span>Graduate members, capable of delivering solutions to problem statements, are welcome to join this track.</span>
+      </li>
+    </ul>
+  </section>
+  <section class="benefits-section scroll-animate animate-left">
+    <h2 class="section-heading"><b>Benefits of participating</b></h2>
+    <ul class="benefits-list">
+      <li>
+        <i class="fas fa-network-wired scroll-animate animate-right delay-1"></i>
+        <span><b>Gaining a good network:</b> Connect with passionate people worldwide and share your thoughts, talents, and passions. Opportunities to meet professionals are endless.</span>
+      </li>
+      <li>
+        <i class="fas fa-chart-line scroll-animate animate-right delay-1"></i>
+        <span><b>Understand present trends: </b> Participate to gain insight into the society's current state and emerging trends.</span>
+      </li>
+      <li>
+        <i class="fas fa-lightbulb scroll-animate animate-right delay-1"></i>
+        <span><b>Attempt a real-world task: </b> Solve real-world problems to unleash your team's creativity.</span>
+      </li>
+      <li>
+        <i class="fas fa-trophy scroll-animate animate-right delay-1"></i>
+        <span><b>Put yourself to the test: </b>Advance your project management abilities through practical experience in overseeing projects and navigating all stages.</span>
+      </li>
+       <li>
+        <i class="fas fa-microphone scroll-animate animate-right delay-1"></i>
+        <span><b>Improve your public speaking skills: </b> Showcase communication and entrepreneurial abilities during project presentations.</span>
+      </li>
+       <li>
+        <i class="fas fa-chalkboard-teacher scroll-animate animate-right delay-1"></i>
+        <span><b>Gain knowledge from industry experts: </b> Attend webinars from prominent professionals for guidance, insight, and inspiration.</span>
+      </li>
+    </ul>
+  </section>
 
-    <!-- Benefits Section (Was Why Join) -->
-    <section class="benefits-section scroll-animate animate-left">
-      <div class="container">
-        <h2 class="section-heading"><b>Benefits of participating</b></h2>
-        <ul class="benefits-list">
-          <li>
-            <i class="fas fa-network-wired scroll-animate animate-right delay-1"></i>
-            <span>
-              <strong>Gaining a good network:</strong> Connect with passionate
-              people worldwide and share your thoughts, talents, and passions.
-              Opportunities to meet professionals are endless.
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-chart-line scroll-animate animate-right delay-1"></i>
-            <span>
-              <strong>Understand present trends:</strong> Participate to gain
-              insight into the society's current state and emerging trends.
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-lightbulb scroll-animate animate-right delay-1"></i>
-            <span>
-              <strong>Attempt a real-world task:</strong> Solve real-world problems
-              to unleash your team's creativity.
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-trophy scroll-animate animate-right delay-1"></i>
-            <span>
-              <strong>Put yourself to the test:</strong> Advance your project
-              management abilities through practical experience in overseeing
-              projects and navigating all stages.
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-microphone scroll-animate animate-right delay-1"></i>
-            <span>
-              <strong>Improve your public speaking skills:</strong> Showcase
-              communication and entrepreneurial abilities during project
-              presentations.
-            </span>
-          </li>
-          <li>
-            <i class="fas fa-chalkboard-teacher scroll-animate animate-right delay-1"></i>
-            <span>
-              <strong>Gain knowledge from industry experts:</strong> Attend webinars
-              from prominent professionals for guidance, insight, and inspiration.
-            </span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Rules Section (Was Things to Remember) -->
-    <section class="rules-section scroll-animate animate-left">
-      <div class="container">
-        <h2 class="section-heading"><b>Rules for participation</b></h2>
-        <ul class="rules-list">
+  <section class="rules-section scroll-animate animate-left">
+      <h2 class="section-heading"><b>Rules for participation</b></h2>
+      <ul class="rules-list">
           <li>
             <i class="fas fa-users scroll-animate animate-down delay-1"></i>
             <span><strong>Team Size:</strong> 1 to 4 members (Max: 4, Min: 1).</span>
@@ -794,95 +407,236 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
       </div>
     </div>
 
-    <!-- Topics Section (Was Topics Explanation) -->
+    <section class="gateways-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Submission Mode
+        </h2>
+        <div class="gateway-container">
+          <div class="gateway-row">
+            <div class="gateway-icon-container">
+              <div class="gateway-icon">
+                <i class="fas fa-paper-plane" style="color:white; font-size: 40px;"></i>
+              </div>
+              <div class="gateway-label">Pilot Entry</div>
+            </div>
+            <div class="gateway-content pilot-content">
+              <ul>
+                <li>Participants from regions with an active YESIST12 Pilot event.</li>
+                <li>Projects are first presented and evaluated at a preliminary competition.</li>
+                <li>Winners from the Pilot event get a direct entry into the Grand Finale.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="gateway-row">
+            <div class="gateway-icon-container">
+              <div class="gateway-icon">
+                 <i class="fas fa-laptop-code" style="color:white; font-size: 40px;"></i>
+              </div>
+              <div class="gateway-label">Direct Entry</div>
+            </div>
+            <div class="gateway-content direct-content">
+              <ul>
+                <li>For participants from countries or regions without a YESIST12 Pilot event.</li>
+                <li>Submissions (Abstract, PPT, Video) are evaluated directly by the jury.</li>
+                <li>Selected projects are notified via email and advance to the Grand Finale.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="selection-method-section">
       <h2 class="section-heading scroll-animate animate-down delay-1">
         The submission could be related to the following topics
       </h2>
-      <div class="container">
-        <div class="selection-method-grid">
-          <div class="method-box scroll-animate animate-up delay-1">
-            <i class="fas fa-hand-holding-heart method-icon"></i>
-            <h3>No Poverty</h3>
-            <p>
-              Build the resilience of the poor and those in vulnerable situations;
-              reduce their exposure and vulnerability to climate-related extreme
-              events and other economic, social, and environmental shocks and
-              disasters.
-            </p>
-          </div>
 
-          <div class="method-box scroll-animate animate-up delay-2">
-            <i class="fas fa-carrot method-icon"></i>
-            <h3>Zero Hunger</h3>
-            <p>
-              Ensure sustainable food production systems, implement resilient
-              agricultural practices that increase productivity and production, help
-              maintain ecosystems, strengthen adaptation capacity to climate change,
-              extreme weather, drought, flooding, and progressively improve land and
-              soil quality.
-            </p>
-          </div>
+      <div class="selection-method-grid">
+        <div class="method-box scroll-animate animate-up delay-2">
+          <i class="fa-solid fa-seedling method-icon"></i>
+          <h3>Sustainable Agriculture & Food Systems
+</h3>
+          <p>
+            Innovative solutions that improve agricultural productivity, ensure food security, and promote eco-friendly farming practices. Examples include:
+          </p>
+          <ul class="topics-bullets">
+            <li>Smart irrigation and soil monitoring systems</li>
+            <li>Low-cost precision farming tools</li>
+            <li>Vertical farming or urban agriculture prototypes</li>
+            <li>Waste-to-resource solutions for agriculture</li>
+          </ul>
+        </div>
 
-          <div class="method-box scroll-animate animate-up delay-3">
-            <i class="fas fa-recycle method-icon"></i>
-            <h3>Responsible Consumption & Production</h3>
-            <p>
-              Innovative measures to minimize natural resource use and toxic
-              materials, and reduce waste and pollutants throughout the production
-              and consumption process.
-            </p>
-          </div>
+        <div class="method-box scroll-animate animate-up delay-3">
+          <i class="fa-solid fa-recycle method-icon"></i>
+          <h3>Circular Economy & Responsible Production</h3>
+          <p>
+            Projects that minimize resource consumption, reduce waste, and promote sustainable manufacturing or product life cycles. Examples include:
+          </p>
+          <ul class="topics-bullets">
+            <li>Eco-friendly product design and packaging</li>
+            <li>Recycling or upcycling technologies</li>
+            <li>Energy-efficient production systems</li>
+            <li>Solutions for reducing single-use plastics or toxic materials</li>
+          </ul>
+        </div>
 
-          <div class="method-box scroll-animate animate-up delay-4">
-            <i class="fas fa-cloud-sun method-icon"></i>
-            <h3>Climate Change</h3>
-            <p>
-              Build solutions to strengthen resilience and adaptive capacity to
-              climate hazards and disasters globally. Improve education, awareness,
-              and institutional capacity for mitigation, adaptation, impact
-              reduction, and early warning systems.
-            </p>
-          </div>
+        <div class="method-box scroll-animate animate-up delay-4">
+          <i class="fa-solid fa-cloud-sun method-icon"></i>
+          <h3>Climate Action & Environmental Resilience</h3>
+          <p>
+             Solutions that address climate-related challenges and enhance community or ecosystem resilience. Examples include:
+          </p>
+          <ul class="topics-bullets">
+            <li>Tools for carbon footprint monitoring</li>
+            <li>Early-warning systems for natural disasters</li>
+            <li>Climate-smart urban or rural solutions</li>
+            <li>Renewable energy or low-carbon technology prototypes</li>
+          </ul>
+        </div>
 
-          <div class="method-box scroll-animate animate-up delay-1">
-            <i class="fas fa-tree method-icon"></i>
-            <h3>Loss of Biodiversity</h3>
-            <p>
-              Focus on sustainable forest management, halting and reversing habitat
-              degradation, combating desertification, and stopping biodiversity
-              loss.
-            </p>
-          </div>
-
-          <div class="method-box scroll-animate animate-up delay-2">
-            <i class="fas fa-water method-icon"></i>
-            <h3>Pollution</h3>
-            <p>
-              Ensure universal access to affordable, reliable, and modern energy
-              services, and significantly increase the share of renewable energy in
-              the global energy mix.
-            </p>
-          </div>
-
-          <div class="method-box scroll-animate animate-up delay-3">
-            <i class="fas fa-microchip method-icon"></i>
-            <h3>e-Waste Management</h3>
-            <p>
-              Innovative ways to collect e-waste, recover and recycle materials
-              safely, and dispose of e-waste by suitable methods to reduce adverse
-              environmental impacts.
-            </p>
-          </div>
+        <div class="method-box scroll-animate animate-up delay-5">
+          <i class="fa-solid fa-leaf method-icon"></i>
+          <h3>Biodiversity & Ecosystem Conservation</h3>
+          <p>
+            Projects that protect natural habitats, preserve species, and promote sustainable land or water use. Examples include:
+          </p>
+          <ul class="topics-bullets">
+            <li>Forest or marine ecosystem monitoring devices</li>
+            <li>Smart wildlife conservation solutions</li>
+            <li>Community-driven habitat restoration tools</li>
+            <li>Pollution mitigation for sensitive ecosystems</li>
+          </ul>
+        </div>
+        <div class="method-box scroll-animate animate-up delay-4">
+          <i class="fa-solid fa-heart-pulse method-icon"></i>
+          <h3>Health, Safety & Community Wellbeing</h3>
+          <p>
+              Innovations that improve quality of life, promote public safety, or enhance social inclusion. Examples include:
+          </p>
+          <ul class="topics-bullets">
+            <li>Low-cost assistive devices or healthcare tools</li>
+            <li>Community engagement platforms for social good</li>
+            <li>Disaster preparedness or emergency response devices</li>
+            <li>Accessible solutions for differently-abled or vulnerable populations</li>
+          </ul>
+        </div>
+        <div class="method-box scroll-animate animate-up delay-4">
+          <i class="fa-solid fa-lightbulb method-icon"></i>
+          <h3>Open Category / Miscellaneous</h3>
+          <p>
+               Other creative, tech-driven projects addressing global challenges aligned with SDGs (other than SDG 7, 9, 11). Examples include:
+          </p>
+          <ul class="topics-bullets">
+            <li>Educational tools for underserved communities</li>
+            <li>Innovative maker solutions for energy access, mobility, or urban services</li>
+            <li>Any prototype with societal or environmental impact</li>
+          </ul>
         </div>
       </div>
     </div>
+    <div class="selection-method-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Selection Method
+        </h2>
+      </div>
+      <p class="section-text">
+        The selection process will be conducted in two main stages:
+      </p>
 
-    <!-- Sample Project Topics (Was Topics List) -->
-    <section class="benefits-section scroll-animate animate-left" style="background-color: var(--light-bg-color); padding: 40px 0;">
-      <div class="container">
-        <h2 class="section-heading"><b>Sample Project Topics</b></h2>
-        <ul class="benefits-list">
+      <div class="selection-method-grid">
+        <div class="method-box scroll-animate animate-up delay-3">
+          <i class="fa-solid fa-file-lines method-icon"></i>
+          <h3>Stage 1 - Abstracts & Prelims</h3>
+          <p>
+            Abstract submission is open to all school students between ages 12
+            and 17 via Pilot entry or Direct Entry.
+            <br /><br />
+            <b>A)</b> Direct entry participants will be evaluated based on
+            abstract submission. Selected innovative projects will be informed
+            via email. <br /><br />
+            <b>B)</b> Pilot entry participants present projects in a preliminary
+            round conducted by pilots. Winners move to finals.
+          </p>
+        </div>
+
+        <div class="method-box scroll-animate animate-up delay-4">
+          <i class="fa-solid fa-trophy method-icon"></i>
+          <h3>Stage 2 - Grand Finale</h3>
+          <p>
+            Selected teams will present their projects before the jury during
+            the finals.
+            <br /><br />
+            Evaluation will be carried out based on criteria such as novelty,
+            technical implementation, clarity of pitch, and expandability of the
+            idea.
+          </p>
+        </div>
+      </div>
+    </div>
+    <section class="methodology-section scroll-animate">
+      <h2 class="section-heading"><b>Methodology</b></h2>
+      <ul class="methodology-list">
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >The participants will be evaluated in either of the two modes:
+            Pilot entry mode or Direct entry mode.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Direct entry mode is for participants from countries without Pilots
+            and will be evaluated based on their submission of Abstract, PPT,
+            and Video demonstration of their project.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Pilot entry mode will select eligible teams for participation by
+            conducting a preliminary project competition at their venue.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Teams need to submit the problem statement and the detailed
+            solution as a PPT for evaluation by experts/Jury.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Selected teams will be notified and asked to submit an executive
+            summary and video demonstration of their project.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >During the finale, teams will present their projects virtually,
+            evaluated by the jury.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Prizes will be awarded based on jury, track chair, and general
+            chair recommendations.</span
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section class="benefits-section scroll-animate animate-left"
+    style="background-color: var(--light-bg-color); padding: 40px 0;">
+    <div class="container">
+      <h2 class="section-heading"><b>Sample Project Topics</b></h2>
+     <ul class="benefits-list">
           <li>
             <i class="fas fa-leaf"></i>
             <span><b>No Poverty:</b> Build the resilience of the poor and those in vulnerable situations.</span>
@@ -916,7 +670,102 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
             <span><b>Miscellaneous:</b> SDG other than 7, 9, and 11.</span>
           </li>
         </ul>
+    </section>
+    <section class="winners-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Previous Year Achivers(2025)
+        </h2>
       </div>
+      <div class="jury-carousel-container">
+        <button class="jury-nav-btn jury-prev">&#10094;</button>
+        <div class="jury-carousel-track">
+          <div class="jury-carousel-slide">
+            <img src="../images/MF_Winner.jpg" alt="Maker Fair Winner">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="../images/MF_Runner.jpg" alt="Maker Fair Runner">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="../images/MF_HM.jpg" alt="Maker Fair Honorable Mention 1">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="../images/MF_HM2.jpg" alt="Maker Fair Honorable Mention 2">
+          </div>
+        </div>
+        <button class="jury-nav-btn jury-next">&#10095;</button>
+        <div class="jury-dots">
+          <span class="jury-dot active"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+        </div>
+      </div>
+    </section>
+    <section class="card-gallery-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Gallery
+        </h2>
+      </div>
+      <div class="card-gallery">
+        <div class="card-gallery-track">
+          <div class="card-gallery-item" data-category="winners">
+            <img src="../Gallery/STGallery1.jpeg" alt="Special Track Winner">
+          </div>
+          <div class="card-gallery-item" data-category="runners">
+            <img src="../Gallery/STGallery2.jpeg" alt="Special Track Runner">
+          </div>
+          <div class="card-gallery-item" data-category="runners">
+            <img src="../Gallery/STGallery3.jpeg" alt="Special Track Runner">
+          </div>
+          <div class="card-gallery-item" data-category="honorable">
+            <img src="../Gallery/STGallery4.jpg" alt="Special Track Honorable Mention 1">
+          </div>
+          <div class="card-gallery-item" data-category="honorable">
+            <img src="../Gallery/STGallery5.JPG" alt="Special Track Honorable Mention 2">
+          </div>
+          <div class="card-gallery-item" data-category="moments">
+            <img src="../Gallery/STGallery6.JPG" alt="Junior Einstein Moment 1">
+          </div>
+        </div>
+        <div class="gallery-bottom-nav">
+          <button class="gallery-nav prev"><i class="fas fa-arrow-left"></i></button>
+          <button class="gallery-nav next"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+     <section class="team-details-section contacts-section scroll-animate">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          For any Queries, please contact
+        </h2>
+      </div>
+      <ul class="team-details-list">
+        <li>
+          <i class="fas fa-user"></i>
+          <span>
+            Chair<br />
+            Mr. M. Arun<br />
+            Chair | Maker Fair Track<br />
+            Email ID: yesist12.makerfairtrack@gmail.com<br />
+            +91 7200096048
+          </span>
+        </li>
+        <li>
+          <i class="fas fa-user"></i>
+          <span>
+            Co-Chair<br />
+            Ms. Dhanalakshmi<br />
+            Co-Chair | Maker Fair Track<br />
+            Email ID: dharshinid410@gmail.comm<br />
+            +91 8939652730
+          </span>
+        </li>
+      </ul>
     </section>
 
     <!-- FAQs Section -->
@@ -1096,8 +945,543 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
         </div>
       </div>
     </section>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Hamburger menu functionality
+    //
+    // --- THIS IS THE CRITICAL FIX ---
+    // Changed getElementById to querySelector to find by CLASS
+    //
+    const hamburger = document.querySelector('.hamburger'); // Use .hamburger class
+    const mainNav = document.querySelector('.main-nav');   // Use .main-nav class
 
-    <script>
+    if (hamburger && mainNav) {
+        hamburger.addEventListener('click', function () {
+            const isOpening = !mainNav.classList.contains('nav-open');
+            mainNav.classList.toggle('nav-open');
+            // Toggle icon between bars and times
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+
+            // Close all dropdowns when closing the menu
+            if (!isOpening) {
+                const activeDropdowns = mainNav.querySelectorAll('.has-dropdown.active');
+                activeDropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+    }
+
+    // Dropdown menu toggle for mobile
+    const dropdownToggles = document.querySelectorAll('.has-dropdown > a');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function (event) {
+            // Check if within the mobile/hamburger menu (which is always used now)
+            // Or just always enable toggle behavior for these links
+            event.preventDefault();
+            const parentLi = this.parentElement;
+            parentLi.classList.toggle('active');
+
+            // Close other open dropdowns (Ensure mainNav is defined correctly above)
+            if (mainNav) {
+                const otherDropdowns = mainNav.querySelectorAll('.has-dropdown.active');
+                otherDropdowns.forEach(otherLi => {
+                    if (otherLi !== parentLi) {
+                        otherLi.classList.remove('active');
+                    }
+                });
+            }
+        });
+    });
+
+    // Close mobile nav when a link is clicked
+    if (mainNav) {
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (event) {
+                // Only close if it's not a dropdown toggle
+                if (!this.closest('.has-dropdown')) {
+                    // Ensure hamburger is defined correctly above
+                    if (mainNav.classList.contains('nav-open') && hamburger) {
+                        mainNav.classList.remove('nav-open');
+                        hamburger.querySelector('i').classList.remove('fa-times');
+                        hamburger.querySelector('i').classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+    }
+
+    // Close nav if clicking outside on mobile
+    document.addEventListener('click', function (event) {
+        // Ensure mainNav and hamburger are defined correctly above
+        if (window.innerWidth <= 992 && mainNav && hamburger) {
+            if (mainNav.classList.contains('nav-open') && !mainNav.contains(event.target) && !hamburger.contains(event.target)) {
+                mainNav.classList.remove('nav-open');
+                hamburger.querySelector('i').classList.remove('fa-times');
+                hamburger.querySelector('i').classList.add('fa-bars');
+            }
+        }
+    });
+
+
+    // --- (Rest of your script.js code remains the same) ---
+
+    // Scroll to top button functionality
+    const scrollTopBtn = document.getElementById('scrollTopBtn'); // Assuming this ID exists in your footer.js or HTML
+
+    window.addEventListener('scroll', function () {
+        if (scrollTopBtn) {
+            if (window.scrollY > 300) { // Show button after scrolling down 300px
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        }
+    });
+
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Map initialization for Global Reach section (Only runs if #map exists)
+    const mapElement = document.getElementById('map');
+    if (mapElement) {
+        new jsVectorMap({
+            selector: "#map",
+            map: "world",
+            markers: [
+                { name: "Malaysia", coords: [4.2105, 101.9758] },
+                { name: "India", coords: [20.5937, 78.9629] },
+                { name: "USA", coords: [37.0902, -95.7129] },
+                { name: "UK", coords: [55.3781, -3.4360] },
+            ],
+            regionStyle: {
+                initial: { fill: '#D2E3F0' },
+                hover: { fill: '#80B3E8' }
+            },
+            markerStyle: {
+                initial: {
+                    fill: '#FF5733',
+                    stroke: '#FFF',
+                    "stroke-width": 4,
+                    "stroke-opacity": 0.5
+                },
+                hover: { fill: '#C70039' }
+            },
+            labels: {
+                regions: {
+                    render: function (code) { return; } // No labels
+                }
+            },
+        });
+    }
+
+    // Scroll animation for sections
+    const animateOnScroll = () => {
+        const sections = document.querySelectorAll('.scroll-animate');
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const triggerPoint = window.innerHeight; // trigger as soon as it enters viewport
+
+            if (sectionTop < triggerPoint) {
+                section.classList.add('in-view');
+            } else {
+                // Optional: remove class if you want animation to repeat when scrolling up
+                // section.classList.remove('in-view');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Run on load
+
+    // Latest Updates Ticker (Only runs if elements exist)
+    const updatesWrapper = document.querySelector('.updates-wrapper');
+    const updateItems = document.querySelectorAll('.update-item');
+    const prevUpdateBtn = document.getElementById('prev-update');
+    const nextUpdateBtn = document.getElementById('next-update');
+    let currentIndex = 0;
+
+    if (updatesWrapper && updateItems.length > 0) {
+        const showUpdate = (index) => {
+            updatesWrapper.style.transform = `translateX(-${index * 100}%)`;
+        };
+
+        const updateButtons = () => {
+            if (prevUpdateBtn) prevUpdateBtn.disabled = currentIndex === 0;
+            if (nextUpdateBtn) nextUpdateBtn.disabled = currentIndex === updateItems.length - 1;
+        };
+
+        if (nextUpdateBtn) {
+            nextUpdateBtn.addEventListener('click', () => {
+                if (currentIndex < updateItems.length - 1) {
+                    currentIndex++;
+                    showUpdate(currentIndex);
+                    updateButtons();
+                }
+            });
+        }
+
+        if (prevUpdateBtn) {
+            prevUpdateBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showUpdate(currentIndex);
+                    updateButtons();
+                }
+            });
+        }
+
+        // Initialize
+        showUpdate(currentIndex);
+        updateButtons();
+    }
+
+    // Reveal YESIST Gateways section items when in view
+    const gatewaysSection = document.querySelector('.gateways-section');
+    if (gatewaysSection) {
+        const gatewayHeader = gatewaysSection.querySelector('.gateway-header h2');
+        const gatewayRows = gatewaysSection.querySelectorAll('.gateway-row');
+
+        const reveal = (el) => { if (el) el.classList.add('visible'); };
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        reveal(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.01 });
+
+            if (gatewayHeader) observer.observe(gatewayHeader);
+            gatewayRows.forEach(row => observer.observe(row));
+        } else {
+            // Fallback for older browsers: reveal immediately
+            reveal(gatewayHeader);
+            gatewayRows.forEach(reveal);
+        }
+    }
+
+    // FAQ Accordion Functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            }
+        });
+    }
+});
+// Achievers Section Tab Functionality
+const achieverTabs = document.querySelectorAll('.tab-btn');
+const trackAchievers = document.querySelectorAll('.track-achievers');
+
+if (achieverTabs.length > 0 && trackAchievers.length > 0) {
+    achieverTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            const trackName = this.getAttribute('data-track');
+
+            // Remove active class from all tabs
+            achieverTabs.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked tab
+            this.classList.add('active');
+
+            // Hide all track achievers
+            trackAchievers.forEach(track => track.classList.remove('active'));
+            // Show selected track achievers
+            const selectedTrack = document.querySelector(`.track-achievers[data-track="${trackName}"]`);
+            if (selectedTrack) {
+                selectedTrack.classList.add('active');
+            }
+        });
+    });
+}
+
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // --- Data ---
+    const committeeMembers = {
+        '1': {
+            name: 'Dr. Ramalatha Marimuthu',
+            title: 'Chair, YESIST12 2025',
+            bio: 'Dr. Ramalatha Marimuthu is a distinguished professor with extensive experience in IEEE leadership roles. She has led numerous initiatives to promote technology education and innovation among young engineers. With over 20 years of experience in academia and research, she has contributed significantly to the field of engineering education.',
+            affiliation: 'Kumaraguru College of Technology, India',
+            responsibilities: 'As the General Chair of YESIST12 2025, Dr. Marimuthu oversees all aspects of the program, including strategic planning, partnership development, and overall execution of the event.',
+            contact: 'Email: ramalatha.m@kct.ac.in | LinkedIn: linkedin.com/in/ramalatha-marimuthu-0aa6a78/',
+            image: 'images/Mukesh K.jpg'
+        },
+        '2': {
+            name: 'Dr. Rukmani Devi R K',
+            title: 'Co-Chair, YESIST12 2025',
+            bio: 'Dr. Rukmani Devi R K is a renowned researcher and educator with a focus on sustainable technology. Her work has been instrumental in developing innovative approaches to engineering education and research. She has published numerous papers in international journals and conferences.',
+            affiliation: 'Sri Sairam Engineering College, India',
+            responsibilities: 'As Program Coordinator, Dr. Rukmani Devi manages the technical program, coordinates with track chairs, and ensures smooth execution of all program activities.',
+            contact: 'Email: rukmani.cse@sairam.edu.in | LinkedIn: linkedin.com/in/rukmani-devi-r-k-0b845a20/',
+            image: 'images/Mukesh K.jpg'
+        },
+        '3': {
+            name: 'Dr. Gunjan Varshney',
+            title: 'Co-Chair, YESIST12 2025',
+            bio: 'Dr. Gunjan Varshney is an expert in emerging technologies and has led multiple international collaborations. She has published extensively in the field of computer science and engineering. Her research interests include artificial intelligence, machine learning, and their applications in solving real-world problems.',
+            affiliation: 'JSS Academy of Technical Education, India',
+            responsibilities: 'As Chair of the Innovation Challenge Track, Dr. Varshney leads the evaluation and selection process for innovative projects, coordinates with judges, and ensures high standards for all submissions.',
+            contact: 'Email: gunjanvarshney@jssaten.ac.in | LinkedIn: linkedin.com/in/dr-gunjan-varshney-6a881b20/',
+            image: 'images/Mukesh K.jpg'
+        },
+        // Duplicated members to reach 6
+        '4': {
+            name: 'Dr. Ramalatha Marimuthu',
+            title: 'Chair, YESIST12 2025',
+            bio: 'Dr. Ramalatha Marimuthu is a distinguished professor with extensive experience in IEEE leadership roles. She has led numerous initiatives to promote technology education and innovation among young engineers. With over 20 years of experience in academia and research, she has contributed significantly to the field of engineering education.',
+            affiliation: 'Kumaraguru College of Technology, India',
+            responsibilities: 'As the General Chair of YESIST12 2025, Dr. Marimuthu oversees all aspects of the program, including strategic planning, partnership development, and overall execution of the event.',
+            contact: 'Email: ramalatha.m@kct.ac.in | LinkedIn: linkedin.com/in/ramalatha-marimuthu-0aa6a78/',
+            image: 'images/Mukesh K.jpg'
+        },
+        '5': {
+            name: 'Dr. Rukmani Devi R K',
+            title: 'Co-Chair, YESIST12 2025',
+            bio: 'Dr. Rukmani Devi R K is a renowned researcher and educator with a focus on sustainable technology. Her work has been instrumental in developing innovative approaches to engineering education and research. She has published numerous papers in international journals and conferences.',
+            affiliation: 'Sri Sairam Engineering College, India',
+            responsibilities: 'As Program Coordinator, Dr. Rukmani Devi manages the technical program, coordinates with track chairs, and ensures smooth execution of all program activities.',
+            contact: 'Email: rukmani.cse@sairam.edu.in | LinkedIn: linkedin.com/in/rukmani-devi-r-k-0b845a20/',
+            image: 'images/Mukesh K.jpg'
+        },
+        '6': {
+            name: 'Dr. Gunjan Varshney',
+            title: 'Co-Chair, YESIST12 2025',
+            bio: 'Dr. Gunjan Varshney is an expert in emerging technologies and has led multiple international collaborations. She has published extensively in the field of computer science and engineering. Her research interests include artificial intelligence, machine learning, and their applications in solving real-world problems.',
+            affiliation: 'JSS Academy of Technical Education, India',
+            responsibilities: 'As Chair of the Innovation Challenge Track, Dr. Varshney leads the evaluation and selection process for innovative projects, coordinates with judges, and ensures high standards for all submissions.',
+            contact: 'Email: gunjanvarshney@jssaten.ac.in | LinkedIn: linkedin.com/in/dr-gunjan-varshney-6a881b20/',
+            image: 'images/Mukesh K.jpg'
+        }
+    };
+
+    // --- Modal Logic ---
+    const modal = document.getElementById('memberModal');
+    const modalClose = document.querySelector('.modal-close');
+    const moreInfoButtons = document.querySelectorAll('.more-info-btn');
+
+    // Open modal when More Info button is clicked
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('more-info-btn')) {
+            e.stopPropagation(); // Prevent event bubbling
+            const card = e.target.closest('.committee-card');
+            const memberId = card.getAttribute('data-member-id');
+            const member = committeeMembers[memberId];
+
+            if (member) {
+                // Populate modal with member data
+                const modalImg = document.getElementById('modalMemberImg');
+                if (modalImg) modalImg.src = member.image;
+                
+                const modalName = document.getElementById('modalMemberName');
+                if (modalName) modalName.textContent = member.name;
+                
+                const modalTitle = document.getElementById('modalMemberTitle');
+                if (modalTitle) modalTitle.textContent = member.title;
+                
+                const modalBio = document.getElementById('modalMemberBio');
+                if (modalBio) modalBio.textContent = member.bio;
+                
+                const modalAffiliation = document.getElementById('modalMemberAffiliation');
+                if (modalAffiliation) modalAffiliation.textContent = member.affiliation;
+                
+                const modalResponsibilities = document.getElementById('modalMemberResponsibilities');
+                if (modalResponsibilities) modalResponsibilities.textContent = member.responsibilities;
+                
+                const modalContact = document.getElementById('modalMemberContact');
+                if (modalContact) modalContact.textContent = member.contact;
+
+                // Show modal
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                }
+            }
+        }
+    });
+
+    // Close modal when close button is clicked
+    if (modalClose) {
+        modalClose.addEventListener('click', function() {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+    }
+
+    // Close modal when clicking outside the modal content
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+    }
+
+    // Close modal when ESC key is pressed
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+
+    // --- Carousel Logic ---
+    const track = document.querySelector('.jury-carousel-track');
+    if (!track) return;
+    let slides = Array.from(track.children);
+    const nextButton = document.querySelector('.jury-next');
+    const prevButton = document.querySelector('.jury-prev');
+    const dotsNav = document.querySelector('.jury-dots');
+
+    function getItemsPerView() {
+        if (window.innerWidth <= 768) return 1;
+        if (window.innerWidth <= 992) return 2;
+        return 3;
+    }
+
+    let currentIndex = 0;
+    let isAnimating = false;
+    let autoplayTimer;
+
+    function buildDots(totalPages) {
+        if (!dotsNav) return;
+        dotsNav.innerHTML = '';
+        for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'jury-dot' + (i === 0 ? ' active' : '');
+            dotsNav.appendChild(dot);
+        }
+    }
+
+    function updateCarousel(immediate) {
+        const itemsPerView = getItemsPerView();
+        const amountToMove = -(currentIndex * (100 / itemsPerView));
+        if (immediate) {
+            const prevTransition = track.style.transition;
+            track.style.transition = 'none';
+            track.style.transform = `translateX(${amountToMove}%)`;
+            void track.offsetWidth;
+            track.style.transition = prevTransition || '';
+        } else {
+            track.style.transform = `translateX(${amountToMove}%)`;
+        }
+
+        if (dotsNav) {
+            const dotEls = Array.from(dotsNav.children);
+            const totalRealSlides = slides.length - 2 * getItemsPerView();
+            const realIndex = currentIndex - getItemsPerView();
+            let pageIndex = Math.floor(realIndex / getItemsPerView());
+            if (pageIndex < 0) pageIndex = 0;
+            dotEls.forEach(d => d.classList.remove('active'));
+            if (dotEls[pageIndex]) dotEls[pageIndex].classList.add('active');
+        }
+    }
+
+    function setupInfinite() {
+        const itemsPerView = getItemsPerView();
+        Array.from(track.querySelectorAll('.clone')).forEach(c => c.remove());
+        const original = Array.from(track.children).filter(el => !el.classList.contains('clone'));
+        for (let i = original.length - itemsPerView; i < original.length; i++) {
+            const clone = original[i].cloneNode(true);
+            clone.classList.add('clone');
+            track.insertBefore(clone, track.firstChild);
+        }
+        for (let i = 0; i < itemsPerView; i++) {
+            const clone = original[i].cloneNode(true);
+            clone.classList.add('clone');
+            track.appendChild(clone);
+        }
+        slides = Array.from(track.children);
+        currentIndex = itemsPerView;
+        updateCarousel(true);
+        const totalPages = Math.ceil(original.length / itemsPerView);
+        buildDots(totalPages);
+    }
+
+    function moveNext() {
+        if (isAnimating) return;
+        isAnimating = true;
+        currentIndex++;
+        updateCarousel();
+    }
+
+    function movePrev() {
+        if (isAnimating) return;
+        isAnimating = true;
+        currentIndex--;
+        updateCarousel();
+    }
+
+    if (nextButton) nextButton.addEventListener('click', () => { moveNext(); startAutoplay(); });
+    if (prevButton) prevButton.addEventListener('click', () => { movePrev(); startAutoplay(); });
+
+    if (dotsNav) {
+        dotsNav.addEventListener('click', e => {
+            const targetDot = e.target.closest('.jury-dot');
+            if (!targetDot) return;
+            const itemsPerView = getItemsPerView();
+            const dotEls = Array.from(dotsNav.children);
+            const targetIndex = dotEls.findIndex(dot => dot === targetDot);
+            currentIndex = itemsPerView + targetIndex * itemsPerView;
+            updateCarousel();
+        });
+    }
+
+    track.addEventListener('transitionend', () => {
+        const itemsPerView = getItemsPerView();
+        const totalRealSlides = slides.length - 2 * itemsPerView;
+        if (currentIndex >= totalRealSlides + itemsPerView) {
+            currentIndex = itemsPerView;
+            updateCarousel(true);
+        }
+        if (currentIndex <= 0) {
+            currentIndex = totalRealSlides;
+            updateCarousel(true);
+        }
+        isAnimating = false;
+    });
+
+    function startAutoplay() {
+        if (autoplayTimer) clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(() => {
+            moveNext();
+        }, 5000);
+    }
+
+    window.addEventListener('resize', () => {
+        setupInfinite();
+    });
+
+    setupInfinite();
+    startAutoplay();
+});
+
+</script>
+<script>
   document.addEventListener('DOMContentLoaded', function () {
     var card = document.querySelector('.abstract-card');
     if (!card) return;
@@ -1363,7 +1747,7 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
       window.addEventListener('load', function () { update(); });
     });
   </script>
-    <!-- Footer -->
+  <!-- Footer -->
     <div id="footer-container"></div>
 
 <script src="../components/header.js"></script> 
