@@ -292,3 +292,23 @@
 .methodology-section .methodology-list li:hover i {
   color: #ffffff;
 }
+
+/* Mobile View: Center all section titles */
+@media (max-width: 768px) {
+  .section-heading,
+  .section-title,
+  .about-special .title,
+  .theme-heading h2,
+  .theme-heading h3,
+  .theme-icon-box .text h2,
+  .timeline-section .section-heading,
+  .mission-areas .section-heading,
+  .eligibility-section .section-heading,
+  .benefits-section .section-heading,
+  .rules-section .section-heading,
+  .objectives-section .section-heading,
+  .gateways-section .section-heading,
+  .selection-method-section .section-heading {
+    text-align: center !important;
+  }
+}

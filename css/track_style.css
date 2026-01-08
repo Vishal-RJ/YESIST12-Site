@@ -607,6 +607,7 @@ main {
 .special-hero .subtitle,
 .iengage-hero .subtitle {
   font-size: 1.1rem;
+  font-weight: 425;
 }
 
 .innovation-hero .breadcrumb,
@@ -746,10 +747,11 @@ main {
 .about-wepower .subtitle,
 .about-special .subtitle,
 .about-iengage .subtitle {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: #0a4360cc;
+  font-weight: 425;
+  color: black;
 }
 
 .about-innovation .presentation-link,
@@ -826,8 +828,8 @@ main {
 
 .theme-heading h3 {
   font-size: 1.2rem;
-  color: #031b27cc;
-  font-weight: 400;
+  color: black;
+  font-weight: 425;
 }
 
 .theme-icon-box {
@@ -870,10 +872,10 @@ main {
 }
 
 .theme-text {
-  font-weight: 400;
-  font-size: 1rem;
+  font-weight: 425;
+  font-size: 1.1rem;
   line-height: 1.6;
-  color: #333;
+  color: black;
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
@@ -1800,3 +1802,34 @@ main {
     font-weight: 600;
     color: #0a4360;
 }
+
+/* Mobile View: Center all section titles */
+@media (max-width: 768px) {
+  .section-heading,
+  .section-title,
+  .objective-title,
+  .theme-heading h2,
+  .about-innovation .title,
+  .about-einstein .title,
+  .about-maker .title,
+  .about-wepower .title,
+  .about-special .title,
+  .about-iengage .title,
+  .contact-section h3,
+  .focus-areas .section-title,
+  .focus-areas .section-heading,
+  .mission-areas .section-heading,
+  .mission-areas .section-title,
+  .objectives-areas .section-title,
+  .participation-areas .section-title,
+  .submission-topics-section .section-heading {
+    text-align: center !important;
+  }
+
+  /* Center the underline for objective-title */
+  .objective-title::after {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
