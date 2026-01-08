@@ -374,9 +374,9 @@
          Special Track of IEEE YESIST12 2026 is designed to inspire impactful, technology-driven solutions that address some of humanity’s most pressing global challenges. First introduced in 2020, the track has become a dynamic platform for young innovators to present smarter, scalable, and meaningful ideas that tackle both humanitarian and industry-related problems. For the 2026 edition, the Special Track focuses on elevating the quality of life worldwide by encouraging creative, research-backed, and future-ready proposals. It invites participants to reimagine how technology can transform communities, improve everyday living, and contribute to a more sustainable and inclusive global society.
 
         </p>
-        <a href="https://ieeeyesist12.org/pdf/?id=schedule-2025-je" target="_blank" class="presentation-link">
+        <!-- <a href="https://ieeeyesist12.org/pdf/?id=schedule-2025-je" target="_blank" class="presentation-link">
           View Presentation Schedule
-        </a>
+        </a> -->
       </div>
       <div class="image scroll-animate animate-right delay-2">
         <img src="https://ieeeyesist12.org/wp-content/uploads/2022/12/yesist12-track-05-1024x525.png"
@@ -444,15 +444,16 @@
       </div>
     </section>
 
+    <!-- Timeline Section -->
     <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
       <div class="container">
-        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>TIMELINE:</b></h2>
+        <h2 class="section-heading"><b>TIMELINE</b></h2>
         <div class="table-responsive">
           <table class="timeline-table">
             <tbody>
               <tr>
                 <td>Call for Abstracts-1</td>
-                <td>15th Dec 2025</td>
+                <td>12th Jan 2026</td>
               </tr>
               <tr>
                 <td>Deadline for Abstract-1</td>
@@ -492,9 +493,9 @@
       <div class="container">
         <div class="abstract-card">
           <h2 class="section-title">Submit your Abstract now</h2>
-          <div class="status-pill open">Open</div>
-          <h4 class="deadline">Call for Abstract: 14 / 01 / 2026</h4>
-          <div class="flip-countdown" data-countdown="2026-01-14T23:59:00">
+          <div class="status-pill closed">Yet to be opened</div>
+          <h4 class="deadline">Call for Abstract Starts: 12 / 01 / 2026</h4>
+          <div class="flip-countdown" data-countdown="2026-01-12T23:59:00">
             <div class="flip-unit" data-unit="days">
               <div class="flip-card"><span class="flip-number">00</span></div>
               <span class="flip-label">Days</span>
@@ -629,23 +630,29 @@
         setVal(secsEl, pad2(secs));
 
         if (statusEl) {
-          statusEl.textContent = 'Open';
-          statusEl.classList.add('open');
-          statusEl.classList.remove('closed');
-        }
-      } else {
-        if (statusEl) {
-          statusEl.textContent = 'Closed';
+          statusEl.textContent = 'Yet to be opened';
           statusEl.classList.remove('open');
           statusEl.classList.add('closed');
         }
-
-        flipCountdown.innerHTML = 'Closed';
 
         if (submitBtn) {
           submitBtn.setAttribute('aria-disabled', 'true');
           submitBtn.style.opacity = '0.6';
           submitBtn.style.pointerEvents = 'none';
+        }
+      } else {
+        if (statusEl) {
+          statusEl.textContent = 'Open';
+          statusEl.classList.add('open');
+          statusEl.classList.remove('closed');
+        }
+
+        flipCountdown.innerHTML = 'Open';
+
+        if (submitBtn) {
+          submitBtn.setAttribute('aria-disabled', 'false');
+          submitBtn.style.opacity = '1';
+          submitBtn.style.pointerEvents = 'auto';
         }
 
         clearInterval(timer);

@@ -765,14 +765,15 @@
 }
 
 /* Timeline Section Styling */
-.timeline-section .section-heading {
-  color: #0a4360;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 
+.timeline-section .section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a415c;
+  text-align: left;
+  margin-bottom: 25px;
+  font-family: 'Montserrat';
+}
 .timeline-table {
   width: 100%;
   border-collapse: collapse;
@@ -790,6 +791,7 @@
   font-size: 1rem;
   color: #333;
   vertical-align: middle;
+  text-align: center;
 }
 
 .timeline-table tr:nth-child(even) {
@@ -803,13 +805,13 @@
 .timeline-table td:first-child {
   font-weight: 600;
   color: #0a4360;
-  width: 60%;
+  width: 50%;
 }
 
 .timeline-table td:last-child {
   font-weight: 500;
   color: #2bb884;
-  width: 40%;
+  width: 50%;
 }
 
 /* Responsive Table */
