@@ -1233,10 +1233,12 @@ main {
 .objectives-list li span,
 .participation-list li span,
 .topic-box span {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   flex: 1;
   display: inline-block;
+  color: black;
+  font-weight: 425;
 }
 
 /* Objectives & Submission Section */

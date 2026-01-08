@@ -168,7 +168,7 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
         <div class="abstract-card">
           <h2 class="section-title">Submit your Abstract now</h2>
           <div class="status-pill open">Open</div>
-          <h4 class="deadline">Call for Abstract: 12 / 01 / 2026</h4>
+          <h4 class="deadline">Call for Abstract Starts: 12 / 01 / 2026</h4>
           <div class="flip-countdown" data-countdown="2026-01-12T23:59:00">
             <div class="flip-unit" data-unit="days">
               <div class="flip-card"><span class="flip-number">00</span></div>
@@ -188,10 +188,10 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
             </div>
           </div>
           <div class="abstract-actions">
-            <a class="btn download-btn" href="https://portal.ieeeyesist12.org/docs/Abstract_template.pptx" target="_blank">
+            <a class="btn download-btn" href="../tracks/maker_fair.html" target="_blank">
               <i class="fas fa-download"></i> DOWNLOAD ABSTRACT TEMPLATE
             </a>
-            <a class="btn submit-btn" href="https://portal.ieeeyesist12.org/mf-direct" target="_blank">
+            <a class="btn submit-btn" href="../tracks/maker_fair.html" target="_blank">
               <i class="fas fa-paper-plane"></i> Submit Abstract
             </a>
           </div>
@@ -201,10 +201,16 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
     <!-- The Objectives of the Special Track -->
     <section class="mission-areas eligibility-section">
       <h2 class="section-heading"><b>The Objectives of the Maker Fair Track</b></h2>
-      <p class="section-text scroll-animate animate-up delay-2">
-        The MakerFair Track aims to provide a hands-on platform for experimenters and creators to demonstrate innovative solutions to global challenges.<br> 
-        It encourages ideation, prototyping, and early-stage commercialization while highlighting creativity and practical problem-solving.
-      </p>
+      <ul class="mission-list">
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span>The MakerFair Track aims to provide a hands-on platform for experimenters and creators to demonstrate innovative solutions to global challenges.</span>
+        </li>
+        <li>
+          <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+          <span>It encourages ideation, prototyping, and early-stage commercialization while highlighting creativity and practical problem-solving.</span>
+        </li>
+      </ul>
       <!-- <ul class="mission-list">
         <li>
           <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
@@ -1573,23 +1579,29 @@ if (achieverTabs.length > 0 && trackAchievers.length > 0) {
         setVal(secsEl, pad2(secs));
 
         if (statusEl) {
-          statusEl.textContent = 'Open';
-          statusEl.classList.add('open');
-          statusEl.classList.remove('closed');
-        }
-      } else {
-        if (statusEl) {
-          statusEl.textContent = 'Closed';
+          statusEl.textContent = 'Yet to be opened';
           statusEl.classList.remove('open');
           statusEl.classList.add('closed');
         }
-
-        flipCountdown.innerHTML = 'Closed';
 
         if (submitBtn) {
           submitBtn.setAttribute('aria-disabled', 'true');
           submitBtn.style.opacity = '0.6';
           submitBtn.style.pointerEvents = 'none';
+        }
+      } else {
+        if (statusEl) {
+          statusEl.textContent = 'Open';
+          statusEl.classList.add('open');
+          statusEl.classList.remove('closed');
+        }
+
+        flipCountdown.innerHTML = 'Open';
+
+        if (submitBtn) {
+          submitBtn.setAttribute('aria-disabled', 'false');
+          submitBtn.style.opacity = '1';
+          submitBtn.style.pointerEvents = 'auto';
         }
 
         clearInterval(timer);
