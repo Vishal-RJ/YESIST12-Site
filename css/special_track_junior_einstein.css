@@ -439,8 +439,11 @@
   flex-shrink: 0;
 }
 .eligibility-list li span {
-  font-size: 1rem;
-  line-height: 1.5;
+  color: #000000;
+  font-weight: 425;
+  font-size: 1.1rem;
+  line-height: 1.7;
+ 
   flex: 1;
   display: inline-block;
 }
@@ -478,8 +481,12 @@
   flex-shrink: 0;
 }
 .benefits-list li span {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 425;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  
   flex: 1;
   display: inline-block;
 }
@@ -551,7 +558,11 @@
 
 .selection-method-section p {
   text-align: justify;
-  font-weight: 500;
+  font-weight: 425;
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 /* Force left alignment for Selection Method header */
@@ -588,13 +599,57 @@
 /* Track Structure content adjustments */
 .objectives-section .section-text {
   text-align: justify;
-  font-weight: 500;
+  font-weight: 425;
   font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 .objectives-section .box-inner p {
   text-align: justify;
-  font-weight: 500;
+  font-weight: 425;
   font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.selection-method-grid .method-box p {
+  text-align: justify;
+  font-weight: 425;
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Team Details List (Contacts) - Standardized Style */
+.team-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.team-details-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.team-details-list li i {
+  color: #2bb884;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+.team-details-list li span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 425;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  
+  flex: 1;
+  display: inline-block;
 }
 
 /* Contacts: place Co-Chair 1 and 2 in one row */
@@ -759,9 +814,27 @@
   font-family: 'Montserrat', sans-serif !important;
   font-weight: 600 !important;
 }
+.methodology-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.methodology-list li i {
+  color: #2bb884;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
 .methodology-list li span {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 425;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  flex: 1;
+  display: inline-block;
 }
 
 /* Timeline Section Styling */
@@ -850,8 +923,13 @@
 }
 .rules-list li span {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 425;
   color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  flex: 1;
+  display: inline-block;
 }
 .eligibility-section .section-heading {
   font-family: 'Montserrat', sans-serif !important;
@@ -869,7 +947,13 @@
 }
 .mission-areas .mission-list li span {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 425;
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.7;
+   
+    flex: 1;
+    display: inline-block;
   }
 
   /* --- Alignment Fixes: Match 'Top five reasons' indentation --- */
@@ -1271,4 +1355,22 @@
 }
 .card-gallery-item.animate-in {
   animation: riseFade 500ms ease both;
+}
+@media (max-width: 768px) {
+  .section-heading,
+  .section-title,
+  .about-special .title,
+  .theme-heading h2,
+  .theme-heading h3,
+  .theme-icon-box .text h2,
+  .timeline-section .section-heading,
+  .mission-areas .section-heading,
+  .eligibility-section .section-heading,
+  .benefits-section .section-heading,
+  .rules-section .section-heading,
+  .objectives-section .section-heading,
+  .gateways-section .section-heading,
+  .selection-method-section .section-heading {
+    text-align: center !important;
+  }
 }
