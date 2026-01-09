@@ -1374,6 +1374,7 @@
 .card-gallery-item.animate-in {
   animation: riseFade 500ms ease both;
 }
+
 @media (max-width: 768px) {
   .section-heading,
   .section-title,
