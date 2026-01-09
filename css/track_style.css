@@ -1277,12 +1277,16 @@ main {
 
 /* Objectives paragraph inside mission-areas */
 .mission-areas .section-text {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+   flex: 1;
   margin-bottom: 30px;
   margin-left: 0;
-  color: #060a0ccc;
+   color: black;
   text-align: justify;
+  font-weight: 425;
 }
+
 
 @media (max-width: 768px) {
   .mission-areas .section-text {
