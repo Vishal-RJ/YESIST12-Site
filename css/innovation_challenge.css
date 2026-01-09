@@ -170,3 +170,36 @@ main {
     text-align: center !important;
   }
 }
+
+.ic-evaluation {
+  color: #000;
+}
+
+.ic-evaluation .evaluation-list li {
+  font-size: 1.1rem;
+  font-weight: 425;
+}
+
+.ic-guidelines {
+  color: #000;
+}
+
+.ic-guidelines .section-text {
+  color: inherit;
+  font-size: 1.1rem;
+  font-weight: 425;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.ic-guidelines .rules-list li {
+  color: inherit;
+  font-size: 1.1rem;
+  font-weight: 425;
+}
+
+.ic-guidelines .rules-list li span {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
