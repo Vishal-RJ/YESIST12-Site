@@ -203,6 +203,14 @@
   top: 8px;
 }
 
+.mf-submission-topics .method-box:hover ul.topics-bullets li {
+  color: #fff;
+}
+
+.mf-submission-topics .method-box:hover ul.topics-bullets li::before {
+  background: #fff;
+}
+
 /* Objectives paragraph emphasis */
 .mission-areas .section-text {
   color: #000000;
@@ -243,6 +251,11 @@
   font-size: 1.1rem;
   line-height: 1.7;
   text-align: justify;
+}
+
+.mf-track-structure .objective-box:hover,
+.mf-track-structure .objective-box:hover * {
+  color: #fff !important;
 }
 
 

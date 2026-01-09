@@ -203,3 +203,28 @@ main {
   font-size: inherit;
   font-weight: inherit;
 }
+
+.ic-guidelines .rules-list li:hover {
+  color: #fff;
+}
+
+.ic-guidelines .rules-list li:hover span {
+  color: #fff;
+}
+
+.mission-areas .section-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.ic-track-structure .objective-box:hover,
+.ic-track-structure .objective-box:hover h3,
+.ic-track-structure .objective-box:hover p,
+.ic-track-structure .objective-box:hover i {
+  color: #fff;
+}
+
+.ic-selection-method .method-box:hover,
+.ic-selection-method .method-box:hover * {
+  color: #fff;
+}
