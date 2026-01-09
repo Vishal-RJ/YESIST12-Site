@@ -1228,11 +1228,19 @@ main {
   flex-shrink: 0;
 }
 
-.focus-list li span,
 .mission-list li span,
 .objectives-list li span,
 .participation-list li span,
 .topic-box span {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  flex: 1;
+  display: inline-block;
+  color: black;
+  font-weight: 425;
+}
+
+.focus-list li span {
   font-size: 1.1rem;
   line-height: 1.5;
   flex: 1;
