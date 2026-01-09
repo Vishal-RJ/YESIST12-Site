@@ -4,6 +4,16 @@ main {
 }
 
 .about-special .image {
+  overflow: hidden;
+}
+
+.about-special .image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about-special .image {
   margin-top: 30px;
 }
 @media (min-width: 992px) {

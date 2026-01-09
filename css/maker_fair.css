@@ -1,4 +1,20 @@
 /* Aim, Theme & Topics Section */
+.about-special .image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about-special .image {
+  margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .about-special .image {
+    margin-top: 40px;
+  }
+}
+
 .aim-theme-topics {
   max-width: 100%;
   margin: 40px 0;
@@ -203,8 +219,18 @@
   top: 8px;
 }
 
+.selection-method-section .method-box:hover,
+.selection-method-section .method-box:hover * {
+  color: #fff !important;
+}
+
 .mf-submission-topics .method-box:hover ul.topics-bullets li {
   color: #fff;
+}
+
+.mf-submission-topics .method-box:hover,
+.mf-submission-topics .method-box:hover * {
+  color: #fff !important;
 }
 
 .mf-submission-topics .method-box:hover ul.topics-bullets li::before {

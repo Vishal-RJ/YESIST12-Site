@@ -533,6 +533,24 @@
 .about-special .content {
   text-align: justify;
 }
+
+.special-track-je-page .about-special .image {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .special-track-je-page .about-special .image {
+    margin-top: 40px;
+  }
+}
+
+.special-track-je-page .about-special .image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .winners-section,
 .selection-method-section,
 .contacts-section {
