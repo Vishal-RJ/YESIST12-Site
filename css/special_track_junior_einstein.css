@@ -28,6 +28,11 @@
 .abstract-card.in-view {
   animation: abstractEnter 0.8s ease both, abstractFloat 8s ease-in-out 0.8s infinite;
 }
+.about-special .image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
 @keyframes abstractEnter {
   from {
     opacity: 0;
