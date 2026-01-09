@@ -484,7 +484,8 @@ main {
 }
 
 .objective-text {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  font-weight: 425;
   line-height: 1.8;
   color: #333;
   text-align: left;
@@ -1024,7 +1025,8 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 15px;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 425;
   margin-bottom: 15px;
   background: #f9f9f9;
   padding: 15px 20px;
@@ -1269,7 +1271,8 @@ main {
 
 .objectives-section .section-text,
 .submission-topics-section .section-text {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 425;
   margin-bottom: 30px;
   margin-left: -60px;
   color: #060a0ccc;
@@ -1363,7 +1366,8 @@ main {
 
 .objective-box p,
 .topic-box p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
+  font-weight: 425;
   color: #555;
 }
 
@@ -1641,7 +1645,7 @@ main {
 .method-box:hover {
   transform: scale(0.95);
   background: linear-gradient(135deg, #0a4360 0%, #2bb884 100%);
-  color: #fff;
+  color: #fff !important;
 }
 
 .method-icon {
@@ -1660,7 +1664,7 @@ main {
 }
 
 .method-box:hover h3 {
-  color: #fff;
+  color: #fff !important;
 }
 
 .method-box p {
@@ -1672,8 +1676,12 @@ main {
 }
 
 .method-box:hover .method-icon,
-.method-box:hover p {
-  color: #fff;
+.method-box:hover p,
+.method-box:hover span,
+.method-box:hover b,
+.method-box:hover strong,
+.method-box:hover i {
+  color: #fff !important;
   transform: scale(0.95);
   transition: transform 0.9s ease, color 0.3s ease;
 }

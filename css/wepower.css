@@ -263,6 +263,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  font-size: 1.1rem;
+  font-weight: 425;
   background: #f9f9f9;
   padding: 12px 18px;
   margin-bottom: 12px;

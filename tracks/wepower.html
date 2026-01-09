@@ -494,7 +494,7 @@
 
     <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
       <div class="container">
-        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>TIMELINE:</b></h2>
+        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>Timeline</b></h2>
         <div class="table-responsive">
           <table class="timeline-table">
             <tbody>
@@ -539,9 +539,9 @@
     <section class="abstract-section">
       <div class="container">
         <div class="abstract-card">
-          <h2 class="section-title">Submit your Abstract now</h2>
+          <h2 class="section-title">Submit Your Abstract Now</h2>
           <div class="status-pill open">Open</div>
-          <h4 class="deadline">Deadline: 30 / 04 / 2026</h4>
+          <h4 class="deadline">Deadline 30 / 04 / 2026</h4>
           <div class="flip-countdown" data-countdown="2026-04-30T23:59:00">
             <div class="flip-unit" data-unit="days">
               <div class="flip-card"><span class="flip-number">00</span></div>
@@ -650,23 +650,27 @@
         setVal(secsEl, pad2(secs));
 
         if (statusEl) {
-          statusEl.textContent = 'Open';
-          statusEl.classList.add('open');
-          statusEl.classList.remove('closed');
-        }
-      } else {
-        if (statusEl) {
-          statusEl.textContent = 'Closed';
+          statusEl.textContent = 'Yet to be opened';
           statusEl.classList.remove('open');
           statusEl.classList.add('closed');
         }
-
-        flipCountdown.innerHTML = 'Closed';
 
         if (submitBtn) {
           submitBtn.setAttribute('aria-disabled', 'true');
           submitBtn.style.opacity = '0.6';
           submitBtn.style.pointerEvents = 'none';
+        }
+      } else {
+        if (statusEl) {
+          statusEl.textContent = 'Open';
+          statusEl.classList.add('open');
+          statusEl.classList.remove('closed');
+        }
+
+        if (submitBtn) {
+          submitBtn.setAttribute('aria-disabled', 'false');
+          submitBtn.style.opacity = '1';
+          submitBtn.style.pointerEvents = 'auto';
         }
 
         clearInterval(timer);
@@ -955,7 +959,7 @@
 
     <div class="objectives-section">
       <h2 class="section-heading scroll-animate animate-down delay-1">
-        Track Structure:
+        Track Structure
       </h2>
       <p class="section-text scroll-animate animate-up delay-2">
         The WePOWER Track follows a structured process to identify and showcase
@@ -966,7 +970,7 @@
         <div class="objective-box">
           <div class="box-inner scroll-animate animate-left delay-3">
             <h3>
-              <i class="fa-solid fa-microphone objective-icon"></i> Phase 1: Call for Abstracts-1
+              <i class="fa-solid fa-microphone objective-icon"></i> Phase 1 Call for Abstracts-1
             </h3>
             <p>
               This is the initial phase where the abstract submission is open to anyone interested in participating in the WePOWER Track. The call for abstracts is announced globally, and participants can submit their abstracts through the submission portal available on the website. Phase 1 serves as the first opportunity for participants to showcase their ideas and concepts.
@@ -977,7 +981,7 @@
         <div class="objective-box">
           <div class="box-inner scroll-animate animate-right delay-4">
             <h3>
-              <i class="fa-solid fa-paper-plane objective-icon"></i> Phase 2: Call for Abstracts-2
+              <i class="fa-solid fa-paper-plane objective-icon"></i> Phase 2 Call for Abstracts-2
             </h3>
             <p>
               Phase 2 is an extended call for abstract submissions. Teams that wish to extend their participation opportunity can do so by submitting their abstracts in this second phase. It also gives a chance for participants who did not advance to the next rounds in Phase 1 to reapply and take part in the competition.
@@ -988,7 +992,7 @@
          <div class="objective-box">
           <div class="box-inner scroll-animate animate-right delay-5">
             <h3>
-              <i class="fa-solid fa-check objective-icon"></i> Phase 3: Selection & Registration
+              <i class="fa-solid fa-check objective-icon"></i> Phase 3 Selection & Registration
             </h3>
             <p>
               Potential and innovative projects that are submitted in the first and second call are selected for finals, and the teams are intimated via mail.
@@ -999,7 +1003,7 @@
          <div class="objective-box">
           <div class="box-inner scroll-animate animate-right delay-6">
             <h3>
-              <i class="fa-solid fa-trophy objective-icon"></i> Phase 4: Finale
+              <i class="fa-solid fa-trophy objective-icon"></i> Phase 4 Finale
             </h3>
             <p>
               Selected teams will present their project works before the jury during the finals. Evaluation will be carried out based on the criteria.
@@ -1197,7 +1201,7 @@
 
   <!-- Contact Section -->
   <section class="contact-section scroll-animate animate-up" style="text-align:center; padding: 40px 0; background-color: var(--light-bg-color);">
-    <h3>For any Queries, please contact</h3>
+    <h3>For Any Queries, Please Contact</h3>
 
     <div class="contact-row" style="display:flex; justify-content:center; gap:40px; margin-top:30px; flex-wrap:wrap;">
       <!-- Chair -->

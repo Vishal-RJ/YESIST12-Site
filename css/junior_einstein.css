@@ -314,7 +314,8 @@
 .timeline-table td {
   padding: 15px 20px;
   border: 1px solid #ddd;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 425;
   color: #333;
   vertical-align: middle;
 }

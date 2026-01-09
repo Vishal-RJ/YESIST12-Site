@@ -481,13 +481,22 @@
         <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
         
         <ul class="sdg-image-grid">
+          <li><img src="../SDG/E-WEB-Goal-01.png" alt="SDG 1: No Poverty"></li>
+          <li><img src="../SDG/E-WEB-Goal-02.png" alt="SDG 2: Zero Hunger"></li>
+          <li><img src="../SDG/E-WEB-Goal-03.png" alt="SDG 3: Good Health and Well-being"></li>
           <li><img src="../SDG/E-WEB-Goal-04.png" alt="SDG 4: Quality Education"></li>
+          <li><img src="../SDG/E-WEB-Goal-05.png" alt="SDG 5: Gender Equality"></li>
           <li><img src="../SDG/E-WEB-Goal-06.png" alt="SDG 6: Clean Water and Sanitation"></li>
           <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
+          <li><img src="../SDG/E-WEB-Goal-08.png" alt="SDG 8: Decent Work and Economic Growth"></li>
           <li><img src="../SDG/E-WEB-Goal-09.png" alt="SDG 9: Industry, Innovation, and Infrastructure"></li>
+          <li><img src="../SDG/E-WEB-Goal-10.png" alt="SDG 10: Reduced Inequalities"></li>
           <li><img src="../SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
           <li><img src="../SDG/E-WEB-Goal-12.png" alt="SDG 12: Responsible Consumption and Production"></li>
           <li><img src="../SDG/E-WEB-Goal-13.png" alt="SDG 13: Climate Action"></li>
+          <li><img src="../SDG/E-WEB-Goal-14.png" alt="SDG 14: Life Below Water"></li>
+          <li><img src="../SDG/E-WEB-Goal-15.png" alt="SDG 15: Life on Land"></li>
+          <li><img src="../SDG/E-WEB-Goal-16.png" alt="SDG 16: Peace, Justice and Strong Institutions"></li>
           <li><img src="../SDG/E-WEB-Goal-17.png" alt="SDG 17: Partnerships for the Goals"></li>
         </ul>
       </div>
@@ -495,7 +504,7 @@
 
     <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
       <div class="container">
-        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>TIMELINE:</b></h2>
+        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>Timeline</b></h2>
         <div class="table-responsive">
           <table class="timeline-table">
             <tbody>
@@ -541,8 +550,8 @@
       <div class="container">
         <div class="abstract-card">
           <h2 class="section-title">Submit your Abstract now</h2>
-          <div class="status-pill open">Open</div>
-          <h4 class="deadline">Call for Abstract: 14 / 01 / 2026</h4>
+          <div class="status-pill closed">Yet to be opened</div>
+          <h4 class="deadline">Call for Abstract 14 / 01 / 2026</h4>
           <div class="flip-countdown" data-countdown="2026-01-14T23:59:00">
             <div class="flip-unit" data-unit="days">
               <div class="flip-card"><span class="flip-number">00</span></div>
@@ -651,23 +660,27 @@
         setVal(secsEl, pad2(secs));
 
         if (statusEl) {
-          statusEl.textContent = 'Open';
-          statusEl.classList.add('open');
-          statusEl.classList.remove('closed');
-        }
-      } else {
-        if (statusEl) {
-          statusEl.textContent = 'Closed';
+          statusEl.textContent = 'Yet to be opened';
           statusEl.classList.remove('open');
           statusEl.classList.add('closed');
         }
-
-        flipCountdown.innerHTML = 'Closed';
 
         if (submitBtn) {
           submitBtn.setAttribute('aria-disabled', 'true');
           submitBtn.style.opacity = '0.6';
           submitBtn.style.pointerEvents = 'none';
+        }
+      } else {
+        if (statusEl) {
+          statusEl.textContent = 'Open';
+          statusEl.classList.add('open');
+          statusEl.classList.remove('closed');
+        }
+
+        if (submitBtn) {
+          submitBtn.setAttribute('aria-disabled', 'false');
+          submitBtn.style.opacity = '1';
+          submitBtn.style.pointerEvents = 'auto';
         }
 
         clearInterval(timer);
@@ -728,7 +741,7 @@
   </section>
 
   <section class="eligibility-section scroll-animate animate-left">
-    <h2 class="section-heading"><b>Who is eligible?</b></h2>
+    <h2 class="section-heading"><b>Who Is Eligible?</b></h2>
     <ul class="eligibility-list">
       <li>
         <i class="fas fa-star"></i>
@@ -754,7 +767,7 @@
   </section>
 
   <section class="benefits-section scroll-animate animate-left">
-    <h2 class="section-heading"><b>Benefits of participating</b></h2>
+    <h2 class="section-heading"><b>Benefits of Participating</b></h2>
     <ul class="benefits-list">
       <li>
         <i class="fas fa-bolt"></i>
@@ -780,7 +793,7 @@
   </section>
 
     <section class="rules-section scroll-animate animate-left">
-      <h2 class="section-heading"><b>Rules for participation</b></h2>
+      <h2 class="section-heading"><b>Rules for Participation</b></h2>
       <ul class="rules-list">
         <li>
           <i class="fas fa-book"></i>
@@ -818,7 +831,7 @@
 
     <div class="objectives-section">
       <h2 class="section-heading scroll-animate animate-down delay-1">
-        Track Structure:
+        Track Structure
       </h2>
       <p class="section-text scroll-animate animate-up delay-2">
         The Special Track follows a structured process to identify and showcase
@@ -897,7 +910,7 @@
 
     <div class="selection-method-section">
       <h2 class="section-heading scroll-animate animate-down delay-1">
-        The submission could be related to the following topics
+        The Submission Could Be Related to the Following Topics
       </h2>
 
       <div class="selection-method-grid">
