@@ -1,3 +1,10 @@
+/* Track Structure - Hover Effect */
+.objectives-section .track-grid .objective-box:hover .box-inner h3,
+.objectives-section .track-grid .objective-box:hover .box-inner p,
+.objectives-section .track-grid .objective-box:hover .box-inner i {
+  color: #ffffff !important;
+}
+
 .innovation-hero .title {
   color: #ffffff !important;
 }
