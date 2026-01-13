@@ -1,3 +1,10 @@
+/* Track Structure - Hover Effect */
+.objectives-section .track-grid .objective-box:hover .box-inner h3,
+.objectives-section .track-grid .objective-box:hover .box-inner p,
+.objectives-section .track-grid .objective-box:hover .box-inner i {
+  color: #ffffff !important;
+}
+
 .innovation-hero .title {
   color: #ffffff !important;
 }
@@ -27,6 +34,11 @@
 }
 .abstract-card.in-view {
   animation: abstractEnter 0.8s ease both, abstractFloat 8s ease-in-out 0.8s infinite;
+}
+.about-special .image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 @keyframes abstractEnter {
   from {
@@ -375,6 +387,9 @@
 .eligibility-section p {
   text-align: center;
   margin-top: -1rem;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 425;
 }
 .benefits-section {
   background-color: var(--light-bg-color);
@@ -436,8 +451,11 @@
   flex-shrink: 0;
 }
 .eligibility-list li span {
-  font-size: 1rem;
-  line-height: 1.5;
+  color: #000000;
+  font-weight: 425;
+  font-size: 1.1rem;
+  line-height: 1.7;
+ 
   flex: 1;
   display: inline-block;
 }
@@ -475,8 +493,12 @@
   flex-shrink: 0;
 }
 .benefits-list li span {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 425;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  
   flex: 1;
   display: inline-block;
 }
@@ -511,7 +533,7 @@
   color: var(--primary-color) !important;
   font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
   line-height: 1.2 !important;
-  text-align: left !important;
+  text-align: left;
 }
 .about-special .presentation-link {
   color: var(--primary-color) !important;
@@ -523,6 +545,24 @@
 .about-special .content {
   text-align: justify;
 }
+
+.special-track-je-page .about-special .image {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .special-track-je-page .about-special .image {
+    margin-top: 40px;
+  }
+}
+
+.special-track-je-page .about-special .image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .winners-section,
 .selection-method-section,
 .contacts-section {
@@ -548,7 +588,11 @@
 
 .selection-method-section p {
   text-align: justify;
-  font-weight: 500;
+  font-weight: 425;
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 /* Force left alignment for Selection Method header */
@@ -585,13 +629,57 @@
 /* Track Structure content adjustments */
 .objectives-section .section-text {
   text-align: justify;
-  font-weight: 500;
+  font-weight: 425;
   font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 .objectives-section .box-inner p {
   text-align: justify;
-  font-weight: 500;
+  font-weight: 425;
   font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.selection-method-grid .method-box p {
+  text-align: justify;
+  font-weight: 425;
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Team Details List (Contacts) - Standardized Style */
+.team-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.team-details-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.team-details-list li i {
+  color: #2bb884;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+.team-details-list li span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 425;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  
+  flex: 1;
+  display: inline-block;
 }
 
 /* Contacts: place Co-Chair 1 and 2 in one row */
@@ -617,8 +705,8 @@
   font-weight: 600 !important;
 }
 .innovation-theme .theme-heading h3 {
-  color: #4a5970;
-  font-weight: 500;
+  color: black;
+  font-weight: 425;
   font-family: 'Montserrat', sans-serif !important;
 }
 .innovation-theme .theme-icon-box {
@@ -756,20 +844,39 @@
   font-family: 'Montserrat', sans-serif !important;
   font-weight: 600 !important;
 }
+.methodology-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.methodology-list li i {
+  color: #2bb884;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
 .methodology-list li span {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 425;
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  flex: 1;
+  display: inline-block;
 }
 
 /* Timeline Section Styling */
-.timeline-section .section-heading {
-  color: #0a4360;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
 
+.timeline-section .section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a415c;
+  text-align: left;
+  margin-bottom: 25px;
+  font-family: 'Montserrat';
+}
 .timeline-table {
   width: 100%;
   border-collapse: collapse;
@@ -787,6 +894,7 @@
   font-size: 1rem;
   color: #333;
   vertical-align: middle;
+  text-align: center;
 }
 
 .timeline-table tr:nth-child(even) {
@@ -800,13 +908,13 @@
 .timeline-table td:first-child {
   font-weight: 600;
   color: #0a4360;
-  width: 60%;
+  width: 50%;
 }
 
 .timeline-table td:last-child {
   font-weight: 500;
   color: #2bb884;
-  width: 40%;
+  width: 50%;
 }
 
 /* Responsive Table */
@@ -845,8 +953,13 @@
 }
 .rules-list li span {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 425;
   color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  flex: 1;
+  display: inline-block;
 }
 .eligibility-section .section-heading {
   font-family: 'Montserrat', sans-serif !important;
@@ -864,7 +977,13 @@
 }
 .mission-areas .mission-list li span {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 425;
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.7;
+   
+    flex: 1;
+    display: inline-block;
   }
 
   /* --- Alignment Fixes: Match 'Top five reasons' indentation --- */
@@ -1266,4 +1385,23 @@
 }
 .card-gallery-item.animate-in {
   animation: riseFade 500ms ease both;
+}
+
+@media (max-width: 768px) {
+  .section-heading,
+  .section-title,
+  .about-special .title,
+  .theme-heading h2,
+  .theme-heading h3,
+  .theme-icon-box .text h2,
+  .timeline-section .section-heading,
+  .mission-areas .section-heading,
+  .eligibility-section .section-heading,
+  .benefits-section .section-heading,
+  .rules-section .section-heading,
+  .objectives-section .section-heading,
+  .gateways-section .section-heading,
+  .selection-method-section .section-heading {
+    text-align: center !important;
+  }
 }

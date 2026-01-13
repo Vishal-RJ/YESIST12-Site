@@ -4,6 +4,16 @@ main {
 }
 
 .about-special .image {
+  overflow: hidden;
+}
+
+.about-special .image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about-special .image {
   margin-top: 30px;
 }
 @media (min-width: 992px) {
@@ -32,7 +42,8 @@ main {
 }
 
 .participation-section .section-text {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 425;
   line-height: 1.6;
   margin-bottom: 30px;
   color: #0a4360cc;
@@ -149,4 +160,82 @@ main {
   .footer-bottom p:last-child {
     margin-bottom: 0;
   }
+}
+
+/* Mobile View: Center all section titles */
+@media (max-width: 768px) {
+  .section-heading,
+  .section-title,
+  .about-special .title,
+  .theme-heading h2,
+  .theme-heading h3,
+  .theme-icon-box .text h2,
+  .timeline-section .section-heading,
+  .mission-areas .section-heading,
+  .eligibility-section .section-heading,
+  .benefits-section .section-heading,
+  .rules-section .section-heading,
+  .objectives-section .section-heading,
+  .gateways-section .section-heading,
+  .selection-method-section .section-heading {
+    text-align: center !important;
+  }
+}
+
+.ic-evaluation {
+  color: #000;
+}
+
+.ic-evaluation .evaluation-list li {
+  font-size: 1.1rem;
+  font-weight: 425;
+}
+
+.ic-guidelines {
+  color: #000;
+}
+
+.ic-guidelines .section-text {
+  color: inherit;
+  font-size: 1.1rem;
+  font-weight: 425;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.ic-guidelines .rules-list li {
+  color: inherit;
+  font-size: 1.1rem;
+  font-weight: 425;
+}
+
+.ic-guidelines .rules-list li span {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.ic-guidelines .rules-list li:hover {
+  color: #fff;
+}
+
+.ic-guidelines .rules-list li:hover span {
+  color: #fff;
+}
+
+.mission-areas .section-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.ic-track-structure .objective-box:hover,
+.ic-track-structure .objective-box:hover h3,
+.ic-track-structure .objective-box:hover p,
+.ic-track-structure .objective-box:hover i {
+  color: #fff;
+}
+
+.ic-selection-method .method-box:hover,
+.ic-selection-method .method-box:hover * {
+  color: #fff;
 }

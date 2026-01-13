@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WePOWER Track - YESIST12</title>
-  <link rel="icon" type="image/png" href="../images/IEEE-YESIST12-Logo-1024x307-1.png">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../css/track_style.css" />
-  <link rel="stylesheet" href="../css/special_track_junior_einstein.css" />
-  <link rel="stylesheet" href="../jury-carousel.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WePOWER Track</title>
+    <link rel="icon" type="image/png" href="../images/IEEE-YESIST12-Logo-1024x307-1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/track_style.css" />
+    <link rel="stylesheet" href="../css/special_track_junior_einstein.css" />
+    <link rel="stylesheet" href="../jury-carousel.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
     .innovation-hero .title {
@@ -439,12 +440,51 @@
         width: auto;
         min-width: 120px;
       }
-    }
-  </style>
-</head>
+      .gateway-content li {
+        margin-bottom: 12px;
+        line-height: 1.7;
+      }
+      /* Row-specific colors to mirror screenshot */
+      .gateway-row:first-child .gateway-icon { background-color: #128a73; }
+      .gateway-row:first-child .gateway-label { background-color: #128a73; }
+      .gateway-row:first-child .gateway-content { background-color: #128a73; }
+      .gateway-row:last-child .gateway-icon { background-color: #0a415c; }
+      .gateway-row:last-child .gateway-label { background-color: #0a415c; }
+      .gateway-row:last-child .gateway-content { background-color: #0a415c; }
+      @media (max-width: 768px) {
+        .gateway-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .gateway-icon-container {
+          flex-direction: row;
+          width: auto;
+        }
+        .gateway-label {
+          width: auto;
+          min-width: 120px;
+        }
+      }
+      /* Evaluation Criteria Styles - specific to WePOWER page */
+       .evaluation-section .evaluation-list li span {
+         font-size: 1.1rem !important;
+         color: black !important;
+         font-weight: 425 !important;
+       }
 
-<body>
-  <div id="header-container"></div>
+       .evaluation-section .evaluation-list li:hover span,
+       .evaluation-section .evaluation-list li:hover i {
+         color: #ffffff !important;
+       }
+
+       /* Adjust WePOWER track image position */
+       .about-special .image {
+         margin-top: 50px !important;
+       }
+     </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
 
   <section class="innovation-hero">
     <div class="container">
@@ -478,10 +518,9 @@
           more than a competition; it is a movement to build future-ready energy systems and create inclusive ecosystems
           that enhance women’s participation and entrepreneurship in the clean energy value chain.
         </p>
-        <a href="https://ieeeyesist12.org/pdf/?id=schedule-2025-je" target="_blank" class="presentation-link"
-          style="display:inline-block; margin-top:20px; font-weight:600; color:#0b3b61; text-decoration:underline;">
+         <!-- <a href="https://ieeeyesist12.org/pdf/?id=schedule-2025-je" target="_blank" class="presentation-link" style="display:inline-block; margin-top:20px; font-weight:600; color:#0b3b61; text-decoration:underline;">
           View Presentation Schedule
-        </a>
+        </a> -->
       </div>
       <div class="image scroll-animate animate-right delay-2">
         <img src="https://ieeeyesist12.org/wp-content/uploads/2022/12/yesist12-track-04-1024x525.png"
@@ -512,107 +551,103 @@
     </div>
 
 
-  </section>
-
-  <section class="innovation-description">
-    <div class="container">
-      <p class="theme-text scroll-animate animate-fade delay-2">
-        This theme addresses the urgent global need for affordable, reliable, and sustainable energy systems while
-        embedding gender inclusivity at the core of technological innovation.
-      </p>
-    </div>
-  </section>
-
-  <section class="eligibility-section scroll-animate animate-up"
-    style="background-color: var(--light-bg-color); padding: 40px 0;">
-    <div class="container">
-      <h2 class="section-heading"><b>SDGs Aligned</b></h2>
-      <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the
-        following UN Sustainable Development Goals:</p>
-
-      <ul class="sdg-image-grid">
-        <li><img src="../SDG/E-WEB-Goal-05.png" alt="SDG 5: Gender Equality"></li>
-        <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
-        <li><img src="../SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
-        <li><img src="../SDG/E-WEB-Goal-13.png" alt="SDG 13: Climate Action"></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
-    <div class="container">
-      <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>TIMELINE:</b></h2>
-      <div class="table-responsive">
-        <table class="timeline-table">
-          <tbody>
-            <tr>
-              <td>Call for Abstracts-1</td>
-              <td>17th Jan 2026</td>
-            </tr>
-            <tr>
-              <td>Deadline for Abstract-1</td>
-              <td>5th Feb 2026</td>
-            </tr>
-            <tr>
-              <td>Time for reviewer to review the abstracts</td>
-              <td>6th Feb - 10th Feb 2026</td>
-            </tr>
-            <tr>
-              <td>Call for Abstracts-2</td>
-              <td>13th Feb 2026</td>
-            </tr>
-            <tr>
-              <td>Deadline for Abstract-2</td>
-              <td>10th March 2026</td>
-            </tr>
-            <tr>
-              <td>Time for reviewer to review the abstracts</td>
-              <td>14th March - 24th March 2026</td>
-            </tr>
-            <tr>
-              <td>Announcement of qualified abstracts</td>
-              <td>25th March 2026</td>
-            </tr>
-            <tr>
-              <td>Final Call for Abstracts</td>
-              <td>1st April 2026</td>
-            </tr>
-            <tr>
-              <td>Deadline for Final call for Abstract</td>
-              <td>25th April 2026</td>
-            </tr>
-            <tr>
-              <td>Time for reviewer to review the abstracts</td>
-              <td>25th April - 10th May 2026</td>
-            </tr>
-            <tr>
-              <td>Announcement of qualified abstracts</td>
-              <td>11th May 2026</td>
-            </tr>
-          </tbody>
-        </table>
+    <section class="innovation-description">
+      <div class="container">
+        <p class="theme-text scroll-animate animate-fade delay-2">
+          This theme addresses the urgent global need for affordable, reliable, and sustainable energy systems while embedding gender inclusivity at the core of technological innovation.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="abstract-section">
-    <div class="container">
-      <div class="abstract-card">
-        <h2 class="section-title">Submit your Abstract now</h2>
-        <div class="status-pill open">Open</div>
-        <h4 class="deadline">Deadline: 30 / 04 / 2026</h4>
-        <div class="flip-countdown" data-countdown="2026-04-30T23:59:00">
-          <div class="flip-unit" data-unit="days">
-            <div class="flip-card"><span class="flip-number">00</span></div>
-            <span class="flip-label">Days</span>
+    <section class="eligibility-section scroll-animate animate-up" style="background-color: var(--light-bg-color); padding: 40px 0;">
+      <div class="container">
+        <h2 class="section-heading"><b>SDGs Aligned</b></h2>
+        <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
+        
+        <ul class="sdg-image-grid">
+          <li><img src="../SDG/E-WEB-Goal-05.png" alt="SDG 5: Gender Equality"></li>
+          <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
+          <li><img src="../SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
+          <li><img src="../SDG/E-WEB-Goal-13.png" alt="SDG 13: Climate Action"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
+      <div class="container">
+        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>Timeline</b></h2>
+        <div class="table-responsive">
+          <table class="timeline-table">
+            <tbody>
+              <tr>
+                <td>Call for Abstracts-1</td>
+                <td>12th Jan 2026</td>
+              </tr>
+              <tr>
+                <td>Deadline for Abstract-1</td>
+                <td>31st Jan 2026</td>
+              </tr>
+              <tr>
+                <td>Time for reviewer to review the abstracts</td>
+                <td>1st Feb - 7th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Announcement of qualified abstracts</td>
+                <td>8th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Call for Abstracts-2</td>
+                <td>8th Feb 2026</td>
+              </tr>
+              <tr>
+                <td>Deadline for Abstract-2</td>
+                <td>30th April 2026</td>
+              </tr>
+              <tr>
+                <td>Time for reviewer to review the abstracts</td>
+                <td>01st May to 07th May 2026</td>
+              </tr>
+              <tr>
+                <td>Announcement of qualified abstract</td>
+                <td>08th May 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="abstract-section">
+      <div class="container">
+        <div class="abstract-card">
+          <h2 class="section-title">Submit your Abstract now</h2>
+          <div class="status-pill closed">Yet to be opened</div>
+          <h4 class="deadline">Call for Abstract Starts: 12 / 01 / 2026</h4>
+          <div class="flip-countdown" data-countdown="2026-01-12T23:59:00">
+            <div class="flip-unit" data-unit="days">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Days</span>
+            </div>
+            <div class="flip-unit" data-unit="hours">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Hours</span>
+            </div>
+            <div class="flip-unit" data-unit="minutes">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Minutes</span>
+            </div>
+            <div class="flip-unit" data-unit="seconds">
+              <div class="flip-card"><span class="flip-number">00</span></div>
+              <span class="flip-label">Seconds</span>
+            </div>
           </div>
-          <div class="flip-unit" data-unit="hours">
-            <div class="flip-card"><span class="flip-number">00</span></div>
-            <span class="flip-label">Hours</span>
-          </div>
-          <div class="flip-unit" data-unit="minutes">
-            <div class="flip-card"><span class="flip-number">00</span></div>
-            <span class="flip-label">Minutes</span>
+          <div class="abstract-actions">
+            <a class="btn download-btn" href="../tracks/wepower.html" target="_blank">
+              <i class="fas fa-download"></i> DOWNLOAD ABSTRACT TEMPLATE
+            </a>
+            <a class="btn submit-btn" href="https://portal.ieeeyesist12.org/ic-direct" target="_blank">
+              <i class="fas fa-paper-plane"></i> Submit Abstract
+            </a>
           </div>
           <div class="flip-unit" data-unit="seconds">
             <div class="flip-card"><span class="flip-number">00</span></div>
@@ -689,48 +724,32 @@
             el.removeEventListener('animationend', onAnimEnd);
           };
 
-          el.addEventListener('animationend', onAnimEnd);
-          card.classList.add('flip');
+        if (statusEl) {
+          statusEl.textContent = 'Yet to be opened';
+          statusEl.classList.remove('open');
+          statusEl.classList.add('closed');
         }
       }
 
-      function tick() {
-        var now = new Date();
-        var diff = deadline - now;
-
-        if (diff > 0) {
-          var days = Math.floor(diff / 86400000);
-          var hours = Math.floor((diff % 86400000) / 3600000);
-          var mins = Math.floor((diff % 3600000) / 60000);
-          var secs = Math.floor((diff % 60000) / 1000);
-
-          setVal(daysEl, days > 99 ? String(days) : pad2(days));
-          setVal(hoursEl, pad2(hours));
-          setVal(minsEl, pad2(mins));
-          setVal(secsEl, pad2(secs));
-
-          if (statusEl) {
-            statusEl.textContent = 'Open';
-            statusEl.classList.add('open');
-            statusEl.classList.remove('closed');
-          }
-        } else {
-          if (statusEl) {
-            statusEl.textContent = 'Closed';
-            statusEl.classList.remove('open');
-            statusEl.classList.add('closed');
-          }
-
-          flipCountdown.innerHTML = 'Closed';
-
-          if (submitBtn) {
-            submitBtn.setAttribute('aria-disabled', 'true');
-            submitBtn.style.opacity = '0.6';
-            submitBtn.style.pointerEvents = 'none';
-          }
-
-          clearInterval(timer);
+        if (submitBtn) {
+          submitBtn.setAttribute('aria-disabled', 'true');
+          submitBtn.style.opacity = '0.6';
+          submitBtn.style.pointerEvents = 'none';
         }
+      } else {
+        if (statusEl) {
+          statusEl.textContent = 'Open';
+          statusEl.classList.add('open');
+          statusEl.classList.remove('closed');
+        }
+
+        if (submitBtn) {
+          submitBtn.setAttribute('aria-disabled', 'false');
+          submitBtn.style.opacity = '1';
+          submitBtn.style.pointerEvents = 'auto';
+        }
+
+        clearInterval(timer);
       }
 
       /* ---------------- Initialize Without Flip ---------------- */
@@ -759,13 +778,12 @@
     });
   </script>
 
-
-  <section class="mission-areas scroll-animate animate-left">
-    <h2 class="section-heading">Objectives of the Track</h2>
+ <section class="mission-areas eligibility-section">
+    <h2 class="section-heading"><b>The Objectives of the WePOWER Track</b></h2>
     <ul class="mission-list">
       <li>
         <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>To promote clean, reliable, and climate-resilient energy solutions for communities.</span>
+        <span>To promote clean, reliable, and climate-resilient energy solutions for communities</span>
       </li>
       <li>
         <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
@@ -837,10 +855,45 @@
     </ul>
   </section>
 
+    <section class="benefits-section scroll-animate animate-left">
+    <h2 class="section-heading"><b>Benefits of participating</b></h2>
+    <ul class="benefits-list">
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Global IEEE Recognition & Certification:</b>Receive internationally recognized certificates from IEEE YESIST12, enhancing academic, professional, and research profiles.</span>
+      </li>
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Expert Mentorship:</b>Gain guidance from IEEE professionals, industry experts, and clean energy researchers to refine ideas and improve technical feasibility.</span>
+      </li>
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>International Platform Exposure:</b>Opportunity to present innovations at a global stage and gain visibility among international delegates and organizations.</span>
+      </li>
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Skill Development:</b>Strengthen technical, analytical, innovation, and leadership skills in clean energy, IoT, AI, and sustainable engineering.</span>
+      </li>
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Women-Centric Leadership & Inclusion:</b>Promote women’s participation, leadership, and skill development in the clean energy and power sector.</span>
+      </li>
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Networking & Collaboration:</b>Connect with innovators, academia, industry leaders, and IEEE communities worldwide.</span>
+      </li>
+      <li>
+        <i class="fas fa-bolt"></i>
+        <span><b>Career & Entrepreneurship Opportunities:</b>Open pathways for internships, research collaborations, startups, and future career growth.</span>
+      </li>
+    </ul>
+  </section>
 
-  <section class="rules-section scroll-animate animate-left">
-    <h2 class="section-heading"><b>Points to Be Remembered</b></h2>
-    <ul class="rules-list">
+
+
+    <section class="rules-section scroll-animate animate-left">
+      <h2 class="section-heading"><b>Rules for participation</b></h2>
+      <ul class="rules-list">
       <li>
         <i class="fas fa-users"></i>
         <span>Participants may register as a team (One Girl student mandatory).</span>
@@ -861,236 +914,433 @@
         <i class="fas fa-chalkboard-teacher"></i>
         <span>Having a mentor (Faculty/Professional/IEEE Member) is recommended, but not mandatory.</span>
       </li>
-
-      <span>
+      
+      <!-- <span>
         <a href="#" class="download-btn"><b>Download Rulebook</b></a>
-      </span>
+      </span> -->
     </ul>
-  </section>
+    </section>
 
-  <section class="rules-section scroll-animate animate-left">
-    <h2 class="section-heading"><b>Guidelines</b></h2>
-    <ul class="rules-list">
-      <li>
-        <i class="fas fa-lightbulb"></i>
-        <span><b>Originality of Work:</b> All submissions must be original and created exclusively for IEEE YESIST12.
-          Plagiarism, duplication, or submission of previously awarded projects is strictly prohibited and will result
-          in disqualification as per IEEE ethics.</span>
-      </li>
-      <li>
-        <i class="fas fa-bullseye"></i>
-        <span><b>Alignment with Track Theme:</b> Projects must clearly align with the WePOWER Track theme, focusing on
-          clean energy innovation, sustainability, and women’s empowerment, supporting SDG 7 and SDG 5.</span>
-      </li>
-      <li>
-        <i class="fas fa-search"></i>
-        <span><b>Clear Problem Definition:</b> Teams must clearly identify the real-world energy challenge being
-          addressed, supported by research, user needs, or contextual data.</span>
-      </li>
-      <li>
-        <i class="fas fa-cogs"></i>
-        <span><b>Technical Feasibility & Impact:</b> Proposed solutions should be technically sound, practical,
-          scalable, and demonstrate measurable social, environmental, or economic impact.</span>
-      </li>
-      <li>
-        <i class="fas fa-hands-helping"></i>
-        <span><b>Inclusivity & Sustainability:</b> Solutions should promote inclusivity, affordability, and long-term
-          sustainability, particularly enabling women’s participation in clean energy ecosystems.</span>
-      </li>
-      <li>
-        <i class="fas fa-file-alt"></i>
-        <span><b>Proper Documentation & Submission Format:</b> Participants must strictly follow the official submission
-          guidelines, templates, naming conventions, and deadlines specified by IEEE YESIST12.</span>
-      </li>
-      <li>
-        <i class="fas fa-user-tie"></i>
-        <span><b>Professional & Ethical Conduct:</b> All teams are expected to maintain professionalism, respect fellow
-          participants, and adhere to the IEEE Code of Ethics throughout the competition process.</span>
-      </li>
-    </ul>
-  </section>
+    <section class="rules-section scroll-animate animate-left">
+      <h2 class="section-heading"><b>Guidelines</b></h2>
+      <ul class="rules-list">
+        <li>
+          <i class="fas fa-lightbulb"></i>
+          <span><b>Originality of Work:</b> All submissions must be original and created exclusively for IEEE YESIST12. Plagiarism, duplication, or submission of previously awarded projects is strictly prohibited and will result in disqualification as per IEEE ethics.</span>
+        </li>
+        <li>
+          <i class="fas fa-bullseye"></i>
+          <span><b>Alignment with Track Theme:</b> Projects must clearly align with the WePOWER Track theme, focusing on clean energy innovation, sustainability, and women’s empowerment, supporting SDG 7 and SDG 5.</span>
+        </li>
+        <li>
+          <i class="fas fa-search"></i>
+          <span><b>Clear Problem Definition:</b> Teams must clearly identify the real-world energy challenge being addressed, supported by research, user needs, or contextual data.</span>
+        </li>
+        <li>
+          <i class="fas fa-cogs"></i>
+          <span><b>Technical Feasibility & Impact:</b> Proposed solutions should be technically sound, practical, scalable, and demonstrate measurable social, environmental, or economic impact.</span>
+        </li>
+        <li>
+          <i class="fas fa-hands-helping"></i>
+          <span><b>Inclusivity & Sustainability:</b> Solutions should promote inclusivity, affordability, and long-term sustainability, particularly enabling women’s participation in clean energy ecosystems.</span>
+        </li>
+        <li>
+          <i class="fas fa-file-alt"></i>
+          <span><b>Proper Documentation & Submission Format:</b> Participants must strictly follow the official submission guidelines, templates, naming conventions, and deadlines specified by IEEE YESIST12.</span>
+        </li>
+        <li>
+          <i class="fas fa-user-tie"></i>
+          <span><b>Professional & Ethical Conduct:</b> All teams are expected to maintain professionalism, respect fellow participants, and adhere to the IEEE Code of Ethics throughout the competition process.</span>
+        </li>
+      </ul>
+    </section>
+     <!-- evaluation-section -->
+        <section class="evaluation-section scroll-animate animate-left ic-evaluation">
+          <h2 class="section-heading"><b>Evaluation Criteria</b></h2>
+          <ul class="evaluation-list">
+            <li>
+              <i class="fas fa-bullseye"></i>
+              <span><b>Relevance to Theme:</b> The project aligns strongly with the given theme by directly addressing its core objectives. It demonstrates clear applicability and purpose within the thematic framework.</span>
+            </li>
+            <li>
+              <i class="fas fa-lightbulb"></i>
+              <span><b>Understanding of Problem:</b> The problem is clearly identified with a well-defined scope and context. Underlying causes and real-world implications are thoroughly analyzed.</span>
+            </li>
+            <li>
+              <i class="fas fa-rocket"></i>
+              <span><b>Novelty/Innovation:</b> The project introduces a creative and original approach to solving the identified problem. It goes beyond conventional solutions by integrating innovative ideas or methods.</span>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span><b>Validating of Innovation:</b> The proposed solution is supported through testing, prototyping, or logical validation. Results and observations justify the effectiveness of the innovation.</span>
+            </li>
+            <li>
+              <i class="fas fa-chart-line"></i>
+              <span><b>Scalability:</b> The solution has potential for implementation on a larger scale with minimal modifications. It is adaptable to different contexts and user requirements.</span>
+            </li>
+            <li>
+              <i class="fas fa-chalkboard-teacher"></i>
+              <span><b>Presentation & Communication:</b> The project is presented in a clear, structured, and engaging manner. Ideas, visuals, and explanations effectively communicate the project’s intent and outcomes.</span>
+            </li>
+            <li>
+              <i class="fas fa-leaf"></i>
+              <span><b>Environmental Impact:</b> The project considers sustainability and minimizes negative environmental effects. It promotes eco-friendly practices or contributes positively to environmental well-being.</span>
+            </li>
+            <li>
+              <i class="fas fa-poll"></i>
+              <span><b>Results:</b> The outcomes meet the stated objectives and validate the project’s purpose. Results are clearly documented and demonstrate measurable impact or improvement.</span>
+            </li>
+          </ul>
+        </section>
 
-  <section class="mission-areas scroll-animate animate-left">
-    <h2 class="section-heading">Sample Project Topics</h2>
-    <ul class="mission-list">
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>AI-Driven Smart Microgrids for Women-Led Rural Communities</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>IoT-Based Smart Energy Management and Metering Systems</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Clean and Efficient Cooking Technologies for Women-Centric Households</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Solar-Powered Community Charging Hubs for Rural Connectivity</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Hybrid Renewable Energy Systems for Climate-Resilient Communities</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Portable Low-Cost Renewable Energy Devices for Last-Mile Access</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Women-Centric Renewable Energy Skill Development and Training Platforms</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>AI Tools for Predicting Energy Demand in Low-Resource Settings</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Affordable Solar Water Heating Solutions for Small Communities</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Clean Energy Solutions for Disaster-Prone and Remote Areas</span>
-      </li>
-    </ul>
-  </section>
 
-  <section class="mission-areas scroll-animate animate-left">
-    <h2 class="section-heading">Evaluation Criteria</h2>
-    <ul class="mission-list">
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Relevance to Theme</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Understanding of Problem</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Novelty</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Scalability</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Presentation & Communication</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Environmental Impact</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span>Results</span>
-      </li>
-    </ul>
-  </section>
-
-  <section class="winners-section scroll-animate animate-up"
-    style="background-color: var(--light-bg-color); padding: 40px 0;">
-    <div class="container">
-      <h2 class="section-heading"><b>Previous Year Achievers (2025)</b></h2>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
-        <!-- Winner -->
-        <div
-          style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); flex: 1; min-width: 300px; max-width: 400px; text-align: center;">
-          <div
-            style="width: 80px; height: 80px; background: #FFD700; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 32px; color: white;">
-            <i class="fas fa-trophy"></i>
+    <section class="gateways-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Submission Mode
+        </h2>
+        <div class="gateway-container">
+          <div class="gateway-row">
+            <div class="gateway-icon-container">
+              <div class="gateway-icon">
+                <i class="fas fa-paper-plane" style="color:white; font-size: 40px;"></i>
+              </div>
+              <div class="gateway-label">Pilot Entry</div>
+            </div>
+            <div class="gateway-content pilot-content">
+              <ul>
+                <li>Participants from regions with an active YESIST12 Pilot event.</li>
+                <li>Projects are first presented and evaluated at a preliminary competition.</li>
+                <li>Winners from the Pilot event get a direct entry into the Grand Finale.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="gateway-row">
+            <div class="gateway-icon-container">
+              <div class="gateway-icon">
+                 <i class="fas fa-laptop-code" style="color:white; font-size: 40px;"></i>
+              </div>
+              <div class="gateway-label">Direct Entry</div>
+            </div>
+            <div class="gateway-content direct-content">
+              <ul>
+                <li>For participants from countries or regions without a YESIST12 Pilot event.</li>
+                <li>Submissions (Abstract, PPT, Video) are evaluated directly by the jury.</li>
+                <li>Selected projects are notified via email and advance to the Grand Finale.</li>
+              </ul>
+            </div>
           </div>
           <h3 style="color: #0b3b61; margin-bottom: 10px;">Winner</h3>
           <h4 style="margin-bottom: 5px;">SAISANJAY MK</h4>
           <p style="color: #666; font-style: italic; margin-bottom: 15px;">(Negizhi micro-pyrolyser)</p>
           <p style="font-weight: 600; color: #0b3b61;">Kongu Engineering College, India</p>
         </div>
+      </div>
+    </section>
 
-        <!-- Runner -->
-        <div
-          style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); flex: 1; min-width: 300px; max-width: 400px; text-align: center;">
-          <div
-            style="width: 80px; height: 80px; background: #C0C0C0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 32px; color: white;">
-            <i class="fas fa-medal"></i>
+    
+
+    <div class="objectives-section">
+      <h2 class="section-heading scroll-animate animate-down delay-1">
+        Track Structure
+      </h2>
+      <p class="section-text scroll-animate animate-up delay-2">
+        The WePOWER Track follows a structured process to identify and showcase
+        innovative projects, consisting of the following phases:
+      </p>
+
+      <div class="objectives-grid track-grid">
+        <div class="objective-box">
+          <div class="box-inner scroll-animate animate-left delay-3">
+            <h3>
+              <i class="fa-solid fa-microphone objective-icon"></i> Phase 1 Call for Abstracts-1
+            </h3>
+            <p>
+              This is the initial phase where the abstract submission is open to anyone interested in participating in the WePOWER Track. The call for abstracts is announced globally, and participants can submit their abstracts through the submission portal available on the website. Phase 1 serves as the first opportunity for participants to showcase their ideas and concepts.
+            </p>
           </div>
-          <h3 style="color: #0b3b61; margin-bottom: 10px;">Runner</h3>
-          <h4 style="margin-bottom: 5px;">Mercy Otuko</h4>
-          <p style="color: #666; font-style: italic; margin-bottom: 15px;">(Umeme Sense)</p>
-          <p style="font-weight: 600; color: #0b3b61;">Dedan Kimathi University of Technology, Kenya</p>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="https://drive.google.com/drive/folders/1ry1GOoz5wkOvcca9WALPTuxKdIJmRJaH?usp=sharing" target="_blank"
-          class="download-btn"><b>View Event Gallery</b></a>
-      </div>
-    </div>
-  </section>
-
-  <div class="objectives-section">
-    <h2 class="section-heading scroll-animate animate-down delay-1">
-      Track Structure:
-    </h2>
-    <p class="section-text scroll-animate animate-up delay-2">
-      The WePOWER Track follows a structured process to identify and showcase
-      innovative projects, consisting of the following phases:
-    </p>
-
-    <div class="objectives-grid track-grid">
-      <div class="objective-box">
-        <div class="box-inner scroll-animate animate-left delay-3">
-          <h3>
-            <i class="fa-solid fa-microphone objective-icon"></i> Phase 1: Call for Abstracts-1
-          </h3>
-          <p>
-            This is the initial phase where the abstract submission is open to anyone interested in participating in the
-            WePOWER Track. The call for abstracts is announced globally, and participants can submit their abstracts
-            through the submission portal available on the website. Phase 1 serves as the first opportunity for
-            participants to showcase their ideas and concepts.
-          </p>
         </div>
       </div>
 
-      <div class="objective-box">
-        <div class="box-inner scroll-animate animate-right delay-4">
-          <h3>
-            <i class="fa-solid fa-paper-plane objective-icon"></i> Phase 2: Call for Abstracts-2
-          </h3>
-          <p>
-            Phase 2 is an extended call for abstract submissions. Teams that wish to extend their participation
-            opportunity can do so by submitting their abstracts in this second phase. It also gives a chance for
-            participants who did not advance to the next rounds in Phase 1 to reapply and take part in the competition.
-          </p>
+        <div class="objective-box">
+          <div class="box-inner scroll-animate animate-right delay-4">
+            <h3>
+              <i class="fa-solid fa-paper-plane objective-icon"></i> Phase 2 Call for Abstracts-2
+            </h3>
+            <p>
+              Phase 2 is an extended call for abstract submissions. Teams that wish to extend their participation opportunity can do so by submitting their abstracts in this second phase. It also gives a chance for participants who did not advance to the next rounds in Phase 1 to reapply and take part in the competition.
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="objective-box">
-        <div class="box-inner scroll-animate animate-right delay-5">
-          <h3>
-            <i class="fa-solid fa-check objective-icon"></i> Phase 3: Selection & Registration
-          </h3>
-          <p>
-            Potential and innovative projects that are submitted in the first and second call are selected for finals,
-            and the teams are intimated via mail.
-          </p>
+        
+         <div class="objective-box">
+          <div class="box-inner scroll-animate animate-right delay-5">
+            <h3>
+              <i class="fa-solid fa-check objective-icon"></i> Phase 3 Selection & Registration
+            </h3>
+            <p>
+              Potential and innovative projects that are submitted in the first and second call are selected for finals, and the teams are intimated via mail.
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="objective-box">
-        <div class="box-inner scroll-animate animate-right delay-6">
-          <h3>
-            <i class="fa-solid fa-trophy objective-icon"></i> Phase 4: Finale
-          </h3>
-          <p>
-            Selected teams will present their project works before the jury during the finals. Evaluation will be
-            carried out based on the criteria.
-          </p>
+        
+         <div class="objective-box">
+          <div class="box-inner scroll-animate animate-right delay-6">
+            <h3>
+              <i class="fa-solid fa-trophy objective-icon"></i> Phase 4 Finale
+            </h3>
+            <p>
+              Selected teams will present their project works before the jury during the finals. Evaluation will be carried out based on the criteria.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="selection-method-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Selection Method
+        </h2>
+      </div>
+      <p class="section-text">
+        The selection process will be conducted in two main stages:
+      </p>
 
+      <div class="selection-method-grid">
+        <div class="method-box scroll-animate animate-up delay-3">
+          <i class="fa-solid fa-file-lines method-icon"></i>
+          <h3>Stage 1 - Abstracts & Prelims</h3>
+          <p>
+           Abstract submission is open to all students via Pilot entry or Direct Entry.
+            <br /><br />
+            <b>A)</b> Direct entry participants will be evaluated based on
+            abstract submission. Selected innovative projects will be informed
+            via email. <br /><br />
+            <b>B)</b> Pilot entry participants present projects in a preliminary
+            round conducted by pilots. Winners move to finals.
+          </p>
+        </div>
+
+        <div class="method-box scroll-animate animate-up delay-4">
+          <i class="fa-solid fa-trophy method-icon"></i>
+          <h3>Stage 2 - Grand Finale</h3>
+          <p>
+            Selected teams will present their projects before the jury during
+            the finals.
+            <br /><br />
+            Evaluation will be carried out based on criteria such as novelty,
+            technical implementation, clarity of pitch, and expandability of the
+            idea.
+          </p>
+        </div>
+      </div>
+    </div>
+    <section class="methodology-section scroll-animate">
+      <h2 class="section-heading"><b>Methodology</b></h2>
+      <ul class="methodology-list">
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >The participants will be evaluated in either of the two modes:
+            Pilot entry mode or Direct entry mode.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Direct entry mode is for participants from countries without Pilots
+            and will be evaluated based on their submission of Abstract, PPT,
+            and Video demonstration of their project.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Pilot entry mode will select eligible teams for participation by
+            conducting a preliminary project competition at their venue.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Teams need to submit the problem statement and the detailed
+            solution as a PPT for evaluation by experts/Jury.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Selected teams will be notified and asked to submit an executive
+            summary and video demonstration of their project.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >During the finale, teams will present their projects virtually,
+            evaluated by the jury.</span
+          >
+        </li>
+        <li>
+          <i class="fas fa-angle-double-right"></i>
+          <span
+            >Prizes will be awarded based on jury, track chair, and general
+            chair recommendations.</span
+          >
+        </li>
+      </ul>
+    </section>
+
+     <section class="benefits-section scroll-animate animate-left"
+    style="background-color: var(--light-bg-color); padding: 40px 0;">
+    <div class="container">
+      <h2 class="section-heading"><b>Sample Project Topics</b></h2>
+      <ul class="benefits-list">
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>AI-Driven Smart Microgrids for Women-Led Rural Communities</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>IoT-Based Smart Energy Management and Metering Systems</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>Clean and Efficient Cooking Technologies for Women-Centric Households</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>Solar-Powered Community Charging Hubs for Rural Connectivity</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>Hybrid Renewable Energy Systems for Climate-Resilient Communities</span>
+        </li>
+        <li>
+          <i class="fas fa-bolt"></i>
+          <span>Portable Low-Cost Renewable Energy Devices for Last-Mile Access</span>
+        </li>
+         <li>
+          <i class="fas fa-bolt"></i>
+          <span>Women-Centric Renewable Energy Skill Development and Training Platforms</span>
+        </li>
+         <li>
+          <i class="fas fa-bolt"></i>
+          <span>AI Tools for Predicting Energy Demand in Low-Resource Settings</span>
+        </li>
+         <li>
+          <i class="fas fa-bolt"></i>
+          <span>Affordable Solar Water Heating Solutions for Small Communities</span>
+        </li>
+         <li>
+          <i class="fas fa-bolt"></i>
+          <span>Clean Energy Solutions for Disaster-Prone and Remote Areas</span>
+        </li>
+      
+      </ul>
+    </section>
+
+     <section class="winners-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Previous Year Achivers(2025)
+        </h2>
+      </div>
+      <div class="jury-carousel-container">
+        <button class="jury-nav-btn jury-prev">&#10094;</button>
+        <div class="jury-carousel-track">
+          <div class="jury-carousel-slide">
+            <img src="../images/WE1.jpg" alt="WePower Track Winner">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="../images/WE2.jpg" alt="WePower Track Runner">
+          </div>
+          <div class="jury-carousel-slide">
+            <img src="../images/WE3.jpg" alt="WePower Track HM">
+          </div>
+          
+        </div>
+        <button class="jury-nav-btn jury-next">&#10095;</button>
+        <div class="jury-dots">
+          <span class="jury-dot active"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+          <span class="jury-dot"></span>
+        </div>
+      </div>
+    </section>
+    <section class="card-gallery-section">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          Gallery
+        </h2>
+      </div>
+      <!-- <div class="gallery-controls">
+        <div class="gallery-filters">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="winners">Winners</button>
+          <button class="filter-pill" data-filter="runners">Runners</button>
+          <button class="filter-pill" data-filter="honorable">Honorable</button>
+          <button class="filter-pill" data-filter="moments">Moments</button>
+        </div>
+      </div> -->
+      <div class="card-gallery">
+        <div class="card-gallery-track">
+          <div class="card-gallery-item" data-category="winners">
+            <img src="../Gallery/WP1.JPG" alt="WePOWER Track">
+          </div>
+          <div class="card-gallery-item" data-category="runners">
+            <img src="../Gallery/WP2.JPG" alt="WePOWER Track">
+          </div>
+          <div class="card-gallery-item" data-category="runners">
+            <img src="../Gallery/WP3.JPG" alt="WePOWER Track">
+          </div>
+          <div class="card-gallery-item" data-category="honorable">
+            <img src="../Gallery/WP4.jpg" alt="WePOWER Track">
+          </div>
+          <div class="card-gallery-item" data-category="honorable">
+            <img src="../Gallery/WP5.jpg" alt="WePOWER Track">
+          </div>
+         
+        </div>
+        <div class="gallery-bottom-nav">
+          <button class="gallery-nav prev"><i class="fas fa-arrow-left"></i></button>
+          <button class="gallery-nav next"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-details-section contacts-section scroll-animate">
+      <div class="objectives-section">
+        <h2 class="section-heading scroll-animate animate-down delay-1">
+          For any Queries, please contact
+        </h2>
+      </div>
+      <ul class="team-details-list">
+        <li>
+          <i class="fas fa-user"></i>
+          <span>
+            Chair<br />
+            Dr. Harivardhagini Subhadra<br />
+            Chair | WePOWER Track<br />
+            <!-- Email ID: yesist12.specialtrack@gmail.com<br /> -->
+            +91 99851 47962
+          </span>
+        </li>
+        <li>
+          <i class="fas fa-user"></i>
+          <span>
+            Co-Chair<br />
+            Ms. G. Aparna<br />
+            Co-Chair |  WePOWER Track<br />
+            <!-- Email ID: mithreshgp@ieee.org<br /> -->
+            +91 9677175916
+          </span>
+        </li>
+      </ul>
+    </section>
+    
   <section class="faqs-section" style="background-color: #f9f9f9; padding: 40px 0;">
     <div class="container">
       <h2 class="section-heading">Frequently Asked Questions</h2>
@@ -1288,74 +1538,155 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section scroll-animate animate-up"
-    style="text-align:center; padding: 40px 0; background-color: var(--light-bg-color);">
-    <h3>For any Queries, please contact</h3>
-
-    <div class="contact-row" style="display:flex; justify-content:center; gap:40px; margin-top:30px; flex-wrap:wrap;">
-      <!-- Chair -->
-      <div class="contact-person" style="text-align:center;">
-        <div class="contact-icon" style="font-size:32px; color:#0b3b61; margin-bottom:10px;">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="contact-details">
-          <h4>Chair</h4>
-          <p>
-            <b>Dr. Harivardhagini Subhadra</b><br />
-            Chair | WePOWER Track<br />
-            Phone: +91 99851 47962
-          </p>
-        </div>
-      </div>
-
-      <!-- Co-Chair -->
-      <div class="contact-person" style="text-align:center;">
-        <div class="contact-icon" style="font-size:32px; color:#0b3b61; margin-bottom:10px;">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="contact-details">
-          <h4>Co-Chair</h4>
-          <p>
-            <b>Ms. G. Aparna</b><br />
-            Co-Chair | WePOWER Track <br />
-            Phone: +91 9677175916
-          </p>
-        </div>
-      </div>
-
-      <!-- Coordinator -->
-      <div class="contact-person" style="text-align:center;">
-        <div class="contact-icon" style="font-size:32px; color:#0b3b61; margin-bottom:10px;">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="contact-details">
-          <h4>Coordinator</h4>
-          <p>
-            <b>Ms. Vanshika Sharma</b><br />
-            Coordinator | WePOWER Track <br />
-            Phone: <a href="tel:+918587893512" style="color: inherit;">+91 85878 93512</a>
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Footer Text -->
-    <p class="footer-text big-text scroll-animate animate-zoom-in delay-5"
-      style="text-align: center; margin-top: 30px; font-weight:600; color:#0b3b61;">
-      Join the WePOWER Track and empower the future with innovative, sustainable, and inclusive energy solutions for a
-      brighter tomorrow!
-    </p>
-  </section>
-
-  <!-- Footer -->
+ 
+    <!-- Footer -->
   <div id="footer-container"></div>
 
   <script src="../components/header.js"></script>
   <script src="../components/footer.js"></script>
 
   <script src="../script.js"></script>
+  <script src="../jury-carousel.js"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var section = document.querySelector('.card-gallery-section');
+      if (!section) return;
+      var track = section.querySelector('.card-gallery-track');
+      var container = section.querySelector('.card-gallery');
+      var prevBtn = section.querySelector('.gallery-nav.prev');
+      var nextBtn = section.querySelector('.gallery-nav.next');
+      var pills = Array.from(section.querySelectorAll('.filter-pill'));
+      var currentIndex = 0;
+      var startX = 0;
+      var endX = 0;
+
+      function defaultIndex() {
+        var items = visibleItems();
+        return Math.max(0, Math.floor(items.length / 2));
+      }
+
+      function visibleItems() {
+        return Array.from(track.querySelectorAll('.card-gallery-item:not(.hidden)'));
+      }
+
+      function updateActive() {
+        var items = visibleItems();
+        items.forEach(function (el) { el.classList.remove('active','near-left','near-right'); el.style.zIndex=''; });
+        if (items.length === 0) return;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > items.length - 1) currentIndex = items.length - 1;
+        var active = items[currentIndex];
+        active.classList.add('active');
+        active.style.zIndex = '3';
+        var leftIdx = currentIndex - 1;
+        var rightIdx = currentIndex + 1;
+        if (leftIdx >= 0) items[leftIdx].classList.add('near-left');
+        if (rightIdx < items.length) items[rightIdx].classList.add('near-right');
+      }
+
+      function centerActive() {
+        var items = visibleItems();
+        if (items.length === 0) return;
+        var active = items[currentIndex];
+        var activeCenter = active.offsetLeft + active.offsetWidth / 2;
+        var target = container.clientWidth / 2;
+        var translateX = -(activeCenter - target);
+        track.style.transform = 'translateX(' + translateX + 'px)';
+      }
+
+      function update() {
+        updateActive();
+        centerActive();
+      }
+
+      function moveNext() {
+        currentIndex += 1;
+        update();
+      }
+
+      function movePrev() {
+        currentIndex -= 1;
+        update();
+      }
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          var filter = pill.getAttribute('data-filter');
+          var all = Array.from(track.querySelectorAll('.card-gallery-item'));
+          all.forEach(function (el) {
+            var cat = el.getAttribute('data-category');
+            var show = filter === 'all' ? true : cat === filter;
+            el.classList.toggle('hidden', !show);
+          });
+          currentIndex = defaultIndex();
+          update();
+        });
+      });
+
+      if (nextBtn) nextBtn.addEventListener('click', function () { moveNext(); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { movePrev(); });
+
+      function applyParallax(e) {
+        if (window.innerWidth < 768) return;
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        var rect = active.getBoundingClientRect();
+        var cx = e.clientX - rect.left;
+        var cy = e.clientY - rect.top;
+        var nx = (cx / rect.width) * 2 - 1;
+        var ny = (cy / rect.height) * 2 - 1;
+        var rx = -ny * 6;
+        var ry = nx * 6;
+        active.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'translateX(' + (ry * 1.2) + 'px) translateY(' + (rx * -1.2) + 'px) scale(1.02)';
+        }
+      }
+      function resetParallax() {
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        active.style.transform = 'scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'none';
+        }
+      }
+      container.addEventListener('mousemove', applyParallax);
+      container.addEventListener('mouseleave', resetParallax);
+
+      container.addEventListener('touchstart', function (e) {
+        if (!e.touches || e.touches.length === 0) return;
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', function (e) {
+        endX = e.changedTouches[0].clientX;
+        var delta = endX - startX;
+        if (Math.abs(delta) > 40) {
+          if (delta < 0) moveNext();
+          else movePrev();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        update();
+      });
+
+      currentIndex = defaultIndex();
+      var initialItems = visibleItems();
+      initialItems.forEach(function (el, i) {
+        el.style.animationDelay = (i * 80) + 'ms';
+        el.classList.add('animate-in');
+      });
+      update();
+      window.addEventListener('load', function () { update(); });
+    });
+  </script>
 </body>
 
 </html>

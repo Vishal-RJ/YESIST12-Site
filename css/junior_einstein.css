@@ -64,7 +64,7 @@
 /* Force left alignment for Selection Method header */
 .selection-method-section,
 .selection-method-section .section-heading {
-  text-align: left !important;
+  text-align: left;
 }
 
 /* Submission Mode Text Color */
@@ -314,7 +314,8 @@
 .timeline-table td {
   padding: 15px 20px;
   border: 1px solid #ddd;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 425;
   color: #333;
   vertical-align: middle;
 }
