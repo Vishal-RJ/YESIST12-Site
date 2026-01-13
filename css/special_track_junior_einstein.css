@@ -967,8 +967,14 @@
 }
 .eligibility-list li span {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 425;
   color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  
+  flex: 1;
+  display: inline-block;
 }
 /* Objectives of the Track typography overrides */
 .mission-areas .section-title {
