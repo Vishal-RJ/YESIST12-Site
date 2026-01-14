@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Junior Einstein</title>
-    <link rel="icon" type="image/png" href="../images/IEEE-YESIST12-Logo-1024x307-1.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../css/track_style.css" />
-    <link rel="stylesheet" href="../css/special_track_junior_einstein.css" />
-    <link rel="stylesheet" href="../jury-carousel.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junior Einstein</title>
+  <link rel="icon" type="image/png" href="../images/IEEE-YESIST12-Logo-1024x307-1.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/track_style.css" />
+  <link rel="stylesheet" href="../css/special_track_junior_einstein.css" />
+  <link rel="stylesheet" href="../jury-carousel.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
     .innovation-hero .title {
@@ -294,10 +293,12 @@
       .sdg-image-grid {
         grid-template-columns: repeat(4, 100px);
       }
+
       .sdg-image-grid li {
         width: 100px;
         text-align: center;
       }
+
       .sdg-image-grid img {
         width: 100%;
         height: auto;
@@ -305,110 +306,145 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
+
       .sdg-image-grid img:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
       }
     }
-      @media (max-width: 1024px) {
-        .sdg-image-grid {
-          grid-template-columns: repeat(4, 100px);
-        }
+
+    @media (max-width: 1024px) {
+      .sdg-image-grid {
+        grid-template-columns: repeat(4, 100px);
       }
-      @media (max-width: 768px) {
-        .sdg-image-grid {
-          grid-template-columns: repeat(3, 100px);
-        }
+    }
+
+    @media (max-width: 768px) {
+      .sdg-image-grid {
+        grid-template-columns: repeat(3, 100px);
       }
-      @media (max-width: 480px) {
-        .sdg-image-grid {
-          grid-template-columns: repeat(2, 100px);
-        }
+    }
+
+    @media (max-width: 480px) {
+      .sdg-image-grid {
+        grid-template-columns: repeat(2, 100px);
       }
-      /* Submission Mode (Gateways) - visual restyle to match provided layout */
-      .gateways-section {
-        padding: 40px 0;
-      }
-      .gateway-container {
-        display: flex;
-        flex-direction: column;
-        gap: 28px;
-      }
+    }
+
+    /* Submission Mode (Gateways) - visual restyle to match provided layout */
+    .gateways-section {
+      padding: 40px 0;
+    }
+
+    .gateway-container {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .gateway-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+    }
+
+    .gateway-icon-container {
+      width: 96px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .gateway-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 10px;
+      background-color: #128a73;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    .gateway-label {
+      width: 96px;
+      border-radius: 10px;
+      background-color: #0a415c;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px 8px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .gateway-content {
+      flex: 1;
+      border-radius: 14px;
+      padding: 22px 24px;
+      color: #fff;
+      box-shadow: 0 16px 26px rgba(0, 0, 0, 0.18);
+    }
+
+    .gateway-content ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 28px;
+    }
+
+    .gateway-content li {
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    /* Row-specific colors to mirror screenshot */
+    .gateway-row:first-child .gateway-icon {
+      background-color: #128a73;
+    }
+
+    .gateway-row:first-child .gateway-label {
+      background-color: #128a73;
+    }
+
+    .gateway-row:first-child .gateway-content {
+      background-color: #128a73;
+    }
+
+    .gateway-row:last-child .gateway-icon {
+      background-color: #0a415c;
+    }
+
+    .gateway-row:last-child .gateway-label {
+      background-color: #0a415c;
+    }
+
+    .gateway-row:last-child .gateway-content {
+      background-color: #0a415c;
+    }
+
+    @media (max-width: 768px) {
       .gateway-row {
-        display: flex;
-        align-items: flex-start;
-        gap: 22px;
-      }
-      .gateway-icon-container {
-        width: 96px;
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        align-items: stretch;
       }
-      .gateway-icon {
-        width: 96px;
-        height: 96px;
-        border-radius: 10px;
-        background-color: #128a73;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+
+      .gateway-icon-container {
+        flex-direction: row;
+        width: auto;
       }
+
       .gateway-label {
-        width: 96px;
-        border-radius: 10px;
-        background-color: #0a415c;
-        color: #fff;
-        font-weight: 700;
-        font-size: 14px;
-        text-align: center;
-        padding: 10px 8px;
-        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        width: auto;
+        min-width: 120px;
       }
-      .gateway-content {
-        flex: 1;
-        border-radius: 14px;
-        padding: 22px 24px;
-        color: #fff;
-        box-shadow: 0 16px 26px rgba(0,0,0,0.18);
-      }
-      .gateway-content ul {
-        list-style: none;
-        margin: 0;
-        padding-left: 28px;
-      }
-      .gateway-content li {
-        margin-bottom: 12px;
-        line-height: 1.7;
-      }
-      /* Row-specific colors to mirror screenshot */
-      .gateway-row:first-child .gateway-icon { background-color: #128a73; }
-      .gateway-row:first-child .gateway-label { background-color: #128a73; }
-      .gateway-row:first-child .gateway-content { background-color: #128a73; }
-      .gateway-row:last-child .gateway-icon { background-color: #0a415c; }
-      .gateway-row:last-child .gateway-label { background-color: #0a415c; }
-      .gateway-row:last-child .gateway-content { background-color: #0a415c; }
-      @media (max-width: 768px) {
-        .gateway-row {
-          flex-direction: column;
-          align-items: stretch;
-        }
-        .gateway-icon-container {
-          flex-direction: row;
-          width: auto;
-        }
-        .gateway-label {
-          width: auto;
-          min-width: 120px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="header-container"></div>
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header-container"></div>
 
   <section class="innovation-hero">
     <div class="container">
@@ -424,14 +460,20 @@
       </ul>
     </div>
   </section>
-<section class="about-special">
+  <section class="about-special">
     <div class="bg-image"></div>
 
     <div class="container">
       <div class="content">
         <h2 class="title">About Junior Einstein</h2>
         <p class="subtitle">
-         The Junior Einstein Track at IEEE YESIST12 is a global platform designed to inspire young innovators aged 12 to 17. It encourages students to explore STEM through creative problem-solving and socially impactful ideas. Participants ideate, design, and present solutions to real-world challenges. The track focuses on nurturing curiosity, technical thinking, and confidence. It goes beyond competition, offering a developmental learning journey. Students gain exposure to mentors, industry experts, and global perspectives. The track promotes ethical, service-oriented, and sustainable innovation. Its goal is to shape the next generation of innovators and change-makers.
+          The Junior Einstein Track at IEEE YESIST12 is a global platform designed to inspire young innovators aged 12
+          to 17. It encourages students to explore STEM through creative problem-solving and socially impactful ideas.
+          Participants ideate, design, and present solutions to real-world challenges. The track focuses on nurturing
+          curiosity, technical thinking, and confidence. It goes beyond competition, offering a developmental learning
+          journey. Students gain exposure to mentors, industry experts, and global perspectives. The track promotes
+          ethical, service-oriented, and sustainable innovation. Its goal is to shape the next generation of innovators
+          and change-makers.
 
         </p>
       </div>
@@ -443,422 +485,458 @@
 
 
   </section>
-  
+
 
     <section class="innovation-theme">
-      <div class="container">
-        <div class="theme-heading scroll-animate animate-up">
-          <h2>Theme</h2>
-          <h3>Smart Ideas for a Sustainable Future</h3>
-        </div>
-
-        <div class="theme-icon-box accent">
-          <div class="icon scroll-animate animate-left">
-            <i class="fas fa-brain"></i>
-          </div>
-          <div class="text scroll-animate animate-up delay-1">
-            <h2>
-              “Smart Ideas for a Sustainable Future”
-            </h2>
-          </div>
-        </div>
-  </div>
-
-  
-    </section>
-
-    <section class="innovation-description">
-      <div class="container">
-        <p class="theme-text scroll-animate animate-fade delay-2">
-          The Junior Einstein Track at IEEE YESIST12 2026 centers on “Smart Ideas for a Sustainable Future.” Aligned with the UN SDGs, this theme empowers young innovators to develop technology-driven solutions for a resilient world. Students are encouraged to identify community or global challenges and propose future-ready ideas—spanning smart systems, automation, and eco-friendly designs—that balance innovation with sustainability to create lasting impact.
-        </p>
+    <div class="container">
+      <div class="theme-heading scroll-animate animate-up">
+        <h2>Theme</h2>
+        <h3>Smart Ideas for a Sustainable Future</h3>
       </div>
-    </section>
 
-    <section class="eligibility-section scroll-animate animate-up" style="background-color: var(--light-bg-color); padding: 40px 0;">
-      <div class="container">
-        <h2 class="section-heading"><b>SDGs Aligned</b></h2>
-        <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
-        
-        <ul class="sdg-image-grid">
-          <li><img src="../SDG/E-WEB-Goal-01.png" alt="SDG 1: No Poverty"></li>
-          <li><img src="../SDG/E-WEB-Goal-02.png" alt="SDG 2: Zero Hunger"></li>
-          <li><img src="../SDG/E-WEB-Goal-03.png" alt="SDG 3: Good Health and Well-being"></li>
-          <li><img src="../SDG/E-WEB-Goal-04.png" alt="SDG 4: Quality Education"></li>
-          <li><img src="../SDG/E-WEB-Goal-05.png" alt="SDG 5: Gender Equality"></li>
-          <li><img src="../SDG/E-WEB-Goal-06.png" alt="SDG 6: Clean Water and Sanitation"></li>
-          <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
-          <li><img src="../SDG/E-WEB-Goal-08.png" alt="SDG 8: Decent Work and Economic Growth"></li>
-          <li><img src="../SDG/E-WEB-Goal-09.png" alt="SDG 9: Industry, Innovation, and Infrastructure"></li>
-          <li><img src="../SDG/E-WEB-Goal-10.png" alt="SDG 10: Reduced Inequalities"></li>
-          <li><img src="../SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
-          <li><img src="../SDG/E-WEB-Goal-12.png" alt="SDG 12: Responsible Consumption and Production"></li>
-          <li><img src="../SDG/E-WEB-Goal-13.png" alt="SDG 13: Climate Action"></li>
-          <li><img src="../SDG/E-WEB-Goal-14.png" alt="SDG 14: Life Below Water"></li>
-          <li><img src="../SDG/E-WEB-Goal-15.png" alt="SDG 15: Life on Land"></li>
-          <li><img src="../SDG/E-WEB-Goal-16.png" alt="SDG 16: Peace, Justice and Strong Institutions"></li>
-          <li><img src="../SDG/E-WEB-Goal-17.png" alt="SDG 17: Partnerships for the Goals"></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
-      <div class="container">
-        <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>Timeline</b></h2>
-        <div class="table-responsive">
-          <table class="timeline-table">
-            <tbody>
-              <tr>
-                <td>Call for Abstracts-1</td>
-                <td>17th Jan 2026</td>
-              </tr>
-              <tr>
-                <td>Deadline for Abstract-1</td>
-                <td>31st Jan 2026</td>
-              </tr>
-              <tr>
-                <td>Time for reviewer to review the abstracts</td>
-                <td>1st Feb - 7th Feb 2026</td>
-              </tr>
-              <tr>
-                <td>Announcement of qualified abstracts</td>
-                <td>8th Feb 2026</td>
-              </tr>
-              <tr>
-                <td>Call for Abstracts-2</td>
-                <td>8th Feb 2026</td>
-              </tr>
-              <tr>
-                <td>Deadline for Abstract-2</td>
-                <td>31st March 2026</td>
-              </tr>
-              <tr>
-                <td>Time for reviewer to review the abstracts</td>
-                <td>01st April to 07th April 2026</td>
-              </tr>
-              <tr>
-                <td>Announcement of qualified abstract</td>
-                <td>08th April 2026</td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="theme-icon-box accent">
+        <div class="icon scroll-animate animate-left">
+          <i class="fas fa-brain"></i>
+        </div>
+        <div class="text scroll-animate animate-up delay-1">
+          <h2>
+            “Smart Ideas for a Sustainable Future”
+          </h2>
         </div>
       </div>
-    </section>
-
-    <section class="abstract-section">
-      <div class="container">
-        <div class="abstract-card">
-          <h2 class="section-title">Submit your Abstract now</h2>
-          <div class="status-pill closed">Yet to be opened</div>
-          <h4 class="deadline">Call for Abstract Starts: 17th January 2026</h4>
-          <div class="flip-countdown" data-countdown="2026-01-17T23:59:00">
-            <div class="flip-unit" data-unit="days">
-              <div class="flip-card"><span class="flip-number">00</span></div>
-              <span class="flip-label">Days</span>
-            </div>
-            <div class="flip-unit" data-unit="hours">
-              <div class="flip-card"><span class="flip-number">00</span></div>
-              <span class="flip-label">Hours</span>
-            </div>
-            <div class="flip-unit" data-unit="minutes">
-              <div class="flip-card"><span class="flip-number">00</span></div>
-              <span class="flip-label">Minutes</span>
-            </div>
-            <div class="flip-unit" data-unit="seconds">
-              <div class="flip-card"><span class="flip-number">00</span></div>
-              <span class="flip-label">Seconds</span>
-            </div>
-          </div>
-          <div class="abstract-actions">
-            <a class="btn download-btn" href="../tracks/junior_einstein.html" target="_blank">
-              <i class="fas fa-download"></i> DOWNLOAD ABSTRACT TEMPLATE
-            </a>
-            <a class="btn submit-btn" href="https://portal.ieeeyesist12.org/ic-direct" target="_blank">
-              <i class="fas fa-paper-plane"></i> Submit Abstract
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script>
-  document.addEventListener('DOMContentLoaded', function () {
-
-    var card = document.querySelector('.abstract-card');
-    if (!card) return;
-
-    var statusEl = card.querySelector('.status-pill');
-    var flipCountdown = card.querySelector('.flip-countdown');
-    var submitBtn = card.querySelector('.submit-btn');
-
-    /* ---------------- Intersection Observer ---------------- */
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          card.classList.add('in-view');
-        }
-      });
-    }, { threshold: 0.5 });
-
-    io.observe(card);
-
-    /* ---------------- Countdown Logic ---------------- */
-    if (!flipCountdown) return;
-
-    var deadlineStr = flipCountdown.getAttribute('data-countdown');
-    var deadline = new Date(deadlineStr);
-
-    var daysEl = flipCountdown.querySelector('.flip-unit[data-unit="days"] .flip-number');
-    var hoursEl = flipCountdown.querySelector('.flip-unit[data-unit="hours"] .flip-number');
-    var minsEl = flipCountdown.querySelector('.flip-unit[data-unit="minutes"] .flip-number');
-    var secsEl = flipCountdown.querySelector('.flip-unit[data-unit="seconds"] .flip-number');
-
-    function pad2(n) {
-      return n < 10 ? '0' + n : '' + n;
-    }
-
-    function setInitial(el, val) {
-      if (!el) return;
-      var card = el.closest('.flip-card');
-      el.textContent = val;
-      if (card) card.classList.remove('flip');
-    }
-
-    function setVal(el, val) {
-      if (!el) return;
-      var card = el.closest('.flip-card');
-      var prev = el.textContent;
-
-      if (prev !== val && card) {
-        card.classList.remove('flip');
-        void card.offsetWidth; // force reflow
-
-        var onAnimEnd = function () {
-          el.textContent = val;
-          card.classList.remove('flip');
-          el.removeEventListener('animationend', onAnimEnd);
-        };
-
-        el.addEventListener('animationend', onAnimEnd);
-        card.classList.add('flip');
-      }
-    }
-
-    function tick() {
-      var now = new Date();
-      var diff = deadline - now;
-
-      if (diff > 0) {
-        var days = Math.floor(diff / 86400000);
-        var hours = Math.floor((diff % 86400000) / 3600000);
-        var mins = Math.floor((diff % 3600000) / 60000);
-        var secs = Math.floor((diff % 60000) / 1000);
-
-        setVal(daysEl, days > 99 ? String(days) : pad2(days));
-        setVal(hoursEl, pad2(hours));
-        setVal(minsEl, pad2(mins));
-        setVal(secsEl, pad2(secs));
-
-        if (statusEl) {
-          statusEl.textContent = 'Yet to be opened';
-          statusEl.classList.remove('open');
-          statusEl.classList.add('closed');
-        }
-
-        if (submitBtn) {
-          submitBtn.setAttribute('aria-disabled', 'true');
-          submitBtn.style.opacity = '0.6';
-          submitBtn.style.pointerEvents = 'none';
-        }
-      } else {
-        if (statusEl) {
-          statusEl.textContent = 'Open';
-          statusEl.classList.add('open');
-          statusEl.classList.remove('closed');
-        }
-
-        if (submitBtn) {
-          submitBtn.setAttribute('aria-disabled', 'false');
-          submitBtn.style.opacity = '1';
-          submitBtn.style.pointerEvents = 'auto';
-        }
-
-        clearInterval(timer);
-      }
-    }
-
-    /* ---------------- Initialize Without Flip ---------------- */
-    (function initValues() {
-      var now = new Date();
-      var diff = deadline - now;
-
-      var days = Math.floor(diff / 86400000);
-      var hours = Math.floor((diff % 86400000) / 3600000);
-      var mins = Math.floor((diff % 3600000) / 60000);
-      var secs = Math.floor((diff % 60000) / 1000);
-
-      setInitial(daysEl, days > 99 ? String(days) : pad2(days));
-      setInitial(hoursEl, pad2(hours));
-      setInitial(minsEl, pad2(mins));
-      setInitial(secsEl, pad2(secs));
-    })();
-
-    /* ---------------- Start Timer ---------------- */
-    var timer;
-    setTimeout(function () {
-      tick();
-      timer = setInterval(tick, 1000);
-    }, 1000);
-
-  });
-</script>
-
-
-  <section class="mission-areas">
-    <h2 class="section-heading">The Objectives of the Junior Einstein</h2>
-    <ul class="mission-list">
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span><b>Global Showcase and Collaboration:</b> To create an international platform where young participants can showcase their talents and innovations, connect with peers from around the world, and foster meaningful collaborations that may lead to future academic, technical, and entrepreneurial partnerships.</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span><b>Next-Generation Innovator Recognition:</b> To identify, recognize, and motivate the next generation of innovators by encouraging creative thinking and supporting the development of viable, impactful solutions to real-world social challenges.</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span><b>Societal Impact through STEM:</b> To inspire students to apply STEM concepts in designing and developing solutions that address societal needs, while actively contributing to the United Nations Sustainable Development Goals (SDGs).</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span><b>Hands-on Experience and Skill Development:</b> To provide participants with hands-on exposure to technology and engineering projects, enhancing critical thinking, problem-solving abilities, technical understanding, and long-term interest in STEM fields.</span>
-      </li>
-      <li>
-        <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-        <span><b>Teamwork, Collaboration, and Innovation:</b> To cultivate a culture of teamwork and collaboration, encouraging participants to work collectively, think creatively, and approach challenges with innovation-driven and solution-oriented mindsets.</span>
-      </li>
-    </ul>
+    </div>
   </section>
 
-  <section class="eligibility-section scroll-animate animate-left">
-    <h2 class="section-heading"><b>Who Is Eligible?</b></h2>
-    <ul class="eligibility-list">
-      <li>
-        <i class="fas fa-star"></i>
-        <span>Open to school students worldwide aged 12–17 years.</span>
-      </li>
-      <li>
-        <i class="fas fa-star"></i>
-        <span>Participants should have a keen interest in STEM and a passion for innovation.</span>
-      </li>
-      <li>
-        <i class="fas fa-star"></i>
-        <span>Teams may include up to 4 members; mixed institutions/countries are allowed.</span>
-      </li>
-      <li>
-        <i class="fas fa-star"></i>
-        <span>A mentor must accompany each team during registration.</span>
-      </li>
-      <li>
-        <i class="fas fa-star"></i>
-        <span>Proof of age and enrollment (e.g., bonafide school certificate or Birth Certificate) is required.</span>
-      </li>
-    </ul>
+  <section class="innovation-description">
+    <div class="container">
+      <p class="theme-text scroll-animate animate-fade delay-2">
+        The Junior Einstein Track at IEEE YESIST12 2026 centers on “Smart Ideas for a Sustainable Future.” Aligned with
+        the UN SDGs, this theme empowers young innovators to develop technology-driven solutions for a resilient world.
+        Students are encouraged to identify community or global challenges and propose future-ready ideas—spanning smart
+        systems, automation, and eco-friendly designs—that balance innovation with sustainability to create lasting
+        impact.
+      </p>
+    </div>
   </section>
 
-  <section class="benefits-section scroll-animate animate-left">
-    <h2 class="section-heading"><b>Benefits of Participating</b></h2>
-    <ul class="benefits-list">
-      <li>
-        <i class="fas fa-bolt"></i>
-        <span><b>Global Recognition:</b> Showcase your innovative ideas and stand
-          a chance to be recognized on a global platform.</span>
-      </li>
-      <li>
-        <i class="fas fa-bolt"></i>
-        <span><b>Skill Development:</b> Hone critical thinking, problem-solving,
-          and collaboration skills.</span>
-      </li>
-      <li>
-        <i class="fas fa-bolt"></i>
-        <span><b>Networking:</b> Connect with like-minded individuals, mentors,
-          and professionals who share a passion for sustainability.</span>
-      </li>
-      <li>
-        <i class="fas fa-bolt"></i>
-        <span><b>Awareness:</b> Gain insights into pressing global issues and
-          contribute to meaningful solutions.</span>
-      </li>
-    </ul>
+  <section class="eligibility-section scroll-animate animate-up" style="background-color: var(--light-bg-color); padding: 40px 0;">
+    <div class="container">
+      <h2 class="section-heading"><b>SDGs Aligned</b></h2>
+      <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
+      
+      <ul class="sdg-image-grid">
+        <li><img src="../SDG/E-WEB-Goal-01.png" alt="SDG 1: No Poverty"></li>
+        <li><img src="../SDG/E-WEB-Goal-02.png" alt="SDG 2: Zero Hunger"></li>
+        <li><img src="../SDG/E-WEB-Goal-03.png" alt="SDG 3: Good Health and Well-being"></li>
+        <li><img src="../SDG/E-WEB-Goal-04.png" alt="SDG 4: Quality Education"></li>
+        <li><img src="../SDG/E-WEB-Goal-05.png" alt="SDG 5: Gender Equality"></li>
+        <li><img src="../SDG/E-WEB-Goal-06.png" alt="SDG 6: Clean Water and Sanitation"></li>
+        <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
+        <li><img src="../SDG/E-WEB-Goal-08.png" alt="SDG 8: Decent Work and Economic Growth"></li>
+        <li><img src="../SDG/E-WEB-Goal-09.png" alt="SDG 9: Industry, Innovation, and Infrastructure"></li>
+        <li><img src="../SDG/E-WEB-Goal-10.png" alt="SDG 10: Reduced Inequalities"></li>
+        <li><img src="../SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
+        <li><img src="../SDG/E-WEB-Goal-12.png" alt="SDG 12: Responsible Consumption and Production"></li>
+        <li><img src="../SDG/E-WEB-Goal-13.png" alt="SDG 13: Climate Action"></li>
+        <li><img src="../SDG/E-WEB-Goal-14.png" alt="SDG 14: Life Below Water"></li>
+        <li><img src="../SDG/E-WEB-Goal-15.png" alt="SDG 15: Life on Land"></li>
+        <li><img src="../SDG/E-WEB-Goal-16.png" alt="SDG 16: Peace, Justice and Strong Institutions"></li>
+        <li><img src="../SDG/E-WEB-Goal-17.png" alt="SDG 17: Partnerships for the Goals"></li>
+      </ul>
+    </div>
   </section>
 
-    <section class="rules-section scroll-animate animate-left">
-      <h2 class="section-heading"><b>Rules for Participation</b></h2>
-      <ul class="rules-list">
-        <li>
-          <i class="fas fa-book"></i>
-          <span>Teams should consist of up to four members.</span>
-        </li>
-        <li>
-          <i class="fas fa-book"></i>
-          <span>Projects can be software, hardware, or integrated tech solutions.</span>
-        </li>
-        <li>
-          <i class="fas fa-book"></i>
-          <span>Ensure originality – plagiarism in any form is strictly prohibited.</span>
-        </li>
-        <li>
-          <i class="fas fa-book"></i>
-          <span>Submissions must be clear, well-structured, and aligned with SDGs.</span>
-        </li>
-        <li>
-          <i class="fas fa-book"></i>
-          <span>Teams will be locked upon abstract submission. No changes to team members or mentors will be permitted after the abstract submission deadline under any circumstances.</span>
-        </li>
-        <li>
-          <i class="fas fa-book"></i>
-          <span>Each team is solely responsible for internal coordination, cooperation, and teamwork throughout the duration of the competition. IEEE YESIST12 will not intervene in internal team matters.</span>
-        </li>
-        <li>
-          <i class="fas fa-book"></i>
-          <span>Teams that have actively participated and have enrolled themselves with team members and mentor details will be eligible for the certificates.</span>
-        </li>
-        <!-- <span>
+  <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
+    <div class="container">
+      <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>Timeline</b></h2>
+      <div class="table-responsive">
+        <table class="timeline-table">
+          <tbody>
+            <tr>
+              <td>Call for Abstracts-1</td>
+              <td>17th Jan 2026</td>
+            </tr>
+            <tr>
+              <td>Deadline for Abstract-1</td>
+              <td>31st Jan 2026</td>
+            </tr>
+            <tr>
+              <td>Time for reviewer to review the abstracts</td>
+              <td>1st Feb - 7th Feb 2026</td>
+            </tr>
+            <tr>
+              <td>Announcement of qualified abstracts</td>
+              <td>8th Feb 2026</td>
+            </tr>
+            <tr>
+              <td>Call for Abstracts-2</td>
+              <td>8th Feb 2026</td>
+            </tr>
+            <tr>
+              <td>Deadline for Abstract-2</td>
+              <td>31st March 2026</td>
+            </tr>
+            <tr>
+              <td>Time for reviewer to review the abstracts</td>
+              <td>01st April to 07th April 2026</td>
+            </tr>
+            <tr>
+              <td>Announcement of qualified abstract</td>
+              <td>08th April 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="abstract-section">
+    <div class="container">
+      <div class="abstract-card">
+        <h2 class="section-title">Submit your Abstract now</h2>
+        <div class="status-pill closed">Yet to be opened</div>
+        <h4 class="deadline">Call for Abstract Starts: 17th January 2026</h4>
+        <div class="flip-countdown" data-countdown="2026-01-17T23:59:00">
+          <div class="flip-unit" data-unit="days">
+            <div class="flip-card"><span class="flip-number">00</span></div>
+            <span class="flip-label">Days</span>
+          </div>
+          <div class="flip-unit" data-unit="hours">
+            <div class="flip-card"><span class="flip-number">00</span></div>
+            <span class="flip-label">Hours</span>
+          </div>
+          <div class="flip-unit" data-unit="minutes">
+            <div class="flip-card"><span class="flip-number">00</span></div>
+            <span class="flip-label">Minutes</span>
+          </div>
+          <div class="flip-unit" data-unit="seconds">
+            <div class="flip-card"><span class="flip-number">00</span></div>
+            <span class="flip-label">Seconds</span>
+          </div>
+        </div>
+        <div class="abstract-actions">
+          <a class="btn download-btn" href="../tracks/junior_einstein.html" target="_blank">
+            <i class="fas fa-download"></i> DOWNLOAD ABSTRACT TEMPLATE
+          </a>
+          <a class="btn submit-btn" href="https://portal.ieeeyesist12.org/ic-direct" target="_blank">
+            <i class="fas fa-paper-plane"></i> Submit Abstract
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+              var card = document.querySelector('.abstract-card');
+              if (!card) return;
+
+              var statusEl = card.querySelector('.status-pill');
+              var flipCountdown = card.querySelector('.flip-countdown');
+              var submitBtn = card.querySelector('.submit-btn');
+
+              /* ---------------- Intersection Observer ---------------- */
+              var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                  if (entry.isIntersecting) {
+                    card.classList.add('in-view');
+                  }
+                });
+              }, { threshold: 0.5 });
+
+              io.observe(card);
+
+              /* ---------------- Countdown Logic ---------------- */
+              if (!flipCountdown) return;
+
+              var deadlineStr = flipCountdown.getAttribute('data-countdown');
+              var deadline = new Date(deadlineStr);
+
+              var daysEl = flipCountdown.querySelector('.flip-unit[data-unit="days"] .flip-number');
+              var hoursEl = flipCountdown.querySelector('.flip-unit[data-unit="hours"] .flip-number');
+              var minsEl = flipCountdown.querySelector('.flip-unit[data-unit="minutes"] .flip-number');
+              var secsEl = flipCountdown.querySelector('.flip-unit[data-unit="seconds"] .flip-number');
+
+              function pad2(n) {
+                return n < 10 ? '0' + n : '' + n;
+              }
+
+              function setInitial(el, val) {
+                if (!el) return;
+                var card = el.closest('.flip-card');
+                el.textContent = val;
+                if (card) card.classList.remove('flip');
+              }
+
+              function setVal(el, val) {
+                if (!el) return;
+                var card = el.closest('.flip-card');
+                var prev = el.textContent;
+
+                if (prev !== val && card) {
+                  card.classList.remove('flip');
+                  void card.offsetWidth; // force reflow
+
+                  var onAnimEnd = function () {
+                    el.textContent = val;
+                    card.classList.remove('flip');
+                    el.removeEventListener('animationend', onAnimEnd);
+                  };
+
+                  el.addEventListener('animationend', onAnimEnd);
+                  card.classList.add('flip');
+                }
+              }
+
+              function tick() {
+                var now = new Date();
+                var diff = deadline - now;
+
+                if (diff > 0) {
+                  var days = Math.floor(diff / 86400000);
+                  var hours = Math.floor((diff % 86400000) / 3600000);
+                  var mins = Math.floor((diff % 3600000) / 60000);
+                  var secs = Math.floor((diff % 60000) / 1000);
+
+                  setVal(daysEl, days > 99 ? String(days) : pad2(days));
+                  setVal(hoursEl, pad2(hours));
+                  setVal(minsEl, pad2(mins));
+                  setVal(secsEl, pad2(secs));
+
+                  if (statusEl) {
+                    statusEl.textContent = 'Yet to be opened';
+                    statusEl.classList.remove('open');
+                    statusEl.classList.add('closed');
+                  }
+
+                  if (submitBtn) {
+                    submitBtn.setAttribute('aria-disabled', 'true');
+                    submitBtn.style.opacity = '0.6';
+                    submitBtn.style.pointerEvents = 'none';
+                  }
+                } else {
+                  if (statusEl) {
+                    statusEl.textContent = 'Open';
+                    statusEl.classList.add('open');
+                    statusEl.classList.remove('closed');
+                  }
+
+                  if (submitBtn) {
+                    submitBtn.setAttribute('aria-disabled', 'false');
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.pointerEvents = 'auto';
+                  }
+
+                  clearInterval(timer);
+                }
+              }
+
+              /* ---------------- Initialize Without Flip ---------------- */
+              (function initValues() {
+                var now = new Date();
+                var diff = deadline - now;
+
+                var days = Math.floor(diff / 86400000);
+                var hours = Math.floor((diff % 86400000) / 3600000);
+                var mins = Math.floor((diff % 3600000) / 60000);
+                var secs = Math.floor((diff % 60000) / 1000);
+
+                setInitial(daysEl, days > 99 ? String(days) : pad2(days));
+                setInitial(hoursEl, pad2(hours));
+                setInitial(minsEl, pad2(mins));
+                setInitial(secsEl, pad2(secs));
+              })();
+
+              /* ---------------- Start Timer ---------------- */
+              var timer;
+              setTimeout(function () {
+                tick();
+                timer = setInterval(tick, 1000);
+              }, 1000);
+
+            });
+          </script>
+
+
+          <section class="mission-areas">
+            <h2 class="section-heading">The Objectives of the Junior Einstein</h2>
+            <ul class="mission-list">
+              <li>
+                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+                <span><b>Global Showcase and Collaboration:</b> To create an international platform where young
+                  participants can
+                  showcase their talents and innovations, connect with peers from around the world, and foster
+                  meaningful
+                  collaborations that may lead to future academic, technical, and entrepreneurial partnerships.</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+                <span><b>Next-Generation Innovator Recognition:</b> To identify, recognize, and motivate the next
+                  generation of
+                  innovators by encouraging creative thinking and supporting the development of viable, impactful
+                  solutions to
+                  real-world social challenges.</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+                <span><b>Societal Impact through STEM:</b> To inspire students to apply STEM concepts in designing and
+                  developing solutions that address societal needs, while actively contributing to the United Nations
+                  Sustainable Development Goals (SDGs).</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+                <span><b>Hands-on Experience and Skill Development:</b> To provide participants with hands-on exposure
+                  to
+                  technology and engineering projects, enhancing critical thinking, problem-solving abilities, technical
+                  understanding, and long-term interest in STEM fields.</span>
+              </li>
+              <li>
+                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+                <span><b>Teamwork, Collaboration, and Innovation:</b> To cultivate a culture of teamwork and
+                  collaboration,
+                  encouraging participants to work collectively, think creatively, and approach challenges with
+                  innovation-driven and solution-oriented mindsets.</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="eligibility-section scroll-animate animate-left">
+            <h2 class="section-heading"><b>Who Is Eligible?</b></h2>
+            <ul class="eligibility-list">
+              <li>
+                <i class="fas fa-star"></i>
+                <span>Open to school students worldwide aged 12–17 years.</span>
+              </li>
+              <li>
+                <i class="fas fa-star"></i>
+                <span>Participants should have a keen interest in STEM and a passion for innovation.</span>
+              </li>
+              <li>
+                <i class="fas fa-star"></i>
+                <span>Teams may include up to 4 members; mixed institutions/countries are allowed.</span>
+              </li>
+              <li>
+                <i class="fas fa-star"></i>
+                <span>A mentor must accompany each team during registration.</span>
+              </li>
+              <li>
+                <i class="fas fa-star"></i>
+                <span>Proof of age and enrollment (e.g., bonafide school certificate or Birth Certificate) is
+                  required.</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="benefits-section scroll-animate animate-left">
+            <h2 class="section-heading"><b>Benefits of Participating</b></h2>
+            <ul class="benefits-list">
+              <li>
+                <i class="fas fa-bolt"></i>
+                <span><b>Global Recognition:</b> Showcase your innovative ideas and stand
+                  a chance to be recognized on a global platform.</span>
+              </li>
+              <li>
+                <i class="fas fa-bolt"></i>
+                <span><b>Skill Development:</b> Hone critical thinking, problem-solving,
+                  and collaboration skills.</span>
+              </li>
+              <li>
+                <i class="fas fa-bolt"></i>
+                <span><b>Networking:</b> Connect with like-minded individuals, mentors,
+                  and professionals who share a passion for sustainability.</span>
+              </li>
+              <li>
+                <i class="fas fa-bolt"></i>
+                <span><b>Awareness:</b> Gain insights into pressing global issues and
+                  contribute to meaningful solutions.</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="rules-section scroll-animate animate-left">
+            <h2 class="section-heading"><b>Rules for Participation</b></h2>
+            <ul class="rules-list">
+              <li>
+                <i class="fas fa-book"></i>
+                <span>Teams should consist of up to four members.</span>
+              </li>
+              <li>
+                <i class="fas fa-book"></i>
+                <span>Projects can be software, hardware, or integrated tech solutions.</span>
+              </li>
+              <li>
+                <i class="fas fa-book"></i>
+                <span>Ensure originality – plagiarism in any form is strictly prohibited.</span>
+              </li>
+              <li>
+                <i class="fas fa-book"></i>
+                <span>Submissions must be clear, well-structured, and aligned with SDGs.</span>
+              </li>
+              <li>
+                <i class="fas fa-book"></i>
+                <span>Teams will be locked upon abstract submission. No changes to team members or mentors will be
+                  permitted
+                  after the abstract submission deadline under any circumstances.</span>
+              </li>
+              <li>
+                <i class="fas fa-book"></i>
+                <span>Each team is solely responsible for internal coordination, cooperation, and teamwork throughout
+                  the
+                  duration of the competition. IEEE YESIST12 will not intervene in internal team matters.</span>
+              </li>
+              <li>
+                <i class="fas fa-book"></i>
+                <span>Teams that have actively participated and have enrolled themselves with team members and mentor
+                  details
+                  will be eligible for the certificates.</span>
+              </li>
+              <!-- <span>
           <a href="https://drive.google.com/file/d/1O_UOuKqG0PG7e70z1oqc9Z03QfDghZ6X/view?usp=sharing" download class="download-btn"><b>Download Rulebook</b></a>
         </span> -->
-      </ul>
-    </section>
+            </ul>
+          </section>
 
-     <!-- evaluation-section -->
-        <section class="evaluation-section scroll-animate animate-left ic-evaluation">
-          <h2 class="section-heading"><b>Evaluation Criteria</b></h2>
-          <ul class="evaluation-list">
-            <!-- <li>
+          <!-- evaluation-section -->
+          <section class="evaluation-section scroll-animate animate-left ic-evaluation">
+            <h2 class="section-heading"><b>Evaluation Criteria</b></h2>
+            <ul class="evaluation-list">
+              <!-- <li>
               <i class="fas fa-bullseye"></i>
               <span><b>Relevance to Theme:</b> The project aligns strongly with the given theme by directly addressing its core objectives. It demonstrates clear applicability and purpose within the thematic framework.</span>
             </li> -->
-            <li>
-              <i class="fas fa-rocket"></i>
-              <span><b>Novelty/Innovation:</b> The project introduces a creative and original approach to solving the identified problem. It goes beyond conventional solutions by integrating innovative ideas or methods.</span>
-            </li>
-             <li>
-              <i class="fas fa-lightbulb"></i>
-              <span><b>Understanding of Concept & Market Demand:</b> The problem is clearly identified with a well-defined scope and context. Underlying causes and real-world implications are thoroughly analyzed.</span>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span><b>Technical Implementation:</b> The proposed solution is supported through testing, prototyping, or logical validation. Results and observations justify the effectiveness of the innovation.</span>
-            </li>
-            <li>
-              <i class="fas fa-chalkboard-teacher"></i>
-              <span><b>Demonstration & Clarity of Presentation:</b> The project is presented in a clear, structured, and engaging manner. Ideas, visuals, and explanations effectively communicate the project’s intent and outcomes.</span>
-            </li>
-            <li>
-              <i class="fas fa-chart-line"></i>
-              <span><b>Scalability & Real-World Impact:</b> The solution has potential for implementation on a larger scale with minimal modifications. It is adaptable to different contexts and user requirements.</span>
-            </li>
-            
-            <!-- <li>
+              <li>
+                <i class="fas fa-rocket"></i>
+                <span><b>Novelty/Innovation:</b> The project introduces a creative and original approach to solving the
+                  identified problem. It goes beyond conventional solutions by integrating innovative ideas or
+                  methods.</span>
+              </li>
+              <li>
+                <i class="fas fa-lightbulb"></i>
+                <span><b>Understanding of Concept & Market Demand:</b> The problem is clearly identified with a
+                  well-defined
+                  scope and context. Underlying causes and real-world implications are thoroughly analyzed.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span><b>Technical Implementation:</b> The proposed solution is supported through testing, prototyping,
+                  or
+                  logical validation. Results and observations justify the effectiveness of the innovation.</span>
+              </li>
+              <li>
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span><b>Demonstration & Clarity of Presentation:</b> The project is presented in a clear, structured,
+                  and
+                  engaging manner. Ideas, visuals, and explanations effectively communicate the project’s intent and
+                  outcomes.</span>
+              </li>
+              <li>
+                <i class="fas fa-chart-line"></i>
+                <span><b>Scalability & Real-World Impact:</b> The solution has potential for implementation on a larger
+                  scale
+                  with minimal modifications. It is adaptable to different contexts and user requirements.</span>
+              </li>
+
+              <!-- <li>
               <i class="fas fa-leaf"></i>
               <span><b>Sustainability:</b> The project considers sustainability and minimizes negative environmental effects. It promotes eco-friendly practices or contributes positively to environmental well-being.</span>
             </li>
@@ -866,122 +944,122 @@
               <i class="fas fa-poll"></i>
               <span><b>Results:</b> The outcomes meet the stated objectives and validate the project’s purpose. Results are clearly documented and demonstrate measurable impact or improvement.</span>
             </li> -->
-          </ul>
-        </section>
+            </ul>
+          </section>
 
-    <!-- Track Structure Section -->
-     <div class="objectives-section">
-          <h2 class="section-heading scroll-animate animate-down delay-1">
-            Track Structure:
-          </h2>
-          <p class="section-text scroll-animate animate-up delay-2">
-            The Junior Einstein Track follows a structured process to identify and showcase
-            innovative projects, consisting of the following phases:
-          </p>
+          <!-- Track Structure Section -->
+          <div class="objectives-section">
+            <h2 class="section-heading scroll-animate animate-down delay-1">
+              Track Structure:
+            </h2>
+            <p class="section-text scroll-animate animate-up delay-2">
+              The Junior Einstein Track follows a structured process to identify and showcase
+              innovative projects, consisting of the following phases:
+            </p>
 
-          <div class="objectives-grid track-grid">
-            <div class="objective-box">
-              <div class="box-inner scroll-animate animate-left delay-3">
-                <h3>
-                  <i class="fa-solid fa-microphone objective-icon"></i> Phase 1:
-                  Call for Abstracts-1
-                </h3>
-                <p>
-                  This is the initial phase where the abstract submission is open to
-                  anyone interested in participating in the Junior Einstein Track. The call
-                  for abstracts is announced globally, and participants can submit
-                  their abstracts through the submission portal available on the
-                  website. Phase 1 serves as the first opportunity for participants
-                  to showcase their ideas and concepts.
-                </p>
+            <div class="objectives-grid track-grid">
+              <div class="objective-box">
+                <div class="box-inner scroll-animate animate-left delay-3">
+                  <h3>
+                    <i class="fa-solid fa-microphone objective-icon"></i> Phase 1:
+                    Call for Abstracts-1
+                  </h3>
+                  <p>
+                    This is the initial phase where the abstract submission is open to
+                    anyone interested in participating in the Junior Einstein Track. The call
+                    for abstracts is announced globally, and participants can submit
+                    their abstracts through the submission portal available on the
+                    website. Phase 1 serves as the first opportunity for participants
+                    to showcase their ideas and concepts.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div class="objective-box">
-              <div class="box-inner scroll-animate animate-right delay-4">
-                <h3>
-                  <i class="fa-solid fa-paper-plane objective-icon"></i> Phase 2:
-                  Call for Abstracts-2
-                </h3>
-                <p>
-                  Phase 2 is an extended call for abstract submissions. Teams that
-                  wish to extend their participation opportunity can do so by
-                  submitting their abstracts in this second phase. It also gives a
-                  chance for participants who did not advance to the next rounds in
-                  Phase 1 to reapply and take part in the competition.
-                </p>
+              <div class="objective-box">
+                <div class="box-inner scroll-animate animate-right delay-4">
+                  <h3>
+                    <i class="fa-solid fa-paper-plane objective-icon"></i> Phase 2:
+                    Call for Abstracts-2
+                  </h3>
+                  <p>
+                    Phase 2 is an extended call for abstract submissions. Teams that
+                    wish to extend their participation opportunity can do so by
+                    submitting their abstracts in this second phase. It also gives a
+                    chance for participants who did not advance to the next rounds in
+                    Phase 1 to reapply and take part in the competition.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div class="objective-box">
-              <div class="box-inner scroll-animate animate-left delay-5">
-                <h3>
-                  <i class="fa-solid fa-check objective-icon"></i> Phase 3:
-                  Selection & Registration
-                </h3>
-                <p>
-                  Potential and innovative projects that are submitted in the first
-                  and second call are selected for finals, and the teams are
-                  intimated via mail.
-                </p>
+              <div class="objective-box">
+                <div class="box-inner scroll-animate animate-left delay-5">
+                  <h3>
+                    <i class="fa-solid fa-check objective-icon"></i> Phase 3:
+                    Selection & Registration
+                  </h3>
+                  <p>
+                    Potential and innovative projects that are submitted in the first
+                    and second call are selected for finals, and the teams are
+                    intimated via mail.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div class="objective-box">
-              <div class="box-inner scroll-animate animate-right delay-6">
-                <h3>
-                  <i class="fa-solid fa-trophy objective-icon"></i> Phase 4: Finale
-                </h3>
-                <p>
-                  Selected teams will present their project works before the jury
-                  during the finals. Evaluation will be carried out based on the
-                  criteria.
-                </p>
+              <div class="objective-box">
+                <div class="box-inner scroll-animate animate-right delay-6">
+                  <h3>
+                    <i class="fa-solid fa-trophy objective-icon"></i> Phase 4: Finale
+                  </h3>
+                  <p>
+                    Selected teams will present their project works before the jury
+                    during the finals. Evaluation will be carried out based on the
+                    criteria.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-    <section class="gateways-section">
-      <div class="objectives-section">
-        <h2 class="section-heading scroll-animate animate-down delay-1">
-          Submission Mode
-        </h2>
-        <div class="gateway-container">
-          <div class="gateway-row">
-            <div class="gateway-icon-container">
-              <div class="gateway-icon">
-                <i class="fas fa-paper-plane" style="color:white; font-size: 40px;"></i>
+          <section class="gateways-section">
+            <div class="objectives-section">
+              <h2 class="section-heading scroll-animate animate-down delay-1">
+                Submission Mode
+              </h2>
+              <div class="gateway-container">
+                <div class="gateway-row">
+                  <div class="gateway-icon-container">
+                    <div class="gateway-icon">
+                      <i class="fas fa-paper-plane" style="color:white; font-size: 40px;"></i>
+                    </div>
+                    <div class="gateway-label">Pilot Entry</div>
+                  </div>
+                  <div class="gateway-content pilot-content">
+                    <ul>
+                      <li>Participants from regions with an active YESIST12 Pilot event.</li>
+                      <li>Projects are first presented and evaluated at a preliminary competition.</li>
+                      <li>Winners from the Pilot event get a direct entry into the Grand Finale.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="gateway-row">
+                  <div class="gateway-icon-container">
+                    <div class="gateway-icon">
+                      <i class="fas fa-laptop-code" style="color:white; font-size: 40px;"></i>
+                    </div>
+                    <div class="gateway-label">Direct Entry</div>
+                  </div>
+                  <div class="gateway-content direct-content">
+                    <ul>
+                      <li>For participants from countries or regions without a YESIST12 Pilot event.</li>
+                      <li>Submissions (Abstract, PPT, Video) are evaluated directly by the jury.</li>
+                      <li>Selected projects are notified via email and advance to the Grand Finale.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="gateway-label">Pilot Entry</div>
             </div>
-            <div class="gateway-content pilot-content">
-              <ul>
-                <li>Participants from regions with an active YESIST12 Pilot event.</li>
-                <li>Projects are first presented and evaluated at a preliminary competition.</li>
-                <li>Winners from the Pilot event get a direct entry into the Grand Finale.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="gateway-row">
-            <div class="gateway-icon-container">
-              <div class="gateway-icon">
-                 <i class="fas fa-laptop-code" style="color:white; font-size: 40px;"></i>
-              </div>
-              <div class="gateway-label">Direct Entry</div>
-            </div>
-            <div class="gateway-content direct-content">
-              <ul>
-                <li>For participants from countries or regions without a YESIST12 Pilot event.</li>
-                <li>Submissions (Abstract, PPT, Video) are evaluated directly by the jury.</li>
-                <li>Selected projects are notified via email and advance to the Grand Finale.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </section>
 
-    <!-- <div class="selection-method-section">
+          <!-- <div class="selection-method-section">
       <h2 class="section-heading scroll-animate animate-down delay-1">
         The Submission Could Be Related to the Following Topics
       </h2>
@@ -1024,469 +1102,449 @@
         </div>
       </div>
     </div> -->
-    <div class="selection-method-section">
-      <div class="objectives-section">
-        <h2 class="section-heading scroll-animate animate-down delay-1">
-          Selection Method
-        </h2>
-      </div>
-      <p class="section-text">
-        The selection process will be conducted in two main stages:
-      </p>
+          <div class="selection-method-section">
+            <div class="objectives-section">
+              <h2 class="section-heading scroll-animate animate-down delay-1">
+                Selection Method
+              </h2>
+            </div>
+            <p class="section-text">
+              The selection process will be conducted in two main stages:
+            </p>
 
-      <div class="selection-method-grid">
-        <div class="method-box scroll-animate animate-up delay-3">
-          <i class="fa-solid fa-file-lines method-icon"></i>
-          <h3>Stage 1 - Abstracts & Prelims</h3>
-          <p>
-            Abstract submission is open to all school students between ages 12
-            and 17 via Pilot entry or Direct Entry.
-            <br /><br />
-            <b>A)</b> Direct entry participants will be evaluated based on
-            abstract submission. Selected innovative projects will be informed
-            via email. <br /><br />
-            <b>B)</b> Pilot entry participants present projects in a preliminary
-            round conducted by pilots. Winners move to finals.
-          </p>
-        </div>
+            <div class="selection-method-grid">
+              <div class="method-box scroll-animate animate-up delay-3">
+                <i class="fa-solid fa-file-lines method-icon"></i>
+                <h3>Stage 1 - Abstracts & Prelims</h3>
+                <p>
+                  Abstract submission is open to all school students between ages 12
+                  and 17 via Pilot entry or Direct Entry.
+                  <br /><br />
+                  <b>A)</b> Direct entry participants will be evaluated based on
+                  abstract submission. Selected innovative projects will be informed
+                  via email. <br /><br />
+                  <b>B)</b> Pilot entry participants present projects in a preliminary
+                  round conducted by pilots. Winners move to finals.
+                </p>
+              </div>
 
-        <div class="method-box scroll-animate animate-up delay-4">
-          <i class="fa-solid fa-trophy method-icon"></i>
-          <h3>Stage 2 - Grand Finale</h3>
-          <p>
-            Selected teams will present their projects before the jury during
-            the finals.
-            <br /><br />
-            Evaluation will be carried out based on criteria such as novelty,
-            technical implementation, clarity of pitch, and expandability of the
-            idea.
-          </p>
-        </div>
-      </div>
-    </div>
-    <section class="methodology-section scroll-animate">
-      <h2 class="section-heading"><b>Methodology</b></h2>
-      <ul class="methodology-list">
-        <li>
-          <i class="fas fa-angle-double-right"></i>
-          <span
-            >The participants will be evaluated in either of the two modes:
-            Pilot entry mode or Direct entry mode.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-angle-double-right"></i>
-          <span
-            >Direct entry mode is for participants from countries without Pilots
-            and will be evaluated based on their submission of Abstract, PPT,
-            and Video demonstration of their project.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-angle-double-right"></i>
-          <span
-            >Pilot entry mode will select eligible teams for participation by
-            conducting a preliminary project competition at their venue.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-angle-double-right"></i>
-          <span
-            >Teams need to submit the problem statement and the detailed
-            solution as a PPT for evaluation by experts/Jury.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-angle-double-right"></i>
-          <span
-            >Selected teams will be notified and asked to submit an executive
-            summary and video demonstration of their project.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-angle-double-right"></i>
-          <span
-            >During the finale, teams will present their projects virtually,
-            evaluated by the jury.</span
-          >
-        </li>
-        <li>
-          <i class="fas fa-angle-double-right"></i>
-          <span
-            >Prizes will be awarded based on jury, track chair, and general
-            chair recommendations.</span
-          >
-        </li>
-      </ul>
-    </section>
-
-    
+              <div class="method-box scroll-animate animate-up delay-4">
+                <i class="fa-solid fa-trophy method-icon"></i>
+                <h3>Stage 2 - Grand Finale</h3>
+                <p>
+                  Selected teams will present their projects before the jury during
+                  the finals.
+                  <br /><br />
+                  Evaluation will be carried out based on criteria such as novelty,
+                  technical implementation, clarity of pitch, and expandability of the
+                  idea.
+                </p>
+              </div>
+            </div>
+          </div>
+          <section class="methodology-section scroll-animate">
+            <h2 class="section-heading"><b>Methodology</b></h2>
+            <ul class="methodology-list">
+              <li>
+                <i class="fas fa-angle-double-right"></i>
+                <span>The participants will be evaluated in either of the two modes:
+                  Pilot entry mode or Direct entry mode.</span>
+              </li>
+              <li>
+                <i class="fas fa-angle-double-right"></i>
+                <span>Direct entry mode is for participants from countries without Pilots
+                  and will be evaluated based on their submission of Abstract, PPT,
+                  and Video demonstration of their project.</span>
+              </li>
+              <li>
+                <i class="fas fa-angle-double-right"></i>
+                <span>Pilot entry mode will select eligible teams for participation by
+                  conducting a preliminary project competition at their venue.</span>
+              </li>
+              <li>
+                <i class="fas fa-angle-double-right"></i>
+                <span>Teams need to submit the problem statement and the detailed
+                  solution as a PPT for evaluation by experts/Jury.</span>
+              </li>
+              <li>
+                <i class="fas fa-angle-double-right"></i>
+                <span>Selected teams will be notified and asked to submit an executive
+                  summary and video demonstration of their project.</span>
+              </li>
+              <li>
+                <i class="fas fa-angle-double-right"></i>
+                <span>During the finale, teams will present their projects virtually,
+                  evaluated by the jury.</span>
+              </li>
+              <li>
+                <i class="fas fa-angle-double-right"></i>
+                <span>Prizes will be awarded based on jury, track chair, and general
+                  chair recommendations.</span>
+              </li>
+            </ul>
+          </section>
 
 
 
-  <section class="benefits-section scroll-animate animate-left"
-    style="background-color: var(--light-bg-color); padding: 40px 0;">
-    <div class="container">
-      <h2 class="section-heading"><b>Sample Project Topics</b></h2>
-      <ul class="benefits-list">
-        <li>
-          <i class="fas fa-bolt"></i>
-          <span>Smart water-saving irrigation system using sensors</span>
-        </li>
-        <li>
-          <i class="fas fa-bolt"></i>
-          <span>AI-based waste segregation and recycling solution</span>
-        </li>
-        <li>
-          <i class="fas fa-bolt"></i>
-          <span>Solar-powered smart lighting for rural or public areas</span>
-        </li>
-        <li>
-          <i class="fas fa-bolt"></i>
-          <span>Low-cost air quality monitoring system</span>
-        </li>
-        <li>
-          <i class="fas fa-bolt"></i>
-          <span>Smart classroom tools to support inclusive education</span>
-        </li>
-        <li>
-          <i class="fas fa-bolt"></i>
-          <span>Energy-efficient smart home automation for sustainability</span>
-        </li>
-         <li>
-          <i class="fas fa-bolt"></i>
-          <span>Mobile app to reduce food waste in households</span>
-        </li>
-         <li>
-          <i class="fas fa-bolt"></i>
-          <span>IoT-based flood or disaster early-warning system</span>
-        </li>
-         <li>
-          <i class="fas fa-bolt"></i>
-          <span>Smart traffic management system to reduce emissions</span>
-        </li>
-         <li>
-          <i class="fas fa-bolt"></i>
-          <span>Eco-friendly packaging solutions using smart materials</span>
-        </li>
-      </ul>
-      <!-- <p>
+
+
+          <section class="benefits-section scroll-animate animate-left"
+            style="background-color: var(--light-bg-color); padding: 40px 0;">
+            <div class="container">
+              <h2 class="section-heading"><b>Sample Project Topics</b></h2>
+              <ul class="benefits-list">
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>Smart water-saving irrigation system using sensors</span>
+                </li>
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>AI-based waste segregation and recycling solution</span>
+                </li>
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>Solar-powered smart lighting for rural or public areas</span>
+                </li>
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>Low-cost air quality monitoring system</span>
+                </li>
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>Smart classroom tools to support inclusive education</span>
+                </li>
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>Energy-efficient smart home automation for sustainability</span>
+                </li>
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>Mobile app to reduce food waste in households</span>
+                </li>
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>IoT-based flood or disaster early-warning system</span>
+                </li>
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>Smart traffic management system to reduce emissions</span>
+                </li>
+                <li>
+                  <i class="fas fa-bolt"></i>
+                  <span>Eco-friendly packaging solutions using smart materials</span>
+                </li>
+              </ul>
+              <!-- <p>
         <b>Note:</b>These are sample ideas only. Participants are encouraged to submit original and innovative project concepts.
       </p> -->
+            </div>
+          </section>
+
+          <section class="winners-section">
+            <div class="objectives-section">
+              <h2 class="section-heading scroll-animate animate-down delay-1">
+                Previous Year Achivers(2025)
+              </h2>
+            </div>
+            <div class="jury-carousel-container">
+              <button class="jury-nav-btn jury-prev">&#10094;</button>
+              <div class="jury-carousel-track">
+                <div class="jury-carousel-slide">
+                  <img src="../images/je1.jpeg" alt="Junior Einstein Achiever 1">
+                </div>
+                <div class="jury-carousel-slide">
+                  <img src="../images/je2.jpeg" alt="Junior Einstein Achiever 2">
+                </div>
+                <div class="jury-carousel-slide">
+                  <img src="../images/je3.jpeg" alt="Junior Einstein Achiever 3">
+                </div>
+                <div class="jury-carousel-slide">
+                  <img src="../images/je4.jpeg" alt="Junior Einstein Achiever 4">
+                </div>
+                <div class="jury-carousel-slide">
+                  <img src="../images/je5.jpeg" alt="Junior Einstein Achiever 5">
+                </div>
+                <div class="jury-carousel-slide">
+                  <img src="../images/je6.jpeg" alt="Junior Einstein Achiever 6">
+                </div>
+              </div>
+              <button class="jury-nav-btn jury-next">&#10095;</button>
+              <div class="jury-dots">
+                <span class="jury-dot active"></span>
+                <span class="jury-dot"></span>
+                <span class="jury-dot"></span>
+                <span class="jury-dot"></span>
+                <span class="jury-dot"></span>
+              </div>    </div>
+  </section>
+
+  <section class="card-gallery-section">
+    <div class="objectives-section">
+      <h2 class="section-heading scroll-animate animate-down delay-1">
+        Gallery
+      </h2>
+    </div>
+    <div class="card-gallery">
+      <div class="card-gallery-track">
+        <div class="card-gallery-item" data-category="moments">
+          <img src="../Gallery/JE1.JPG" alt="Junior Einstein Image">
+        </div>
+        <div class="card-gallery-item" data-category="moments">
+          <img src="../Gallery/JE2.JPG" alt="Junior Einstein Image">
+        </div>
+        <div class="card-gallery-item" data-category="moments">
+          <img src="../Gallery/JE3.JPG" alt="Junior Einstein Image">
+        </div>
+        <div class="card-gallery-item" data-category="moments">
+          <img src="../Gallery/JE4.jpg" alt="Junior Einstein Image">
+        </div>
+        <div class="card-gallery-item" data-category="moments">
+          <img src="../Gallery/JE5.jpg" alt="Junior Einstein Image">
+        </div>
+        <div class="card-gallery-item" data-category="moments">
+          <img src="../Gallery/JE6.jpg" alt="Junior Einstein Image">
+        </div>
+        <div class="card-gallery-item" data-category="moments">
+          <img src="../Gallery/JE7.jpg" alt="Junior Einstein Image">
+        </div>
+      </div>
+      <div class="gallery-bottom-nav">
+        <button class="gallery-nav prev"><i class="fas fa-arrow-left"></i></button>
+        <button class="gallery-nav next"><i class="fas fa-arrow-right"></i></button>
+      </div>
     </div>
   </section>
-    
-    <section class="winners-section">
-      <div class="objectives-section">
-        <h2 class="section-heading scroll-animate animate-down delay-1">
-          Previous Year Achivers(2025)
-        </h2>
-      </div>
-      <div class="jury-carousel-container">
-        <button class="jury-nav-btn jury-prev">&#10094;</button>
-        <div class="jury-carousel-track">
-          <div class="jury-carousel-slide">
-            <img src="../images/je1.jpeg" alt="Junior Einstein Achiever 1">
-          </div>
-          <div class="jury-carousel-slide">
-            <img src="../images/je2.jpeg" alt="Junior Einstein Achiever 2">
-          </div>
-          <div class="jury-carousel-slide">
-            <img src="../images/je3.jpeg" alt="Junior Einstein Achiever 3">
-          </div>
-          <div class="jury-carousel-slide">
-            <img src="../images/je4.jpeg" alt="Junior Einstein Achiever 4">
-          </div>
-          <div class="jury-carousel-slide">
-            <img src="../images/je5.jpeg" alt="Junior Einstein Achiever 5">
-          </div>
-          <div class="jury-carousel-slide">
-            <img src="../images/je6.jpeg" alt="Junior Einstein Achiever 6">
-          </div>
-        </div>
-        <button class="jury-nav-btn jury-next">&#10095;</button>
-        <div class="jury-dots">
-          <span class="jury-dot active"></span>
-          <span class="jury-dot"></span>
-          <span class="jury-dot"></span>
-          <span class="jury-dot"></span>
-          <span class="jury-dot"></span>
-        </div>
-      </div>
-    </section>
-
-    <section class="card-gallery-section">
-      <div class="objectives-section">
-        <h2 class="section-heading scroll-animate animate-down delay-1">
-          Gallery
-        </h2>
-      </div>
-      <div class="card-gallery">
-        <div class="card-gallery-track">
-          <div class="card-gallery-item" data-category="moments">
-            <img src="../Gallery/JE1.JPG" alt="Junior Einstein Image">
-          </div>
-          <div class="card-gallery-item" data-category="moments">
-            <img src="../Gallery/JE2.JPG" alt="Junior Einstein Image">
-          </div>
-          <div class="card-gallery-item" data-category="moments">
-            <img src="../Gallery/JE3.JPG" alt="Junior Einstein Image">
-          </div>
-          <div class="card-gallery-item" data-category="moments">
-            <img src="../Gallery/JE4.jpg" alt="Junior Einstein Image">
-          </div>
-          <div class="card-gallery-item" data-category="moments">
-            <img src="../Gallery/JE5.jpg" alt="Junior Einstein Image">
-          </div>
-          <div class="card-gallery-item" data-category="moments">
-            <img src="../Gallery/JE6.jpg" alt="Junior Einstein Image">
-          </div>
-          <div class="card-gallery-item" data-category="moments">
-            <img src="../Gallery/JE7.jpg" alt="Junior Einstein Image">
-          </div>
-        </div>
-        <div class="gallery-bottom-nav">
-          <button class="gallery-nav prev"><i class="fas fa-arrow-left"></i></button>
-          <button class="gallery-nav next"><i class="fas fa-arrow-right"></i></button>
-        </div>
-      </div>
-    </section>
-    <section class="team-details-section contacts-section scroll-animate">
-      <div class="objectives-section">
-        <h2 class="section-heading scroll-animate animate-down delay-1">
-          For any Queries, please contact
-        </h2>
-      </div>
-      <ul class="team-details-list">
-        <li>
-          <i class="fas fa-user"></i>
-          <span>
-            Chair<br />
-            Navaneethakrishnan R<br />
-            Chair | Junior Einstein Track<br />
-            Email ID:navaneethakrishnan@ieee.org<br />
-            +91 99441 47137
-          </span>
-        </li>
-        <li>
-          <i class="fas fa-user"></i>
-          <span>
-            Co-Chair<br />
-            Renu Guntur <br />
-            Co-Chair | Junior Einstein Track<br />
-            Email ID:grenu@ieee.org<br />
-            +91 6281 927 339
-          </span>
-        </li>
-      </ul>
-    </section>
-
-
-
-    
-
+  <section class="team-details-section contacts-section scroll-animate">
+    <div class="objectives-section">
+      <h2 class="section-heading scroll-animate animate-down delay-1">
+        For any Queries, please contact
+      </h2>
+    </div>
+    <ul class="team-details-list">
+      <li>
+        <i class="fas fa-user"></i>
+        <span>
+          Chair<br />
+          Navaneethakrishnan R<br />
+          Chair | Junior Einstein Track<br />
+          Email ID:navaneethakrishnan@ieee.org<br />
+          +91 99441 47137
+        </span>
+      </li>
+      <li>
+        <i class="fas fa-user"></i>
+        <span>
+          Co-Chair<br />
+          Renu Guntur<br />
+          Co-Chair | Junior Einstein Track<br />
+          Email ID: grenu@ieee.org<br />
+          +91 6281 927 339
+        </span>
+      </li>
+    </ul>
+  </section>
   <section class="faqs-section">
-    <div class="container">
-      <h2 class="section-heading">Frequently Asked Questions</h2>
+            <div class="container">
+              <h2 class="section-heading">Frequently Asked Questions</h2>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>1. Who can participate?</span>
-          <i class="fas fa-chevron-down faq-toggle-icon"></i>
-        </div>
-        <div class="faq-answer">
-          School students aged 12–17 worldwide.
-        </div>
-      </div>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>1. Who can participate?</span>
+                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                  School students aged 12–17 worldwide.
+                </div>
+              </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>2. Can I participate individually?</span>
-          <i class="fas fa-chevron-down faq-toggle-icon"></i>
-        </div>
-        <div class="faq-answer">
-          Yes, though teams of up to four are encouraged.
-        </div>
-      </div>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>2. Can I participate individually?</span>
+                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                  Yes, though teams of up to four are encouraged.
+                </div>
+              </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>3. Are hardware projects allowed?</span>
-          <i class="fas fa-chevron-down faq-toggle-icon"></i>
-        </div>
-        <div class="faq-answer">
-          Yes, both software solutions and hardware-integrated projects are accepted.
-        </div>
-      </div>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>3. Are hardware projects allowed?</span>
+                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                  Yes, both software solutions and hardware-integrated projects are accepted.
+                </div>
+              </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>4. What is the selection process?</span>
-          <i class="fas fa-chevron-down faq-toggle-icon"></i>
-        </div>
-        <div class="faq-answer">
-          Through preliminary evaluation (pilot or direct) followed by the grand finale.
-        </div>
-      </div>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>4. What is the selection process?</span>
+                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                  Through preliminary evaluation (pilot or direct) followed by the grand finale.
+                </div>
+              </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>5. Can I reuse ideas from previous competitions?</span>
-          <i class="fas fa-chevron-down faq-toggle-icon"></i>
-        </div>
-        <div class="faq-answer">
-          Projects should be original and specifically tailored for the current theme.
-        </div>
-      </div>
-    </div>
-  </section>
+              <div class="faq-item">
+                <div class="faq-question">
+                  <span>5. Can I reuse ideas from previous competitions?</span>
+                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                  Projects should be original and specifically tailored for the current theme.
+                </div>
+              </div>
+            </div>
+          </section>
 
-    <div id="footer-container"></div>
-  <script src="../components/header.js"></script>
-  <script src="../components/footer.js"></script>
+          <div id="footer-container"></div>
+          <script src="../components/header.js"></script>
+          <script src="../components/footer.js"></script>
 
-  <script src="../script.js"></script>
-  <script src="../jury-carousel.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var section = document.querySelector('.card-gallery-section');
-      if (!section) return;
-      var track = section.querySelector('.card-gallery-track');
-      var container = section.querySelector('.card-gallery');
-      var prevBtn = section.querySelector('.gallery-nav.prev');
-      var nextBtn = section.querySelector('.gallery-nav.next');
-      var pills = Array.from(section.querySelectorAll('.filter-pill'));
-      var currentIndex = 0;
-      var startX = 0;
-      var endX = 0;
+          <script src="../script.js"></script>
+          <script src="../jury-carousel.js"></script>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var section = document.querySelector('.card-gallery-section');
+              if (!section) return;
+              var track = section.querySelector('.card-gallery-track');
+              var container = section.querySelector('.card-gallery');
+              var prevBtn = section.querySelector('.gallery-nav.prev');
+              var nextBtn = section.querySelector('.gallery-nav.next');
+              var pills = Array.from(section.querySelectorAll('.filter-pill'));
+              var currentIndex = 0;
+              var startX = 0;
+              var endX = 0;
 
-      function defaultIndex() {
-        var items = visibleItems();
-        return Math.max(0, Math.floor(items.length / 2));
-      }
+              function defaultIndex() {
+                var items = visibleItems();
+                return Math.max(0, Math.floor(items.length / 2));
+              }
 
-      function visibleItems() {
-        return Array.from(track.querySelectorAll('.card-gallery-item:not(.hidden)'));
-      }
+              function visibleItems() {
+                return Array.from(track.querySelectorAll('.card-gallery-item:not(.hidden)'));
+              }
 
-      function updateActive() {
-        var items = visibleItems();
-        items.forEach(function (el) { el.classList.remove('active','near-left','near-right'); el.style.zIndex=''; });
-        if (items.length === 0) return;
-        if (currentIndex < 0) currentIndex = 0;
-        if (currentIndex > items.length - 1) currentIndex = items.length - 1;
-        var active = items[currentIndex];
-        active.classList.add('active');
-        active.style.zIndex = '3';
-        var leftIdx = currentIndex - 1;
-        var rightIdx = currentIndex + 1;
-        if (leftIdx >= 0) items[leftIdx].classList.add('near-left');
-        if (rightIdx < items.length) items[rightIdx].classList.add('near-right');
-      }
+              function updateActive() {
+                var items = visibleItems();
+                items.forEach(function (el) { el.classList.remove('active', 'near-left', 'near-right'); el.style.zIndex = ''; });
+                if (items.length === 0) return;
+                if (currentIndex < 0) currentIndex = 0;
+                if (currentIndex > items.length - 1) currentIndex = items.length - 1;
+                var active = items[currentIndex];
+                active.classList.add('active');
+                active.style.zIndex = '3';
+                var leftIdx = currentIndex - 1;
+                var rightIdx = currentIndex + 1;
+                if (leftIdx >= 0) items[leftIdx].classList.add('near-left');
+                if (rightIdx < items.length) items[rightIdx].classList.add('near-right');
+              }
 
-      function centerActive() {
-        var items = visibleItems();
-        if (items.length === 0) return;
-        var active = items[currentIndex];
-        var activeCenter = active.offsetLeft + active.offsetWidth / 2;
-        var target = container.clientWidth / 2;
-        var translateX = -(activeCenter - target);
-        track.style.transform = 'translateX(' + translateX + 'px)';
-      }
+              function centerActive() {
+                var items = visibleItems();
+                if (items.length === 0) return;
+                var active = items[currentIndex];
+                var activeCenter = active.offsetLeft + active.offsetWidth / 2;
+                var target = container.clientWidth / 2;
+                var translateX = -(activeCenter - target);
+                track.style.transform = 'translateX(' + translateX + 'px)';
+              }
 
-      function update() {
-        updateActive();
-        centerActive();
-      }
+              function update() {
+                updateActive();
+                centerActive();
+              }
 
-      function moveNext() {
-        currentIndex += 1;
-        update();
-      }
+              function moveNext() {
+                currentIndex += 1;
+                update();
+              }
 
-      function movePrev() {
-        currentIndex -= 1;
-        update();
-      }
+              function movePrev() {
+                currentIndex -= 1;
+                update();
+              }
 
-      pills.forEach(function (pill) {
-        pill.addEventListener('click', function () {
-          pills.forEach(function (p) { p.classList.remove('active'); });
-          pill.classList.add('active');
-          var filter = pill.getAttribute('data-filter');
-          var all = Array.from(track.querySelectorAll('.card-gallery-item'));
-          all.forEach(function (el) {
-            var cat = el.getAttribute('data-category');
-            var show = filter === 'all' ? true : cat === filter;
-            el.classList.toggle('hidden', !show);
-          });
-          currentIndex = defaultIndex();
-          update();
-        });
-      });
+              pills.forEach(function (pill) {
+                pill.addEventListener('click', function () {
+                  pills.forEach(function (p) { p.classList.remove('active'); });
+                  pill.classList.add('active');
+                  var filter = pill.getAttribute('data-filter');
+                  var all = Array.from(track.querySelectorAll('.card-gallery-item'));
+                  all.forEach(function (el) {
+                    var cat = el.getAttribute('data-category');
+                    var show = filter === 'all' ? true : cat === filter;
+                    el.classList.toggle('hidden', !show);
+                  });
+                  currentIndex = defaultIndex();
+                  update();
+                });
+              });
 
-      if (nextBtn) nextBtn.addEventListener('click', function () { moveNext(); });
-      if (prevBtn) prevBtn.addEventListener('click', function () { movePrev(); });
+              if (nextBtn) nextBtn.addEventListener('click', function () { moveNext(); });
+              if (prevBtn) prevBtn.addEventListener('click', function () { movePrev(); });
 
-      function applyParallax(e) {
-        if (window.innerWidth < 768) return;
-        var items = visibleItems();
-        if (!items.length) return;
-        var active = items[currentIndex];
-        var rect = active.getBoundingClientRect();
-        var cx = e.clientX - rect.left;
-        var cy = e.clientY - rect.top;
-        var nx = (cx / rect.width) * 2 - 1;
-        var ny = (cy / rect.height) * 2 - 1;
-        var rx = -ny * 6;
-        var ry = nx * 6;
-        active.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1)';
-        var img = active.querySelector('img');
-        if (img) {
-          img.style.transform = 'translateX(' + (ry * 1.2) + 'px) translateY(' + (rx * -1.2) + 'px) scale(1.02)';
-        }
-      }
-      function resetParallax() {
-        var items = visibleItems();
-        if (!items.length) return;
-        var active = items[currentIndex];
-        active.style.transform = 'scale(1)';
-        var img = active.querySelector('img');
-        if (img) {
-          img.style.transform = 'none';
-        }
-      }
-      container.addEventListener('mousemove', applyParallax);
-      container.addEventListener('mouseleave', resetParallax);
+              function applyParallax(e) {
+                if (window.innerWidth < 768) return;
+                var items = visibleItems();
+                if (!items.length) return;
+                var active = items[currentIndex];
+                var rect = active.getBoundingClientRect();
+                var cx = e.clientX - rect.left;
+                var cy = e.clientY - rect.top;
+                var nx = (cx / rect.width) * 2 - 1;
+                var ny = (cy / rect.height) * 2 - 1;
+                var rx = -ny * 6;
+                var ry = nx * 6;
+                active.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1)';
+                var img = active.querySelector('img');
+                if (img) {
+                  img.style.transform = 'translateX(' + (ry * 1.2) + 'px) translateY(' + (rx * -1.2) + 'px) scale(1.02)';
+                }
+              }
+              function resetParallax() {
+                var items = visibleItems();
+                if (!items.length) return;
+                var active = items[currentIndex];
+                active.style.transform = 'scale(1)';
+                var img = active.querySelector('img');
+                if (img) {
+                  img.style.transform = 'none';
+                }
+              }
+              container.addEventListener('mousemove', applyParallax);
+              container.addEventListener('mouseleave', resetParallax);
 
-      container.addEventListener('touchstart', function (e) {
-        if (!e.touches || e.touches.length === 0) return;
-        startX = e.touches[0].clientX;
-      }, { passive: true });
+              container.addEventListener('touchstart', function (e) {
+                if (!e.touches || e.touches.length === 0) return;
+                startX = e.touches[0].clientX;
+              }, { passive: true });
 
-      container.addEventListener('touchend', function (e) {
-        endX = e.changedTouches[0].clientX;
-        var delta = endX - startX;
-        if (Math.abs(delta) > 40) {
-          if (delta < 0) moveNext();
-          else movePrev();
-        }
-      });
+              container.addEventListener('touchend', function (e) {
+                endX = e.changedTouches[0].clientX;
+                var delta = endX - startX;
+                if (Math.abs(delta) > 40) {
+                  if (delta < 0) moveNext();
+                  else movePrev();
+                }
+              });
 
-      window.addEventListener('resize', function () {
-        update();
-      });
+              window.addEventListener('resize', function () {
+                update();
+              });
 
-      currentIndex = defaultIndex();
-      var initialItems = visibleItems();
-      initialItems.forEach(function (el, i) {
-        el.style.animationDelay = (i * 80) + 'ms';
-        el.classList.add('animate-in');
-      });
-      update();
-      window.addEventListener('load', function () { update(); });
-    });
-  </script>
+              currentIndex = defaultIndex();
+              var initialItems = visibleItems();
+              initialItems.forEach(function (el, i) {
+                el.style.animationDelay = (i * 80) + 'ms';
+                el.classList.add('animate-in');
+              });
+              update();
+              window.addEventListener('load', function () { update(); });
+            });
+          </script>
 </body>
 
 </html>
