@@ -594,9 +594,9 @@
     <div class="container">
       <div class="abstract-card">
         <h2 class="section-title">Submit your Abstract now</h2>
-        <div class="status-pill closed">Yet to be opened</div>
-        <h4 class="deadline">Call for Abstract Starts: 17th January 2026</h4>
-        <div class="flip-countdown" data-countdown="2026-01-17T23:59:00">
+        <div class="status-pill open">Open</div>
+        <h4 class="deadline">Call for Abstract-1 Ends: 31st January 2026</h4>
+        <div class="flip-countdown" data-countdown="2026-01-31T23:59:00">
           <div class="flip-unit" data-unit="days">
             <div class="flip-card"><span class="flip-number">00</span></div>
             <span class="flip-label">Days</span>
@@ -615,7 +615,7 @@
           </div>
         </div>
         <div class="abstract-actions">
-          <a class="btn download-btn" href="../tracks/junior_einstein.html" target="_blank">
+          <a class="btn download-btn" href="http://portal.ieeeyesist12.org/files/Abstract-template-2026.pptx" target="_blank">
             <i class="fas fa-download"></i> DOWNLOAD ABSTRACT TEMPLATE
           </a>
           <a class="btn submit-btn" href="https://portal.ieeeyesist12.org/link/je-direct" target="_blank">
@@ -704,18 +704,6 @@
                   setVal(secsEl, pad2(secs));
 
                   if (statusEl) {
-                    statusEl.textContent = 'Yet to be opened';
-                    statusEl.classList.remove('open');
-                    statusEl.classList.add('closed');
-                  }
-
-                  if (submitBtn) {
-                    submitBtn.setAttribute('aria-disabled', 'true');
-                    submitBtn.style.opacity = '0.6';
-                    submitBtn.style.pointerEvents = 'none';
-                  }
-                } else {
-                  if (statusEl) {
                     statusEl.textContent = 'Open';
                     statusEl.classList.add('open');
                     statusEl.classList.remove('closed');
@@ -725,6 +713,23 @@
                     submitBtn.setAttribute('aria-disabled', 'false');
                     submitBtn.style.opacity = '1';
                     submitBtn.style.pointerEvents = 'auto';
+                  }
+                } else {
+                  if (statusEl) {
+                    statusEl.textContent = 'Closed';
+                    statusEl.classList.remove('open');
+                    statusEl.classList.add('closed');
+                  }
+
+                  setVal(daysEl, '00');
+                  setVal(hoursEl, '00');
+                  setVal(minsEl, '00');
+                  setVal(secsEl, '00');
+
+                  if (submitBtn) {
+                    submitBtn.setAttribute('aria-disabled', 'true');
+                    submitBtn.style.opacity = '0.6';
+                    submitBtn.style.pointerEvents = 'none';
                   }
 
                   clearInterval(timer);
@@ -736,15 +741,43 @@
                 var now = new Date();
                 var diff = deadline - now;
 
-                var days = Math.floor(diff / 86400000);
-                var hours = Math.floor((diff % 86400000) / 3600000);
-                var mins = Math.floor((diff % 3600000) / 60000);
-                var secs = Math.floor((diff % 60000) / 1000);
+                if (diff > 0) {
+                  var days = Math.floor(diff / 86400000);
+                  var hours = Math.floor((diff % 86400000) / 3600000);
+                  var mins = Math.floor((diff % 3600000) / 60000);
+                  var secs = Math.floor((diff % 60000) / 1000);
 
-                setInitial(daysEl, days > 99 ? String(days) : pad2(days));
-                setInitial(hoursEl, pad2(hours));
-                setInitial(minsEl, pad2(mins));
-                setInitial(secsEl, pad2(secs));
+                  setInitial(daysEl, days > 99 ? String(days) : pad2(days));
+                  setInitial(hoursEl, pad2(hours));
+                  setInitial(minsEl, pad2(mins));
+                  setInitial(secsEl, pad2(secs));
+
+                  if (statusEl) {
+                    statusEl.textContent = 'Open';
+                    statusEl.classList.add('open');
+                    statusEl.classList.remove('closed');
+                  }
+                  if (submitBtn) {
+                    submitBtn.setAttribute('aria-disabled', 'false');
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.pointerEvents = 'auto';
+                  }
+                } else {
+                  setInitial(daysEl, '00');
+                  setInitial(hoursEl, '00');
+                  setInitial(minsEl, '00');
+                  setInitial(secsEl, '00');
+                  if (statusEl) {
+                    statusEl.textContent = 'Closed';
+                    statusEl.classList.remove('open');
+                    statusEl.classList.add('closed');
+                  }
+                  if (submitBtn) {
+                    submitBtn.setAttribute('aria-disabled', 'true');
+                    submitBtn.style.opacity = '0.6';
+                    submitBtn.style.pointerEvents = 'none';
+                  }
+                }
               })();
 
               /* ---------------- Start Timer ---------------- */
