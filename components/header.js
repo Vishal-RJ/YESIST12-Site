@@ -40,7 +40,12 @@ const headerHTML = `
                         <li><a href="${basePath}sponsors_2024.html">Sponsors 2024</a></li>
                     </ul>
                 </li>
-                <li><a href="${basePath}index.html#juries-speakers">JURY</a></li>
+                <li class="has-dropdown">
+                    <a href="#">JURY</a>
+                    <ul class="dropdown">
+                        <li><a href="${basePath}become_jury.html">Become a Jury</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">SUBMIT ABSTRACT</a></li>
             </ul>
         </nav>
