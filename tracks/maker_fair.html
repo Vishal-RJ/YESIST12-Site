@@ -755,6 +755,49 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
       .contacts-section .team-details-list li {
         margin-bottom: 0 !important;
       }
+      @media (max-width: 768px) {
+        .contacts-section .team-details-list {
+          grid-template-columns: 1fr !important;
+          gap: 16px !important;
+        }
+        .contacts-section .section-heading {
+          text-align: center !important;
+        }
+        .contacts-section .team-details-list li {
+          padding: 16px !important;
+          border: 1px solid #ddd !important;
+          background: #f9f9f9 !important;
+          border-radius: 10px !important;
+          cursor: default !important;
+          transition: none !important;
+        }
+        .contacts-section .team-details-list li i {
+          font-size: 1.4rem !important;
+          color: #2bb884 !important;
+        }
+        .contacts-section .team-details-list li span {
+          font-size: 0.95rem !important;
+          line-height: 1.5 !important;
+        }
+        .contacts-section .team-details-list li:hover,
+        .contacts-section .team-details-list li:active,
+        .contacts-section .team-details-list li:focus {
+          transform: none !important;
+          background: #f9f9f9 !important;
+          color: #0a4360 !important;
+          box-shadow: none !important;
+        }
+        .contacts-section .team-details-list li:hover i,
+        .contacts-section .team-details-list li:active i,
+        .contacts-section .team-details-list li:focus i {
+          color: #2bb884 !important;
+        }
+        .contacts-section .team-details-list li:hover span,
+        .contacts-section .team-details-list li:active span,
+        .contacts-section .team-details-list li:focus span {
+          color: #0a4360 !important;
+        }
+      }
     </style>
 
     <!-- Contact Section -->
@@ -787,6 +830,27 @@ MakerFair Track is designed to inspire pre-final, final-year, and graduate stude
         </li> 
       </ul>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var list = document.querySelector('.contacts-section .team-details-list');
+        if (!list) return;
+        var items = list.querySelectorAll('li');
+        items.forEach(function (li) {
+          li.style.display = 'flex';
+          li.style.visibility = 'visible';
+          li.style.opacity = '1';
+          li.style.maxHeight = 'none';
+          li.style.overflow = 'visible';
+        });
+        list.style.display = 'grid';
+        list.style.gap = '16px';
+        function setCols() {
+          list.style.gridTemplateColumns = (window.innerWidth <= 768 ? '1fr' : 'repeat(2, 1fr)');
+        }
+        setCols();
+        window.addEventListener('resize', setCols);
+      });
+    </script>
     <!-- FAQs Section -->
     <section class="faqs-section">
       <div class="container">

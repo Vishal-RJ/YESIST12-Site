@@ -1361,6 +1361,51 @@
         </div>
       </div>
     </section>
+     <style>
+          .contacts-section .team-details-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+          .contacts-section .team-details-list li {
+            margin-bottom: 0;
+          }
+          @media (max-width: 768px) {
+            .contacts-section .team-details-list {
+              grid-template-columns: 1fr;
+              gap: 16px;
+            }
+            .contacts-section .section-heading {
+              text-align: center !important;
+            }
+            .contacts-section .team-details-list li {
+              padding: 16px !important;
+              border: 1px solid #ddd !important;
+              background: #f9f9f9 !important;
+              border-radius: 10px !important;
+              cursor: default !important;
+              transition: none !important;
+            }
+            .contacts-section .team-details-list li:hover,
+            .contacts-section .team-details-list li:active,
+            .contacts-section .team-details-list li:focus {
+              transform: none !important;
+              background: #f9f9f9 !important;
+              color: #0a4360 !important;
+              box-shadow: none !important;
+            }
+            .contacts-section .team-details-list li:hover i,
+            .contacts-section .team-details-list li:active i,
+            .contacts-section .team-details-list li:focus i {
+              color: #2bb884 !important;
+            }
+            .contacts-section .team-details-list li:hover span,
+            .contacts-section .team-details-list li:active span,
+            .contacts-section .team-details-list li:focus span {
+              color: #0a4360 !important;
+            }
+          }
+        </style>
 
     <section class="team-details-section contacts-section scroll-animate">
       <div class="objectives-section">
