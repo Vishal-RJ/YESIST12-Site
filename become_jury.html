@@ -39,7 +39,7 @@
       <div class="content">
         <h2 class="title">About Jury</h2>
         <p class="subtitle">
-         At YESIST12, our esteemed jury panel serves as the backbone of the evaluation process, ensuring that groundbreaking ideas receive the recognition they deserve. Comprising distinguished professionals from academia, industry, and research, our jury brings a wealth of expertise and diverse perspectives to the table. Their role extends beyond evaluation—they mentor, guide, and inspire participants by providing constructive feedback and insights that help refine and elevate innovative solutions. Through a rigorous and transparent assessment process, the jury ensures that every project is evaluated based on its originality, feasibility, impact, and alignment with real-world challenges. Their commitment to fostering innovation and excellence makes IEEE YESIST12 a platform where aspiring innovators can thrive and contribute meaningfully to technological advancements.
+         At IEEE YESIST12, the jury is not just an evaluation panel—it is a catalyst for innovation. Handpicked from leaders in academia, industry, and research, our jury members bring real-world insight, technical depth, and visionary thinking into the heart of the competition. They don’t merely score ideas; they challenge assumptions, unlock potential, and shape raw concepts into impactful solutions. By engaging closely with participants, the jury offers guidance and perspectives that bridge the gap between imagination and implementation. Every project undergoes a fair, structured, and transparent review, grounded in innovation, feasibility, impact, and relevance to global challenges. This collaborative and forward-looking approach transforms IEEE YESIST12 into a launchpad where bold ideas evolve into meaningful technological contributions.
 
         </p>
       </div>
@@ -107,34 +107,75 @@
         <div class="benefit-card scroll-animate animate-up delay-2">
           <i class="fas fa-city"></i>
           <div>
-            <h3>Contribution to Innovation</h3>
-            <p>Support young innovators and shape future technologies by evaluating and guiding promising ideas.</p>
+            <h3>Drive Meaningful Innovation</h3>
+            <p>Play a direct role in shaping next-generation technologies by evaluating breakthrough ideas and mentoring young innovators with high potential.</p>
           </div>
         </div>
         <div class="benefit-card scroll-animate animate-up delay-3">
           <i class="fas fa-award"></i>
           <div>
-            <h3>Recognition</h3>
-            <p>Gain acknowledgment as a subject matter expert, through certificates, mentions, or event publications.</p>
+            <h3>Professional Recognition</h3>
+            <p>Be acknowledged as a domain expert through official certificates, digital recognition, and visibility across IEEE YESIST12 platforms and publications.</p>
           </div>
         </div>
         <div class="benefit-card scroll-animate animate-up delay-4">
           <i class="fas fa-bullseye"></i>
           <div>
-            <h3>In trend</h3>
-            <p>Stay updated with emerging trends, innovative ideas, and creative solutions across diverse fields.</p>
+            <h3>Stay Ahead of the Curve</h3>
+            <p>Gain early exposure to emerging trends, disruptive concepts, and creative solutions across multiple technological and social domains.</p>
           </div>
         </div>
         <div class="benefit-card scroll-animate animate-up delay-5">
           <i class="fas fa-users"></i>
           <div>
-            <h3>Networking Opportunities</h3>
-            <p>Connect with experts, innovators, and industry leaders, broadening your professional network.</p>
+            <h3>Expand Your Network</h3>
+            <p>Engage with a global community of experts, researchers, entrepreneurs, and industry leaders, fostering collaborations beyond the event.</p>
           </div>
         </div>
       </div>
     </div>
     </section>
+
+    <style>
+      .roles-section { padding: 40px 0; background: #ffffff; }
+      .roles-section .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+      @media (min-width: 992px) {
+        .roles-section .container {
+          max-width: 100% !important;
+          margin: 0 !important;
+          padding-left: 90px !important;
+          padding-right: 50px !important;
+        }
+      }
+      .roles-section .title {
+        text-align: left;
+        color: var(--primary-color);
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0 0 20px 0;
+      }
+      .roles-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: black;
+        font-weight: 425;
+      }
+      @media (max-width: 768px) {
+        .roles-section .title { text-align: center !important; }
+        .roles-section .container { padding: 0 16px !important; margin: 0 auto !important; }
+      }
+    </style>
+    <section class="roles-section">
+      <div class="container">
+        <h2 class="title scroll-animate animate-up delay-1">Roles & Responsibilities</h2>
+        <p class="scroll-animate animate-up delay-2">
+          Jury members are responsible for evaluating assigned projects in a fair, transparent, and structured manner, based on predefined criteria specific to each competition track. 
+          Evaluations should reflect innovation, feasibility, impact, and presentation quality, while also providing constructive feedback to participants.
+        </p>
+      </div>
+    </section>
+
     <style>
       .evaluation-section { padding: 40px 0; background: #ffffff; }
       .evaluation-section .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -191,11 +232,14 @@
         box-shadow: 0 12px 24px rgba(0,0,0,0.15);
         background: linear-gradient(135deg, #0a4360 0%, #2bb884 100%);
         border-color: #0a4360;
-        color: #ffffff;
       }
       .eval-card:hover h3,
-      .eval-card:hover li {
-        color: #ffffff;
+      .eval-card:hover li,
+      .eval-card:hover p,
+      .eval-card:hover span,
+      .eval-card:hover strong,
+      .eval-card:hover * {
+        color: #ffffff !important;
       }
       @media (max-width: 768px) {
         .eval-grid { grid-template-columns: 1fr; }
@@ -205,68 +249,71 @@
     </style>
     <section class="evaluation-section">
       <div class="container">
-        <h2 class="title scroll-animate animate-up delay-1">EVALUATION CRITERIA</h2>
+        <h2 class="title scroll-animate animate-up delay-1">Evaluation Criteria</h2>
         <div class="eval-grid">
           <div class="eval-card scroll-animate animate-up delay-2">
             <h3>Innovation Challenge Track:</h3>
-            <ol>
-              <li>Project Title</li>
-              <li>Prototype</li>
-              <li>Relevance to the theme (20 marks)</li>
-              <li>Novelty of Idea (20 marks)</li>
-              <li>Innovation of the idea (20 marks)</li>
-              <li>Awareness on Standards/ Methodology (20 marks)</li>
-              <li>Scalability/ Market value (20 marks)</li>
-            </ol>
+            <p style="margin-bottom: 10px; font-weight: 500; color: black;">Each project will be evaluated on the following parameters (Total: 100 Marks):</p>
+            <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 15px;">
+              <li>Relevance to the Theme – <strong>20 Marks</strong></li>
+              <li>Novelty of the Idea – <strong>20 Marks</strong></li>
+              <li>Innovation in the Proposed Solution – <strong>20 Marks</strong></li>
+              <li>Awareness of Standards / Methodology – <strong>20 Marks</strong></li>
+              <li>Scalability and Market Potential – <strong>20 Marks</strong></li>
+            </ul>
+            <p style="font-size: 1.1rem; font-weight: 425; color: black; font-style: italic;">(Project title and prototype details to be reviewed as part of evaluation)</p>
           </div>
           <div class="eval-card scroll-animate animate-up delay-3">
             <h3>Maker Fair Track:</h3>
-            <ol>
-              <li>Theme of the project</li>
-              <li>Prototype – Yes (Mandatory)</li>
-              <li>Relevance to the Theme (5 Marks)</li>
-              <li>Technical Complexity (15 Marks)</li>
-              <li>Originality of Idea (20 Marks)</li>
-              <li>Implementation Level (20 Marks)</li>
-              <li>Awareness on Standards unit (20 Marks)</li>
-              <li>Presentation & Question and Answer (20 Marks)</li>
-            </ol>
+            <p style="margin-bottom: 5px; font-weight: 700; color: black;">Prototype: Mandatory</p>
+            <p style="margin-bottom: 10px; font-weight: 500; color: black;">Evaluation will be based on (Total: 100 Marks):</p>
+            <ul style="list-style-type: disc; padding-left: 20px;">
+              <li>Relevance to the Theme – <strong>5 Marks</strong></li>
+              <li>Technical Complexity – <strong>15 Marks</strong></li>
+              <li>Originality of the Idea – <strong>20 Marks</strong></li>
+              <li>Level of Implementation – <strong>20 Marks</strong></li>
+              <li>Awareness of Standards – <strong>20 Marks</strong></li>
+              <li>Presentation & Question–Answer Interaction – <strong>20 Marks</strong></li>
+            </ul>
           </div>
           <div class="eval-card scroll-animate animate-up delay-4">
             <h3>WePOWER Track:</h3>
-            <ol>
-              <li>Project Title</li>
-              <li>Prototype</li>
-              <li>Relevance to the Theme (20 Marks)</li>
-              <li>Novelty of Idea (20 Marks)</li>
-              <li>Implementation (20 Marks)</li>
-              <li>Community Beneficial (20 Marks)</li>
-              <li>Scalability/ Market value (10 Marks)</li>
-              <li>Presentation (10 Marks)</li>
-            </ol>
+            <p style="margin-bottom: 10px; font-weight: 500; color: black;">Each project will be assessed on (Total: 100 Marks):</p>
+            <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 15px;">
+              <li>Relevance to the Theme – <strong>20 Marks</strong></li>
+              <li>Novelty of the Idea – <strong>20 Marks</strong></li>
+              <li>Quality of Implementation – <strong>20 Marks</strong></li>
+              <li>Community Benefit & Social Impact – <strong>20 Marks</strong></li>
+              <li>Scalability / Market Value – <strong>10 Marks</strong></li>
+              <li>Presentation Quality – <strong>10 Marks</strong></li>
+            </ul>
+            
           </div>
           <div class="eval-card scroll-animate animate-up delay-5">
             <h3>Special Track:</h3>
-            <ol>
-              <li>Prototype Model (5 Marks)</li>
-              <li>Relevance to the Theme (5 Marks)</li>
-              <li>Technical Complexity (15 Marks)</li>
-              <li>Novelty of the Idea (20 Marks)</li>
-              <li>Implementation Level (20 Marks)</li>
-              <li>Feasibility and Sustainability (20 Marks)</li>
-              <li>Awareness of IEEE Standards (5 Marks)</li>
-              <li>Presentation & Q&amp;A (10 Marks)</li>
-            </ol>
+            <p style="margin-bottom: 10px; font-weight: 500; color: black;">Projects will be evaluated based on (Total: 100 Marks):</p>
+            <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 15px;">
+              <li>Prototype Model – <strong>5 Marks</strong></li>
+              <li>Relevance to the Theme – <strong>5 Marks</strong></li>
+              <li>Technical Complexity – <strong>15 Marks</strong></li>
+              <li>Novelty of the Idea – <strong>20 Marks</strong></li>
+              <li>Level of Implementation – <strong>20 Marks</strong></li>
+              <li>Feasibility and Sustainability – <strong>20 Marks</strong></li>
+              <li>Awareness of IEEE Standards – <strong>5 Marks</strong></li>
+              <li>Presentation & Q&A – <strong>10 Marks</strong></li>
+            </ul>
+            
           </div>
           <div class="eval-card scroll-animate animate-up delay-6">
             <h3>Junior Einstein Track:</h3>
-            <ol>
-              <li>Novelty / Innovation (20 Marks)</li>
-              <li>Understanding of target market/customer needs (20 Marks)</li>
-              <li>Project impact &amp; Scalability (20 Marks)</li>
-              <li>Technical implementation &amp; demonstration (20 Marks)</li>
-              <li>Clarity of pitch (20 Marks)</li>
-            </ol>
+            <p style="margin-bottom: 10px; font-weight: 500; color: black;">Evaluation criteria focus on innovation and clarity (Total: 100 Marks):</p>
+            <ul style="list-style-type: disc; padding-left: 20px;">
+              <li>Novelty / Innovation – <strong>20 Marks</strong></li>
+              <li>Understanding of Target Market / User Needs – <strong>20 Marks</strong></li>
+              <li>Project Impact & Scalability – <strong>20 Marks</strong></li>
+              <li>Technical Implementation & Demonstration – <strong>20 Marks</strong></li>
+              <li>Clarity of Pitch & Explanation – <strong>20 Marks</strong></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -274,36 +321,43 @@
 
     <section class="faqs-section">
     <div class="container">
-      <h2 class="section-heading">Frequently Asked Questions</h2>
+      <h2 class="section-heading">FAQ</h2>
 
       <div class="faq-item">
         <div class="faq-question">
-          <span>1. What are the main tracks in IEEE YESIST12, and what do they entail?</span>
+          <span>1. What are the main tracks in IEEE YESIST12, and what do they focus on?</span>
           <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          IEEE YESIST12 comprises several tracks: <br>
-          i. Innovation Challenge: Participants present innovative solutions to current global issues.<br>
-          ii. Junior Einstein: Aimed at school students, this track encourages young innovators to showcase their projects.<br>
-          iii. Maker Fair: Focuses on DIY projects and prototypes demonstrating creativity and technical skills.<br>
-          iv. WePOWER: Empowers women in engineering to present their innovative ideas.<br>
-          v. Special Track: Covers unique themes or challenges introduced for that particular year.<br>
-          vi. IEngage: Encourages participants to engage with communities and develop solutions for social betterment.
+          IEEE YESIST12 features multiple competition tracks designed to encourage innovation across age groups and domains:
+          <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+            <li style="margin-bottom: 8px;"><strong>Innovation Challenge</strong> – Participants propose innovative solutions addressing real-world and global challenges.</li>
+            <li style="margin-bottom: 8px;"><strong>Junior Einstein</strong> – Designed for school students to showcase creativity, curiosity, and early-stage innovations.</li>
+            <li style="margin-bottom: 8px;"><strong>Maker Fair</strong> – Highlights hands-on DIY projects and working prototypes demonstrating technical creativity.</li>
+            <li style="margin-bottom: 8px;"><strong>WePOWER</strong> – A dedicated track empowering women in engineering to present impactful and innovative ideas.</li>
+            <li style="margin-bottom: 8px;"><strong>Special Track</strong> – Focuses on exclusive themes or challenges introduced for the specific edition of YESIST12.</li>
+            <li style="margin-bottom: 8px;"><strong>IEngage</strong> – Encourages community-driven solutions that address social, environmental, or humanitarian needs.</li>
+          </ul>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          <span>2. What are the evaluation criteria for each track? (INDIVIDUAL CRITERIA GUIDELINES WILL BE MAILED)</span>
+          <span>2. What are the evaluation criteria for each track?</span>
           <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          While specific criteria may vary by track, general evaluation parameters include:<br>
-          i. Innovation and Creativity: Originality of the idea or solution.<br>
-          ii. Impact: Potential of the project to address the identified problem effectively.<br>
-          iii. Feasibility: Practicality and viability of implementing the solution.<br>
-          iv. Presentation: Clarity, coherence, and effectiveness of the project presentation.<br>
-          v. Technical Proficiency: Demonstrated technical skills and knowledge.
+          Each track has specific evaluation guidelines tailored to its objectives. However, common evaluation parameters include:
+          <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+            <li style="margin-bottom: 8px;">Innovation and originality</li>
+            <li style="margin-bottom: 8px;">Impact and relevance</li>
+            <li style="margin-bottom: 8px;">Technical feasibility</li>
+            <li style="margin-bottom: 8px;">Implementation quality</li>
+            <li style="margin-bottom: 8px;">Presentation and clarity</li>
+          </ul>
+          <p style="margin-top: 15px; font-style: italic; color: #555;">
+            📩 Detailed, track-specific scoring rubrics will be shared with jurors via email prior to the evaluation.
+          </p>
         </div>
       </div>
 
@@ -313,9 +367,12 @@
           <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          a. Review Submissions: Familiarize yourself with the projects assigned for evaluation.<br>
-          b. Understand Evaluation Criteria: Ensure clarity on the specific criteria for each track.<br>
-          c. Attend Briefings: Participate in any pre-event meetings or briefings organized for jurors.
+          Jurors are advised to:
+          <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+            <li style="margin-bottom: 8px;"><strong>Review assigned submissions</strong> in advance.</li>
+            <li style="margin-bottom: 8px;"><strong>Understand track-specific evaluation criteria</strong> and scoring guidelines.</li>
+            <li style="margin-bottom: 8px;"><strong>Attend jury briefings or orientation sessions</strong>, if scheduled, to align with the evaluation framework.</li>
+          </ul>
         </div>
       </div>
 
@@ -325,62 +382,130 @@
           <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          The time commitment varies depending on the number of projects assigned and the event's schedule. Jurors should allocate sufficient time for reviewing submissions, attending presentations, and deliberation sessions.
+          The time commitment depends on:
+          <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+            <li style="margin-bottom: 8px;">The number of projects assigned</li>
+            <li style="margin-bottom: 8px;">The event format (online / hybrid / offline)</li>
+          </ul>
+          <p style="margin-top: 10px;">Jurors should plan sufficient time for <strong>project review, presentations, evaluations, and feedback submission</strong>.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">
-          <span>5. Are there any conflict-of-interest guidelines for jurors?</span>
+          <span>5. Are there conflict-of-interest guidelines for jurors?</span>
           <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          Yes, jurors should disclose any potential conflicts of interest, such as personal or professional relationships with participants, to maintain impartiality.
+          Yes. Jurors must <strong>declare any potential conflicts of interest</strong>, including personal, academic, or professional relationships with participants, to ensure a fair and unbiased evaluation process.
         </div>
       </div>
       <div class="faq-item">
         <div class="faq-question">
-          <span>6. How are scores submitted and processed?</span>
+          <span>6. How are evaluations and scores submitted?</span>
           <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          Jurors will receive guidelines on scoring procedures, which may involve digital platforms or physical scorecards. Ensure timely submission of scores as per the provided instructions.
-      </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>7.Can jurors provide feedback to participants?</span>
-          <i class="fas fa-chevron-down faq-toggle-icon"></i>
-        </div>
-        <div class="faq-answer">
-         Providing constructive feedback is encouraged, as it helps participants improve their projects and fosters a learning environment.
+          Scores are submitted using:
+          <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+            <li style="margin-bottom: 8px;">Digital evaluation platforms or</li>
+            <li style="margin-bottom: 8px;">Structured scorecards</li>
+          </ul>
+          <p style="margin-top: 10px;">Clear instructions and submission timelines will be shared before the event. Timely submission is essential.</p>
         </div>
       </div>
       <div class="faq-item">
         <div class="faq-question">
-          <span>8. What resources are available for jurors to understand the event's themes and objectives better?</span>
+          <span>7. Can jurors provide feedback to participants?</span>
           <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          Jurors can access resources such as the event's official website, briefing documents, and previous years' project examples to gain insights into the event's goals and expectations.
+         Absolutely. Jurors are <strong>encouraged to provide constructive and actionable feedback</strong>, which helps participants refine their ideas and enhances the learning experience.
         </div>
       </div>
       <div class="faq-item">
         <div class="faq-question">
-          <span>9.Are there opportunities for jurors to interact with participants outside of evaluations?</span>
+          <span>8. What resources are available to help jurors understand the themes and objectives?</span>
           <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          Depending on the event's format, there may be networking sessions, workshops, or informal gatherings where jurors can engage with participants.
+          Jurors will have access to:
+          <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+            <li style="margin-bottom: 8px;">Official IEEE YESIST12 website resources</li>
+            <li style="margin-bottom: 8px;">Jury briefing documents</li>
+            <li style="margin-bottom: 8px;">Track descriptions and guidelines</li>
+            <li style="margin-bottom: 8px;">Sample or past project references (where applicable)</li>
+          </ul>
         </div>
       </div>
       <div class="faq-item">
         <div class="faq-question">
-          <span>10.Whom should jurors contact for support or clarification during the event?</span>
+          <span>9. Will jurors have opportunities to interact with participants beyond evaluations?</span>
           <i class="fas fa-chevron-down faq-toggle-icon"></i>
         </div>
         <div class="faq-answer">
-          Jurors will be provided with contact information for event coordinators or support staff who can assist with any queries or issues that arise during the event.
+          Depending on the event format, jurors may participate in:
+          <ul style="list-style-type: disc; padding-left: 20px; margin-top: 10px;">
+            <li style="margin-bottom: 8px;">Networking sessions</li>
+            <li style="margin-bottom: 8px;">Panel discussions</li>
+            <li style="margin-bottom: 8px;">Mentorship interactions</li>
+            <li style="margin-bottom: 8px;">Informal or structured Q&A sessions</li>
+          </ul>
+          <p style="margin-top: 10px;">These engagements foster collaboration and knowledge exchange.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>10. Who should jurors contact for assistance during the event?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          Dedicated <strong>jury coordinators and support team members</strong> will be assigned. Contact details will be shared in advance for any technical, procedural, or logistical assistance.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>11. Is prior jury experience required to participate as a juror?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          No. While prior jury experience is beneficial, selection is primarily based on <strong>domain expertise, professional background, and willingness to mentor innovators</strong>.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>12. Will jurors receive any official recognition?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          Yes. Jury members receive <strong>official certificates of appreciation</strong> and may be acknowledged across IEEE YESIST12 digital platforms and publications.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>13. Are jury evaluations confidential?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          Yes. All evaluations, scores, and feedback are treated as <strong>confidential</strong> and used strictly for competition assessment purposes.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>14. Can jurors evaluate projects outside their domain?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          Jurors are generally assigned projects aligned with their expertise. However, interdisciplinary evaluation may occur, supported by clear evaluation guidelines.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>15. Will training or orientation be provided for new jurors?</span>
+          <i class="fas fa-chevron-down faq-toggle-icon"></i>
+        </div>
+        <div class="faq-answer">
+          Yes. Orientation sessions or briefing documents are provided to ensure all jurors are aligned with the evaluation process and expectations.
         </div>
       </div>
     </div>
