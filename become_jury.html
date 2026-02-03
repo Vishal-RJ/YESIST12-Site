@@ -385,24 +385,37 @@
           text-align: center;
           margin-top: -30px;
           margin-bottom: 20px;
+          position: relative;
+          z-index: 10;
         }
         .apply-btn {
           display: inline-block;
-          background-color: #0A415C;
+          background: linear-gradient(90deg, #2bb884 0%, #0A415C 100%);
           color: #ffffff;
           font-size: 1.1rem;
-          font-weight: 600;
-          padding: 12px 30px;
-          border-radius: 50px;
+          font-weight: 700;
+          padding: 15px 50px;
+          border-radius: 8px;
           text-decoration: none;
+          text-transform: uppercase;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 12px rgba(10, 65, 92, 0.2);
+          box-shadow: 0 5px 15px rgba(10, 65, 92, 0.2);
+          letter-spacing: 1px;
+          border: none;
         }
         .apply-btn:hover {
-          background-color: #2bb884;
           transform: translateY(-2px);
-          box-shadow: 0 6px 16px rgba(43, 184, 132, 0.3);
-          color: #ffffff;
+          box-shadow: 0 8px 20px rgba(10, 65, 92, 0.3);
+          filter: brightness(1.1);
+        }
+        @media (max-width: 768px) {
+          .apply-btn {
+            width: 90%;
+            padding: 15px 20px;
+            font-size: 1rem;
+            white-space: normal;
+            line-height: 1.4;
+          }
         }
       </style>
       <div class="container">
@@ -507,7 +520,7 @@
     </script>
 
      <div class="apply-btn-container scroll-animate animate-up delay-4">
-          <a href="http://yesist12.org/call-for-jury-2026" class="apply-btn">Click here to apply</a>
+          <a href="http://yesist12.org/call-for-jury-2026" class="apply-btn">CLICK HERE TO APPLY FOR JURY 2026 REGISTRATION </a>
         </div>
 
     <section class="evaluation-criteria-section" id="evaluation-criteria">
