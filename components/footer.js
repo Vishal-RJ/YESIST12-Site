@@ -1,20 +1,23 @@
+const isTrackPage = window.location.pathname.includes('/tracks/');
+const basePath = isTrackPage ? '../' : '';
+
 const footerHTML = `
 <footer class="site-footer"> 
     <video class="footer-video-bg" autoplay muted loop playsinline>
-        <source src="images/FooterBG.mp4" type="video/mp4">
+        <source src="${basePath}images/FooterBG.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     
     <div class="footer-container container">
         <div class="footer-column footer-logo">
-            <img src="images/IEEE-YESIST12-Logo-1024x307-1.png" alt="YESIST12 Logo">
+            <img src="${basePath}images/IEEE-YESIST12-Logo-1024x307-1.png" alt="YESIST12 Logo">
             <p>Use of this website signifies your agreement to the <a href="#" class="ieee-terms">IEEE Terms and Conditions</a>. A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p>
         </div>
         
         <div class="footer-column">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="yesist_index.html">Home</a></li>
+                <li><a href="${basePath}index.html">Home</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Sitemap</a></li>
                 <li><a href="#">IEEE Privacy Policy</a></li>

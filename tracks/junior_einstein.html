@@ -1,21 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Junior Einstein</title>
-  <link rel="icon" type="image/png" href="../images/IEEE-YESIST12-Logo-1024x307-1.png">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../css/track_style.css" />
-  <link rel="stylesheet" href="../css/special_track_junior_einstein.css" />
-  <link rel="stylesheet" href="../jury-carousel.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <style>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Junior Einstein</title>
+<link href="../images/IEEE-YESIST12-Logo-1024x307-1.png" rel="icon" type="image/png"/>
+<link href="fonts.googleapis.com/css2" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+<link href="../css/track_style.css" rel="stylesheet"/>
+<link href="../css/special_track_junior_einstein.css" rel="stylesheet"/>
+<link href="../jury-carousel.css" rel="stylesheet"/>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
     .innovation-hero .title {
       color: #ffffff !important;
     }
@@ -293,12 +291,10 @@
       .sdg-image-grid {
         grid-template-columns: repeat(4, 100px);
       }
-
       .sdg-image-grid li {
         width: 100px;
         text-align: center;
       }
-
       .sdg-image-grid img {
         width: 100%;
         height: auto;
@@ -306,326 +302,269 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-
       .sdg-image-grid img:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
       }
     }
-
-    @media (max-width: 1024px) {
-      .sdg-image-grid {
-        grid-template-columns: repeat(4, 100px);
+      @media (max-width: 1024px) {
+        .sdg-image-grid {
+          grid-template-columns: repeat(4, 100px);
+        }
       }
-    }
-
-    @media (max-width: 768px) {
-      .sdg-image-grid {
-        grid-template-columns: repeat(3, 100px);
+      @media (max-width: 768px) {
+        .sdg-image-grid {
+          grid-template-columns: repeat(3, 100px);
+        }
       }
-    }
-
-    @media (max-width: 480px) {
-      .sdg-image-grid {
-        grid-template-columns: repeat(2, 100px);
+      @media (max-width: 480px) {
+        .sdg-image-grid {
+          grid-template-columns: repeat(2, 100px);
+        }
       }
-    }
-
-    /* Submission Mode (Gateways) - visual restyle to match provided layout */
-    .gateways-section {
-      padding: 40px 0;
-    }
-
-    .gateway-container {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-
-    .gateway-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 22px;
-    }
-
-    .gateway-icon-container {
-      width: 96px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .gateway-icon {
-      width: 96px;
-      height: 96px;
-      border-radius: 10px;
-      background-color: #128a73;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-    }
-
-    .gateway-label {
-      width: 96px;
-      border-radius: 10px;
-      background-color: #0a415c;
-      color: #fff;
-      font-weight: 700;
-      font-size: 14px;
-      text-align: center;
-      padding: 10px 8px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    .gateway-content {
-      flex: 1;
-      border-radius: 14px;
-      padding: 22px 24px;
-      color: #fff;
-      box-shadow: 0 16px 26px rgba(0, 0, 0, 0.18);
-    }
-
-    .gateway-content ul {
-      list-style: none;
-      margin: 0;
-      padding-left: 28px;
-    }
-
-    .gateway-content li {
-      margin-bottom: 12px;
-      line-height: 1.7;
-    }
-
-    /* Row-specific colors to mirror screenshot */
-    .gateway-row:first-child .gateway-icon {
-      background-color: #128a73;
-    }
-
-    .gateway-row:first-child .gateway-label {
-      background-color: #128a73;
-    }
-
-    .gateway-row:first-child .gateway-content {
-      background-color: #128a73;
-    }
-
-    .gateway-row:last-child .gateway-icon {
-      background-color: #0a415c;
-    }
-
-    .gateway-row:last-child .gateway-label {
-      background-color: #0a415c;
-    }
-
-    .gateway-row:last-child .gateway-content {
-      background-color: #0a415c;
-    }
-
-    @media (max-width: 768px) {
-      .gateway-row {
+      /* Submission Mode (Gateways) - visual restyle to match provided layout */
+      .gateways-section {
+        padding: 40px 0;
+      }
+      .gateway-container {
+        display: flex;
         flex-direction: column;
-        align-items: stretch;
+        gap: 28px;
       }
-
+      .gateway-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 22px;
+      }
       .gateway-icon-container {
-        flex-direction: row;
-        width: auto;
+        width: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
       }
-
+      .gateway-icon {
+        width: 96px;
+        height: 96px;
+        border-radius: 10px;
+        background-color: #128a73;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+      }
       .gateway-label {
-        width: auto;
-        min-width: 120px;
+        width: 96px;
+        border-radius: 10px;
+        background-color: #0a415c;
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px 8px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
       }
-    }
-  </style>
-</head>
-
+      .gateway-content {
+        flex: 1;
+        border-radius: 14px;
+        padding: 22px 24px;
+        color: #fff;
+        box-shadow: 0 16px 26px rgba(0,0,0,0.18);
+      }
+      .gateway-content ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 28px;
+      }
+      .gateway-content li {
+        margin-bottom: 12px;
+        line-height: 1.7;
+      }
+      /* Row-specific colors to mirror screenshot */
+      .gateway-row:first-child .gateway-icon { background-color: #128a73; }
+      .gateway-row:first-child .gateway-label { background-color: #128a73; }
+      .gateway-row:first-child .gateway-content { background-color: #128a73; }
+      .gateway-row:last-child .gateway-icon { background-color: #0a415c; }
+      .gateway-row:last-child .gateway-label { background-color: #0a415c; }
+      .gateway-row:last-child .gateway-content { background-color: #0a415c; }
+      @media (max-width: 768px) {
+        .gateway-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .gateway-icon-container {
+          flex-direction: row;
+          width: auto;
+        }
+        .gateway-label {
+          width: auto;
+          min-width: 120px;
+        }
+      }
+    </style>
+</link></link></meta></meta></head>
 <body>
-  <div id="header-container"></div>
-
-  <section class="innovation-hero">
-    <div class="container">
-      <h1 class="title">Junior Einstein</h1>
-      <ul class="breadcrumb">
-        <li class="scroll-animate animate-up delay-1">
-          <a href="../index.html">Home</a>
-        </li>
-        <li class="scroll-animate animate-up delay-2">
-          <i class="fas fa-chevron-right"></i>
-        </li>
-        <li class="scroll-animate animate-up delay-3">Junior Einstein</li>
-      </ul>
-    </div>
-  </section>
-  <section class="about-special">
-    <div class="bg-image"></div>
-
-    <div class="container">
-      <div class="content">
-        <h2 class="title">About Junior Einstein</h2>
-        <p class="subtitle">
-          The Junior Einstein Track at IEEE YESIST12 is a global platform designed to inspire young innovators aged 12
-          to 17. It encourages students to explore STEM through creative problem-solving and socially impactful ideas.
-          Participants ideate, design, and present solutions to real-world challenges. The track focuses on nurturing
-          curiosity, technical thinking, and confidence. It goes beyond competition, offering a developmental learning
-          journey. Students gain exposure to mentors, industry experts, and global perspectives. The track promotes
-          ethical, service-oriented, and sustainable innovation. Its goal is to shape the next generation of innovators
-          and change-makers.
+    <script src="../components/header.js"></script>
+<div id="header-container"></div>
+<section class="innovation-hero">
+<div class="container">
+<h1 class="title">Junior Einstein</h1>
+<ul class="breadcrumb">
+<li class="scroll-animate animate-up delay-1">
+<a href="../index.html">Home</a>
+</li>
+<li class="scroll-animate animate-up delay-2">
+<i class="fas fa-chevron-right"></i>
+</li>
+<li class="scroll-animate animate-up delay-3">Junior Einstein</li>
+</ul>
+</div>
+</section>
+<section class="about-special">
+<div class="bg-image"></div>
+<div class="container">
+<div class="content">
+<h2 class="title">About Junior Einstein</h2>
+<p class="subtitle">
+         The Junior Einstein Track at IEEE YESIST12 is a global platform designed to inspire young innovators aged 12 to 17. It encourages students to explore STEM through creative problem-solving and socially impactful ideas. Participants ideate, design, and present solutions to real-world challenges. The track focuses on nurturing curiosity, technical thinking, and confidence. It goes beyond competition, offering a developmental learning journey. Students gain exposure to mentors, industry experts, and global perspectives. The track promotes ethical, service-oriented, and sustainable innovation. Its goal is to shape the next generation of innovators and change-makers.
 
         </p>
-      </div>
-      <div class="image scroll-animate animate-right delay-2">
-        <img src="../images/JE_TRACK.gif"
-          alt="Junior Einstein Track Image" />
-      </div>
-    </div>
-
-
-  </section>
-
-
-    <section class="innovation-theme">
-    <div class="container">
-      <div class="theme-heading scroll-animate animate-up">
-        <h2>Theme</h2>
-        <h3>Smart Ideas for a Sustainable Future</h3>
-      </div>
-
-      <div class="theme-icon-box accent">
-        <div class="icon scroll-animate animate-left">
-          <i class="fas fa-brain"></i>
-        </div>
-        <div class="text scroll-animate animate-up delay-1">
-          <h2>
-            “Smart Ideas for a Sustainable Future”
-          </h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="innovation-description">
-    <div class="container">
-      <p class="theme-text scroll-animate animate-fade delay-2">
-        The Junior Einstein Track at IEEE YESIST12 2026 centers on “Smart Ideas for a Sustainable Future.” Aligned with
-        the UN SDGs, this theme empowers young innovators to develop technology-driven solutions for a resilient world.
-        Students are encouraged to identify community or global challenges and propose future-ready ideas—spanning smart
-        systems, automation, and eco-friendly designs—that balance innovation with sustainability to create lasting
-        impact.
-      </p>
-    </div>
-  </section>
-
-  <section class="eligibility-section scroll-animate animate-up" style="background-color: var(--light-bg-color); padding: 40px 0;">
-    <div class="container">
-      <h2 class="section-heading"><b>SDGs Aligned</b></h2>
-      <p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
-      
-      <ul class="sdg-image-grid">
-        <li><img src="../SDG/E-WEB-Goal-01.png" alt="SDG 1: No Poverty"></li>
-        <li><img src="../SDG/E-WEB-Goal-02.png" alt="SDG 2: Zero Hunger"></li>
-        <li><img src="../SDG/E-WEB-Goal-03.png" alt="SDG 3: Good Health and Well-being"></li>
-        <li><img src="../SDG/E-WEB-Goal-04.png" alt="SDG 4: Quality Education"></li>
-        <li><img src="../SDG/E-WEB-Goal-05.png" alt="SDG 5: Gender Equality"></li>
-        <li><img src="../SDG/E-WEB-Goal-06.png" alt="SDG 6: Clean Water and Sanitation"></li>
-        <li><img src="../SDG/E-WEB-Goal-07.png" alt="SDG 7: Affordable and Clean Energy"></li>
-        <li><img src="../SDG/E-WEB-Goal-08.png" alt="SDG 8: Decent Work and Economic Growth"></li>
-        <li><img src="../SDG/E-WEB-Goal-09.png" alt="SDG 9: Industry, Innovation, and Infrastructure"></li>
-        <li><img src="../SDG/E-WEB-Goal-10.png" alt="SDG 10: Reduced Inequalities"></li>
-        <li><img src="../SDG/E-WEB-Goal-11.png" alt="SDG 11: Sustainable Cities and Communities"></li>
-        <li><img src="../SDG/E-WEB-Goal-12.png" alt="SDG 12: Responsible Consumption and Production"></li>
-        <li><img src="../SDG/E-WEB-Goal-13.png" alt="SDG 13: Climate Action"></li>
-        <li><img src="../SDG/E-WEB-Goal-14.png" alt="SDG 14: Life Below Water"></li>
-        <li><img src="../SDG/E-WEB-Goal-15.png" alt="SDG 15: Life on Land"></li>
-        <li><img src="../SDG/E-WEB-Goal-16.png" alt="SDG 16: Peace, Justice and Strong Institutions"></li>
-        <li><img src="../SDG/E-WEB-Goal-17.png" alt="SDG 17: Partnerships for the Goals"></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
-    <div class="container">
-      <h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>Timeline</b></h2>
-      <div class="table-responsive">
-        <table class="timeline-table">
-          <tbody>
-            <tr>
-              <td>Call for Abstracts-1</td>
-              <td>17th Jan 2026</td>
-            </tr>
-            <tr>
-              <td>Deadline for Abstract-1</td>
-              <td>31st Jan 2026</td>
-            </tr>
-            <tr>
-              <td>Time for reviewer to review the abstracts</td>
-              <td>1st Feb - 7th Feb 2026</td>
-            </tr>
-            <tr>
-              <td>Announcement of qualified abstracts</td>
-              <td>8th Feb 2026</td>
-            </tr>
-            <tr>
-              <td>Call for Abstracts-2</td>
-              <td>8th Feb 2026</td>
-            </tr>
-            <tr>
-              <td>Deadline for Abstract-2</td>
-              <td>31st March 2026</td>
-            </tr>
-            <tr>
-              <td>Time for reviewer to review the abstracts</td>
-              <td>01st April to 07th April 2026</td>
-            </tr>
-            <tr>
-              <td>Announcement of qualified abstract</td>
-              <td>08th April 2026</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section class="abstract-section">
-    <div class="container">
-      <div class="abstract-card">
-        <h2 class="section-title">Submit your Abstract now</h2>
-        <div class="status-pill open">Open</div>
-        <h4 class="deadline">Call for Abstract-1 Ends: 31st January 2026</h4>
-        <div class="flip-countdown" data-countdown="2026-01-31T23:59:00">
-          <div class="flip-unit" data-unit="days">
-            <div class="flip-card"><span class="flip-number">00</span></div>
-            <span class="flip-label">Days</span>
-          </div>
-          <div class="flip-unit" data-unit="hours">
-            <div class="flip-card"><span class="flip-number">00</span></div>
-            <span class="flip-label">Hours</span>
-          </div>
-          <div class="flip-unit" data-unit="minutes">
-            <div class="flip-card"><span class="flip-number">00</span></div>
-            <span class="flip-label">Minutes</span>
-          </div>
-          <div class="flip-unit" data-unit="seconds">
-            <div class="flip-card"><span class="flip-number">00</span></div>
-            <span class="flip-label">Seconds</span>
-          </div>
-        </div>
-        <div class="abstract-actions">
-          <a class="btn download-btn" href="http://portal.ieeeyesist12.org/files/Abstract-template-2026.pptx" target="_blank">
-            <i class="fas fa-download"></i> DOWNLOAD ABSTRACT TEMPLATE
+</div>
+<div class="image scroll-animate animate-right delay-2">
+<img alt="Junior Einstein Track Image" src="https://ieeeyesist12.org/images/JE_TRACK.gif"/>
+</div>
+</div>
+</section>
+<section class="innovation-theme">
+<div class="container">
+<div class="theme-heading scroll-animate animate-up">
+<h2>Theme</h2>
+<h3>Smart Ideas for a Sustainable Future</h3>
+</div>
+<div class="theme-icon-box accent">
+<div class="icon scroll-animate animate-left">
+<i class="fas fa-brain"></i>
+</div>
+<div class="text scroll-animate animate-up delay-1">
+<h2>
+              âSmart Ideas for a Sustainable Futureâ
+            </h2>
+</div>
+</div>
+</div>
+</section>
+<section class="innovation-description">
+<div class="container">
+<p class="theme-text scroll-animate animate-fade delay-2">
+          The Junior Einstein Track at IEEE YESIST12 2026 centers on âSmart Ideas for a Sustainable Future.â Aligned with the UN SDGs, this theme empowers young innovators to develop technology-driven solutions for a resilient world. Students are encouraged to identify community or global challenges and propose future-ready ideasâspanning smart systems, automation, and eco-friendly designsâthat balance innovation with sustainability to create lasting impact.
+        </p>
+</div>
+</section>
+<section class="eligibility-section scroll-animate animate-up" style="background-color: var(--light-bg-color); padding: 40px 0;">
+<div class="container">
+<h2 class="section-heading"><b>SDGs Aligned</b></h2>
+<p style="text-align: center; margin-top: -1rem;">This track encourages projects addressing one or more of the following UN Sustainable Development Goals:</p>
+<ul class="sdg-image-grid">
+<li><img alt="SDG 1: No Poverty" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-01.png"/></li>
+<li><img alt="SDG 2: Zero Hunger" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-02.png"/></li>
+<li><img alt="SDG 3: Good Health and Well-being" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-03.png"/></li>
+<li><img alt="SDG 4: Quality Education" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-04.png"/></li>
+<li><img alt="SDG 5: Gender Equality" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-05.png"/></li>
+<li><img alt="SDG 6: Clean Water and Sanitation" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-06.png"/></li>
+<li><img alt="SDG 7: Affordable and Clean Energy" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-07.png"/></li>
+<li><img alt="SDG 8: Decent Work and Economic Growth" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-08.png"/></li>
+<li><img alt="SDG 9: Industry, Innovation, and Infrastructure" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-09.png"/></li>
+<li><img alt="SDG 10: Reduced Inequalities" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-10.png"/></li>
+<li><img alt="SDG 11: Sustainable Cities and Communities" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-11.png"/></li>
+<li><img alt="SDG 12: Responsible Consumption and Production" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-12.png"/></li>
+<li><img alt="SDG 13: Climate Action" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-13.png"/></li>
+<li><img alt="SDG 14: Life Below Water" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-14.png"/></li>
+<li><img alt="SDG 15: Life on Land" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-15.png"/></li>
+<li><img alt="SDG 16: Peace, Justice and Strong Institutions" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-16.png"/></li>
+<li><img alt="SDG 17: Partnerships for the Goals" src="https://ieeeyesist12.org/SDG/E-WEB-Goal-17.png"/></li>
+</ul>
+</div>
+</section>
+<section class="timeline-section" style="padding: 40px 0; background-color: #ffffff;">
+<div class="container">
+<h2 class="section-heading" style="text-align: left; margin-bottom: 20px;"><b>Timeline</b></h2>
+<div class="table-responsive">
+<table class="timeline-table">
+<tbody>
+<tr>
+<td>Call for Abstracts-1</td>
+<td>17th Jan 2026</td>
+</tr>
+<tr>
+<td>Deadline for Abstract-1</td>
+<td>31st Jan 2026</td>
+</tr>
+<tr>
+<td>Time for reviewer to review the abstracts</td>
+<td>1st Feb - 7th Feb 2026</td>
+</tr>
+<tr>
+<td>Announcement of qualified abstracts</td>
+<td>8th Feb 2026</td>
+</tr>
+<tr>
+<td>Call for Abstracts-2</td>
+<td>8th Feb 2026</td>
+</tr>
+<tr>
+<td>Deadline for Abstract-2</td>
+<td>31st March 2026</td>
+</tr>
+<tr>
+<td>Time for reviewer to review the abstracts</td>
+<td>01st April to 07th April 2026</td>
+</tr>
+<tr>
+<td>Announcement of qualified abstract</td>
+<td>08th April 2026</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="abstract-section">
+<div class="container">
+<div class="abstract-card">
+<h2 class="section-title">Submit your Abstract now</h2>
+<div class="status-pill open">Open</div>
+<h4 class="deadline">Call for Abstract-1 Ends: 31st January 2026</h4>
+<div class="flip-countdown" data-countdown="2026-01-31T23:59:00">
+<div class="flip-unit" data-unit="days">
+<div class="flip-card"><span class="flip-number">00</span></div>
+<span class="flip-label">Days</span>
+</div>
+<div class="flip-unit" data-unit="hours">
+<div class="flip-card"><span class="flip-number">00</span></div>
+<span class="flip-label">Hours</span>
+</div>
+<div class="flip-unit" data-unit="minutes">
+<div class="flip-card"><span class="flip-number">00</span></div>
+<span class="flip-label">Minutes</span>
+</div>
+<div class="flip-unit" data-unit="seconds">
+<div class="flip-card"><span class="flip-number">00</span></div>
+<span class="flip-label">Seconds</span>
+</div>
+</div>
+<div class="abstract-actions">
+<a class="btn download-btn" href="http://portal.ieeeyesist12.org/files/Abstract-template-2026.pptx" target="_blank">
+<i class="fas fa-download"></i> DOWNLOAD ABSTRACT TEMPLATE
           </a>
-          <a class="btn submit-btn" href="https://portal.ieeeyesist12.org/link/je-direct" target="_blank">
-            <i class="fas fa-paper-plane"></i> Submit Abstract
+<a class="btn submit-btn" href="https://portal.ieeeyesist12.org/link/je-direct" target="_blank">
+<i class="fas fa-paper-plane"></i> Submit Abstract
           </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script>
+</div>
+</div>
+</div>
+</section>
+<script>
             document.addEventListener('DOMContentLoaded', function () {
 
               var card = document.querySelector('.abstract-card');
@@ -789,310 +728,263 @@
 
             });
           </script>
-
-
-          <section class="mission-areas">
-            <h2 class="section-heading">The Objectives of the Junior Einstein</h2>
-            <ul class="mission-list">
-              <li>
-                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-                <span><b>Global Showcase and Collaboration:</b> To create an international platform where young
-                  participants can
-                  showcase their talents and innovations, connect with peers from around the world, and foster
-                  meaningful
-                  collaborations that may lead to future academic, technical, and entrepreneurial partnerships.</span>
-              </li>
-              <li>
-                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-                <span><b>Next-Generation Innovator Recognition:</b> To identify, recognize, and motivate the next
-                  generation of
-                  innovators by encouraging creative thinking and supporting the development of viable, impactful
-                  solutions to
-                  real-world social challenges.</span>
-              </li>
-              <li>
-                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-                <span><b>Societal Impact through STEM:</b> To inspire students to apply STEM concepts in designing and
-                  developing solutions that address societal needs, while actively contributing to the United Nations
-                  Sustainable Development Goals (SDGs).</span>
-              </li>
-              <li>
-                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-                <span><b>Hands-on Experience and Skill Development:</b> To provide participants with hands-on exposure
-                  to
-                  technology and engineering projects, enhancing critical thinking, problem-solving abilities, technical
-                  understanding, and long-term interest in STEM fields.</span>
-              </li>
-              <li>
-                <i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
-                <span><b>Teamwork, Collaboration, and Innovation:</b> To cultivate a culture of teamwork and
-                  collaboration,
-                  encouraging participants to work collectively, think creatively, and approach challenges with
-                  innovation-driven and solution-oriented mindsets.</span>
-              </li>
-            </ul>
-          </section>
-
-          <section class="eligibility-section scroll-animate animate-left">
-            <h2 class="section-heading"><b>Who Is Eligible?</b></h2>
-            <ul class="eligibility-list">
-              <li>
-                <i class="fas fa-star"></i>
-                <span>Open to school students worldwide aged 12–17 years.</span>
-              </li>
-              <li>
-                <i class="fas fa-star"></i>
-                <span>Participants should have a keen interest in STEM and a passion for innovation.</span>
-              </li>
-              <li>
-                <i class="fas fa-star"></i>
-                <span>Teams may include up to 4 members; mixed institutions/countries are allowed.</span>
-              </li>
-              <li>
-                <i class="fas fa-star"></i>
-                <span>A mentor must accompany each team during registration.</span>
-              </li>
-              <li>
-                <i class="fas fa-star"></i>
-                <span>Proof of age and enrollment (e.g., bonafide school certificate or Birth Certificate) is
-                  required.</span>
-              </li>
-            </ul>
-          </section>
-
-          <section class="benefits-section scroll-animate animate-left">
-            <h2 class="section-heading"><b>Benefits of Participating</b></h2>
-            <ul class="benefits-list">
-              <li>
-                <i class="fas fa-bolt"></i>
-                <span><b>Global Recognition:</b> Showcase your innovative ideas and stand
-                  a chance to be recognized on a global platform.</span>
-              </li>
-              <li>
-                <i class="fas fa-bolt"></i>
-                <span><b>Skill Development:</b> Hone critical thinking, problem-solving,
-                  and collaboration skills.</span>
-              </li>
-              <li>
-                <i class="fas fa-bolt"></i>
-                <span><b>Networking:</b> Connect with like-minded individuals, mentors,
-                  and professionals who share a passion for sustainability.</span>
-              </li>
-              <li>
-                <i class="fas fa-bolt"></i>
-                <span><b>Awareness:</b> Gain insights into pressing global issues and
-                  contribute to meaningful solutions.</span>
-              </li>
-            </ul>
-          </section>
-
-          <section class="rules-section scroll-animate animate-left">
-            <h2 class="section-heading"><b>Rules for Participation</b></h2>
-            <ul class="rules-list">
-              <li>
-                <i class="fas fa-book"></i>
-                <span>Teams should consist of up to four members.</span>
-              </li>
-              <li>
-                <i class="fas fa-book"></i>
-                <span>Projects can be software, hardware, or integrated tech solutions.</span>
-              </li>
-              <li>
-                <i class="fas fa-book"></i>
-                <span>Ensure originality – plagiarism in any form is strictly prohibited.</span>
-              </li>
-              <li>
-                <i class="fas fa-book"></i>
-                <span>Submissions must be clear, well-structured, and aligned with SDGs.</span>
-              </li>
-              <li>
-                <i class="fas fa-book"></i>
-                <span>Teams will be locked upon abstract submission. No changes to team members or mentors will be
-                  permitted
-                  after the abstract submission deadline under any circumstances.</span>
-              </li>
-              <li>
-                <i class="fas fa-book"></i>
-                <span>Each team is solely responsible for internal coordination, cooperation, and teamwork throughout
-                  the
-                  duration of the competition. IEEE YESIST12 will not intervene in internal team matters.</span>
-              </li>
-              <li>
-                <i class="fas fa-book"></i>
-                <span>Teams that have actively participated and have enrolled themselves with team members and mentor
-                  details
-                  will be eligible for the certificates.</span>
-              </li>
-              <!-- <span>
+<section class="mission-areas">
+<h2 class="section-heading">The Objectives of the Junior Einstein</h2>
+<ul class="mission-list">
+<li>
+<i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+<span><b>Global Showcase and Collaboration:</b> To create an international platform where young participants can showcase their talents and innovations, connect with peers from around the world, and foster meaningful collaborations that may lead to future academic, technical, and entrepreneurial partnerships.</span>
+</li>
+<li>
+<i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+<span><b>Next-Generation Innovator Recognition:</b> To identify, recognize, and motivate the next generation of innovators by encouraging creative thinking and supporting the development of viable, impactful solutions to real-world social challenges.</span>
+</li>
+<li>
+<i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+<span><b>Societal Impact through STEM:</b> To inspire students to apply STEM concepts in designing and developing solutions that address societal needs, while actively contributing to the United Nations Sustainable Development Goals (SDGs).</span>
+</li>
+<li>
+<i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+<span><b>Hands-on Experience and Skill Development:</b> To provide participants with hands-on exposure to technology and engineering projects, enhancing critical thinking, problem-solving abilities, technical understanding, and long-term interest in STEM fields.</span>
+</li>
+<li>
+<i class="fas fa-circle-dot scroll-animate animate-down delay-1"></i>
+<span><b>Teamwork, Collaboration, and Innovation:</b> To cultivate a culture of teamwork and collaboration, encouraging participants to work collectively, think creatively, and approach challenges with innovation-driven and solution-oriented mindsets.</span>
+</li>
+</ul>
+</section>
+<section class="eligibility-section scroll-animate animate-left">
+<h2 class="section-heading"><b>Who Is Eligible?</b></h2>
+<ul class="eligibility-list">
+<li>
+<i class="fas fa-star"></i>
+<span>Open to school students worldwide aged 12â17 years.</span>
+</li>
+<li>
+<i class="fas fa-star"></i>
+<span>Participants should have a keen interest in STEM and a passion for innovation.</span>
+</li>
+<li>
+<i class="fas fa-star"></i>
+<span>Teams may include up to 4 members; mixed institutions/countries are allowed.</span>
+</li>
+<li>
+<i class="fas fa-star"></i>
+<span>A mentor must accompany each team during registration.</span>
+</li>
+<li>
+<i class="fas fa-star"></i>
+<span>Proof of age and enrollment (e.g., bonafide school certificate or Birth Certificate) is required.</span>
+</li>
+</ul>
+</section>
+<section class="benefits-section scroll-animate animate-left">
+<h2 class="section-heading"><b>Benefits of Participating</b></h2>
+<ul class="benefits-list">
+<li>
+<i class="fas fa-bolt"></i>
+<span><b>Global Recognition:</b> Showcase your innovative ideas and stand
+          a chance to be recognized on a global platform.</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span><b>Skill Development:</b> Hone critical thinking, problem-solving,
+          and collaboration skills.</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span><b>Networking:</b> Connect with like-minded individuals, mentors,
+          and professionals who share a passion for sustainability.</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span><b>Awareness:</b> Gain insights into pressing global issues and
+          contribute to meaningful solutions.</span>
+</li>
+</ul>
+</section>
+<section class="rules-section scroll-animate animate-left">
+<h2 class="section-heading"><b>Rules for Participation</b></h2>
+<ul class="rules-list">
+<li>
+<i class="fas fa-book"></i>
+<span>Teams should consist of up to four members.</span>
+</li>
+<li>
+<i class="fas fa-book"></i>
+<span>Projects can be software, hardware, or integrated tech solutions.</span>
+</li>
+<li>
+<i class="fas fa-book"></i>
+<span>Ensure originality â plagiarism in any form is strictly prohibited.</span>
+</li>
+<li>
+<i class="fas fa-book"></i>
+<span>Submissions must be clear, well-structured, and aligned with SDGs.</span>
+</li>
+<li>
+<i class="fas fa-book"></i>
+<span>Teams will be locked upon abstract submission. No changes to team members or mentors will be permitted after the abstract submission deadline under any circumstances.</span>
+</li>
+<li>
+<i class="fas fa-book"></i>
+<span>Each team is solely responsible for internal coordination, cooperation, and teamwork throughout the duration of the competition. IEEE YESIST12 will not intervene in internal team matters.</span>
+</li>
+<li>
+<i class="fas fa-book"></i>
+<span>Teams that have actively participated and have enrolled themselves with team members and mentor details will be eligible for the certificates.</span>
+</li>
+<!-- <span>
           <a href="https://drive.google.com/file/d/1O_UOuKqG0PG7e70z1oqc9Z03QfDghZ6X/view?usp=sharing" download class="download-btn"><b>Download Rulebook</b></a>
         </span> -->
-            </ul>
-          </section>
-
-          <!-- evaluation-section -->
-          <section class="evaluation-section scroll-animate animate-left ic-evaluation">
-            <h2 class="section-heading"><b>Evaluation Criteria</b></h2>
-            <ul class="evaluation-list">
-              <!-- <li>
+</ul>
+</section>
+<!-- evaluation-section -->
+<section class="evaluation-section scroll-animate animate-left ic-evaluation">
+<h2 class="section-heading"><b>Evaluation Criteria</b></h2>
+<ul class="evaluation-list">
+<!-- <li>
               <i class="fas fa-bullseye"></i>
               <span><b>Relevance to Theme:</b> The project aligns strongly with the given theme by directly addressing its core objectives. It demonstrates clear applicability and purpose within the thematic framework.</span>
             </li> -->
-              <li>
-                <i class="fas fa-rocket"></i>
-                <span><b>Novelty/Innovation:</b> The project introduces a creative and original approach to solving the
-                  identified problem. It goes beyond conventional solutions by integrating innovative ideas or
-                  methods.</span>
-              </li>
-              <li>
-                <i class="fas fa-lightbulb"></i>
-                <span><b>Understanding of Concept & Market Demand:</b> The problem is clearly identified with a
-                  well-defined
-                  scope and context. Underlying causes and real-world implications are thoroughly analyzed.</span>
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i>
-                <span><b>Technical Implementation:</b> The proposed solution is supported through testing, prototyping,
-                  or
-                  logical validation. Results and observations justify the effectiveness of the innovation.</span>
-              </li>
-              <li>
-                <i class="fas fa-chalkboard-teacher"></i>
-                <span><b>Demonstration & Clarity of Presentation:</b> The project is presented in a clear, structured,
-                  and
-                  engaging manner. Ideas, visuals, and explanations effectively communicate the project’s intent and
-                  outcomes.</span>
-              </li>
-              <li>
-                <i class="fas fa-chart-line"></i>
-                <span><b>Scalability & Real-World Impact:</b> The solution has potential for implementation on a larger
-                  scale
-                  with minimal modifications. It is adaptable to different contexts and user requirements.</span>
-              </li>
-
-              <!-- <li>
+<li>
+<i class="fas fa-rocket"></i>
+<span><b>Novelty/Innovation:</b> The project introduces a creative and original approach to solving the identified problem. It goes beyond conventional solutions by integrating innovative ideas or methods.</span>
+</li>
+<li>
+<i class="fas fa-lightbulb"></i>
+<span><b>Understanding of Concept &amp; Market Demand:</b> The problem is clearly identified with a well-defined scope and context. Underlying causes and real-world implications are thoroughly analyzed.</span>
+</li>
+<li>
+<i class="fas fa-check-circle"></i>
+<span><b>Technical Implementation:</b> The proposed solution is supported through testing, prototyping, or logical validation. Results and observations justify the effectiveness of the innovation.</span>
+</li>
+<li>
+<i class="fas fa-chalkboard-teacher"></i>
+<span><b>Demonstration &amp; Clarity of Presentation:</b> The project is presented in a clear, structured, and engaging manner. Ideas, visuals, and explanations effectively communicate the projectâs intent and outcomes.</span>
+</li>
+<li>
+<i class="fas fa-chart-line"></i>
+<span><b>Scalability &amp; Real-World Impact:</b> The solution has potential for implementation on a larger scale with minimal modifications. It is adaptable to different contexts and user requirements.</span>
+</li>
+<!-- <li>
               <i class="fas fa-leaf"></i>
               <span><b>Sustainability:</b> The project considers sustainability and minimizes negative environmental effects. It promotes eco-friendly practices or contributes positively to environmental well-being.</span>
             </li>
             <li>
               <i class="fas fa-poll"></i>
-              <span><b>Results:</b> The outcomes meet the stated objectives and validate the project’s purpose. Results are clearly documented and demonstrate measurable impact or improvement.</span>
+              <span><b>Results:</b> The outcomes meet the stated objectives and validate the projectâs purpose. Results are clearly documented and demonstrate measurable impact or improvement.</span>
             </li> -->
-            </ul>
-          </section>
-
-          <!-- Track Structure Section -->
-          <div class="objectives-section">
-            <h2 class="section-heading scroll-animate animate-down delay-1">
-              Track Structure:
-            </h2>
-            <p class="section-text scroll-animate animate-up delay-2">
-              The Junior Einstein Track follows a structured process to identify and showcase
-              innovative projects, consisting of the following phases:
-            </p>
-
-            <div class="objectives-grid track-grid">
-              <div class="objective-box">
-                <div class="box-inner scroll-animate animate-left delay-3">
-                  <h3>
-                    <i class="fa-solid fa-microphone objective-icon"></i> Phase 1:
-                    Call for Abstracts-1
-                  </h3>
-                  <p>
-                    This is the initial phase where the abstract submission is open to
-                    anyone interested in participating in the Junior Einstein Track. The call
-                    for abstracts is announced globally, and participants can submit
-                    their abstracts through the submission portal available on the
-                    website. Phase 1 serves as the first opportunity for participants
-                    to showcase their ideas and concepts.
-                  </p>
-                </div>
-              </div>
-
-              <div class="objective-box">
-                <div class="box-inner scroll-animate animate-right delay-4">
-                  <h3>
-                    <i class="fa-solid fa-paper-plane objective-icon"></i> Phase 2:
-                    Call for Abstracts-2
-                  </h3>
-                  <p>
-                    Phase 2 is an extended call for abstract submissions. Teams that
-                    wish to extend their participation opportunity can do so by
-                    submitting their abstracts in this second phase. It also gives a
-                    chance for participants who did not advance to the next rounds in
-                    Phase 1 to reapply and take part in the competition.
-                  </p>
-                </div>
-              </div>
-
-              <div class="objective-box">
-                <div class="box-inner scroll-animate animate-left delay-5">
-                  <h3>
-                    <i class="fa-solid fa-check objective-icon"></i> Phase 3:
-                    Selection & Registration
-                  </h3>
-                  <p>
-                    Potential and innovative projects that are submitted in the first
-                    and second call are selected for finals, and the teams are
-                    intimated via mail.
-                  </p>
-                </div>
-              </div>
-
-              <div class="objective-box">
-                <div class="box-inner scroll-animate animate-right delay-6">
-                  <h3>
-                    <i class="fa-solid fa-trophy objective-icon"></i> Phase 4: Finale
-                  </h3>
-                  <p>
-                    Selected teams will present their project works before the jury
-                    during the finals. Evaluation will be carried out based on the
-                    criteria.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <section class="gateways-section">
-            <div class="objectives-section">
-              <h2 class="section-heading scroll-animate animate-down delay-1">
-                Submission Mode
-              </h2>
-              <div class="gateway-container">
-                <div class="gateway-row">
-                  <div class="gateway-icon-container">
-                    <div class="gateway-icon">
-                      <i class="fas fa-paper-plane" style="color:white; font-size: 40px;"></i>
-                    </div>
-                    <div class="gateway-label">Pilot Entry</div>
-                  </div>
-                  <div class="gateway-content pilot-content">
-                    <ul>
-                      <li>Participants from regions with an active YESIST12 Pilot event.</li>
-                      <li>Projects are first presented and evaluated at a preliminary competition.</li>
-                      <li>Winners from the Pilot event get a direct entry into the Grand Finale.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="gateway-row">
-                  <div class="gateway-icon-container">
-                    <div class="gateway-icon">
-                      <i class="fas fa-laptop-code" style="color:white; font-size: 40px;"></i>
-                    </div>
-                    <div class="gateway-label">Direct Entry</div>
-                  </div>
-                  <div class="gateway-content direct-content">
-                    <ul>
-                      <li>For participants from countries or regions without a YESIST12 Pilot event.</li>
-                      <li>Submissions (Abstract, PPT, Video) are evaluated directly by the jury.</li>
-                      <li>Selected projects are notified via email and advance to the Grand Finale.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- <div class="selection-method-section">
+</ul>
+</section>
+<!-- Track Structure Section -->
+<div class="objectives-section">
+<h2 class="section-heading scroll-animate animate-down delay-1">
+            Track Structure:
+          </h2>
+<p class="section-text scroll-animate animate-up delay-2">
+            The Junior Einstein Track follows a structured process to identify and showcase
+            innovative projects, consisting of the following phases:
+          </p>
+<div class="objectives-grid track-grid">
+<div class="objective-box">
+<div class="box-inner scroll-animate animate-left delay-3">
+<h3>
+<i class="fa-solid fa-microphone objective-icon"></i> Phase 1:
+                  Call for Abstracts-1
+                </h3>
+<p>
+                  This is the initial phase where the abstract submission is open to
+                  anyone interested in participating in the Junior Einstein Track. The call
+                  for abstracts is announced globally, and participants can submit
+                  their abstracts through the submission portal available on the
+                  website. Phase 1 serves as the first opportunity for participants
+                  to showcase their ideas and concepts.
+                </p>
+</div>
+</div>
+<div class="objective-box">
+<div class="box-inner scroll-animate animate-right delay-4">
+<h3>
+<i class="fa-solid fa-paper-plane objective-icon"></i> Phase 2:
+                  Call for Abstracts-2
+                </h3>
+<p>
+                  Phase 2 is an extended call for abstract submissions. Teams that
+                  wish to extend their participation opportunity can do so by
+                  submitting their abstracts in this second phase. It also gives a
+                  chance for participants who did not advance to the next rounds in
+                  Phase 1 to reapply and take part in the competition.
+                </p>
+</div>
+</div>
+<div class="objective-box">
+<div class="box-inner scroll-animate animate-left delay-5">
+<h3>
+<i class="fa-solid fa-check objective-icon"></i> Phase 3:
+                  Selection &amp; Registration
+                </h3>
+<p>
+                  Potential and innovative projects that are submitted in the first
+                  and second call are selected for finals, and the teams are
+                  intimated via mail.
+                </p>
+</div>
+</div>
+<div class="objective-box">
+<div class="box-inner scroll-animate animate-right delay-6">
+<h3>
+<i class="fa-solid fa-trophy objective-icon"></i> Phase 4: Finale
+                </h3>
+<p>
+                  Selected teams will present their project works before the jury
+                  during the finals. Evaluation will be carried out based on the
+                  criteria.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<section class="gateways-section">
+<div class="objectives-section">
+<h2 class="section-heading scroll-animate animate-down delay-1">
+          Submission Mode
+        </h2>
+<div class="gateway-container">
+<div class="gateway-row">
+<div class="gateway-icon-container">
+<div class="gateway-icon">
+<i class="fas fa-paper-plane" style="color:white; font-size: 40px;"></i>
+</div>
+<div class="gateway-label">Pilot Entry</div>
+</div>
+<div class="gateway-content pilot-content">
+<ul>
+<li>Participants from regions with an active YESIST12 Pilot event.</li>
+<li>Projects are first presented and evaluated at a preliminary competition.</li>
+<li>Winners from the Pilot event get a direct entry into the Grand Finale.</li>
+</ul>
+</div>
+</div>
+<div class="gateway-row">
+<div class="gateway-icon-container">
+<div class="gateway-icon">
+<i class="fas fa-laptop-code" style="color:white; font-size: 40px;"></i>
+</div>
+<div class="gateway-label">Direct Entry</div>
+</div>
+<div class="gateway-content direct-content">
+<ul>
+<li>For participants from countries or regions without a YESIST12 Pilot event.</li>
+<li>Submissions (Abstract, PPT, Video) are evaluated directly by the jury.</li>
+<li>Selected projects are notified via email and advance to the Grand Finale.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- <div class="selection-method-section">
       <h2 class="section-heading scroll-animate animate-down delay-1">
         The Submission Could Be Related to the Following Topics
       </h2>
@@ -1135,219 +1027,210 @@
         </div>
       </div>
     </div> -->
-          <div class="selection-method-section">
-            <div class="objectives-section">
-              <h2 class="section-heading scroll-animate animate-down delay-1">
-                Selection Method
-              </h2>
-            </div>
-            <p class="section-text">
-              The selection process will be conducted in two main stages:
-            </p>
-
-            <div class="selection-method-grid">
-              <div class="method-box scroll-animate animate-up delay-3">
-                <i class="fa-solid fa-file-lines method-icon"></i>
-                <h3>Stage 1 - Abstracts & Prelims</h3>
-                <p>
-                  Abstract submission is open to all school students between ages 12
-                  and 17 via Pilot entry or Direct Entry.
-                  <br /><br />
-                  <b>A)</b> Direct entry participants will be evaluated based on
-                  abstract submission. Selected innovative projects will be informed
-                  via email. <br /><br />
-                  <b>B)</b> Pilot entry participants present projects in a preliminary
-                  round conducted by pilots. Winners move to finals.
-                </p>
-              </div>
-
-              <div class="method-box scroll-animate animate-up delay-4">
-                <i class="fa-solid fa-trophy method-icon"></i>
-                <h3>Stage 2 - Grand Finale</h3>
-                <p>
-                  Selected teams will present their projects before the jury during
-                  the finals.
-                  <br /><br />
-                  Evaluation will be carried out based on criteria such as novelty,
-                  technical implementation, clarity of pitch, and expandability of the
-                  idea.
-                </p>
-              </div>
-            </div>
-          </div>
-          <section class="methodology-section scroll-animate">
-            <h2 class="section-heading"><b>Methodology</b></h2>
-            <ul class="methodology-list">
-              <li>
-                <i class="fas fa-angle-double-right"></i>
-                <span>The participants will be evaluated in either of the two modes:
-                  Pilot entry mode or Direct entry mode.</span>
-              </li>
-              <li>
-                <i class="fas fa-angle-double-right"></i>
-                <span>Direct entry mode is for participants from countries without Pilots
-                  and will be evaluated based on their submission of Abstract, PPT,
-                  and Video demonstration of their project.</span>
-              </li>
-              <li>
-                <i class="fas fa-angle-double-right"></i>
-                <span>Pilot entry mode will select eligible teams for participation by
-                  conducting a preliminary project competition at their venue.</span>
-              </li>
-              <li>
-                <i class="fas fa-angle-double-right"></i>
-                <span>Teams need to submit the problem statement and the detailed
-                  solution as a PPT for evaluation by experts/Jury.</span>
-              </li>
-              <li>
-                <i class="fas fa-angle-double-right"></i>
-                <span>Selected teams will be notified and asked to submit an executive
-                  summary and video demonstration of their project.</span>
-              </li>
-              <li>
-                <i class="fas fa-angle-double-right"></i>
-                <span>During the finale, teams will present their projects virtually,
-                  evaluated by the jury.</span>
-              </li>
-              <li>
-                <i class="fas fa-angle-double-right"></i>
-                <span>Prizes will be awarded based on jury, track chair, and general
-                  chair recommendations.</span>
-              </li>
-            </ul>
-          </section>
-
-
-
-
-
-          <section class="benefits-section scroll-animate animate-left"
-            style="background-color: var(--light-bg-color); padding: 40px 0;">
-            <div class="container">
-              <h2 class="section-heading"><b>Sample Project Topics</b></h2>
-              <ul class="benefits-list">
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>Smart water-saving irrigation system using sensors</span>
-                </li>
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>AI-based waste segregation and recycling solution</span>
-                </li>
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>Solar-powered smart lighting for rural or public areas</span>
-                </li>
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>Low-cost air quality monitoring system</span>
-                </li>
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>Smart classroom tools to support inclusive education</span>
-                </li>
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>Energy-efficient smart home automation for sustainability</span>
-                </li>
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>Mobile app to reduce food waste in households</span>
-                </li>
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>IoT-based flood or disaster early-warning system</span>
-                </li>
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>Smart traffic management system to reduce emissions</span>
-                </li>
-                <li>
-                  <i class="fas fa-bolt"></i>
-                  <span>Eco-friendly packaging solutions using smart materials</span>
-                </li>
-              </ul>
-              <!-- <p>
+<div class="selection-method-section">
+<div class="objectives-section">
+<h2 class="section-heading scroll-animate animate-down delay-1">
+          Selection Method
+        </h2>
+</div>
+<p class="section-text">
+        The selection process will be conducted in two main stages:
+      </p>
+<div class="selection-method-grid">
+<div class="method-box scroll-animate animate-up delay-3">
+<i class="fa-solid fa-file-lines method-icon"></i>
+<h3>Stage 1 - Abstracts &amp; Prelims</h3>
+<p>
+            Abstract submission is open to all school students between ages 12
+            and 17 via Pilot entry or Direct Entry.
+            <br/><br/>
+<b>A)</b> Direct entry participants will be evaluated based on
+            abstract submission. Selected innovative projects will be informed
+            via email. <br/><br/>
+<b>B)</b> Pilot entry participants present projects in a preliminary
+            round conducted by pilots. Winners move to finals.
+          </p>
+</div>
+<div class="method-box scroll-animate animate-up delay-4">
+<i class="fa-solid fa-trophy method-icon"></i>
+<h3>Stage 2 - Grand Finale</h3>
+<p>
+            Selected teams will present their projects before the jury during
+            the finals.
+            <br/><br/>
+            Evaluation will be carried out based on criteria such as novelty,
+            technical implementation, clarity of pitch, and expandability of the
+            idea.
+          </p>
+</div>
+</div>
+</div>
+<section class="methodology-section scroll-animate">
+<h2 class="section-heading"><b>Methodology</b></h2>
+<ul class="methodology-list">
+<li>
+<i class="fas fa-angle-double-right"></i>
+<span>The participants will be evaluated in either of the two modes:
+            Pilot entry mode or Direct entry mode.</span>
+</li>
+<li>
+<i class="fas fa-angle-double-right"></i>
+<span>Direct entry mode is for participants from countries without Pilots
+            and will be evaluated based on their submission of Abstract, PPT,
+            and Video demonstration of their project.</span>
+</li>
+<li>
+<i class="fas fa-angle-double-right"></i>
+<span>Pilot entry mode will select eligible teams for participation by
+            conducting a preliminary project competition at their venue.</span>
+</li>
+<li>
+<i class="fas fa-angle-double-right"></i>
+<span>Teams need to submit the problem statement and the detailed
+            solution as a PPT for evaluation by experts/Jury.</span>
+</li>
+<li>
+<i class="fas fa-angle-double-right"></i>
+<span>Selected teams will be notified and asked to submit an executive
+            summary and video demonstration of their project.</span>
+</li>
+<li>
+<i class="fas fa-angle-double-right"></i>
+<span>During the finale, teams will present their projects virtually,
+            evaluated by the jury.</span>
+</li>
+<li>
+<i class="fas fa-angle-double-right"></i>
+<span>Prizes will be awarded based on jury, track chair, and general
+            chair recommendations.</span>
+</li>
+</ul>
+</section>
+<section class="benefits-section scroll-animate animate-left" style="background-color: var(--light-bg-color); padding: 40px 0;">
+<div class="container">
+<h2 class="section-heading"><b>Sample Project Topics</b></h2>
+<ul class="benefits-list">
+<li>
+<i class="fas fa-bolt"></i>
+<span>Smart water-saving irrigation system using sensors</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span>AI-based waste segregation and recycling solution</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span>Solar-powered smart lighting for rural or public areas</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span>Low-cost air quality monitoring system</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span>Smart classroom tools to support inclusive education</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span>Energy-efficient smart home automation for sustainability</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span>Mobile app to reduce food waste in households</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span>IoT-based flood or disaster early-warning system</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span>Smart traffic management system to reduce emissions</span>
+</li>
+<li>
+<i class="fas fa-bolt"></i>
+<span>Eco-friendly packaging solutions using smart materials</span>
+</li>
+</ul>
+<!-- <p>
         <b>Note:</b>These are sample ideas only. Participants are encouraged to submit original and innovative project concepts.
       </p> -->
-            </div>
-          </section>
-
-          <section class="winners-section">
-            <div class="objectives-section">
-              <h2 class="section-heading scroll-animate animate-down delay-1">
-                Previous Year Achivers(2025)
-              </h2>
-            </div>
-            <div class="jury-carousel-container">
-              <button class="jury-nav-btn jury-prev">&#10094;</button>
-              <div class="jury-carousel-track">
-                <div class="jury-carousel-slide">
-                  <img src="../images/je1.jpeg" alt="Junior Einstein Achiever 1">
-                </div>
-                <div class="jury-carousel-slide">
-                  <img src="../images/je2.jpeg" alt="Junior Einstein Achiever 2">
-                </div>
-                <div class="jury-carousel-slide">
-                  <img src="../images/je3.jpeg" alt="Junior Einstein Achiever 3">
-                </div>
-                <div class="jury-carousel-slide">
-                  <img src="../images/je4.jpeg" alt="Junior Einstein Achiever 4">
-                </div>
-                <div class="jury-carousel-slide">
-                  <img src="../images/je5.jpeg" alt="Junior Einstein Achiever 5">
-                </div>
-                <div class="jury-carousel-slide">
-                  <img src="../images/je6.jpeg" alt="Junior Einstein Achiever 6">
-                </div>
-              </div>
-              <button class="jury-nav-btn jury-next">&#10095;</button>
-              <div class="jury-dots">
-                <span class="jury-dot active"></span>
-                <span class="jury-dot"></span>
-                <span class="jury-dot"></span>
-                <span class="jury-dot"></span>
-                <span class="jury-dot"></span>
-              </div>    </div>
-  </section>
-
-  <section class="card-gallery-section">
-    <div class="objectives-section">
-      <h2 class="section-heading scroll-animate animate-down delay-1">
-        Gallery
-      </h2>
-    </div>
-    <div class="card-gallery">
-      <div class="card-gallery-track">
-        <div class="card-gallery-item" data-category="moments">
-          <img src="../Gallery/JE1.JPG" alt="Junior Einstein Image">
-        </div>
-        <div class="card-gallery-item" data-category="moments">
-          <img src="../Gallery/JE2.JPG" alt="Junior Einstein Image">
-        </div>
-        <div class="card-gallery-item" data-category="moments">
-          <img src="../Gallery/JE3.JPG" alt="Junior Einstein Image">
-        </div>
-        <div class="card-gallery-item" data-category="moments">
-          <img src="../Gallery/JE4.jpg" alt="Junior Einstein Image">
-        </div>
-        <div class="card-gallery-item" data-category="moments">
-          <img src="../Gallery/JE5.jpg" alt="Junior Einstein Image">
-        </div>
-        <div class="card-gallery-item" data-category="moments">
-          <img src="../Gallery/JE6.jpg" alt="Junior Einstein Image">
-        </div>
-        <div class="card-gallery-item" data-category="moments">
-          <img src="../Gallery/JE7.jpg" alt="Junior Einstein Image">
-        </div>
-      </div>
-      <div class="gallery-bottom-nav">
-        <button class="gallery-nav prev"><i class="fas fa-arrow-left"></i></button>
-        <button class="gallery-nav next"><i class="fas fa-arrow-right"></i></button>
-      </div>
-    </div>
-  </section>
-   <style>
+</div>
+</section>
+<section class="winners-section">
+<div class="objectives-section">
+<h2 class="section-heading scroll-animate animate-down delay-1">
+          Previous Year Achivers(2025)
+        </h2>
+</div>
+<div class="jury-carousel-container">
+<button class="jury-nav-btn jury-prev">❮</button>
+<div class="jury-carousel-track">
+<div class="jury-carousel-slide">
+<img alt="Junior Einstein Achiever 1" src="https://ieeeyesist12.org/images/je1.jpeg"/>
+</div>
+<div class="jury-carousel-slide">
+<img alt="Junior Einstein Achiever 2" src="https://ieeeyesist12.org/images/je2.jpeg"/>
+</div>
+<div class="jury-carousel-slide">
+<img alt="Junior Einstein Achiever 3" src="https://ieeeyesist12.org/images/je3.jpeg"/>
+</div>
+<div class="jury-carousel-slide">
+<img alt="Junior Einstein Achiever 4" src="https://ieeeyesist12.org/images/je4.jpeg"/>
+</div>
+<div class="jury-carousel-slide">
+<img alt="Junior Einstein Achiever 5" src="https://ieeeyesist12.org/images/je5.jpeg"/>
+</div>
+<div class="jury-carousel-slide">
+<img alt="Junior Einstein Achiever 6" src="https://ieeeyesist12.org/images/je6.jpeg"/>
+</div>
+</div>
+<button class="jury-nav-btn jury-next">❯</button>
+<div class="jury-dots">
+<span class="jury-dot active"></span>
+<span class="jury-dot"></span>
+<span class="jury-dot"></span>
+<span class="jury-dot"></span>
+<span class="jury-dot"></span>
+</div>
+</div>
+</section>
+<section class="card-gallery-section">
+<div class="objectives-section">
+<h2 class="section-heading scroll-animate animate-down delay-1">
+          Gallery
+        </h2>
+</div>
+<div class="card-gallery">
+<div class="card-gallery-track">
+<div class="card-gallery-item" data-category="moments">
+<img alt="Junior Einstein Image" src="https://ieeeyesist12.org/Gallery/JE1.JPG"/>
+</div>
+<div class="card-gallery-item" data-category="moments">
+<img alt="Junior Einstein Image" src="https://ieeeyesist12.org/Gallery/JE2.JPG"/>
+</div>
+<div class="card-gallery-item" data-category="moments">
+<img alt="Junior Einstein Image" src="https://ieeeyesist12.org/Gallery/JE3.JPG"/>
+</div>
+<div class="card-gallery-item" data-category="moments">
+<img alt="Junior Einstein Image" src="https://ieeeyesist12.org/Gallery/JE4.jpg"/>
+</div>
+<div class="card-gallery-item" data-category="moments">
+<img alt="Junior Einstein Image" src="https://ieeeyesist12.org/Gallery/JE5.jpg"/>
+</div>
+<div class="card-gallery-item" data-category="moments">
+<img alt="Junior Einstein Image" src="https://ieeeyesist12.org/Gallery/JE6.jpg"/>
+</div>
+<div class="card-gallery-item" data-category="moments">
+<img alt="Junior Einstein Image" src="https://ieeeyesist12.org/Gallery/JE7.jpg"/>
+</div>
+</div>
+<div class="gallery-bottom-nav">
+<button class="gallery-nav prev"><i class="fas fa-arrow-left"></i></button>
+<button class="gallery-nav next"><i class="fas fa-arrow-right"></i></button>
+</div>
+</div>
+</section>
+<style>
           .contacts-section .team-details-list {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1392,237 +1275,547 @@
             }
           }
         </style>
-  <section class="team-details-section contacts-section scroll-animate">
-    <div class="objectives-section">
-      <h2 class="section-heading scroll-animate animate-down delay-1">
-        For any Queries, please contact
-      </h2>
-    </div>
-    <ul class="team-details-list">
-      <li>
-        <i class="fas fa-user"></i>
-        <span>
-          Chair<br />
-          Navaneethakrishnan R<br />
-          Chair | Junior Einstein Track<br />
-          Email ID:navaneethakrishnan@ieee.org<br />
-          +91 99441 47137
-        </span>
-      </li>
-      <li>
-        <i class="fas fa-user"></i>
-        <span>
-          Co-Chair<br />
-          Renu Guntur<br />
-          Co-Chair | Junior Einstein Track<br />
-          Email ID: grenu@ieee.org<br />
-          +91 6281 927 339
-        </span>
-      </li>
-    </ul>
-  </section>
-  <section class="faqs-section">
-            <div class="container">
-              <h2 class="section-heading">Frequently Asked Questions</h2>
+<section class="team-details-section contacts-section scroll-animate">
+<div class="objectives-section">
+<h2 class="section-heading scroll-animate animate-down delay-1">
+          For any Queries, please contact
+        </h2>
+</div>
+<ul class="team-details-list">
+<li>
+<i class="fas fa-user"></i>
+<span>
+            Chair<br/>
+            Navaneethakrishnan R<br/>
+            Chair | Junior Einstein Track<br/>
+            Email ID:navaneethakrishnan@ieee.org<br/>
+            +91 99441 47137
+          </span>
+</li>
+<li>
+<i class="fas fa-user"></i>
+<span>
+            Co-Chair<br/>
+            Renu Guntur <br/>
+            Co-Chair | Junior Einstein Track<br/>
+            Email ID:grenu@ieee.org<br/>
+            +91 6281 927 339
+          </span>
+</li>
+</ul>
+</section>
+<section class="faqs-section">
+<div class="container">
+<h2 class="section-heading">Frequently Asked Questions</h2>
+<div class="faq-item">
+<div class="faq-question">
+<span>1. Who can participate?</span>
+<i class="fas fa-chevron-down faq-toggle-icon"></i>
+</div>
+<div class="faq-answer">
+          School students aged 12â17 worldwide.
+        </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span>2. Can I participate individually?</span>
+<i class="fas fa-chevron-down faq-toggle-icon"></i>
+</div>
+<div class="faq-answer">
+          Yes, though teams of up to four are encouraged.
+        </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span>3. Are hardware projects allowed?</span>
+<i class="fas fa-chevron-down faq-toggle-icon"></i>
+</div>
+<div class="faq-answer">
+          Yes, both software solutions and hardware-integrated projects are accepted.
+        </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span>4. What is the selection process?</span>
+<i class="fas fa-chevron-down faq-toggle-icon"></i>
+</div>
+<div class="faq-answer">
+          Through preliminary evaluation (pilot or direct) followed by the grand finale.
+        </div>
+</div>
+<div class="faq-item">
+<div class="faq-question">
+<span>5. Can I reuse ideas from previous competitions?</span>
+<i class="fas fa-chevron-down faq-toggle-icon"></i>
+</div>
+<div class="faq-answer">
+          Projects should be original and specifically tailored for the current theme.
+        </div>
+</div>
+</div>
+</section>
+<div id="footer-container"></div>
+<script src="../script.js"></script>
+<script src="../jury-carousel.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var section = document.querySelector('.card-gallery-section');
+      if (!section) return;
+      var track = section.querySelector('.card-gallery-track');
+      var container = section.querySelector('.card-gallery');
+      var prevBtn = section.querySelector('.gallery-nav.prev');
+      var nextBtn = section.querySelector('.gallery-nav.next');
+      var pills = Array.from(section.querySelectorAll('.filter-pill'));
+      var currentIndex = 0;
+      var startX = 0;
+      var endX = 0;
 
-              <div class="faq-item">
-                <div class="faq-question">
-                  <span>1. Who can participate?</span>
-                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
-                </div>
-                <div class="faq-answer">
-                  School students aged 12–17 worldwide.
-                </div>
-              </div>
+      function defaultIndex() {
+        var items = visibleItems();
+        return Math.max(0, Math.floor(items.length / 2));
+      }
 
-              <div class="faq-item">
-                <div class="faq-question">
-                  <span>2. Can I participate individually?</span>
-                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
-                </div>
-                <div class="faq-answer">
-                  Yes, though teams of up to four are encouraged.
-                </div>
-              </div>
+      function visibleItems() {
+        return Array.from(track.querySelectorAll('.card-gallery-item:not(.hidden)'));
+      }
 
-              <div class="faq-item">
-                <div class="faq-question">
-                  <span>3. Are hardware projects allowed?</span>
-                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
-                </div>
-                <div class="faq-answer">
-                  Yes, both software solutions and hardware-integrated projects are accepted.
-                </div>
-              </div>
+      function updateActive() {
+        var items = visibleItems();
+        items.forEach(function (el) { el.classList.remove('active','near-left','near-right'); el.style.zIndex=''; });
+        if (items.length === 0) return;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > items.length - 1) currentIndex = items.length - 1;
+        var active = items[currentIndex];
+        active.classList.add('active');
+        active.style.zIndex = '3';
+        var leftIdx = currentIndex - 1;
+        var rightIdx = currentIndex + 1;
+        if (leftIdx >= 0) items[leftIdx].classList.add('near-left');
+        if (rightIdx < items.length) items[rightIdx].classList.add('near-right');
+      }
 
-              <div class="faq-item">
-                <div class="faq-question">
-                  <span>4. What is the selection process?</span>
-                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
-                </div>
-                <div class="faq-answer">
-                  Through preliminary evaluation (pilot or direct) followed by the grand finale.
-                </div>
-              </div>
+      function centerActive() {
+        var items = visibleItems();
+        if (items.length === 0) return;
+        var active = items[currentIndex];
+        var activeCenter = active.offsetLeft + active.offsetWidth / 2;
+        var target = container.clientWidth / 2;
+        var translateX = -(activeCenter - target);
+        track.style.transform = 'translateX(' + translateX + 'px)';
+      }
 
-              <div class="faq-item">
-                <div class="faq-question">
-                  <span>5. Can I reuse ideas from previous competitions?</span>
-                  <i class="fas fa-chevron-down faq-toggle-icon"></i>
-                </div>
-                <div class="faq-answer">
-                  Projects should be original and specifically tailored for the current theme.
-                </div>
-              </div>
-            </div>
-          </section>
+      function update() {
+        updateActive();
+        centerActive();
+      }
 
-          <div id="footer-container"></div>
-          <script src="../components/header.js"></script>
-          <script src="../components/footer.js"></script>
+      function moveNext() {
+        currentIndex += 1;
+        update();
+      }
 
-          <script src="../script.js"></script>
-          <script src="../jury-carousel.js"></script>
-          <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              var section = document.querySelector('.card-gallery-section');
-              if (!section) return;
-              var track = section.querySelector('.card-gallery-track');
-              var container = section.querySelector('.card-gallery');
-              var prevBtn = section.querySelector('.gallery-nav.prev');
-              var nextBtn = section.querySelector('.gallery-nav.next');
-              var pills = Array.from(section.querySelectorAll('.filter-pill'));
-              var currentIndex = 0;
-              var startX = 0;
-              var endX = 0;
+      function movePrev() {
+        currentIndex -= 1;
+        update();
+      }
 
-              function defaultIndex() {
-                var items = visibleItems();
-                return Math.max(0, Math.floor(items.length / 2));
-              }
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          var filter = pill.getAttribute('data-filter');
+          var all = Array.from(track.querySelectorAll('.card-gallery-item'));
+          all.forEach(function (el) {
+            var cat = el.getAttribute('data-category');
+            var show = filter === 'all' ? true : cat === filter;
+            el.classList.toggle('hidden', !show);
+          });
+          currentIndex = defaultIndex();
+          update();
+        });
+      });
 
-              function visibleItems() {
-                return Array.from(track.querySelectorAll('.card-gallery-item:not(.hidden)'));
-              }
+      if (nextBtn) nextBtn.addEventListener('click', function () { moveNext(); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { movePrev(); });
 
-              function updateActive() {
-                var items = visibleItems();
-                items.forEach(function (el) { el.classList.remove('active', 'near-left', 'near-right'); el.style.zIndex = ''; });
-                if (items.length === 0) return;
-                if (currentIndex < 0) currentIndex = 0;
-                if (currentIndex > items.length - 1) currentIndex = items.length - 1;
-                var active = items[currentIndex];
-                active.classList.add('active');
-                active.style.zIndex = '3';
-                var leftIdx = currentIndex - 1;
-                var rightIdx = currentIndex + 1;
-                if (leftIdx >= 0) items[leftIdx].classList.add('near-left');
-                if (rightIdx < items.length) items[rightIdx].classList.add('near-right');
-              }
+      function applyParallax(e) {
+        if (window.innerWidth < 768) return;
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        var rect = active.getBoundingClientRect();
+        var cx = e.clientX - rect.left;
+        var cy = e.clientY - rect.top;
+        var nx = (cx / rect.width) * 2 - 1;
+        var ny = (cy / rect.height) * 2 - 1;
+        var rx = -ny * 6;
+        var ry = nx * 6;
+        active.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'translateX(' + (ry * 1.2) + 'px) translateY(' + (rx * -1.2) + 'px) scale(1.02)';
+        }
+      }
+      function resetParallax() {
+        var items = visibleItems();
+        if (!items.length) return;
+        var active = items[currentIndex];
+        active.style.transform = 'scale(1)';
+        var img = active.querySelector('img');
+        if (img) {
+          img.style.transform = 'none';
+        }
+      }
+      container.addEventListener('mousemove', applyParallax);
+      container.addEventListener('mouseleave', resetParallax);
 
-              function centerActive() {
-                var items = visibleItems();
-                if (items.length === 0) return;
-                var active = items[currentIndex];
-                var activeCenter = active.offsetLeft + active.offsetWidth / 2;
-                var target = container.clientWidth / 2;
-                var translateX = -(activeCenter - target);
-                track.style.transform = 'translateX(' + translateX + 'px)';
-              }
+      container.addEventListener('touchstart', function (e) {
+        if (!e.touches || e.touches.length === 0) return;
+        startX = e.touches[0].clientX;
+      }, { passive: true });
 
-              function update() {
-                updateActive();
-                centerActive();
-              }
+      container.addEventListener('touchend', function (e) {
+        endX = e.changedTouches[0].clientX;
+        var delta = endX - startX;
+        if (Math.abs(delta) > 40) {
+          if (delta < 0) moveNext();
+          else movePrev();
+        }
+      });
 
-              function moveNext() {
-                currentIndex += 1;
-                update();
-              }
+      window.addEventListener('resize', function () {
+        update();
+      });
 
-              function movePrev() {
-                currentIndex -= 1;
-                update();
-              }
-
-              pills.forEach(function (pill) {
-                pill.addEventListener('click', function () {
-                  pills.forEach(function (p) { p.classList.remove('active'); });
-                  pill.classList.add('active');
-                  var filter = pill.getAttribute('data-filter');
-                  var all = Array.from(track.querySelectorAll('.card-gallery-item'));
-                  all.forEach(function (el) {
-                    var cat = el.getAttribute('data-category');
-                    var show = filter === 'all' ? true : cat === filter;
-                    el.classList.toggle('hidden', !show);
-                  });
-                  currentIndex = defaultIndex();
-                  update();
-                });
-              });
-
-              if (nextBtn) nextBtn.addEventListener('click', function () { moveNext(); });
-              if (prevBtn) prevBtn.addEventListener('click', function () { movePrev(); });
-
-              function applyParallax(e) {
-                if (window.innerWidth < 768) return;
-                var items = visibleItems();
-                if (!items.length) return;
-                var active = items[currentIndex];
-                var rect = active.getBoundingClientRect();
-                var cx = e.clientX - rect.left;
-                var cy = e.clientY - rect.top;
-                var nx = (cx / rect.width) * 2 - 1;
-                var ny = (cy / rect.height) * 2 - 1;
-                var rx = -ny * 6;
-                var ry = nx * 6;
-                active.style.transform = 'rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1)';
-                var img = active.querySelector('img');
-                if (img) {
-                  img.style.transform = 'translateX(' + (ry * 1.2) + 'px) translateY(' + (rx * -1.2) + 'px) scale(1.02)';
-                }
-              }
-              function resetParallax() {
-                var items = visibleItems();
-                if (!items.length) return;
-                var active = items[currentIndex];
-                active.style.transform = 'scale(1)';
-                var img = active.querySelector('img');
-                if (img) {
-                  img.style.transform = 'none';
-                }
-              }
-              container.addEventListener('mousemove', applyParallax);
-              container.addEventListener('mouseleave', resetParallax);
-
-              container.addEventListener('touchstart', function (e) {
-                if (!e.touches || e.touches.length === 0) return;
-                startX = e.touches[0].clientX;
-              }, { passive: true });
-
-              container.addEventListener('touchend', function (e) {
-                endX = e.changedTouches[0].clientX;
-                var delta = endX - startX;
-                if (Math.abs(delta) > 40) {
-                  if (delta < 0) moveNext();
-                  else movePrev();
-                }
-              });
-
-              window.addEventListener('resize', function () {
-                update();
-              });
-
-              currentIndex = defaultIndex();
-              var initialItems = visibleItems();
-              initialItems.forEach(function (el, i) {
-                el.style.animationDelay = (i * 80) + 'ms';
-                el.classList.add('animate-in');
-              });
-              update();
-              window.addEventListener('load', function () { update(); });
-            });
-          </script>
+      currentIndex = defaultIndex();
+      var initialItems = visibleItems();
+      initialItems.forEach(function (el, i) {
+        el.style.animationDelay = (i * 80) + 'ms';
+        el.classList.add('animate-in');
+      });
+      update();
+      window.addEventListener('load', function () { update(); });
+    });
+  </script>
+    <script src="../components/footer.js"></script>
 </body>
-
 </html>
+<!-- page data end -->
+<div class="elementor elementor-70 elementor-location-footer" data-elementor-id="70" data-elementor-post-type="elementor_library" data-elementor-type="footer">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-1ce2d217 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="1ce2d217" data-particle-mobile-disabled="false" data-particle_enable="false" data-settings='{"background_background":"classic"}'>
+<div class="elementor-background-overlay"></div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a5ea671" data-element_type="column" data-id="a5ea671">
+<div class="elementor-widget-wrap elementor-element-populated">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-7e54baec elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="7e54baec" data-particle-mobile-disabled="false" data-particle_enable="false">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-f141747" data-element_type="column" data-id="f141747" data-settings='{"background_background":"classic"}'>
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-8567649 elementor-widget elementor-widget-image" data-element_type="widget" data-id="8567649" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img alt="" class="attachment-full size-full wp-image-108" decoding="async" height="307" sizes="(max-width: 1024px) 100vw, 1024px" src="wp-content/uploads/2022/01/IEEE-YESIST12-Logo-1024x307-1.png" srcset="wp-content/uploads/2022/01/IEEE-YESIST12-Logo-1024x307-1.png 1024w,  wp-content/uploads/2022/01/IEEE-YESIST12-Logo-1024x307-1-300x90.png 300w,  wp-content/uploads/2022/01/IEEE-YESIST12-Logo-1024x307-1-768x230.png 768w" width="1024"> </img></div>
+</div>
+<div class="elementor-element elementor-element-20db361 elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="20db361" data-widget_type="spacer.default">
+<div class="elementor-widget-container">
+<div class="elementor-spacer">
+<div class="elementor-spacer-inner"></div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-37bba9b elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="37bba9b" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p>Use of this website signifies your agreement to the <a href="https://www.ieee.org/site-terms-conditions.html" rel="noopener" style="color: #2bb884;" target="_blank">IEEE Terms and Conditions</a>. A not-for-profit organization, IEEE is the worldâs largest technical professional organization dedicated to advancing technology for the benefit of humanity.</p> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-43767207" data-element_type="column" data-id="43767207">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-7246089e elementor-widget elementor-widget-heading" data-element_type="widget" data-id="7246089e" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">Quick Links</h4> </div>
+</div>
+<div class="elementor-element elementor-element-3895ee70 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-element_type="widget" data-id="3895ee70" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<a href="./">
+<span class="elementor-icon-list-text">Home</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="./contact-us/">
+<span class="elementor-icon-list-text">Contact Us</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="https://www.ieee.org/sitemap.html">
+<span class="elementor-icon-list-text">Sitemap</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="https://www.ieee.org/accessibility-statement.html">
+<span class="elementor-icon-list-text">Accessibility</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="https://www.ieee.org/about/corporate/governance/p9-26.html">
+<span class="elementor-icon-list-text">Nondiscrimination Policy</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="https://www.ieee.org/security-privacy.html">
+<span class="elementor-icon-list-text">IEEE Privacy Policy</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-4d42f6d" data-element_type="column" data-id="4d42f6d">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-5a8bd0fe elementor-widget elementor-widget-heading" data-element_type="widget" data-id="5a8bd0fe" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">Our Tracks</h4> </div>
+</div>
+<div class="elementor-element elementor-element-6ff74484 elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-element_type="widget" data-id="6ff74484" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<a href="innovation-challenge/">
+<span class="elementor-icon-list-text">Innovation Challenge</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="junior-einstein/">
+<span class="elementor-icon-list-text">Junior Einstein</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="maker-fair/">
+<span class="elementor-icon-list-text">Maker Fair</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="wepower/">
+<span class="elementor-icon-list-text">WePOWER Track</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="special-track/">
+<span class="elementor-icon-list-text">Special Track</span>
+</a>
+</li>
+<li class="elementor-icon-list-item">
+<a href="iengage/">
+<span class="elementor-icon-list-text">IEngage Track</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-52b50e8f" data-element_type="column" data-id="52b50e8f">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-1d45925 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="1d45925" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h4 class="elementor-heading-title elementor-size-default">Get In Touch</h4> </div>
+</div>
+<div class="elementor-element elementor-element-1e58e7c elementor-view-stacked elementor-position-left elementor-shape-circle elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-element_type="widget" data-id="1e58e7c" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<a aria-label="support@ieeeyesist12.org" class="elementor-icon" href="mailto:support@ieeeyesist12.org" tabindex="-1">
+<i aria-hidden="true" class="icon icon-email"></i> </a>
+</div>
+<div class="elementor-icon-box-content">
+<h3 class="elementor-icon-box-title">
+<a href="mailto:support@ieeeyesist12.org">
+							support@ieeeyesist12.org						</a>
+</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-629656a7 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="629656a7" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p>Get more updatesÂ </p> </div>
+</div>
+<div class="elementor-element elementor-element-6b57b7a elementor-shape-circle e-grid-align-left e-grid-align-tablet-left e-grid-align-mobile-center elementor-grid-0 elementor-widget elementor-widget-social-icons" data-element_type="widget" data-id="6b57b7a" data-widget_type="social-icons.default">
+<div class="elementor-widget-container">
+<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+<span class="elementor-grid-item" role="listitem">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-shrink elementor-repeater-item-c0163ab" href="https://www.facebook.com/IEEEYESIST12/" target="_blank">
+<span class="elementor-screen-only">Facebook-f</span>
+<i class="fab fa-facebook-f"></i> </a>
+</span>
+<span class="elementor-grid-item" role="listitem">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-63f86db" href="https://www.instagram.com/ieeeyesist12/" target="_blank">
+<span class="elementor-screen-only">Instagram</span>
+<i class="fab fa-instagram"></i> </a>
+</span>
+<span class="elementor-grid-item" role="listitem">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-animation-shrink elementor-repeater-item-310ab07" href="https://www.linkedin.com/company/ieeeyesist12/" target="_blank">
+<span class="elementor-screen-only">Linkedin</span>
+<i class="fab fa-linkedin"></i> </a>
+</span>
+<span class="elementor-grid-item" role="listitem">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-jki-youtube-v-light elementor-animation-shrink elementor-repeater-item-d54d883" href="https://www.youtube.com/channel/UC6kdciumxh-R97OtbwbWJ6Q" target="_blank">
+<span class="elementor-screen-only">Jki-youtube-v-light</span>
+<i class="jki jki-youtube-v-light"></i> </a>
+</span>
+<span class="elementor-grid-item" role="listitem">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-shrink elementor-repeater-item-495e199" href="https://twitter.com/ieeeyesist12/" target="_blank">
+<span class="elementor-screen-only">Twitter</span>
+<i class="fab fa-twitter"></i> </a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-4321f3d1 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="4321f3d1" data-particle-mobile-disabled="false" data-particle_enable="false">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-695a6f6f" data-element_type="column" data-id="695a6f6f">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-1428015d elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="1428015d" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p>IEEE YESIST12</p> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1c7ef582" data-element_type="column" data-id="1c7ef582">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-1d826660 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="1d826660" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p>Copyright Â© 2026. All rights reserved.</p> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/hello-elementor\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!-- GA Google Analytics @ https://m0n.co/ga -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S2HRRN6PX2"></script>
+<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-S2HRRN6PX2');
+		</script>
+<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+<div class="elementor elementor-710 elementor-location-popup" data-elementor-id="710" data-elementor-post-type="elementor_library" data-elementor-settings='{"prevent_close_on_esc_key":"yes","a11y_navigation":"yes","triggers":{"scrolling_offset":15,"scrolling":"yes","scrolling_direction":"down"},"timing":[]}' data-elementor-type="popup">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-4c6d95b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="4c6d95b" data-particle-mobile-disabled="false" data-particle_enable="false">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-713f6d8" data-element_type="column" data-id="713f6d8">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-a549b73 elementor-view-stacked elementor-shape-circle elementor-invisible elementor-widget elementor-widget-icon" data-element_type="widget" data-id="a549b73" data-settings='{"_animation":"fadeIn"}' data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="#top">
+<i aria-hidden="true" class="fas fa-angle-double-up"></i> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"},"registration_prompt":"There is unsaved attendee information. Are you sure you want to continue?"};/* ]]> */ </script> <script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+<link href="wp-content/plugins/jeg-elementor-kit/lib/jeg-framework/assets/css/jeg-dynamic-styles.css" id="jeg-dynamic-style-css" media="all" rel="stylesheet"/>
+<script id="event-tickets-tickets-rsvp-js-js" src="wp-content/plugins/event-tickets/build/js/rsvp.js"></script>
+<script id="event-tickets-details-js-js" src="wp-content/plugins/event-tickets/build/js/ticket-details.js"></script>
+<script id="eael-general-js-extra">
+var localize = {"ajaxurl":"https:\/\/ieeeyesist12.org\/wp-admin\/admin-ajax.php","nonce":"a5c0eb303b","i18n":{"added":"Added ","compare":"Compare","loading":"Loading..."},"eael_translate_text":{"required_text":"is a required field","invalid_text":"Invalid","billing_text":"Billing","shipping_text":"Shipping","fg_mfp_counter_text":"of"},"page_permalink":"https:\/\/ieeeyesist12.org\/tracks\/junior-einstein\/","cart_redirectition":"","cart_page_url":"","el_breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"ParticleThemesData":{"default":"{\"particles\":{\"number\":{\"value\":160,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#ffffff\"},\"shape\":{\"type\":\"circle\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"img\/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.5,\"random\":false,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":3,\"random\":true,\"anim\":{\"enable\":false,\"speed\":40,\"size_min\":0.1,\"sync\":false}},\"line_linked\":{\"enable\":true,\"distance\":150,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":1},\"move\":{\"enable\":true,\"speed\":6,\"direction\":\"none\",\"random\":false,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":true,\"mode\":\"repulse\"},\"onclick\":{\"enable\":true,\"mode\":\"push\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":400,\"size\":40,\"duration\":2,\"opacity\":8,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}","nasa":"{\"particles\":{\"number\":{\"value\":250,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#ffffff\"},\"shape\":{\"type\":\"circle\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"img\/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":1,\"random\":true,\"anim\":{\"enable\":true,\"speed\":1,\"opacity_min\":0,\"sync\":false}},\"size\":{\"value\":3,\"random\":true,\"anim\":{\"enable\":false,\"speed\":4,\"size_min\":0.3,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":150,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":1},\"move\":{\"enable\":true,\"speed\":1,\"direction\":\"none\",\"random\":true,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":600}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":true,\"mode\":\"bubble\"},\"onclick\":{\"enable\":true,\"mode\":\"repulse\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":250,\"size\":0,\"duration\":2,\"opacity\":0,\"speed\":3},\"repulse\":{\"distance\":400,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}","bubble":"{\"particles\":{\"number\":{\"value\":15,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#1b1e34\"},\"shape\":{\"type\":\"polygon\",\"stroke\":{\"width\":0,\"color\":\"#000\"},\"polygon\":{\"nb_sides\":6},\"image\":{\"src\":\"img\/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.3,\"random\":true,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":50,\"random\":false,\"anim\":{\"enable\":true,\"speed\":10,\"size_min\":40,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":200,\"color\":\"#ffffff\",\"opacity\":1,\"width\":2},\"move\":{\"enable\":true,\"speed\":8,\"direction\":\"none\",\"random\":false,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":false,\"mode\":\"grab\"},\"onclick\":{\"enable\":false,\"mode\":\"push\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":400,\"size\":40,\"duration\":2,\"opacity\":8,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}","snow":"{\"particles\":{\"number\":{\"value\":450,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#fff\"},\"shape\":{\"type\":\"circle\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"img\/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.5,\"random\":true,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":5,\"random\":true,\"anim\":{\"enable\":false,\"speed\":40,\"size_min\":0.1,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":500,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":2},\"move\":{\"enable\":true,\"speed\":6,\"direction\":\"bottom\",\"random\":false,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":true,\"mode\":\"bubble\"},\"onclick\":{\"enable\":true,\"mode\":\"repulse\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":0.5}},\"bubble\":{\"distance\":400,\"size\":4,\"duration\":0.3,\"opacity\":1,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}","nyan_cat":"{\"particles\":{\"number\":{\"value\":150,\"density\":{\"enable\":false,\"value_area\":800}},\"color\":{\"value\":\"#ffffff\"},\"shape\":{\"type\":\"star\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"http:\/\/wiki.lexisnexis.com\/academic\/images\/f\/fb\/Itunes_podcast_icon_300.jpg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.5,\"random\":false,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":4,\"random\":true,\"anim\":{\"enable\":false,\"speed\":40,\"size_min\":0.1,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":150,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":1},\"move\":{\"enable\":true,\"speed\":14,\"direction\":\"left\",\"random\":false,\"straight\":true,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":false,\"mode\":\"grab\"},\"onclick\":{\"enable\":true,\"mode\":\"repulse\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":200,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":400,\"size\":40,\"duration\":2,\"opacity\":8,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}"},"eael_login_nonce":"86db2410b0","eael_register_nonce":"b282723c41","eael_lostpassword_nonce":"f5fad48c1f","eael_resetpassword_nonce":"e0ce5965dd"};
+</script>
+<script id="eael-general-js" src="wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js"></script>
+<script id="eael-979-js" src="wp-content/uploads/essential-addons-elementor/eael-979.js"></script>
+<script id="elementor-webpack-runtime-js" src="wp-content/plugins/elementor/assets/js/webpack.runtime.min.js"></script>
+<script id="elementor-frontend-modules-js" src="wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script>
+<script id="jquery-ui-core-js" src="wp-includes/js/jquery/ui/core.min.js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.31.1","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true},"urls":{"assets":"https:\/\/ieeeyesist12.org\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/ieeeyesist12.org\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/ieeeyesist12.org\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"84e445baf0"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":979,"title":"Junior%20Einstein%20%E2%80%93%20IEEEYESIST12","excerpt":"","featuredImage":false}};
+</script>
+<script id="elementor-frontend-js" src="wp-content/plugins/elementor/assets/js/frontend.min.js"></script>
+<script id="elementor-frontend-js-after">
+var jkit_ajax_url = "https://ieeeyesist12.org/?jkit-ajax-request=jkit_elements", jkit_nonce = "97e95610ef";
+</script>
+<script id="hello-theme-frontend-js" src="wp-content/themes/hello-elementor/assets/js/hello-frontend.js"></script>
+<script id="e-sticky-js" src="wp-content/plugins/proelements-3.29.0/assets/lib/sticky/jquery.sticky.min.js"></script>
+<script id="elementskit-framework-js-frontend-js" src="wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js"></script>
+<script id="elementskit-framework-js-frontend-js-after">
+		var elementskit = {
+			resturl: 'https://ieeeyesist12.org/wp-json/elementskit/v1/',
+		}
+
+		
+</script>
+<script id="ekit-widget-scripts-js" src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js"></script>
+<script id="event-tickets-rsvp-js-extra">
+var tribe_tickets_rsvp_strings = {"attendee":"Attendee %1$s"};
+</script>
+<script id="event-tickets-rsvp-js" src="wp-content/plugins/event-tickets/build/js/rsvp.js"></script>
+<script id="jkit-element-navmenu-js" src="wp-content/plugins/jeg-elementor-kit/assets/js/elements/nav-menu.js"></script>
+<script id="jkit-element-accordion-js" src="wp-content/plugins/jeg-elementor-kit/assets/js/elements/accordion.js"></script>
+<script id="jkit-sticky-element-js" src="wp-content/plugins/jeg-elementor-kit/assets/js/elements/sticky-element.js"></script>
+<script id="elementor-pro-webpack-runtime-js" src="wp-content/plugins/proelements-3.29.0/assets/js/webpack-pro.runtime.min.js"></script>
+<script id="wp-hooks-js" src="wp-includes/js/dist/hooks.min.js"></script>
+<script id="wp-i18n-js" src="wp-includes/js/dist/i18n.min.js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/ieeeyesist12.org\/wp-admin\/admin-ajax.php","nonce":"3667b83091","urls":{"assets":"https:\/\/ieeeyesist12.org\/wp-content\/plugins\/proelements-3.29.0\/assets\/","rest":"https:\/\/ieeeyesist12.org\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/ieeeyesist12.org\/wp-content\/plugins\/proelements-3.29.0\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script id="elementor-pro-frontend-js" src="wp-content/plugins/proelements-3.29.0/assets/js/frontend.min.js"></script>
+<script id="pro-elements-handlers-js" src="wp-content/plugins/proelements-3.29.0/assets/js/elements-handlers.min.js"></script>
+<script id="animate-circle-js" src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js"></script>
+<script id="elementskit-elementor-js-extra">
+var ekit_config = {"ajaxurl":"https:\/\/ieeeyesist12.org\/wp-admin\/admin-ajax.php","nonce":"eeb35c7e21"};
+</script>
+<script id="elementskit-elementor-js" src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js"></script>
+    <script src="../components/footer.js"></script>
+</body>
+</html>
+<!-- Page cached by LiteSpeed Cache 7.3.0.1 on 2025-08-10 14:04:16 -->
